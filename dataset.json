@@ -1,0 +1,1900 @@
+{
+  "version": "1.0",
+  "framework_total_kpis": 174,
+  "categories": {
+    "Direzione": {
+      "weight": 20,
+      "color": "#3B6FD6",
+      "short": "Direzione"
+    },
+    "Execution": {
+      "weight": 28,
+      "color": "#D64545",
+      "short": "Execution"
+    },
+    "Technology": {
+      "weight": 28,
+      "color": "#3FA66B",
+      "short": "Technology"
+    },
+    "Persone": {
+      "weight": 25,
+      "color": "#E08A3C",
+      "short": "Persone"
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "cat": "Direzione",
+      "sub": "Strategia condivisa",
+      "title": "Strategia condivisa",
+      "text": "Nella tua azienda la strategia è formalizzata in un documento aggiornato e i manager la comprendono e la sanno tradurre in azioni per i loro team.",
+      "anchor_low": "Nessuna strategia scritta, ognuno va per conto suo",
+      "anchor_high": "Strategia documentata, condivisa e revisionata regolarmente",
+      "kpis": [
+        {
+          "num": 1,
+          "name": "% manager che comprendono la strategia",
+          "desc": "Misura quanto la strategia aziendale sia realmente compresa dai manager. Bassa comprensione = esecuzione disallineata.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 2,
+          "name": "% iniziative allineate alla strategia",
+          "desc": "Verifica che le iniziative in corso siano coerenti con la direzione strategica dichiarata.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 3,
+          "name": "Documento strategico formalizzato e aggiornato",
+          "desc": "Presenza e aggiornamento di un documento formale che definisce la strategia. Assenza = strategia implicita e non condivisa.",
+          "benchmark": "Sì"
+        },
+        {
+          "num": 4,
+          "name": "N. priorità strategiche attive simultaneamente",
+          "desc": "Troppe priorità simultanee disperdono risorse e attenzione. Ottimale: massimo 3-5 priorità attive.",
+          "benchmark": "<5"
+        },
+        {
+          "num": 5,
+          "name": "Frequenza di revisione della strategia",
+          "desc": "Frequenza con cui la strategia viene rivista e aggiornata. Troppo rara = strategia obsoleta.",
+          "benchmark": "Almeno annuale"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "Workshop di strategia cascade",
+          "desc": "Condurre sessioni strutturate (max 8 persone) per tradurre la strategia in obiettivi operativi per funzione, con verifica della comprensione tramite Q&A facilitato.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Strategy scorecard individuale",
+          "desc": "Definire per ogni manager una scorecard personale che colleghi i KPI di funzione agli obiettivi strategici, con revisione trimestrale.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Briefing esecutivo ricorrente",
+          "desc": "Istituire un briefing mensile di 60 minuti con l'AD per aggiornare i manager sullo stato della strategia e raccogliere feedback operativo.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Portfolio review strategica",
+          "desc": "Mappare tutte le iniziative attive su una matrice impatto strategico / effort, archiviando quelle non allineate e ridefinendo le priorità.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Filtro di ingresso iniziative",
+          "desc": "Implementare un processo formale (business case minimo) per l'approvazione di nuove iniziative, con criterio obbligatorio di allineamento strategico.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Check-in trimestrale di allineamento",
+          "desc": "Introdurre una revisione trimestrale del portfolio con domanda esplicita: 'questa iniziativa è ancora strategicamente rilevante?'.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Redazione documento strategico",
+          "desc": "Facilitare la redazione di un documento strategico strutturato (max 10 pagine) con: visione, priorità, obiettivi triennali, KPI di riferimento.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Processo di aggiornamento annuale",
+          "desc": "Definire un calendario fisso di revisione annuale del documento strategico, con owner designato e approvazione formale del CDA o AD.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Distribuzione e onboarding",
+          "desc": "Strutturare un processo di distribuzione e presentazione del documento a tutti i manager, con sessione Q&A documentata.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Strategic prioritization workshop",
+          "desc": "Facilitare una sessione di prioritizzazione con il top management usando la matrice impatto/probabilità per ridurre le priorità a massimo 5.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Moratoria nuove iniziative",
+          "desc": "Introdurre un meccanismo formale di stop temporaneo all'avvio di nuove iniziative finché quelle in corso non raggiungono milestone definite.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Killing criteria per progetti",
+          "desc": "Definire criteri espliciti per la sospensione o chiusura di iniziative non più strategiche, con revisione semestrale.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Calendario strategico annuale",
+          "desc": "Definire e bloccare nel calendario aziendale le sessioni di revisione strategica: 1 annuale estesa + 2 review semestrali.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Dashboard di segnali di mercato",
+          "desc": "Implementare un sistema semplice (anche solo un report mensile) di monitoraggio dei principali segnali di mercato rilevanti per la strategia.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Trigger-based review process",
+          "desc": "Definire eventi-trigger (es. perdita cliente chiave, cambiamento normativo, nuovo competitore) che attivano automaticamente una revisione straordinaria.",
+          "hours": 8,
+          "cost": 800
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "cat": "Direzione",
+      "sub": "Definizione obiettivi",
+      "title": "Definizione obiettivi",
+      "text": "Gli obiettivi aziendali sono definiti in modo SMART (misurabili, con scadenze, con un responsabile) e collegati agli obiettivi individuali dei collaboratori.",
+      "anchor_low": "Obiettivi vaghi o assenti",
+      "anchor_high": "Sistema di performance management strutturato e attivo",
+      "kpis": [
+        {
+          "num": 11,
+          "name": "% obiettivi definiti con KPI misurabili (SMART)",
+          "desc": "Percentuale di obiettivi definiti con criteri SMART (Specifici, Misurabili, Achievable, Rilevanti, Temporali).",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 12,
+          "name": "% obiettivi assegnati con responsabilità esplicita",
+          "desc": "Ogni obiettivo deve avere un responsabile esplicito. Senza ownership non c'è accountability.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 13,
+          "name": "% allineamento obiettivi individuali e aziendali",
+          "desc": "Grado di coerenza tra gli obiettivi personali dei dipendenti e quelli aziendali. Disallineamento = demotivazione.",
+          "benchmark": ">75%"
+        },
+        {
+          "num": 14,
+          "name": "N. medio di KPI per funzione/team",
+          "desc": "Troppi KPI per funzione disperdono il focus. Il numero ottimale è 3-5 per team.",
+          "benchmark": "3-5"
+        },
+        {
+          "num": 15,
+          "name": "Sistema strutturato di performance management attivo",
+          "desc": "Indica se esiste un sistema strutturato per monitorare e valutare le performance. Assenza = valutazione soggettiva.",
+          "benchmark": "Sì"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "Workshop OKR / SMART",
+          "desc": "Formare il management sulla metodologia SMART/OKR e facilitare la riscrittura degli obiettivi esistenti in forma misurabile.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Template obiettivi standardizzato",
+          "desc": "Introdurre un template obbligatorio per la definizione degli obiettivi, con campo KPI di riferimento, baseline e target.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Revisione annuale obiettivi",
+          "desc": "Istituire un processo formale di validazione degli obiettivi all'inizio dell'anno, con check SMART facilitato dal consulente.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Matrice obiettivi-owner",
+          "desc": "Creare e mantenere aggiornata una matrice che associa ogni obiettivo strategico a un singolo owner nominativo.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Firma di accettazione obiettivi",
+          "desc": "Introdurre un processo formale di accettazione degli obiettivi da parte dei manager, con documento firmato e conservato in HR.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Review accountability semestrале",
+          "desc": "Condurre una revisione semestrale con ogni manager per verificare lo stato degli obiettivi e l'aggiornamento della ownership.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Cascading degli obiettivi",
+          "desc": "Facilitare un processo top-down di cascading: dagli obiettivi strategici aziendali agli obiettivi di funzione, fino agli obiettivi individuali.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Mappa di allineamento visiva",
+          "desc": "Creare una rappresentazione visiva dell'albero degli obiettivi (strategy map), condivisa con tutti i manager.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Check allineamento in MBO",
+          "desc": "Integrare nel ciclo MBO esistente un momento esplicito di verifica dell'allineamento verticale degli obiettivi.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "KPI rationalization",
+          "desc": "Ridurre il numero di KPI per funzione a massimo 5-7 chiave, attraverso una sessione facilitata di prioritizzazione con i responsabili.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Gerarchia KPI (leading/lagging)",
+          "desc": "Strutturare i KPI in due livelli: KPI di risultato (lagging) e KPI di processo (leading), eliminando quelli ridondanti.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "KPI owner e frequenza",
+          "desc": "Assegnare un owner e una frequenza di aggiornamento a ciascun KPI, eliminando quelli che nessuno aggiorna regolarmente.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Design del sistema PM",
+          "desc": "Progettare un sistema di performance management semplice: obiettivi + KPI + revisioni periodiche + feedback, calibrato sulla dimensione aziendale.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Implementazione pilota",
+          "desc": "Implementare il sistema su una funzione pilota per 6 mesi, raccogliendo feedback e ottimizzando prima del rollout.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Training HR e manager",
+          "desc": "Formare HR e manager sull'utilizzo del sistema, con focus sulla conduzione dei colloqui di performance.",
+          "hours": 16,
+          "cost": 1600
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "cat": "Direzione",
+      "sub": "Cultura decisionale data-driven",
+      "title": "Decisioni basate sui dati",
+      "text": "Le decisioni importanti sono basate su dati e KPI (non solo su intuizione) e i dati sono accessibili rapidamente quando servono.",
+      "anchor_low": "Decisioni 'a sensazione', dati lenti o inaffidabili",
+      "anchor_high": "KPI sempre disponibili, decisioni supportate dai numeri",
+      "kpis": [
+        {
+          "num": 31,
+          "name": "% decisioni supportate da KPI o analisi dati",
+          "desc": "Percentuale di decisioni supportate da analisi dati o KPI, contrapposta a decisioni basate su percezioni.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 32,
+          "name": "% report prodotti effettivamente utilizzati",
+          "desc": "Percentuale dei report prodotti che vengono effettivamente letti e usati. Alta produzione + basso utilizzo = spreco.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 33,
+          "name": "Livello di fiducia nei dati aziendali (survey)",
+          "desc": "Livello di fiducia percepita dai manager nell'accuratezza e affidabilità dei dati aziendali.",
+          "benchmark": ">7/10"
+        },
+        {
+          "num": 34,
+          "name": "Tempo medio per reperire dati per una decisione",
+          "desc": "Tempo necessario per trovare e accedere ai dati utili a prendere una decisione. Dato lento = decisione lenta.",
+          "benchmark": "<1 ora"
+        },
+        {
+          "num": 35,
+          "name": "N. fonti dati per decisioni strategiche",
+          "desc": "Numero di fonti dati distinte utilizzate per supportare le decisioni strategiche.",
+          "benchmark": ">3"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "Data-driven decision protocol",
+          "desc": "Introdurre un protocollo semplice: ogni proposta in riunione deve includere almeno un dato a supporto, con fonte citata.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Dashboard pre-meeting",
+          "desc": "Distribuire prima di ogni riunione direzionale un report sintetico con i KPI rilevanti per i temi in agenda.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Coaching individuale data literacy",
+          "desc": "Lavorare individualmente con i manager meno inclini all'uso dei dati per costruire confidenza e abitudine.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Report utilization audit",
+          "desc": "Intervistare i destinatari dei report esistenti per capire quali vengono effettivamente letti e quali vengono ignorati.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Razionalizzazione report",
+          "desc": "Eliminare o accorpare i report non utilizzati, riducendo il carico di produzione e aumentando la qualità di quelli chiave.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Feedback loop sul reporting",
+          "desc": "Istituire un meccanismo periodico di feedback dai destinatari per migliorare continuamente la rilevanza dei report.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Data quality assessment",
+          "desc": "Condurre un assessment della qualità dei dati nelle principali fonti (ERP, CRM, fogli Excel) identificando le aree critiche.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Data quality owner",
+          "desc": "Nominare per ogni fonte dati principale un owner responsabile della qualità e dell'aggiornamento.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Piano di bonifica dati",
+          "desc": "Definire e implementare un piano prioritizzato di bonifica dei dati più critici per le decisioni del management.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Catalogo dati aziendali",
+          "desc": "Creare un catalogo semplice delle fonti dati disponibili, con indicazione di dove trovare ogni tipo di dato e chi contattare.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Self-service reporting",
+          "desc": "Implementare uno strumento di self-service reporting (anche semplice come Power BI o Metabase) per ridurre le richieste ad IT.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Dati chiave pre-elaborati",
+          "desc": "Pre-elaborare i dati più richiesti in report standard disponibili on-demand, riducendo il tempo di preparazione.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Mappatura fonti dati",
+          "desc": "Censire tutte le fonti dati utilizzate dal management nelle decisioni, identificando ridondanze e gap.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Integrazione fonti prioritarie",
+          "desc": "Integrare le 3-5 fonti dati più critiche in un'unica vista consolidata, eliminando la necessità di aggregare manualmente.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Governance delle fonti",
+          "desc": "Definire quali fonti sono 'ufficiali' per ogni tipo di decisione, riducendo la proliferazione di fonti alternative.",
+          "hours": 8,
+          "cost": 800
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "cat": "Execution",
+      "sub": "Processi operativi",
+      "title": "Processi operativi",
+      "text": "I processi chiave sono documentati, hanno un owner definito e sono eseguiti in modo standardizzato (non variano da persona a persona).",
+      "anchor_low": "Tutto dipende dalle persone, niente è scritto",
+      "anchor_high": "Processi mappati, standard, con responsabili chiari",
+      "kpis": [
+        {
+          "num": 36,
+          "name": "% processi documentati e formalizzati",
+          "desc": "Percentuale di processi aziendali che sono stati documentati, standardizzati e formalizzati.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 37,
+          "name": "Tempo medio esecuzione processi chiave",
+          "desc": "Tempo medio necessario per completare i processi operativi chiave dall'inizio alla fine.",
+          "benchmark": "Varia per processo"
+        },
+        {
+          "num": 38,
+          "name": "% processi con owner definito",
+          "desc": "Percentuale di processi con un responsabile identificato. Senza owner i processi non vengono migliorati.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 39,
+          "name": "% processi standardizzati vs variabili",
+          "desc": "Percentuale di processi eseguiti sempre allo stesso modo, contrapposta a processi variabili per operatore.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 40,
+          "name": "N. passaggi medi per processo",
+          "desc": "Numero medio di passaggi necessari per completare un processo. Più passaggi = maggiore complessità e rischio errore.",
+          "benchmark": "Varia per settore"
+        },
+        {
+          "num": 41,
+          "name": "Tasso di variabilità dei processi (dev. std. tempi)",
+          "desc": "Variabilità nei tempi di esecuzione dei processi. Alta variabilità = processo non sotto controllo.",
+          "benchmark": "Bassa"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Censimento processi chiave",
+          "desc": "Identificare e censire i 20-30 processi più critici per il business, definendo il perimetro di documentazione prioritaria.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Documentazione processi as-is",
+          "desc": "Facilitare sessioni di process mapping con i team operativi per documentare i processi chiave nella forma attuale (as-is).",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Repository documentazione",
+          "desc": "Implementare un repository centralizzato (anche SharePoint o Notion) per la gestione e aggiornamento della documentazione di processo.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Process time analysis",
+          "desc": "Misurare i tempi effettivi di esecuzione dei 5 processi chiave identificati, identificando le fasi più lente.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Identificazione colli di bottiglia",
+          "desc": "Analizzare le cause di rallentamento (approvazioni, attese, rilavorazioni) e definire azioni correttive prioritarie.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Quick wins di ottimizzazione",
+          "desc": "Implementare le ottimizzazioni a minor effort (es. eliminazione passaggi ridondanti, automazione notifiche) con impatto immediato sui tempi.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Assegnazione process owner",
+          "desc": "Assegnare formalmente un process owner a ogni processo documentato, con responsabilità esplicite su performance e aggiornamento.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Process owner charter",
+          "desc": "Definire per ogni process owner il mandato: cosa misura, con quale frequenza, cosa può decidere autonomamente.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Community process owner",
+          "desc": "Istituire incontri trimestrali tra i process owner per condividere best practice e problemi comuni.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Identificazione variabilità critica",
+          "desc": "Identificare i processi con maggiore variabilità e valutare se è patologica (errori, mancanza di standard) o fisiologica (personalizzazione richiesta).",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Standard operating procedures",
+          "desc": "Definire SOP (Standard Operating Procedure) per i processi ad alta variabilità patologica, con formazione dei team.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Monitoraggio conformità",
+          "desc": "Implementare check periodici di conformità alle procedure standard, con feedback immediato agli operatori.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Value stream mapping",
+          "desc": "Mappare il flusso di valore di ogni processo chiave identificando i passaggi che non aggiungono valore al cliente interno/esterno.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Eliminazione passaggi ridondanti",
+          "desc": "Eliminare o accorpare i passaggi non necessari identificati nel VSM, semplificando il flusso operativo.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Lean process redesign",
+          "desc": "Ridisegnare i processi più complessi applicando principi lean, con obiettivo di ridurre il numero di passaggi del 20-30%.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Statistical process control base",
+          "desc": "Introdurre misurazioni sistematiche dei tempi di processo per identificare la variabilità reale e le sue cause.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Root cause variabilità",
+          "desc": "Analizzare le cause della variabilità (qualità input variabile, competenze diverse, eccezioni non gestite) e definire azioni correttive.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Standardizzazione input di processo",
+          "desc": "Standardizzare gli input dei processi più variabili (template, checklist, dati richiesti) per ridurre la variabilità all'origine.",
+          "hours": 16,
+          "cost": 1600
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "cat": "Execution",
+      "sub": "Project execution e delivery",
+      "title": "Esecuzione progetti",
+      "text": "I progetti vengono completati nei tempi e nel budget previsti, senza scostamenti significativi e senza modificare gli obiettivi in corsa.",
+      "anchor_low": "Progetti spesso in ritardo o fuori budget",
+      "anchor_high": "Time-to-market rapido, deliverable on-time/on-budget",
+      "kpis": [
+        {
+          "num": 42,
+          "name": "% progetti completati nei tempi previsti",
+          "desc": "Percentuale di progetti consegnati entro la data pianificata originariamente.",
+          "benchmark": ">75%"
+        },
+        {
+          "num": 43,
+          "name": "% progetti completati nel budget",
+          "desc": "Percentuale di progetti completati senza sforare il budget approvato.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 44,
+          "name": "Schedule variance (scostamento temporale medio)",
+          "desc": "Scostamento medio tra la data pianificata e la data effettiva di completamento dei progetti.",
+          "benchmark": "<10%"
+        },
+        {
+          "num": 45,
+          "name": "Cost variance (scostamento economico medio)",
+          "desc": "Scostamento medio tra il costo pianificato e il costo effettivo dei progetti.",
+          "benchmark": "<10%"
+        },
+        {
+          "num": 46,
+          "name": "% progetti con obiettivi modificati in corso d'opera",
+          "desc": "Percentuale di progetti in cui gli obiettivi originali sono stati modificati durante l'esecuzione.",
+          "benchmark": "<15%"
+        },
+        {
+          "num": 47,
+          "name": "Tempo medio di avvio progetto (idea → start)",
+          "desc": "Tempo che passa dall'approvazione di un progetto all'effettivo avvio operativo delle attività.",
+          "benchmark": "<2 settimane"
+        },
+        {
+          "num": 48,
+          "name": "Time-to-market (decisione → primo risultato operativo)",
+          "desc": "Tempo dalla decisione di avviare un'iniziativa al primo risultato operativo misurabile. Misura la velocità di esecuzione end-to-end.",
+          "benchmark": "Varia per settore"
+        }
+      ],
+      "n_actions": 21,
+      "actions_preview": [
+        {
+          "name": "Analisi ritardi storici",
+          "desc": "Analizzare i progetti degli ultimi 2 anni e identificare le cause sistematiche di ritardo (scope creep, risorse, dipendenze).",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Milestone-based planning",
+          "desc": "Rivedere la metodologia di pianificazione introducendo milestone intermedie verificabili ogni 2-4 settimane.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Buffer management",
+          "desc": "Introdurre buffer espliciti nei piani di progetto e una norma su come gestirli (Critical Chain Project Management).",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Earned Value Management semplificato",
+          "desc": "Introdurre un sistema semplice di tracking costi effettivi vs pianificati a ogni milestone, con alert automatico.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Governance varianze",
+          "desc": "Definire soglie di varianza oltre le quali è obbligatorio un escalation formale al project sponsor.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Stima costi bottom-up",
+          "desc": "Migliorare la qualità delle stime iniziali attraverso metodologie bottom-up e historical data delle iniziative precedenti.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Weekly status update strutturato",
+          "desc": "Introdurre un aggiornamento settimanale di 15 minuti per ogni progetto: completato, pianificato, blocchi.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Gantt review bisettimanale",
+          "desc": "Rivedere il Gantt di progetto ogni 2 settimane, aggiornando le stime residue basandosi sullo stato reale.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Recovery plan obbligatorio",
+          "desc": "Rendere obbligatorio un piano di recupero formale quando la schedule variance supera il 10%.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Budget tracking mensile",
+          "desc": "Introdurre un report mensile di tracking costi per ogni progetto sopra una soglia definita di investimento.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Change request process",
+          "desc": "Implementare un processo formale di change request per gestire le variazioni di scope con impatto economico.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Revisione stime a completamento",
+          "desc": "Aggiornare formalmente le stime a completamento (EAC) a ogni milestone, comunicandole al project sponsor.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Requirements freeze process",
+          "desc": "Introdurre un processo di congelamento dei requisiti dopo la fase di definizione, con change request formale per ogni modifica.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Stakeholder alignment iniziale",
+          "desc": "Dedicare più tempo alla fase di definizione per garantire il consenso degli stakeholder prima dell'avvio.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Lessons learned sulle modifiche",
+          "desc": "Analizzare le modifiche agli obiettivi degli ultimi progetti per identificare i pattern e prevenirli nella pianificazione.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Project startup checklist",
+          "desc": "Definire una checklist standardizzata per l'avvio di un progetto (team, strumenti, kick-off, piano) che riduca i tempi di setup.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Pre-approved resource pool",
+          "desc": "Definire in anticipo un pool di risorse interne disponibili per i progetti, riducendo i tempi di staffing.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Fast-track per progetti urgenti",
+          "desc": "Definire una procedura accelerata per l'avvio di progetti ad alta priorità strategica.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "MVP approach",
+          "desc": "Introdurre la pratica di definire un MVP (Minimum Viable Product) per ogni iniziativa, con obiettivo di primo risultato in 60-90 giorni.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Sprint-based delivery",
+          "desc": "Adottare un approccio iterativo (sprint di 2-4 settimane) con deliverable intermedi verificabili, anche per progetti non IT.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Rimozione colli di bottiglia al lancio",
+          "desc": "Identificare e rimuovere i principali ostacoli organizzativi che rallentano il passaggio da progetto a operativo.",
+          "hours": 12,
+          "cost": 1200
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "cat": "Execution",
+      "sub": "Automazione processi",
+      "title": "Automazione processi",
+      "text": "Una quota significativa dei processi è automatizzata e i sistemi sono integrati end-to-end, riducendo attività manuali e duplicazioni di dati.",
+      "anchor_low": "Tutto manuale, dati ribattuti tra sistemi",
+      "anchor_high": "Workflow digitalizzati, sistemi integrati, automazioni attive",
+      "kpis": [
+        {
+          "num": 61,
+          "name": "% processi automatizzati vs manuali",
+          "desc": "Percentuale di processi eseguiti in modo automatico rispetto al totale dei processi.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 62,
+          "name": "Tempo risparmiato grazie all'automazione",
+          "desc": "Quantità di tempo lavorativo risparmiato grazie all'introduzione di automazioni nei processi.",
+          "benchmark": "Varia per processo"
+        },
+        {
+          "num": 63,
+          "name": "% integrazione tra sistemi (end-to-end digitali)",
+          "desc": "Percentuale di processi che si svolgono in modo completamente digitale senza interventi manuali tra sistemi.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 64,
+          "name": "N. attività manuali ripetitive",
+          "desc": "Numero di attività ripetitive ancora eseguite manualmente che potrebbero essere automatizzate.",
+          "benchmark": "Tendenza a 0"
+        },
+        {
+          "num": 65,
+          "name": "N. workflow digitalizzati",
+          "desc": "Numero di flussi di lavoro che sono stati digitalizzati e strutturati all'interno di sistemi.",
+          "benchmark": "Varia per settore"
+        },
+        {
+          "num": 66,
+          "name": "N. interventi manuali per processo digitale",
+          "desc": "Numero medio di volte in cui un operatore deve intervenire manualmente in un processo teoricamente digitale.",
+          "benchmark": "Tendenza a 0"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Automation opportunity assessment",
+          "desc": "Identificare e prioritizzare i processi con maggior potenziale di automazione (alto volume, regole chiare, bassa variabilità).",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Quick automation wins",
+          "desc": "Implementare automazioni rapide sui processi più semplici (notifiche, report, data transfer) usando strumenti no-code/low-code.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Automation roadmap",
+          "desc": "Definire una roadmap di automazione a 12 mesi, con KPI di tracking e ROI atteso per ogni iniziativa.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Baseline pre-automazione",
+          "desc": "Misurare sistematicamente il tempo manuale impiegato nei processi prima dell'automazione, per quantificare il beneficio.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Post-implementation review",
+          "desc": "Condurre una review a 90 giorni da ogni automazione implementata, misurando il tempo effettivamente risparmiato.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Reinvestimento del tempo liberato",
+          "desc": "Definire esplicitamente come il tempo risparmiato dall'automazione viene reinvestito in attività a maggior valore.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Integration landscape mapping",
+          "desc": "Mappare tutti i sistemi attivi e le integrazioni esistenti, identificando i gap e i punti di disconnessione.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "API integration plan",
+          "desc": "Definire un piano di integrazione prioritizzato per i sistemi più critici, partendo dai processi con più passaggi manuali di trasferimento dati.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Integration monitoring",
+          "desc": "Implementare un monitoraggio delle integrazioni esistenti per rilevare interruzioni e anomalie in tempo reale.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Manual activity census",
+          "desc": "Censire le attività manuali ripetitive svolte dai team, stimando il tempo settimanale dedicato a ciascuna.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "RPA quick wins",
+          "desc": "Implementare soluzioni RPA (Robotic Process Automation) o macro per le attività ripetitive più time-consuming.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "No-code automation training",
+          "desc": "Formare i team operativi su strumenti no-code (Zapier, Power Automate) per renderli autonomi nell'automatizzare le proprie attività.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Workflow priority mapping",
+          "desc": "Identificare i 10 workflow più critici ancora gestiti via email/carta/telefono e prioritizzarli per la digitalizzazione.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "BPM tool implementation",
+          "desc": "Implementare uno strumento di workflow management (anche semplice come Microsoft Power Automate o Kissflow) per i workflow prioritari.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Digital workflow adoption program",
+          "desc": "Strutturare un programma di adozione dei workflow digitalizzati con formazione, supporto e monitoraggio dell'utilizzo.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Exception analysis",
+          "desc": "Analizzare le cause dei principali interventi manuali nei processi digitali: regole non coperte, dati mancanti, casi speciali.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Rule engine extension",
+          "desc": "Estendere le regole dei processi digitali per coprire i casi di eccezione più frequenti, riducendo gli interventi manuali.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Exception SLA",
+          "desc": "Definire SLA per la gestione delle eccezioni residue, assegnando ownership e tempi di risoluzione.",
+          "hours": 8,
+          "cost": 800
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "cat": "Technology",
+      "sub": "Data governance e qualità del dato",
+      "title": "Qualità e governance dei dati",
+      "text": "I dati aziendali sono completi, accurati, non duplicati, facilmente accessibili e c'è un modello di data governance formalizzato.",
+      "anchor_low": "Dati sparsi, inaffidabili, duplicati",
+      "anchor_high": "Dati integrati, governati, alta qualità",
+      "kpis": [
+        {
+          "num": 126,
+          "name": "Livello qualità del dato (completezza e accuratezza)",
+          "desc": "Livello complessivo di qualità dei dati aziendali in termini di completezza, accuratezza e consistenza.",
+          "benchmark": ">95%"
+        },
+        {
+          "num": 127,
+          "name": "% dati duplicati o inconsistenti",
+          "desc": "Percentuale di record nei sistemi che contengono dati duplicati o contraddittori tra fonti diverse.",
+          "benchmark": "<5%"
+        },
+        {
+          "num": 128,
+          "name": "Tempo medio di accesso ai dati",
+          "desc": "Tempo medio necessario per accedere ai dati necessari a supportare un'analisi o una decisione.",
+          "benchmark": "<1 ora"
+        },
+        {
+          "num": 129,
+          "name": "% dati strutturati vs non strutturati",
+          "desc": "Percentuale dei dati aziendali disponibili in formato strutturato rispetto a quelli non strutturati.",
+          "benchmark": ">60% strutturati"
+        },
+        {
+          "num": 130,
+          "name": "N. fonti dati integrate",
+          "desc": "Numero di fonti dati distinte integrate in un unico sistema o data warehouse.",
+          "benchmark": "Crescente"
+        },
+        {
+          "num": 131,
+          "name": "Presenza modello data governance formalizzato",
+          "desc": "Presenza di un modello formale di data governance con ruoli, processi e standard definiti.",
+          "benchmark": "Sì"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Data quality assessment",
+          "desc": "Condurre un assessment della qualità dei dati nelle principali fonti, misurando completezza, accuratezza, consistenza e tempestività.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Data quality rules",
+          "desc": "Definire regole di qualità del dato per ogni fonte critica e implementare controlli automatici di verifica.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Data stewardship",
+          "desc": "Nominare data steward per ogni dominio di dati, responsabili della qualità e dell'aggiornamento.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Deduplication analysis",
+          "desc": "Identificare i principali problemi di duplicazione e inconsistenza dei dati tra i sistemi core.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Master data management",
+          "desc": "Implementare un approccio di Master Data Management per i dati critici (clienti, prodotti, fornitori): fonte unica di verità.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Deduplication routine",
+          "desc": "Implementare routine automatiche di deduplicazione per i dataset con maggior problema di duplicati.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Data access bottleneck analysis",
+          "desc": "Identificare i processi di accesso ai dati più lenti e le loro cause (richieste manuali, query non ottimizzate, permessi).",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Self-service data access",
+          "desc": "Implementare soluzioni di self-service data access per le query più comuni, riducendo le richieste ad IT.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Data platform optimization",
+          "desc": "Ottimizzare le performance della data platform per le query più critiche, riducendo i tempi di risposta.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Data inventory and classification",
+          "desc": "Censire e classificare i dati aziendali per tipo (strutturati/non strutturati) e priorità di business.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Structured data migration",
+          "desc": "Migrare i dati non strutturati rilevanti (documenti, email, note) verso formati strutturati o semi-strutturati.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Data capture process redesign",
+          "desc": "Ridisegnare i processi di acquisizione dati per catturare dati già in formato strutturato alla fonte.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Data integration roadmap",
+          "desc": "Definire una roadmap di integrazione delle fonti dati prioritarie in un unico data repository o data warehouse.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "ETL pipeline implementation",
+          "desc": "Implementare pipeline ETL (Extract, Transform, Load) per le integrazioni più critiche, automatizzando il flusso di dati.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Data integration governance",
+          "desc": "Definire standard e processi per la gestione delle integrazioni dati, garantendo qualità e coerenza.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Data governance framework design",
+          "desc": "Progettare un framework di data governance adeguato alla dimensione aziendale: principi, ruoli, processi, strumenti.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Data governance council",
+          "desc": "Istituire un Data Governance Council cross-funzionale con rappresentanti di business e IT, con incontri mensili.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Data governance implementation",
+          "desc": "Implementare gradualmente il framework, partendo dai domini di dati più critici per il business.",
+          "hours": 32,
+          "cost": 3200
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "cat": "Technology",
+      "sub": "Cybersecurity e resilienza",
+      "title": "Cybersecurity",
+      "text": "L'azienda ha controlli di sicurezza aggiornati, sa rilevare e rispondere rapidamente agli incidenti e adotta framework riconosciuti (NIST, ISO 27001).",
+      "anchor_low": "Nessuna gestione strutturata della sicurezza",
+      "anchor_high": "Framework adottato, MTTR/MTTD bassi, vulnerabilità sotto controllo",
+      "kpis": [
+        {
+          "num": 114,
+          "name": "MTTR — Mean Time to Respond agli incidenti",
+          "desc": "Tempo medio dalla rilevazione di un incidente di sicurezza alla sua risoluzione completa.",
+          "benchmark": "<4 ore (critici)"
+        },
+        {
+          "num": 115,
+          "name": "MTTD — Mean Time to Detect gli incidenti",
+          "desc": "Tempo medio dalla comparsa di un incidente di sicurezza alla sua rilevazione da parte del team.",
+          "benchmark": "<1 ora (critici)"
+        },
+        {
+          "num": 116,
+          "name": "% vulnerabilità critiche non risolte",
+          "desc": "Percentuale di vulnerabilità critiche note che non sono ancora state risolte o mitigate.",
+          "benchmark": "0%"
+        },
+        {
+          "num": 117,
+          "name": "% sistemi con controlli di sicurezza aggiornati",
+          "desc": "Percentuale di sistemi coperti da controlli di sicurezza aggiornati all'ultima versione disponibile.",
+          "benchmark": "100%"
+        },
+        {
+          "num": 118,
+          "name": "N. incidenti di sicurezza per periodo",
+          "desc": "Numero di eventi di sicurezza rilevati in un periodo. Include tentativi di attacco e violazioni effettive.",
+          "benchmark": "Tendenza a 0"
+        },
+        {
+          "num": 119,
+          "name": "Adozione framework sicurezza (NIST / ISO 27001)",
+          "desc": "Grado di adozione di framework di sicurezza internazionali come NIST o ISO 27001.",
+          "benchmark": "Certificato o in corso"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Incident response plan",
+          "desc": "Definire e documentare un piano di risposta agli incidenti di sicurezza con ruoli, procedure e tempi obiettivo.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "IR tabletop exercise",
+          "desc": "Condurre esercitazioni di simulazione degli incidenti (tabletop exercise) per testare e migliorare i tempi di risposta.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Automated detection and response",
+          "desc": "Implementare strumenti di rilevamento e risposta automatizzata per ridurre il tempo di reazione agli incidenti più comuni.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Security monitoring improvement",
+          "desc": "Potenziare il monitoraggio della sicurezza con strumenti SIEM o EDR per ridurre il tempo di detection.",
+          "hours": 32,
+          "cost": 3200
+        },
+        {
+          "name": "Alert tuning",
+          "desc": "Ottimizzare le regole di alerting per ridurre i falsi positivi e garantire che gli alert reali vengano rilevati tempestivamente.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Threat intelligence integration",
+          "desc": "Integrare feed di threat intelligence per anticipare i vettori di attacco emergenti e ridurre il tempo di detection.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Vulnerability management program",
+          "desc": "Implementare un programma strutturato di gestione delle vulnerabilità: scan periodici, prioritizzazione, remediation tracking.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Patch management process",
+          "desc": "Definire e rispettare SLA di patching per le vulnerabilità critiche (es. 72h per CVE critici, 7 giorni per alti).",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Risk-based prioritization",
+          "desc": "Prioritizzare le vulnerabilità in base al rischio reale per il business, non solo alla severità tecnica.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Security baseline assessment",
+          "desc": "Definire una baseline di controlli di sicurezza obbligatori per ogni categoria di sistema e verificarne l'implementazione.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Security hardening program",
+          "desc": "Avviare un programma di hardening dei sistemi critici, applicando le configurazioni di sicurezza raccomandate.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Continuous compliance monitoring",
+          "desc": "Implementare strumenti di monitoraggio continuo della conformità ai controlli di sicurezza, con dashboard e alert.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Security awareness program",
+          "desc": "Avviare un programma di security awareness per i dipendenti, riducendo il rischio di incidenti da errore umano.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Attack surface reduction",
+          "desc": "Identificare e ridurre la superficie di attacco: dismissione sistemi obsoleti, riduzione privilegi, segmentazione rete.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Proactive threat hunting",
+          "desc": "Condurre attività proattive di threat hunting per identificare compromissioni prima che si trasformino in incidenti.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Framework gap assessment",
+          "desc": "Condurre un assessment del gap rispetto al framework di sicurezza scelto (NIST CSF o ISO 27001), con prioritizzazione dei controlli mancanti.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Framework adoption roadmap",
+          "desc": "Definire una roadmap di adozione del framework con obiettivi trimestrali e responsabilità assegnate.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "ISMS implementation",
+          "desc": "Avviare l'implementazione di un Information Security Management System (ISMS) per sistematizzare la gestione della sicurezza.",
+          "hours": 40,
+          "cost": 4000
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "cat": "Technology",
+      "sub": "Utilizzo reale delle tecnologie",
+      "title": "Adozione delle tecnologie",
+      "text": "Le piattaforme e i software acquistati vengono realmente utilizzati dai team (non rimangono shelfware) e le licenze attive corrispondono all'uso reale.",
+      "anchor_low": "Molti tool comprati e non usati, lavoro fuori sistema",
+      "anchor_high": "Adozione piena, licenze allineate all'uso reale",
+      "kpis": [
+        {
+          "num": 90,
+          "name": "% funzionalità utilizzate vs disponibili",
+          "desc": "Percentuale delle funzionalità disponibili sulle piattaforme che vengono effettivamente usate dagli utenti.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 91,
+          "name": "% licenze attive vs acquistate",
+          "desc": "Percentuale delle licenze software acquistate che sono effettivamente attive e utilizzate.",
+          "benchmark": ">85%"
+        },
+        {
+          "num": 92,
+          "name": "N. piattaforme con utilizzo <50%",
+          "desc": "Numero di piattaforme con un tasso di utilizzo inferiore al 50% degli utenti abilitati.",
+          "benchmark": "0"
+        },
+        {
+          "num": 93,
+          "name": "Tasso di utilizzo per utente (activity rate)",
+          "desc": "Frequenza e intensità di utilizzo di una piattaforma da parte di ogni singolo utente.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 94,
+          "name": "N. processi eseguiti fuori piattaforme ufficiali",
+          "desc": "Numero di processi aziendali eseguiti al di fuori delle piattaforme ufficiali. Indica shadow IT.",
+          "benchmark": "0"
+        },
+        {
+          "num": 95,
+          "name": "Tempo medio tra implementazione e adozione operativa",
+          "desc": "Tempo che passa dall'implementazione tecnica di uno strumento alla sua adozione operativa stabile.",
+          "benchmark": "<60 gg"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Feature utilization audit",
+          "desc": "Misurare l'utilizzo effettivo delle funzionalità per ogni piattaforma chiave, attraverso analytics e interviste.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Feature activation plan",
+          "desc": "Definire un piano di attivazione delle funzionalità più rilevanti e non ancora utilizzate, con formazione dedicata.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Use case library",
+          "desc": "Creare una libreria di use case per ogni piattaforma, mostrando ai team come utilizzare le funzionalità avanzate nel loro lavoro.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "License audit",
+          "desc": "Censire tutte le licenze software acquistate e verificare il tasso di attivazione e utilizzo effettivo.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "License optimization",
+          "desc": "Rinegoziare i contratti di licenza in base all'utilizzo reale, eliminando le licenze inutilizzate e ottimizzando i costi.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "License governance process",
+          "desc": "Implementare un processo di governance delle licenze: richiesta, approvazione, assegnazione, recupero in caso di disattivazione utente.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Low utilization platform review",
+          "desc": "Identificare tutte le piattaforme con utilizzo inferiore al 50% e valutare le cause: mancanza di formazione, scarsa rilevanza, alternativa preferita.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Remediation o dismissione",
+          "desc": "Per ogni piattaforma sottoutilizzata: definire se è possibile aumentare l'adoption o se è preferibile la dismissione.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Platform success criteria",
+          "desc": "Definire criteri di successo per ogni nuova piattaforma prima del lancio, con review a 6 mesi dall'implementazione.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Per-user analytics",
+          "desc": "Analizzare i dati di utilizzo a livello di singolo utente per identificare i pattern di adozione e i casi di abbandono.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Power user program",
+          "desc": "Identificare e valorizzare gli utenti più attivi (power user) come ambassador interni per trainare l'adozione degli altri.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Personalized onboarding",
+          "desc": "Implementare percorsi di onboarding personalizzati per tipologia di utente, aumentando la rilevanza della formazione.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Shadow IT discovery",
+          "desc": "Identificare i processi e gli strumenti non ufficiali in uso attraverso survey ai team e analisi del traffico di rete.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Shadow IT root cause",
+          "desc": "Analizzare perché i sistemi ufficiali vengono bypassati e intervenire sulle cause (mancanza funzionalità, usabilità, velocità).",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Officializzazione o sostituzione",
+          "desc": "Per ogni shadow IT rilevante: valutare se officializzarlo, sostituirlo con una soluzione approvata, o eliminarlo.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Adoption gap analysis",
+          "desc": "Misurare sistematicamente il tempo tra go-live e raggiungimento di soglie di adozione predefinite per ogni tecnologia.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Pre-launch adoption preparation",
+          "desc": "Strutturare attività di preparazione all'adozione prima del go-live: comunicazione, formazione, champion, supporto dedicato.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Hypercare period",
+          "desc": "Definire un periodo di hypercare post-lancio (4-8 settimane) con supporto intensivo per accelerare l'adozione.",
+          "hours": 16,
+          "cost": 1600
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "cat": "Persone",
+      "sub": "Competenze e utilizzo reale",
+      "title": "Competenze e skill",
+      "text": "Le competenze presenti sono mappate, allineate ai ruoli e utilizzate concretamente nel lavoro quotidiano (no gap critici scoperti).",
+      "anchor_low": "Skill non mappate, gap critici, competenze non usate",
+      "anchor_high": "Skill mapping completo, ruoli allineati, gap coperti",
+      "kpis": [
+        {
+          "num": 132,
+          "name": "% competenze utilizzate vs disponibili",
+          "desc": "Percentuale delle competenze disponibili nell'organizzazione che vengono effettivamente utilizzate nel lavoro.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 133,
+          "name": "Gap competenze dichiarate e osservate in pratica",
+          "desc": "Differenza tra le competenze che i dipendenti dichiarano di avere e quelle osservate nel lavoro reale.",
+          "benchmark": "Minimo possibile"
+        },
+        {
+          "num": 134,
+          "name": "N. competenze critiche non coperte",
+          "desc": "Numero di competenze critiche per il business che non sono presenti o sufficientemente presidiate.",
+          "benchmark": "0 critiche"
+        },
+        {
+          "num": 135,
+          "name": "% ruoli con skill mapping formalizzato",
+          "desc": "Percentuale di ruoli con una mappatura formale delle competenze richieste e di quelle effettivamente disponibili.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 136,
+          "name": "% attività svolte senza competenze adeguate",
+          "desc": "Percentuale di attività operative svolte da persone che non hanno le competenze adeguate per svolgerle.",
+          "benchmark": "<5%"
+        },
+        {
+          "num": 137,
+          "name": "Livello allineamento tra competenze e ruolo",
+          "desc": "Grado di corrispondenza tra le competenze di una persona e quelle richieste dal suo ruolo.",
+          "benchmark": ">8/10"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Competency utilization survey",
+          "desc": "Condurre una survey per identificare le competenze disponibili in azienda non adeguatamente utilizzate nel ruolo attuale.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Role-skill realignment",
+          "desc": "Ridisegnare i ruoli o riassegnare le responsabilità per meglio sfruttare le competenze esistenti.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Internal talent marketplace",
+          "desc": "Implementare un sistema di matching interno per collegare progetti e opportunità alle competenze disponibili non utilizzate.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Skills assessment strutturato",
+          "desc": "Condurre assessment strutturati per validare le competenze dichiarate, con valutazione pratica e feedback strutturato.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "360° feedback competenze",
+          "desc": "Implementare un processo di feedback a 360° sulle competenze chiave, con confronto tra auto-valutazione e valutazione esterna.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Development plan personalizzato",
+          "desc": "Definire piani di sviluppo personalizzati per colmare i gap identificati, con obiettivi misurabili e timeline.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Critical skills mapping",
+          "desc": "Identificare le competenze critiche per il business nei prossimi 12-24 mesi e verificare la copertura interna.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Hiring plan strategico",
+          "desc": "Definire un piano di assunzioni mirati a coprire le competenze critiche mancanti, con profili dettagliati.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Upskilling programma accelerato",
+          "desc": "Avviare programmi di upskilling accelerato sulle competenze critiche più facilmente sviluppabili internamente.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Job architecture design",
+          "desc": "Definire per ogni ruolo le competenze richieste (hard e soft) con livelli di proficiency attesi.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Skill framework implementation",
+          "desc": "Implementare un framework di competenze condiviso con HR e manager, usato per valutazione, sviluppo e recruiting.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Annual skill review",
+          "desc": "Istituire una review annuale delle skill richieste per ogni ruolo, aggiornando i profili al cambiamento del business.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Competency-role gap analysis",
+          "desc": "Identificare i casi in cui le persone svolgono regolarmente attività al di là delle proprie competenze.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Just-in-time training",
+          "desc": "Implementare formazione just-in-time per le attività critiche che vengono svolte senza competenze adeguate.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Task reallocation",
+          "desc": "Ridistribuire le attività critiche verso le persone con competenze adeguate, riducendo il rischio operativo.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Person-role fit assessment",
+          "desc": "Condurre un assessment di allineamento persona-ruolo per tutti i dipendenti chiave.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Role redesign",
+          "desc": "Per i casi di forte disallineamento, valutare il ridisegno del ruolo o la riassegnazione della persona a un ruolo più adatto.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "Internal mobility program",
+          "desc": "Implementare un programma di mobilità interna che permetta alle persone di trovare ruoli più allineati alle proprie competenze.",
+          "hours": 16,
+          "cost": 1600
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "cat": "Persone",
+      "sub": "Engagement e ownership",
+      "title": "Engagement e ownership",
+      "text": "I dipendenti si sentono coinvolti e responsabili dei risultati, prendono iniziative autonome e l'eNPS è positivo.",
+      "anchor_low": "Bassa motivazione, poche iniziative dal basso",
+      "anchor_high": "Engagement alto, ownership diffusa, eNPS positivo",
+      "kpis": [
+        {
+          "num": 150,
+          "name": "Livello engagement dipendenti (survey)",
+          "desc": "Livello di coinvolgimento e motivazione dei dipendenti rispetto al lavoro e all'organizzazione.",
+          "benchmark": ">7/10"
+        },
+        {
+          "num": 151,
+          "name": "Livello ownership percepita sui risultati (survey)",
+          "desc": "Percezione dei dipendenti di essere responsabili dei risultati del proprio lavoro e del proprio team.",
+          "benchmark": ">7/10"
+        },
+        {
+          "num": 152,
+          "name": "% obiettivi individuali raggiunti",
+          "desc": "Percentuale degli obiettivi individuali assegnati che vengono effettivamente raggiunti nel periodo.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 153,
+          "name": "% decisioni prese a livello operativo (autonomia)",
+          "desc": "Percentuale di decisioni operative prese autonomamente dal personale senza necessità di escalation.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 154,
+          "name": "Tasso partecipazione iniziative di miglioramento",
+          "desc": "Percentuale di dipendenti che partecipa attivamente a iniziative di miglioramento proposte dall'organizzazione.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 155,
+          "name": "N. iniziative autonome generate dai team",
+          "desc": "Numero di iniziative di miglioramento proposte spontaneamente dai team senza sollecitazione dall'alto.",
+          "benchmark": "Crescente nel tempo"
+        },
+        {
+          "num": 156,
+          "name": "eNPS — Employee Net Promoter Score",
+          "desc": "Employee Net Promoter Score: misura la probabilità che un dipendente raccomandi l'organizzazione come posto dove lavorare. Proxy del cambiamento culturale reale.",
+          "benchmark": ">20"
+        }
+      ],
+      "n_actions": 21,
+      "actions_preview": [
+        {
+          "name": "Engagement survey",
+          "desc": "Condurre survey di engagement semestrale con strumento validato, con risultati condivisi e action plan per funzione.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Manager effectiveness program",
+          "desc": "Formare i manager sulle pratiche di leadership che aumentano l'engagement: riconoscimento, ascolto, sviluppo.",
+          "hours": 24,
+          "cost": 2400
+        },
+        {
+          "name": "Engagement action team",
+          "desc": "Costituire team di azione sull'engagement per funzione, con responsabilità di implementare le azioni prioritarie emerse dalla survey.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Ownership culture assessment",
+          "desc": "Valutare attraverso survey e interviste il livello percepito di ownership e le sue determinanti.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Autonomia e responsabilità",
+          "desc": "Aumentare il livello di autonomia decisionale dei team operativi, accompagnandola con chiara responsabilità sui risultati.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Outcome-based management",
+          "desc": "Spostare il focus del management dagli input (ore lavorate, attività svolte) agli outcome (risultati raggiunti).",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Obiettivi SMART review",
+          "desc": "Rivedere la qualità degli obiettivi individuali esistenti, assicurando che siano SMART e raggiungibili.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Check-in frequenti",
+          "desc": "Introdurre check-in regolari (mensili) tra manager e collaboratore sullo stato degli obiettivi, con coaching proattivo.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Obiettivi sfidanti ma realistici",
+          "desc": "Calibrare gli obiettivi per essere sfidanti ma realistici, evitando sia obiettivi troppo facili che impossibili.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Decision rights mapping",
+          "desc": "Mappare le decisioni ricorrenti e verificare se vengono prese al livello organizzativo più appropriato.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Delega strutturata",
+          "desc": "Trasferire formalmente la responsabilità decisionale su specifiche categorie di decisioni al livello operativo.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Manager coaching su delega",
+          "desc": "Formare i manager sulla delega efficace: cosa delegare, come delegare, come monitorare senza microgestire.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Improvement idea system",
+          "desc": "Implementare un sistema semplice per raccogliere e valorizzare le idee di miglioramento dai team operativi.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Kaizen events",
+          "desc": "Organizzare eventi di miglioramento continuo (Kaizen) dove i team lavorano su problemi specifici con supporto facilitato.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Idea implementation rate",
+          "desc": "Misurare e comunicare il tasso di implementazione delle idee raccolte, aumentando la fiducia nel sistema.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Innovation time",
+          "desc": "Introdurre tempo dedicato all'innovazione e al miglioramento autonomo per i team (anche solo il 10% del tempo).",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Internal innovation challenge",
+          "desc": "Lanciare challenge interni su problemi specifici dell'azienda, invitando i team a proporre soluzioni.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Autonomy lab",
+          "desc": "Creare un 'laboratorio di autonomia' dove i team possono sperimentare nuovi approcci con supervisione leggera.",
+          "hours": 20,
+          "cost": 2000
+        },
+        {
+          "name": "eNPS measurement",
+          "desc": "Implementare la misurazione trimestrale dell'eNPS con una singola domanda e analisi dei commenti aperti.",
+          "hours": 4,
+          "cost": 400
+        },
+        {
+          "name": "eNPS driver analysis",
+          "desc": "Analizzare i driver principali dell'eNPS: cosa spinge i promotori, cosa genera i detrattori.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Targeted improvement actions",
+          "desc": "Definire azioni specifiche sui driver più critici dell'eNPS, con owner e timeline.",
+          "hours": 16,
+          "cost": 1600
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "cat": "Persone",
+      "sub": "Formazione efficace",
+      "title": "Formazione efficace",
+      "text": "La formazione erogata viene applicata nel lavoro quotidiano in tempi rapidi ed è collegata agli obiettivi di business.",
+      "anchor_low": "Formazione episodica, non applicata",
+      "anchor_high": "Formazione mirata, applicata subito, collegata al business",
+      "kpis": [
+        {
+          "num": 138,
+          "name": "% formazione applicata nel lavoro quotidiano",
+          "desc": "Percentuale della formazione erogata che viene effettivamente applicata nel lavoro quotidiano.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 139,
+          "name": "Tempo medio tra formazione e utilizzo operativo",
+          "desc": "Tempo che passa dalla fine di un percorso formativo al primo utilizzo concreto delle competenze apprese.",
+          "benchmark": "<30 gg"
+        },
+        {
+          "num": 140,
+          "name": "Livello retention competenze (survey/test)",
+          "desc": "Percentuale di conoscenze acquisite durante la formazione che vengono mantenute nel tempo.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 141,
+          "name": "N. ore formazione per dipendente/anno",
+          "desc": "Numero medio di ore di formazione fruite da ciascun dipendente nell'arco di un anno.",
+          "benchmark": ">40 ore/anno"
+        },
+        {
+          "num": 142,
+          "name": "% contenuti formativi utilizzati dopo erogazione",
+          "desc": "Percentuale dei materiali formativi prodotti o acquistati che vengono utilizzati dopo la prima erogazione.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 143,
+          "name": "N. iniziative formative collegate al business",
+          "desc": "Percentuale delle iniziative formative direttamente collegate a obiettivi di business specifici.",
+          "benchmark": ">80% delle iniziative"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Learning transfer action plan",
+          "desc": "Definire per ogni percorso formativo un action plan di applicazione: cosa farò diversamente lunedì mattina.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Manager role in learning transfer",
+          "desc": "Formare i manager sul loro ruolo nel supportare l'applicazione della formazione, con check-in strutturati post-corso.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Application assessment a 90gg",
+          "desc": "Valutare l'applicazione delle competenze apprese a 90 giorni dalla formazione, con feedback strutturato.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Just-in-time learning",
+          "desc": "Erogare la formazione nel momento più vicino all'utilizzo previsto, riducendo il dimenticatoio.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "On-the-job training",
+          "desc": "Integrare la formazione in aula con sessioni di on-the-job training dove le competenze vengono applicate immediatamente.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Learning path redesign",
+          "desc": "Ridisegnare i percorsi formativi integrando momenti di pratica e applicazione immediata ogni 30-60 minuti di teoria.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Spaced repetition",
+          "desc": "Introdurre sessioni di rinforzo a distanza crescente (spaced repetition) per consolidare le competenze apprese.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Micro-learning",
+          "desc": "Sviluppare contenuti di micro-learning (5-10 minuti) per il rinforzo periodico delle competenze chiave.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Practice opportunities",
+          "desc": "Creare opportunità strutturate di pratica dopo la formazione: esercitazioni, progetti, job rotation.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Training needs analysis",
+          "desc": "Condurre un'analisi dei fabbisogni formativi per funzione, identificando le priorità di investimento.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Learning hours target",
+          "desc": "Definire un target di ore formazione per dipendente/anno e integrarlo negli obiettivi dei manager.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Blended learning optimization",
+          "desc": "Ottimizzare il mix di formazione (aula, e-learning, on-the-job) per massimizzare l'efficacia per ora investita.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Content accessibility",
+          "desc": "Rendere i materiali formativi facilmente accessibili e ricercabili sulla piattaforma aziendale.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Reference material design",
+          "desc": "Progettare i materiali formativi come strumenti di riferimento post-corso (job aids, checklist, quick reference cards).",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "Usage analytics LMS",
+          "desc": "Monitorare l'utilizzo dei contenuti sulla piattaforma LMS e ottimizzare quelli meno consultati.",
+          "hours": 8,
+          "cost": 800
+        },
+        {
+          "name": "Business-linked learning strategy",
+          "desc": "Definire la strategia formativa a partire dagli obiettivi di business, non dall'offerta formativa disponibile.",
+          "hours": 12,
+          "cost": 1200
+        },
+        {
+          "name": "ROI formazione",
+          "desc": "Misurare il ROI delle principali iniziative formative in termini di impatto sui KPI di business.",
+          "hours": 16,
+          "cost": 1600
+        },
+        {
+          "name": "Business sponsor per formazione",
+          "desc": "Coinvolgere i manager di business come sponsor delle iniziative formative, aumentando la rilevanza e il commitment.",
+          "hours": 8,
+          "cost": 800
+        }
+      ]
+    }
+  ]
+}

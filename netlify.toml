@@ -1,0 +1,28 @@
+# =============================================================
+# Configurazione Netlify
+# Tutti i file statici stanno alla radice del repo.
+# Le Functions stanno in netlify/functions/.
+# =============================================================
+
+[build]
+  publish    = "."
+  functions  = "netlify/functions"
+  # niente comando di build: pagina statica + functions Node native
+
+[functions]
+  node_bundler = "esbuild"
+
+# Header di sicurezza ragionevoli
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options    = "nosniff"
+    X-Frame-Options           = "SAMEORIGIN"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
+
+# Cache lunga per dataset.json (cambialo solo quando aggiorni il framework)
+[[headers]]
+  for = "/dataset.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
