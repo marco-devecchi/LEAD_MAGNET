@@ -4,7 +4,7 @@
  * VARIABILI D'AMBIENTE da configurare in Netlify (Site settings → Environment variables):
  *   BREVO_API_KEY     - API key v3 di Brevo (https://app.brevo.com/settings/keys/api)
  *   BREVO_LIST_ID     - ID numerico della lista dove inserire i contatti
- *   ALLOWED_ORIGIN    - (opzionale) dominio del sito per CORS, es. "https://check.marcodevecchi.it"
+ *   ALLOWED_ORIGIN    - (opzionale) dominio del sito per CORS, es. "https://check.marco-devecchi.com"
  *                       Default: "*"  (utile per testing, da restringere in produzione)
  *
  * BODY atteso (POST JSON):
@@ -39,11 +39,10 @@ exports.handler = async (event) => {
   const listId  = process.env.BREVO_LIST_ID ? Number(process.env.BREVO_LIST_ID) : null;
   if (!apiKey) {
     console.error('Missing BREVO_API_KEY');
-    // Non bloccare il PDF: rispondiamo 200 lato client, logghiamo l'errore lato server
     return { statusCode: 200, headers: cors, body: JSON.stringify({ ok: false, reason: 'missing_api_key' }) };
   }
 
-  // Split nome / cognome (Brevo ha NOM e PRENOM)
+  // Split nome / cognome (Brevo IT usa NOME e COGNOME)
   const parts = (name || '').trim().split(/\s+/);
   const firstName = parts.shift() || '';
   const lastName  = parts.join(' ');
@@ -51,8 +50,8 @@ exports.handler = async (event) => {
   const payload = {
     email,
     attributes: {
-      NOM:        lastName,
-      PRENOM:     firstName,
+      NOME:       firstName,
+      COGNOME:    lastName,
       AZIENDA:    company || '',
       RUOLO:      role || '',
       SETTORE:    sector || '',
@@ -61,12 +60,11 @@ exports.handler = async (event) => {
       SCORE_EXE:  cat_scores?.Execution  ?? null,
       SCORE_TECH: cat_scores?.Technology ?? null,
       SCORE_PEP:  cat_scores?.Persone    ?? null,
-      // Risposte raw, utile per analisi / segmentazione
-      ANSWERS_JSON: JSON.stringify(answers || {}),
+      ANSWER_JSON: JSON.stringify(answers || {}),
       ASSESSMENT_TS: ts || new Date().toISOString(),
     },
     listIds: listId ? [listId] : undefined,
-    updateEnabled: true, // se l'email esiste già, aggiorna gli attributi
+    updateEnabled: true,
   };
 
   try {
@@ -83,7 +81,6 @@ exports.handler = async (event) => {
     if (!resp.ok) {
       const err = await resp.text();
       console.error('Brevo error:', resp.status, err);
-      // anche in caso di errore Brevo, non vogliamo bloccare il flusso lato utente
       return { statusCode: 200, headers: cors, body: JSON.stringify({ ok: false, status: resp.status }) };
     }
 
