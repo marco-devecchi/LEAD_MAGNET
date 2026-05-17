@@ -1055,13 +1055,15 @@ async function generatePDF(lead){
   // Ritorna la nuova y dopo il box.
   function renderInsightBox(doc, opts){
     const { title, blocks, color, lightColor, startY, M, W, H } = opts;
-    const innerL = M + 18;            // padding sinistro contenuto (oltre la stripe)
-    const innerR = W - M - 16;
+    // Padding interno generoso: 22pt a sinistra (oltre la stripe), 22pt a destra
+    // Per evitare overflow su testi con parole lunghe o spaziature jsPDF irregolari
+    const innerL = M + 22;
+    const innerR = W - M - 22;
     const textW  = innerR - innerL;
     const stripeW = 4;
     const padTop = 14, padBottom = 14;
     const titleSize = 9, titleLeading = 14;
-    const bodySize = 10.2, bodyLeading = 14;
+    const bodySize = 10, bodyLeading = 14;       // ridotto da 10.2 a 10 per più margine
     const citeSize = 8, citeLeading = 11;
     const paraGap = 8;
 
@@ -1115,14 +1117,19 @@ async function generatePDF(lead){
 
     for(let bi = 0; bi < blocks.length; bi++){
       const block = blocks[bi];
-      const bodyLines = doc.splitTextToSize(softBreak(block.text, 60), textW);
+      // Safety: passo a splitTextToSize una larghezza leggermente inferiore a textW
+      // per evitare che jsPDF lasci sbordare l'ultima parola della riga.
+      // softBreak con maxLen=40 garantisce wrap anche su pseudo-parole lunghe (URL, citazioni)
+      const safeW = textW - 8;
+      const bodyLines = doc.splitTextToSize(softBreak(block.text, 40), safeW);
       const bodyH = bodyLines.length * bodyLeading;
 
       let citeLines = null;
       let citeH = 0;
       if(block.cites && block.cites.length > 0){
-        const citeStr = '↳ ' + block.cites.join(' · ');
-        citeLines = doc.splitTextToSize(citeStr, textW);
+        const citeStr = 'Fonti: ' + block.cites.join(', ');
+        // citazioni: softBreak aggressivo per essere sicuri (parole composte tipo "via Salesforce")
+        citeLines = doc.splitTextToSize(softBreak(citeStr, 35), safeW);
         citeH = 4 + citeLines.length * citeLeading;
       }
 
@@ -1179,7 +1186,7 @@ async function generatePDF(lead){
     doc.setFontSize(7.5);
     doc.setTextColor('#8a8f9c');
     for(const ref of refs){
-      const lines = doc.splitTextToSize('• ' + softBreak(ref, 80), W - 2*M);
+      const lines = doc.splitTextToSize('- ' + softBreak(ref, 80), W - 2*M - 6);
       if(y + lines.length * 9 > H - M){
         doc.addPage();
         y = M;
