@@ -1431,7 +1431,24 @@ async function generatePDF(lead){
     doc.text('Punteggio sottocategoria:', M, y);
     doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.setTextColor(cCol);
     doc.text(scoreStr, M+135, y);
-    y += 18;
+    y += 16;
+    // Riga di chiarimento: cosa rappresenta davvero questo punteggio + interpretazione dinamica
+    let interpretazione;
+    if(score < 40){
+      interpretazione = "sei in una situazione critica che richiede intervento prioritario.";
+    } else if(score < 65){
+      interpretazione = "sei sotto lo standard di eccellenza, hai margini di miglioramento importanti.";
+    } else if(score < 80){
+      interpretazione = "sei a livello sufficiente con margini di miglioramento concreti.";
+    } else {
+      interpretazione = "sei in linea con gli standard di eccellenza in quest'area.";
+    }
+    const chiarimento = "Frutto della tua singola risposta al check rapido. È una fotografia indicativa: ti dice che in quest'area " + interpretazione + " Per una misurazione completa servono i KPI sottostanti.";
+    doc.setFont('helvetica','italic'); doc.setFontSize(8.5); doc.setTextColor(C.mute);
+    const chiarLines = doc.splitTextToSize(chiarimento, W - 2*M);
+    doc.text(chiarLines, M, y);
+    y += chiarLines.length * 11 + 14;
+    // Descrizione domanda sottostante
     doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
     doc.text(doc.splitTextToSize(q.text, W-2*M), M, y);
     y += doc.splitTextToSize(q.text, W-2*M).length * 12 + 18;
@@ -1463,35 +1480,36 @@ async function generatePDF(lead){
     }
 
     // ------ TABELLA KPI ------
-    if(y > H-100){ doc.addPage(); y = M; }
+    if(y > H-130){ doc.addPage(); y = M; }
     doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
-    doc.text('KPI sottostanti', M, y); y += 16;
+    doc.text('KPI sottostanti', M, y); y += 14;
+    // Intro tabella KPI
+    doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
+    const kpiIntro = "Il tuo punteggio sopra è il primo indicatore aggregato. Per misurare quest'area in profondità, il framework usa i KPI specifici che vedi qui sotto, ognuno con il suo benchmark di eccellenza. Servono come bussola per capire dove e come intervenire concretamente.";
+    const kpiIntroLines = doc.splitTextToSize(kpiIntro, W-2*M);
+    doc.text(kpiIntroLines, M, y);
+    y += kpiIntroLines.length * 12 + 10;
 
-    // Geometria tabella: 4 colonne con padding cella esplicito
+    // Geometria tabella: 3 colonne (KPI, Descrizione, Benchmark)
     const tblW = W - 2*M;
-    const PAD_L = 8, PAD_R = 8; // padding orizzontale interno alla cella
-    // larghezze colonne (somma = tblW)
+    const PAD_L = 8, PAD_R = 8;
     const colWidths = [
-      tblW * 0.30,   // KPI
-      tblW * 0.42,   // Descrizione
-      tblW * 0.12,   // Tuo
-      tblW * 0.16,   // Benchmark
+      tblW * 0.32,   // KPI
+      tblW * 0.50,   // Descrizione
+      tblW * 0.18,   // Benchmark
     ];
-    // posizioni X di inizio di ogni colonna
     const colX = [M];
     for(let i=0;i<colWidths.length-1;i++) colX.push(colX[i] + colWidths[i]);
-    // larghezza effettiva del testo dentro la cella (al netto del padding)
     const textW = colWidths.map(w => Math.max(10, w - PAD_L - PAD_R));
 
-    // Helper: disegna l'header della tabella KPI (riutilizzato dopo page-break)
+    // Helper: disegna l'header della tabella KPI
     const drawKpiHeader = (yy)=>{
       doc.setFillColor(cCol);
       doc.rect(M, yy, tblW, 22, 'F');
       doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
       doc.text('KPI',         colX[0]+PAD_L, yy+14);
       doc.text('DESCRIZIONE', colX[1]+PAD_L, yy+14);
-      doc.text('TUO',         colX[2]+colWidths[2]/2, yy+14, {align:'center'});
-      doc.text('BENCHMARK',   colX[3]+colWidths[3]/2, yy+14, {align:'center'});
+      doc.text('BENCHMARK',   colX[2]+colWidths[2]/2, yy+14, {align:'center'});
     };
 
     drawKpiHeader(y);
@@ -1499,18 +1517,16 @@ async function generatePDF(lead){
 
     // Righe KPI
     q.kpis.forEach((k, idx)=>{
-      // Calcolo le linee usando le larghezze EFFETTIVE (textW) col font giusto per cella
       doc.setFont('helvetica','bold'); doc.setFontSize(9);
       const nameLines  = doc.splitTextToSize(softBreak(k.name, 32), textW[0]);
 
       doc.setFont('helvetica','normal'); doc.setFontSize(8.5);
       const descLines  = doc.splitTextToSize(softBreak(k.desc || '', 40), textW[1]);
       const benchTxt   = k.benchmark || '—';
-      const benchLines = doc.splitTextToSize(softBreak(benchTxt, 20), textW[3]);
+      const benchLines = doc.splitTextToSize(softBreak(benchTxt, 20), textW[2]);
 
       const rowH = Math.max(nameLines.length, descLines.length, benchLines.length, 1) * 11 + 14;
 
-      // Page break con re-stampa header
       if(y + rowH > H - 50){
         doc.addPage(); y = M;
         drawKpiHeader(y); y += 22;
@@ -1522,28 +1538,23 @@ async function generatePDF(lead){
         doc.rect(M, y, tblW, rowH, 'F');
       }
 
-      // Separatori verticali tra colonne (sottilissimi)
+      // Separatori verticali tra colonne
       doc.setDrawColor('#E6E8EE'); doc.setLineWidth(0.3);
       for(let i=1;i<colX.length;i++){
         doc.line(colX[i], y, colX[i], y + rowH);
       }
 
-      // Nome KPI (col padding)
+      // Nome KPI
       doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(C.ink);
       doc.text(nameLines, colX[0]+PAD_L, y+12);
 
-      // Descrizione (col padding)
+      // Descrizione
       doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(C.soft);
       doc.text(descLines, colX[1]+PAD_L, y+12);
 
-      // TUO — colore semaforo coerente con le soglie (3 livelli)
-      const tuoColor = score < 40 ? C.crit : (score < 65 ? C.warn : C.good);
-      doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(tuoColor);
-      doc.text(score + '%', colX[2]+colWidths[2]/2, y+12, {align:'center'});
-
-      // Benchmark (centrato nella sua cella)
-      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(cCol);
-      doc.text(benchLines, colX[3]+colWidths[3]/2, y+12, {align:'center'});
+      // Benchmark (centrato nella sua cella, colore categoria)
+      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(cCol);
+      doc.text(benchLines, colX[2]+colWidths[2]/2, y+12, {align:'center'});
 
       y += rowH;
     });
@@ -1554,12 +1565,36 @@ async function generatePDF(lead){
     y += 18;
 
     // ------ TABELLA AZIONI ------
-    if(y > H-120){ doc.addPage(); y = M; }
+    if(y > H-150){ doc.addPage(); y = M; }
+
+    // Determino quante azioni mostrare in base allo score (4 tier)
+    let azNum, azTierLabel;
+    if(score < 40){
+      azNum = Math.min(15, q.actions_preview.length);    // critico: quasi tutte
+      azTierLabel = "intervento prioritario, ampio set di azioni per riportare l'area su standard accettabili";
+    } else if(score < 65){
+      azNum = Math.min(8, q.actions_preview.length);     // da migliorare: 7-9
+      azTierLabel = "interventi mirati per chiudere il gap rispetto agli standard di eccellenza";
+    } else if(score < 80){
+      azNum = Math.min(4, q.actions_preview.length);     // buono: 3-5
+      azTierLabel = "azioni di affinamento per consolidare e portare l'area verso l'eccellenza";
+    } else {
+      azNum = Math.min(2, q.actions_preview.length);     // ottimo: 1-2
+      azTierLabel = "azioni di mantenimento per preservare il livello raggiunto";
+    }
+    const azionsFiltered = q.actions_preview.slice(0, azNum);
+
     doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
     doc.text('Azioni concrete suggerite', M, y);
     doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(C.mute);
-    doc.text('(' + q.actions_preview.length + ' azioni)', M+170, y);
-    y += 16;
+    doc.text('(' + azNum + ' azioni su ' + q.actions_preview.length + ' del framework)', M+170, y);
+    y += 14;
+    // Intro tabella Azioni, dinamica in base allo score
+    doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
+    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono ordinate per impatto, ma vanno scelte e priorizzate in base al contesto aziendale; la stima oraria a fianco di ognuna serve come riferimento di effort.";
+    const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
+    doc.text(azIntroLines, M, y);
+    y += azIntroLines.length * 12 + 10;
 
     // Geometria tabella Azioni: 2 colonne con padding cella esplicito
     const azWidths = [ tblW * 0.32, tblW * 0.68 ];
@@ -1577,7 +1612,7 @@ async function generatePDF(lead){
     drawAzHeader(y);
     y += 22;
 
-    q.actions_preview.forEach((a, idx)=>{
+    azionsFiltered.forEach((a, idx)=>{
       doc.setFont('helvetica','bold'); doc.setFontSize(9);
       const azLines  = doc.splitTextToSize(softBreak(a.name, 32), azTextW[0]);
       doc.setFont('helvetica','normal'); doc.setFontSize(8.5);
