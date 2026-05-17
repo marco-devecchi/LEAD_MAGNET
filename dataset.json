@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "framework_total_kpis": 174,
   "categories": {
     "Direzione": {
@@ -156,6 +156,59 @@
           "hours": 8,
           "cost": 800
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Quando entro in una PMI italiana per la prima volta, lo schema che incontro è quasi sempre lo stesso. Il fondatore (o il vertice aziendale) ha idee chiare su dove vuole portare l'azienda. La dirigenza ne è parzialmente a conoscenza, ma spesso non condivide pienamente quelle scelte, e raramente lo dice apertamente. I collaboratori, dal canto loro, ne sanno poco o nulla, e non capiscono il perché delle scelte che si trovano a eseguire ogni giorno.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano il quadro su scala internazionale. La ricerca più solida sull'argomento ha rilevato che solo il 55% dei middle manager riesce a citare anche una sola delle cinque priorità strategiche della propria azienda. Un'analisi successiva mostra che il 60% dei leader pensa che meno del 20% della forza lavoro abbia una comprensione di base della strategia. Sul fronte della trasformazione, lo scollamento tra pianificazione ed esecuzione è oggi il principale ostacolo dichiarato, citato dal 35% degli executive come barriera numero uno.",
+            "cites": [
+              "Sull, HBR 2015",
+              "Gartner",
+              "PMI 2025"
+            ]
+          },
+          {
+            "text": "Nelle PMI italiane il fenomeno è amplificato da tre fattori strutturali: una predominanza di imprese a controllo familiare, oltre l'80% del totale, una classe dirigente con età media molto alta, con il 42% delle manifatturiere guidato da amministratori over 60, e una sovrapposizione strutturale tra famiglia, azienda e patrimonio che rende difficile separare la strategia dell'impresa dalla visione personale del fondatore.",
+            "cites": [
+              "Confindustria",
+              "Politecnico di Milano"
+            ]
+          },
+          {
+            "text": "La causa profonda, però, è culturale. Tante volte ho visto fondatori e dirigenti tenere la strategia stretta nella propria testa per una convinzione di fondo: che le persone non capirebbero, o peggio, che la userebbero per boicottare. Questa logica del \"meglio non dire troppo\" si propaga fino ai livelli operativi. Il risultato è un'organizzazione che si muove a strappi, fatta di silos informativi.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "L'azienda è un organismo le cui parti devono pensare all'unisono per raggiungere obiettivi sfidanti. Lasciare le persone all'oscuro non le rende più controllabili, alimenta sfiducia, sospetto, distacco. Si crea un loop tossico: il fondatore non si fida, le persone non si sentono coinvolte, nessuno rema nella stessa direzione, il fondatore si conferma che \"non si poteva contare su di loro\".",
+            "cites": []
+          },
+          {
+            "text": "Questo scollamento ha un costo economico documentato. Lo studio HBR di Sull stima che le aziende con esecuzione strategica debole perdano circa il 40% del valore potenziale della loro strategia. Le aziende che invece riescono a chiudere il gap di esecuzione hanno tre volte più probabilità di registrare crescita sopra la media, e il doppio delle probabilità di avere profittabilità sopra la media.",
+            "cites": [
+              "Sull, HBR 2015",
+              "Gartner"
+            ]
+          },
+          {
+            "text": "Il reframe da fare è questo: la strategia non è un segreto da proteggere, è una bussola che diventa potente solo se la usano in tanti. Non significa che tutti debbano sapere tutto, significa che debbano saperne abbastanza da decidere, ogni mattina, di sacrificarsi per un ideale o per un obiettivo. Senza quel \"abbastanza\", la strategia resta uno slide deck che nessuno usa, e l'azienda continua a muoversi a strappi mentre il fondatore si chiede perché.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Sull D., Homkes R., Sull C., \"Why Strategy Execution Unravels, and What to Do About It\", Harvard Business Review, marzo 2015",
+        "Gartner, ricerca su strategic alignment e employee strategy awareness",
+        "Project Management Institute, \"Step Up: Redefining the Path to Project Success with M.O.R.E.\", 2025",
+        "Politecnico di Milano, Osservatorio sulle aziende familiari italiane",
+        "Confindustria, dati strutturali sulle PMI italiane"
       ]
     },
     {
@@ -290,6 +343,51 @@
           "hours": 16,
           "cost": 1600
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane gli obiettivi tendono a essere definiti in modo generico, comunicati verbalmente, raramente collegati a KPI misurabili. Si parla di \"fatturato in crescita\", \"migliorare la qualità\", \"essere più presenti sul mercato\", ma raramente queste intenzioni si trasformano in target specifici, con scadenze, owner nominativi e indicatori di avanzamento. Il risultato è prevedibile: ogni persona interpreta gli obiettivi a modo suo, e a fine anno è difficile dire se l'obiettivo sia stato raggiunto o meno.",
+            "cites": []
+          },
+          {
+            "text": "I dati internazionali confermano la portata del fenomeno. Gallup, su milioni di lavoratori intervistati, rileva che solo poco più della metà dichiara di avere una comprensione chiara di cosa ci si aspetta da lui sul lavoro. La chiarezza degli obiettivi è correlata in modo significativo a produttività, retention e qualità: i dipendenti che capiscono come il loro lavoro contribuisce a uno scopo più ampio sono 5,6 volte più engaged dei colleghi che non lo capiscono. Sul fronte OKR, il framework più adottato a livello globale per gestire obiettivi, il 65% delle startup fallisce nel collegare gli OKR agli obiettivi aziendali, riducendone drasticamente l'efficacia.",
+            "cites": [
+              "Gallup 2014",
+              "Gallup & Stand Together 2025",
+              "EvalFlow 2026"
+            ]
+          },
+          {
+            "text": "La causa profonda nelle PMI è duplice. Da un lato c'è una resistenza culturale alla formalizzazione: scrivere gli obiettivi in modo SMART viene percepito come burocrazia, e si preferisce gestire \"a sensibilità\". Dall'altro c'è la conseguenza diretta dello scollamento informativo descritto nella sezione sulla strategia condivisa: se i collaboratori non conoscono la direzione aziendale, non hanno appigli per costruire obiettivi individuali coerenti, e i loro KPI restano staccati dai risultati di business.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Un obiettivo non è \"cosa voglio ottenere\", è \"cosa sono disposto a misurare\". Questa distinzione cambia tutto. Se non hai un KPI associato, non è un obiettivo: è una speranza. E le speranze, per definizione, non si gestiscono.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, scrivere ogni obiettivo in forma SMART non è burocrazia, è la prima forma di rispetto verso chi lo dovrà eseguire: gli si sta dicendo con precisione cosa ci si aspetta, e quando saprà di averlo raggiunto. Secondo, assegnare un owner esplicito a ogni obiettivo è la condizione minima per l'accountability: senza un nome accanto a un obiettivo, quell'obiettivo non esiste davvero. Terzo, gli obiettivi vanno costruiti insieme alle persone che li eseguiranno, non calati dall'alto. Le ricerche mostrano che i dipendenti che partecipano alla definizione dei propri obiettivi sono significativamente più motivati a raggiungerli.",
+            "cites": [
+              "PerformYard 2026"
+            ]
+          },
+          {
+            "text": "E un ultimo punto operativo: meno è meglio. Se ogni funzione ha 15 KPI, nessuno ha davvero un focus. Il numero ottimale documentato è di 3-5 KPI chiave per team: oltre quel numero, l'attenzione si disperde e nessun obiettivo viene davvero perseguito.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Gallup, \"State of the Global Workplace 2024\" e \"Strengths-Based Goal Setting\", 2014",
+        "Gallup & Stand Together, \"The Power of Purpose: Work Purpose Index\", 2025",
+        "Gallup, \"The Relationship Between Engagement at Work and Organizational Outcomes\", meta-analisi",
+        "EvalFlow, \"100+ Employee Performance Goal Examples by Department\", 2026",
+        "PerformYard, \"Performance Goals for Employees 2026\", 2026"
       ]
     },
     {
@@ -424,6 +522,49 @@
           "hours": 8,
           "cost": 800
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane le decisioni importanti vengono prese ancora oggi prevalentemente \"a sensazione\". L'esperienza del fondatore, l'intuito, la conoscenza diretta del mercato e dei clienti sono il vero patrimonio decisionale. Questo approccio ha funzionato per decenni e produce risultati eccellenti quando il contesto è stabile, ma diventa fragile quando il mercato cambia velocemente o quando l'azienda cresce oltre la capacità di una singola testa di tenere tutto sotto controllo.",
+            "cites": []
+          },
+          {
+            "text": "I dati sulle aziende data-driven mostrano vantaggi competitivi rilevanti. Le organizzazioni data-driven sono 23 volte più propense ad acquisire nuovi clienti, 6 volte più propense a trattenerli, e 19 volte più propense a essere profittevoli rispetto alle altre. Le aziende che usano analytics nelle decisioni strategiche sono 2,5 volte più propense a essere top performer del proprio settore. Per le PMI specificamente, l'adozione di processi decisionali data-driven è correlata a un incremento di profitto del 6% rispetto ai competitor. Eppure, solo il 20% dei leader dichiara che la propria organizzazione eccelle nelle decisioni.",
+            "cites": [
+              "McKinsey Global Institute 2016",
+              "McKinsey citato in NumberAnalytics 2025",
+              "McKinsey citato in DigitalOcean 2025",
+              "McKinsey citato in Diwo 2025"
+            ]
+          },
+          {
+            "text": "Le cause di fondo nelle PMI sono diverse e si rinforzano a vicenda. La prima è strutturale: in molte aziende i dati esistono, ma vivono in silos (Excel sparsi, CRM, ERP, fogli del commerciale) e non vengono mai aggregati in una vista unica. La seconda è culturale: chi prende decisioni si fida più della propria esperienza che di un foglio di numeri, soprattutto quando i numeri contraddicono l'intuito. La terza, e forse la più sottile, è di competenze: in molte PMI manca una figura che sappia interpretare i dati e trasformarli in raccomandazioni operative, e il dato grezzo da solo non basta a guidare le decisioni.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il reframe da fare non è \"i dati contro l'intuito\", è \"i dati a servizio dell'intuito\". L'esperienza di chi conosce un'azienda profondamente è un asset prezioso, ma diventa un fattore di rischio quando è l'unica fonte decisionale. Il dato non sostituisce il giudizio: lo arricchisce, lo confronta con la realtà, e lo aiuta a non innamorarsi di sé stesso.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, identificare i 5-7 indicatori che davvero contano per il business e renderli visibili in una dashboard semplice, aggiornata regolarmente, consultata in modo rituale (es. ogni lunedì mattina). Non serve un BI complesso, serve disciplina. Secondo, ogni decisione importante deve avere associato il dato che la motiva: non si discute \"se lanciare il nuovo prodotto\", si discute \"se lanciare il nuovo prodotto sulla base dei seguenti tre dati\". Terzo, costruire la cultura del dato richiede pazienza: iniziare con un caso d'uso semplice, dimostrare che funziona, e poi allargare. Non si converte un'azienda in \"data-driven\" in tre mesi, ma in tre anni di applicazione costante sì.",
+            "cites": []
+          },
+          {
+            "text": "L'asticella non è altissima, anche piccoli passi producono vantaggi rilevanti. La differenza tra una PMI che decide \"a sensazione\" e una che decide \"a sensazione integrata da dati\" è il fattore competitivo più sottovalutato del decennio.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "McKinsey Global Institute, \"The Age of Analytics: Competing in a Data-Driven World\", 2016",
+        "McKinsey, \"The Data-Driven Enterprise of 2025\", 2025",
+        "McKinsey, sondaggio decision-making executive, citato in Diwo, \"7 Characteristics of the Data-Driven Enterprise\", 2025",
+        "Harvard Business School Online, \"The Advantages of Data-Driven Decision-Making\", 2019"
       ]
     },
     {
@@ -582,6 +723,61 @@
           "hours": 16,
           "cost": 1600
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane, quando guardo come funzionano davvero i processi operativi, raramente trovo procedure documentate bene e ancora più raramente le trovo davvero spiegate alle persone. La causa ufficiale che mi viene data è sempre la stessa, mancanza di tempo, ma la verità sta più in profondità: non si è compresa l'importanza di questi passaggi.",
+            "cites": []
+          },
+          {
+            "text": "Il fenomeno non è solo italiano, è strutturale nelle organizzazioni che non investono in process management. Le ricerche stimano che circa l'80% dei processi nella maggior parte delle organizzazioni resti non documentato, vivendo solo come \"tribal knowledge\" nelle teste delle persone. Nel settore manifatturiero, il 97% delle aziende dichiara di essere preoccupato per la perdita di conoscenza non documentata, e oltre il 75% segnala una carenza moderata o grave di risorse qualificate, con un costo medio dell'11% sui ricavi annui tra straordinari, fermi e rilavorazioni.",
+            "cites": [
+              "Tallyfy",
+              "arXiv 2025"
+            ]
+          },
+          {
+            "text": "C'è poi un secondo livello del problema, che è quello del coinvolgimento di chi quei processi li vive ogni giorno. Le decisioni sui processi, ad esempio l'adozione di un nuovo software che dovrebbe migliorarli, vengono prese in alto, da CTO, CEO, CFO, senza coinvolgere chi userà lo strumento ogni giorno. Il risultato è prevedibile: le persone, non capendo il perché e non avendo strumenti per usare bene il nuovo, tornano al metodo vecchio che sapevano fare. La documentazione formale che viene lasciata non viene letta, perché scritta di fretta e quasi mai aggiornata.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano che questa è la causa principale del fallimento dei progetti di cambiamento operativo, non solo nelle PMI ma a livello globale. McKinsey ha rilevato che quando i manager di linea e i collaboratori frontline non vengono coinvolti, il tasso di successo della trasformazione crolla al 3%, contro un 26-28% quando ognuno di questi gruppi è coinvolto. Coinvolgere i collaboratori già nella fase di decisione aumenta la probabilità di successo del 30%, e spostare la pianificazione dell'implementazione direttamente sulle persone che la eseguiranno la aumenta di un ulteriore 11%.",
+            "cites": [
+              "McKinsey 2021",
+              "CEB Corporate Leadership Council 2016"
+            ]
+          },
+          {
+            "text": "Sotto la motivazione del tempo, però, si nasconde spesso qualcosa di più sottile. Si tende ancora a pensare che, per il loro bene, le persone è meglio che non sappiano tutto. Sotto questa logica c'è spesso un timore, ben documentato nella letteratura manageriale internazionale, di esporsi al confronto: il timore di venire contraddetti, di vedere le proprie idee messe in discussione, di una percezione di autorità che si indebolisce. È un fenomeno trasversale, non specificamente italiano, ma nelle strutture aziendali più verticali è amplificato.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il leader non è chi detta legge e fa eseguire. Il leader è il fluidificante, l'olio che fa girare il motore senza attriti. Il suo lavoro è togliere ostacoli, mettere le persone nelle condizioni migliori per lavorare concentrate e serene. Non il professore in cattedra che riprende quando si sbaglia e non elogia per paura che le persone \"si montino la testa\", ma chi si mette a disposizione del team.",
+            "cites": []
+          },
+          {
+            "text": "Questo non è uno slogan retorico, è quello che la ricerca empirica chiama \"servant leadership\" e che si dimostra correlato a tassi di trasformazione più alti, engagement maggiore e maggior probabilità di successo dei progetti. McKinsey rileva che le aziende con leadership che definisce ruoli e responsabilità chiari e comunica con coerenza hanno fino a 8 volte più probabilità di portare a casa i loro progetti rispetto ai pari.",
+            "cites": [
+              "McKinsey 2021"
+            ]
+          },
+          {
+            "text": "Quando il leader cambia ruolo, anche il rapporto con i processi cambia: le procedure smettono di essere imposte dall'alto e diventano costruite con chi le esegue. Perché chi esegue è anche il primo a sapere come migliorarle. E qui il reframe diventa concreto: il processo documentato non è burocrazia, è la conservazione del know-how aziendale, il modo in cui l'azienda esiste anche al di là delle singole persone. Le PMI che capiscono questo prima delle altre costruiscono un asset che resta, le altre continuano a \"navigare a vista\" sperando che le persone chiave non si ammalino mai.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "McKinsey & Company, \"The science behind successful organizational transformations\", 2021",
+        "McKinsey Global Survey on Organizational Transformations (vari anni)",
+        "CEB Corporate Leadership Council, ricerca su employee involvement in implementation planning, 2016",
+        "Tallyfy, \"What is tribal knowledge and how do you capture it\", ricerca aggregata su process documentation",
+        "arXiv, \"Documenting SME Processes with Conversational AI: From Tacit Knowledge to BPMN\", 2025"
       ]
     },
     {
@@ -764,6 +960,61 @@
           "hours": 12,
           "cost": 1200
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Quando guardo come vengono eseguiti i progetti nelle PMI italiane, vedo sempre lo stesso pattern, indipendentemente dal tipo di progetto. I tempi si dilatano, le scadenze slittano, gli obiettivi iniziali si annacquano. La cosa interessante è che dietro a tutto questo non c'è quasi mai un problema tecnico: c'è una rete di non-detti che attraversa tutti gli attori coinvolti. I collaboratori non segnalano i rischi che vedono per primi, per paura che vengano letti come critiche. I fornitori non comunicano tutte le criticità per non far emergere debolezze nel prodotto appena venduto. I clienti non condividono i retroscena per non scoprirsi. Il risultato è un progetto che procede su informazioni parziali, e gli ostacoli noti a qualcuno emergono solo quando è troppo tardi per gestirli a costo basso.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano che il problema è strutturale e ha un peso enorme. Le ricerche del Project Management Institute identificano la comunicazione inefficace come prima causa di fallimento dei progetti, indicata in un terzo dei casi. Sempre PMI stima che 75 milioni di dollari ogni miliardo speso in progetti siano a rischio per cattiva comunicazione. Una ricerca Geneca riporta che oltre l'80% delle persone coinvolte in progetti sente che il processo di raccolta requisiti non articola davvero i bisogni del business, e che solo il 23% dei progetti chiude con stakeholder e project manager d'accordo sul fatto che il progetto sia effettivamente terminato. Sul fronte trasformazione, lo scollamento tra pianificazione ed esecuzione è oggi il principale ostacolo dichiarato a livello globale, citato dal 35% degli executive.",
+            "cites": [
+              "PMI Pulse 2024",
+              "Geneca 2017",
+              "PMI Step Up 2025"
+            ]
+          },
+          {
+            "text": "A questo si aggiunge un'altra carenza, quasi sempre presente, che impedisce di accorgersi dei problemi in tempo: l'assenza di una baseline quantitativa. Senza valori di partenza misurati, i risultati e i giudizi sui progetti restano qualitativi e impressionistici. Si pensa che il progetto stia andando bene perché \"lo sentiamo che va\", o che vada male perché \"qualcosa non torna\". Il margine di errore è enorme e arriva sempre troppo tardi.",
+            "cites": []
+          },
+          {
+            "text": "La causa profonda di tutto questo, però, è culturale. Non si compra qualcosa solo perché si pensa sia il miglior prodotto sulla piazza, lo si compra perché ci si fida delle persone che lo stanno proponendo, perché si pensa di essere tutti allineati sullo stesso obiettivo. C'è la convinzione, diffusa, che alcuni problemi non debbano essere affrontati perché troppo critici, e che verranno risolti strada facendo. Si pensa troppo al risultato immediato, dimenticando che quel risultato inficierà tutti quelli futuri. Ci sono scelte che nell'immediato creano più problemi ma che nel medio-lungo termine portano benefici enormi, mentre le scorciatoie funzionano al contrario: alleggeriscono oggi, complicano per anni.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Tutto parte dalla chiarezza della direzione, quella di cui parlo nella sezione sulla strategia condivisa. Dove voglio andare, che trasformazione voglio mettere in atto, quali risultati voglio ottenere. Quando questo è chiaro a tutti, ognuno capisce il proprio ruolo e la trasformazione cui sarà sottoposto. Senza, il progetto è destinato a vivere in modalità \"mi hanno detto di fare così e io faccio così, saranno problemi loro quando se ne accorgeranno\".",
+            "cites": []
+          },
+          {
+            "text": "Il secondo reframe riguarda la scelta del fornitore. Il fornitore giusto non è il più bravo tecnicamente, è quello più vicino al modo di ragionare del cliente, quello che lo capisce prima che parli e che aiuta a guidare il team nella stessa direzione. La fiducia non è un fattore \"soft\" del progetto, è il fattore che determina se le criticità emergeranno in tempo per essere gestite o se esploderanno alla fine. I dati lo confermano: il 62% dei progetti completati con successo aveva sponsor attivamente di supporto, e il principale impatto dichiarato dell'avere un project management strutturato è proprio sulla qualità della comunicazione di team, citato dal 52% delle aziende.",
+            "cites": [
+              "PwC 2018"
+            ]
+          },
+          {
+            "text": "Il terzo reframe è sul debito tecnico, e più in generale sul debito operativo. Non è un problema di competenza: è la conseguenza di un commitment scarso, e il commitment scarso ha sempre la stessa radice, le persone non capiscono il perché di quello che fanno. Dagli la motivazione vera e diventano un valore enorme. Non dargliela, e nessun project management framework, per quanto sofisticato, ti salverà. La ricerca empirica concorda: McKinsey rileva che il coinvolgimento dei collaboratori frontline porta i tassi di successo della trasformazione dal 3% al 26-28%.",
+            "cites": [
+              "McKinsey 2021"
+            ]
+          },
+          {
+            "text": "In sintesi: nessuna metodologia sostituisce la trasparenza, l'allineamento di fiducia con chi esegue, e un orizzonte temporale che vada oltre il prossimo quarter. Le PMI che capiscono questo prima delle altre eseguono progetti che generano valore reale. Le altre continuano a chiedersi perché ogni progetto somigli al precedente.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Project Management Institute, \"Pulse of the Profession\", 2024",
+        "Project Management Institute, \"Step Up: Redefining the Path to Project Success with M.O.R.E.\", 2025",
+        "Geneca, \"Doomed from the Start: Why a Majority of Business and IT Teams Anticipate Their Software Development Projects Will Fail\", 2017",
+        "McKinsey & Company, \"The science behind successful organizational transformations\", 2021",
+        "PwC, \"Insights and Trends: Current Programme and Project Management Practices\", 2018"
       ]
     },
     {
@@ -922,6 +1173,57 @@
           "hours": 8,
           "cost": 800
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane l'automazione dei processi resta in larga parte un terreno inesplorato. Si automatizza dove arrivano i software (gestionale, contabilità, fatturazione elettronica perché obbligatoria), ma raramente si va oltre. I processi ripetitivi a basso valore aggiunto, gli scambi tra sistemi diversi, le riconciliazioni manuali, le notifiche e i workflow operativi restano in larga parte affidati a persone che fanno copia-incolla tra Excel, mail e gestionale.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano un quadro a due velocità. Su scala globale, circa il 66% delle aziende ha automatizzato almeno un processo, e le imprese che implementano automazione registrano riduzioni di costo tra il 10% e il 50% sui processi automatizzati. Le aziende che scalano l'automazione vedono una riduzione media dei costi del 22% in tre anni. Ma il quadro per le PMI è molto diverso: una ricerca accademica recente evidenzia che oltre il 90% delle PMI dichiara di non avere applicazioni AI in produzione. Anche sulle aziende che hanno fatto investimenti significativi, McKinsey segnala che meno del 10% dei casi d'uso AI deployati supera la fase di pilot, e solo l'1% delle aziende descrive i propri rollout di AI come \"maturi\".",
+            "cites": [
+              "McKinsey 2024",
+              "Software Oasis 2024",
+              "DoIT Software 2025",
+              "MDPI 2025",
+              "McKinsey 2025"
+            ]
+          },
+          {
+            "text": "Le cause profonde nelle PMI sono tre, e si rinforzano a vicenda. La prima è la mancata mappatura dei processi: per automatizzare un processo bisogna prima averlo descritto, e abbiamo già visto nella sezione \"Processi operativi\" che circa l'80% dei processi nelle organizzazioni resta non documentato. Si finisce ad automatizzare quello che si vede, non quello che genera più valore. La seconda è la complessità tecnica percepita: il 78% delle aziende ritiene che i workflow complessi rendano l'automazione difficile, e in mancanza di competenze interne dedicate, molti progetti si fermano alla fase di valutazione. La terza è economica: investimenti tra 30k e 250k per automatizzare un singolo flusso significativo sono cifre che, senza una valutazione di ROI strutturata, vengono percepite come rischiose, e quindi rimandate.",
+            "cites": [
+              "Salesforce 2024",
+              "SMA Technologies via Zip 2025"
+            ]
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il reframe da fare è semplice: l'automazione non è un investimento tecnologico, è una decisione sui processi. Non si automatizza un processo brutto: lo si trasforma in un processo brutto e veloce. Prima di automatizzare bisogna sapere se quel processo va eseguito, da chi, e in che forma.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, partire da una mappatura essenziale dei 5-10 processi che assorbono più tempo persone in azienda. Non serve una BPM completa: serve sapere dove va davvero il tempo. Secondo, automatizzare a strati, non a salti: cominciare dai casi a basso rischio (notifiche, riconciliazioni, esportazioni di dati) e crescere progressivamente verso flussi più complessi. Gli ROI documentati su RPA vanno dal 30% al 200% nel primo anno di deployment quando l'implementazione è ben fatta, ma i numeri si raggiungono solo quando l'azienda è pronta organizzativamente. Terzo, valutare il ROI non solo come risparmio di costo, ma come liberazione di tempo qualificato: una persona che smette di fare riconciliazioni manuali è una persona che può occuparsi di analisi, clienti, miglioramento.",
+            "cites": [
+              "ThinkAutomation via Software Oasis 2024"
+            ]
+          },
+          {
+            "text": "Un'ultima nota sul tema AI generativa, che è oggi al centro dell'attenzione. La tecnologia esiste, è accessibile, e in molti casi è già pronta per produzione. Il collo di bottiglia non è tecnico, è organizzativo: serve direzione chiara, processi mappati, competenze in casa o partner affidabili. Le PMI che capiscono questo nei prossimi 18-24 mesi avranno un vantaggio competitivo difficile da recuperare.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "McKinsey & Company, \"The state of AI in early 2024\", 2024",
+        "McKinsey & Company, \"Seizing the agentic AI advantage\", 2025",
+        "Salesforce Survey, ricerca su Business Process Automation, ottobre 2024, citato in DoIT Software, 2025",
+        "MDPI, \"Artificial Intelligence Adoption in SMEs: Survey Based on TOE-DOI Framework\", 2025",
+        "ThinkAutomation, citato in Software Oasis, \"Business Process Automation: Top Big Statistics\", 2024",
+        "SMA Technologies, citato in Zip, \"42 must-know business process automation statistics\", 2025"
       ]
     },
     {
@@ -1080,6 +1382,52 @@
           "hours": 32,
           "cost": 3200
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane i dati esistono, ma vivono in disordine. Anagrafiche clienti duplicate sul CRM e sul gestionale, listini prodotti con versioni divergenti, dati di vendita registrati in Excel paralleli, codici prodotto inconsistenti tra reparti. Quando si prova a usare questi dati per una decisione strategica, ognuno tira fuori un numero diverso, e la riunione si trasforma in un confronto su quale fonte sia più affidabile. Il risultato è che i dati, invece di essere un asset, diventano un costo continuo di riconciliazione.",
+            "cites": []
+          },
+          {
+            "text": "Il fenomeno è internazionale e ha un costo quantificato. Gartner stima che la cattiva qualità dei dati costi alle organizzazioni in media 12,9 milioni di dollari l'anno. Secondo IBM, negli Stati Uniti la cattiva qualità dei dati costa complessivamente 3,1 trilioni di dollari all'anno all'economia. Sul piano operativo, il 50% dei dipendenti spende oltre un'ora al giorno per correggere errori o cercare informazioni a causa della cattiva qualità dei dati, e il 55% delle organizzazioni dichiara che la cattiva qualità dei dati li porta a decisioni di business sbagliate. Le aziende che hanno programmi di data governance maturi registrano invece un'efficienza operativa superiore del 15-20%.",
+            "cites": [
+              "Gartner via IBM 2025",
+              "IBM via Anodot 2025",
+              "Forrester via Enricher 2024",
+              "McKinsey via Integrate.io 2026"
+            ]
+          },
+          {
+            "text": "Le cause profonde nelle PMI sono tre. La prima è strutturale: i sistemi sono nati in momenti diversi, gestiti da fornitori diversi, e nessuno ha mai progettato come dovessero parlarsi tra loro. Si finisce con il commerciale che ha il suo CRM, l'amministrazione che ha il suo gestionale, il marketing che ha i suoi fogli, e nessuno con la responsabilità di garantire che parlino la stessa lingua. La seconda è organizzativa: la responsabilità sui dati è di tutti e di nessuno. Non c'è una figura che dice \"questa anagrafica clienti è la fonte di verità, le altre devono allinearsi\". Quando manca un data owner, ogni team rifà a modo suo. La terza è culturale: la qualità del dato viene percepita come un problema IT e non come un problema di business. Finché il dato non si rompe in modo evidente, nessuno alza la voce, e quando si rompe è già tardi per gestirlo a costo basso.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il reframe da fare è semplice: i dati sono un patrimonio aziendale, esattamente come gli stabilimenti, i brevetti, o il marchio. E come tutti i patrimoni, vanno curati con disciplina e responsabilità chiare.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, identificare le fonti di verità per ogni dato critico (anagrafica clienti, anagrafica prodotti, listini, contatti commerciali, dati di vendita). Decidere quale sistema è autoritativo, e fare in modo che gli altri si allineino. Questa decisione politica vale più di qualsiasi strumento tecnico. Secondo, assegnare un data owner per ogni dominio: una persona, non un comitato, responsabile della qualità di quel dato. Senza un nome accanto al dato, la qualità non si garantisce. Terzo, partire dai dati che hanno impatto su decisioni rilevanti, non da tutti i dati. Voler \"ripulire tutto\" è un progetto che non finirà mai. Pulire prima i dati che entrano nelle dashboard di direzione, poi quelli che impattano la fatturazione, poi quelli che servono al marketing: in questo ordine si vede il valore subito.",
+            "cites": []
+          },
+          {
+            "text": "Una nota finale sull'AI, che è oggi sul tavolo di tutte le PMI. Senza dati puliti e governati, qualunque iniziativa AI è destinata a fallire. Lo dice esplicitamente IBM: la qualità dei dati e la governance sono tra le principali barriere allo scaling delle iniziative AI. Investire prima nei dati e poi nell'AI non è un percorso obbligato per la natura della tecnologia, ma è il percorso che porta a risultati reali invece che a piloti che non scalano mai.",
+            "cites": [
+              "IBM Institute for Business Value 2026"
+            ]
+          }
+        ]
+      },
+      "references": [
+        "Gartner, \"Measuring the Business Value of Data Quality\", citato in IBM, \"What Is Data Quality?\", 2025",
+        "IBM, \"The True Cost of Poor Data Quality\", 2026",
+        "IBM, stima impatto US economia 3,1 trilioni di dollari, citato in Anodot, \"The Costs of Poor Data Quality\", 2025",
+        "Forrester, ricerca su decisioni di business e qualità dei dati, citato in Enricher, \"The Cost of Incomplete Data\", 2024",
+        "McKinsey, ricerca su efficienza operativa e data governance maturity, citato in Integrate.io, 2026"
       ]
     },
     {
@@ -1238,6 +1586,56 @@
           "hours": 40,
           "cost": 4000
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane la cybersecurity viene affrontata, nella maggior parte dei casi, in modo reattivo. Si installa l'antivirus, si fa qualche backup, si gestiscono le password come capita, e si pensa che basti finché non succede nulla di grave. Quando capita qualcosa, il più delle volte è già troppo tardi: i dati sono stati cifrati, i sistemi sono fermi, e si scopre di non aver mai testato davvero un piano di ripristino.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano che il problema è strutturale, e l'Italia è uno dei paesi più esposti. Nel 2025 in Italia sono stati registrati 507 incidenti cyber gravi, con un aumento del 42% rispetto all'anno precedente, e il nostro paese rappresenta da solo il 9,6% degli attacchi gravi globali, ben oltre il proprio peso economico. Negli ultimi cinque anni gli incidenti cyber in Italia sono cresciuti del 157%. Il settore manifatturiero, dove operano la maggior parte delle PMI italiane, è uno dei più colpiti: il 16% degli attacchi globali al manifatturiero ha riguardato realtà italiane nel 2025.",
+            "cites": [
+              "CLUSIT 2026"
+            ]
+          },
+          {
+            "text": "Più in generale, il livello di preparazione è basso: oltre il 50% delle PMI italiane non è preparata ad affrontare le minacce cyber, e secondo il Cisco Readiness Index solo l'1% delle organizzazioni italiane è considerato \"maturo\" sulla cyber readiness, contro un 64% in fase \"formativa\". Il costo medio di un data breach in Italia è ormai stabilmente sopra i 4 milioni di euro.",
+            "cites": [
+              "US ITA 2026",
+              "Cisco Readiness Index via US ITA 2026",
+              "IBM 2024"
+            ]
+          },
+          {
+            "text": "Le cause profonde nelle PMI sono tre, e si rinforzano tra loro. La prima è la percezione di non essere bersagli interessanti: \"siamo piccoli, chi vuoi che ci attacchi\". La realtà è opposta: i gruppi di cybercrime hanno automatizzato gli attacchi, scansionano internet 24/7 cercando vulnerabilità, e le PMI sono prede facili proprio perché meno protette delle grandi aziende. Il ransomware oggi è un business industriale: chi attacca non ha bisogno di sceglierti, basta che tu sia raggiungibile e debole. La seconda è la mancanza di una figura responsabile: in molte PMI la cybersecurity è \"del fornitore IT\", che però è un sistemista, non un esperto di sicurezza. La differenza non è marginale: gestire un firewall e gestire una postura di sicurezza sono due lavori diversi. La terza è economica: gli investimenti in cybersecurity vengono percepiti come \"costi\" e non come \"assicurazioni operative\", e si tagliano quando il bilancio si stringe. Il problema è che il costo di un incidente è 50-100 volte maggiore del costo della prevenzione.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il reframe da fare è semplice ma scomodo: la domanda non è \"se\" verremo attaccati, ma \"quando\" e \"quanto saremo pronti\". Smettere di parlare di prevenzione assoluta (che non esiste) e iniziare a parlare di resilienza: quanto velocemente ci accorgiamo che è successo qualcosa, quanto velocemente ripartiamo, quanto poco perdiamo.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, fare un assessment serio della propria postura di sicurezza. Non un check tecnico fatto dal fornitore IT che ha tutto l'interesse a dirti che va bene, ma una valutazione indipendente con metodologia riconosciuta (NIST, ISO 27001, framework nazionale italiano). Sapere dove si è esposti è la condizione minima per decidere dove investire. Secondo, focalizzare gli investimenti sui fondamentali, non sull'ultimo prodotto di moda: gestione degli accessi, backup veramente testati con prove di ripristino periodiche, aggiornamento dei sistemi, formazione delle persone sul phishing. Questi quattro elementi prevengono la grande maggioranza degli incidenti. Terzo, preparare un piano di risposta agli incidenti prima che servano. Chi chiamo se succede? Chi decide se pagare il riscatto o no? Come comunico con clienti e fornitori? Avere queste risposte già scritte è la differenza tra un incidente gestito in 48 ore e un'azienda ferma per settimane.",
+            "cites": []
+          },
+          {
+            "text": "C'è anche una dimensione regolatoria che sta diventando vincolante. La direttiva NIS2 europea, in vigore in Italia dal 2024, estende gli obblighi di cybersecurity a una platea molto più ampia di aziende di quanto fosse in passato, includendo molte PMI dei settori critici. Non adeguarsi non è più solo un rischio operativo, è un rischio sanzionatorio.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "CLUSIT, \"Rapporto Clusit 2026 sulla sicurezza ICT in Italia\", 2026",
+        "CLUSIT, \"Rapporto Clusit 2025 sulla sicurezza ICT in Italia\", 2025",
+        "US International Trade Administration, \"Italy - Cybersecurity Country Commercial Guide\", 2026",
+        "Cisco Readiness Index, citato in US International Trade Administration, 2026",
+        "IBM, \"Cost of a Data Breach Report 2024\", 2024",
+        "Agenzia per la Cybersicurezza Nazionale (ACN), strategia nazionale 2022-2026"
       ]
     },
     {
@@ -1396,6 +1794,46 @@
           "hours": 16,
           "cost": 1600
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Quando entro nelle PMI italiane che hanno fatto investimenti tecnologici importanti, lo schema è quasi sempre lo stesso: solo una piccola parte delle funzionalità acquistate viene usata davvero. Le altre o non sono capite o non se ne conosce nemmeno l'esistenza. La formazione, quando c'è, è frettolosa e una tantum. Le persone tornano spesso e volentieri a Excel.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano che il fenomeno è strutturale e ha dimensioni enormi. Gartner stima che il 30% della spesa SaaS sia \"tossico\", sprecato in licenze e funzionalità non utilizzate. Le ricerche sul campo mostrano che tra il 30 e il 40% delle licenze SaaS in un'azienda media resta inutilizzato, e che le aziende di piccole dimensioni hanno perso in media 2 milioni di dollari l'anno in licenze SaaS non usate, le grandi fino a 127 milioni. Le aziende enterprise mediamente utilizzano solo il 50% delle licenze SaaS che pagano.",
+            "cites": [
+              "Gartner via NPI Financial 2024",
+              "Certero 2026",
+              "Zylo 2023"
+            ]
+          },
+          {
+            "text": "La causa profonda è la stessa che vediamo nei processi operativi: i software vengono scelti da poche persone di alto livello, CTO, CEO, CFO, senza coinvolgere chi li userà ogni giorno. A chi userà il tool non viene chiesto nulla. Il risultato è prevedibile: chi lo deve usare non capisce il perché, non ha gli strumenti per usarlo bene, e torna al metodo che già conosceva. La ricerca McKinsey sul change management conferma la portata del problema: senza coinvolgimento dei frontline employees, il tasso di successo delle trasformazioni tecnologiche crolla al 3%.",
+            "cites": [
+              "McKinsey 2021"
+            ]
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il problema non riguarda solo l'azienda, riguarda anche chi vende il software. L'adozione reale è un interesse condiviso e va trattata come tale.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, coinvolgere chi userà lo strumento già nella fase di selezione, non come \"test utenti\" di facciata, ma come decisori sostanziali sulla rispondenza ai bisogni reali. Secondo, contrattualizzare con il vendor un modello di formazione e adozione che vada oltre la sessione una tantum: roadmap di onboarding, KPI di utilizzo reale, supporto post-vendita misurabile. Terzo, smettere di valutare il ROI del software in base al prezzo o al numero di feature: il vero ROI è la percentuale di adozione reale moltiplicata per il valore che genera a chi lo usa. Un software al 90% di adozione che costa 50k vale dieci volte uno al 20% che ne costa 30k.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Gartner, citato in NPI Financial, \"12 IT Cost Reduction Strategies to Eliminate Toxic Spend\", 2024",
+        "Certero, \"Five Surprising Stats About SaaS Waste in Enterprise IT\", 2026",
+        "Zylo, \"2023 SaaS Management Index\", 2023",
+        "McKinsey & Company, \"The science behind successful organizational transformations\", 2021"
       ]
     },
     {
@@ -1554,6 +1992,47 @@
           "hours": 16,
           "cost": 1600
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane le competenze tecniche, nel migliore dei casi, vengono diffuse internamente da \"champions\" naturali che crescono in azienda e trascinano gli altri. In pochi sanno gestire le persone e farle lavorare bene. Manca una managerialità moderna diffusa. Quando mancano skill specifiche si cercano profili che le abbiano, ma non si è disposti a pagarle al loro reale valore, e quindi arrivano solo profili junior.",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano che il problema è strutturale, specialmente in Italia. Solo il 22% delle PMI italiane aveva una policy formale di cybersecurity nel 2024, il dato più basso tra le grandi economie europee, indicatore di quanto le competenze digitali siano poco strutturate. L'OCSE evidenzia che le aziende guidate da CEO con educazione terziaria hanno una probabilità del 73% di erogare formazione digitale ad almeno il 50% dei dipendenti, contro il 42% delle altre. Sul fronte globale, McKinsey rileva che il 39% dei leader europei cita il budget come principale vincolo all'investimento in upskilling, e che solo il 28% delle aziende ritiene efficaci i propri programmi di mobilità interna. Gartner segnala che il 33% delle competenze presenti in una job posting media del 2019 è già obsoleto oggi.",
+            "cites": [
+              "Istat via Edstellar 2026",
+              "OECD 2024",
+              "McKinsey 2026",
+              "Gartner via Skills-Base 2026"
+            ]
+          },
+          {
+            "text": "La causa profonda è culturale: il reskilling è percepito come costo e non come investimento. Spesso manca una gap analysis seria che dica, rispetto agli obiettivi che voglio raggiungere, quali competenze ho davvero in casa, quali posso convertire, e quali mi servono. Non si è disposti a pagare le competenze al loro valore perché spesso non si sa nemmeno come si farebbe a sfruttarle. C'è poi un fattore italiano specifico, legato alla struttura prevalentemente familiare delle imprese. Oltre l'80% delle PMI italiane è a controllo familiare, e questa configurazione, pur essendo una grande forza di continuità, può rendere meno fluido l'ingresso di competenze e profili esterni nei ruoli decisionali. Il passaggio generazionale, in particolare, viene spesso vissuto come trasferimento di responsabilità all'interno della famiglia più che come occasione di apertura. Anche la scelta dei consulenti segue spesso lo stesso schema, passaparola e fama invece che metodo e risultati documentati. I consulenti, da parte loro, finiscono spesso a coprire ruoli operativi non da consulente, non per loro volontà di rendersi indispensabili, ma perché glieli si ribalta addosso.",
+            "cites": [
+              "Confindustria"
+            ]
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Le competenze sono un asset strategico, ma vanno sapute sfruttare. Per sfruttarle davvero serve prima la chiarezza della direzione, dove sto andando e con quali mezzi. Solo a quel punto la gap analysis smette di essere un esercizio HR e diventa la bussola che dice cosa ho davvero in casa, cosa posso convertire, e cosa mi manca. Senza direzione chiara, ogni piano formativo è destinato a essere generico e quindi inefficace.",
+            "cites": []
+          },
+          {
+            "text": "Il passaggio generazionale, in Italia, andrebbe vissuto come opportunità di rinnovamento invece che come trasferimento automatico di ruoli. E il consulente giusto non si sceglie per fama o passaparola, ma per metodo, percorso documentato, risultati misurabili, e per la sua capacità di entrare nel team senza restarci sopra in modo strutturale.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "OECD, \"Raising Skills in SMEs in the Digital Transformation: The Case of Italy\", 2024",
+        "Istat, dati su digitalizzazione PMI italiane, citato in Edstellar, \"Top 10 In-Demand Skills in Italy for 2026\", 2026",
+        "McKinsey & Company, \"Closing Europe's workforce skills gap: Strategies for growth\", 2026",
+        "Gartner, citato in Skills-Base, \"Skills Gap Analysis: The Definitive Guide for Modern Enterprises\", 2026"
       ]
     },
     {
@@ -1736,6 +2215,60 @@
           "hours": 16,
           "cost": 1600
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nella stragrande maggioranza delle PMI italiane le persone sono disamorate del proprio lavoro. Non perché siano persone \"sbagliate\", ma perché si trovano nel posto sbagliato e perché vengono coinvolte solo nell'esecuzione, mai nella direzione. Eppure sotto la superficie c'è una grande voglia di dimostrare valore, di trovare qualcuno che le metta davvero alla prova.",
+            "cites": []
+          },
+          {
+            "text": "I dati internazionali confermano la portata del fenomeno e la sua gravità. Globalmente, solo il 21% dei lavoratori si dichiara engaged, e il dato è in calo per la seconda volta in dodici anni. In Europa la situazione è ancora più seria: l'engagement medio è del 13%, contro il 33% di USA e Canada. Il costo economico è enorme: il calo di engagement del 2024 ha tolto 438 miliardi di dollari di produttività all'economia mondiale, e complessivamente il disengagement vale circa il 9% del PIL globale ogni anno. Sul fronte business, i team nel quartile più alto di engagement sono il 18% più produttivi e generano il 23% in più di profittabilità rispetto a quelli nel quartile più basso.",
+            "cites": [
+              "Gallup 2024",
+              "Gallup 2025"
+            ]
+          },
+          {
+            "text": "La causa di fondo del mismatch tra azienda e persone è la selezione. Si seleziona di fretta perché si pianifica male, o non si pianifica affatto. I processi di selezione restano spesso poco strutturati, il match tra ruolo e persona è basso, e quando il mismatch arriva a livello C-level, gli effetti a cascata sono pesantissimi: una figura chiave nel posto sbagliato influenza la qualità di decine di decisioni a valle, e l'azienda intera ne risente per anni.",
+            "cites": []
+          },
+          {
+            "text": "C'è anche una dinamica culturale che aggrava il quadro. Le persone vengono spesso coinvolte solo nell'esecuzione di scelte prese altrove, senza poter contribuire alla direzione. Questo, combinato con feedback poco strutturato e premi solo a fine percorso (e raramente lungo la strada), produce quello stato di \"esecuzione disamorata\" che ha un nome specifico nelle ricerche internazionali: quiet quitting. Le persone restano in azienda, ma in versione minima. Fanno il loro, niente di più.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "L'engagement non si compra e non si motiva con slogan: si costruisce nelle condizioni. Tre cambi di prospettiva concreti.",
+            "cites": []
+          },
+          {
+            "text": "Primo, la pianificazione della direzione è il processo da cui parte tutto. Senza chiarezza su dove vuoi andare, non sai chi ti serve, e finisci a navigare a vista nella selezione. Tutti i mismatch successivi nascono da qui.",
+            "cites": []
+          },
+          {
+            "text": "Secondo, il colloquio di selezione non è azienda che valuta candidato. È uno scambio a due, un'apertura reciproca: l'azienda mostra punti di forza e debolezza, la persona fa lo stesso, e ci si sceglie reciprocamente. È un approccio raro nelle PMI italiane, ma è anche quello che le ricerche identificano come predittore di engagement futuro più affidabile.",
+            "cites": []
+          },
+          {
+            "text": "Terzo, le persone vanno premiate durante il percorso, non solo al traguardo. Ricordare i passi compiuti è quello che alimenta la motivazione per i passi successivi. I dati Gallup mostrano che il riconoscimento frequente e specifico è uno dei driver principali dell'engagement, ben più dei bonus annuali.",
+            "cites": [
+              "Gallup 2024"
+            ]
+          },
+          {
+            "text": "Gli obiettivi ambiziosi si raggiungono solo con un team coeso e motivato. Sembra retorica, ma è la pura realtà, ed è ciò che funziona. Le aziende che lo capiscono non hanno bisogno di \"lottare contro la disaffezione\": creano le condizioni in cui la disaffezione non nasce.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Gallup, \"State of the Global Workplace 2024\", 2024",
+        "Gallup, \"State of the Global Workplace 2025\", 2025",
+        "Gallup, \"State of the Global Workplace 2026\", 2026"
       ]
     },
     {
@@ -1894,6 +2427,50 @@
           "hours": 8,
           "cost": 800
         }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Nelle PMI italiane la formazione, quando viene fatta, segue uno schema ricorrente. Si decide il tema, si chiama un fornitore, si organizzano una o due giornate d'aula, si fa firmare il foglio presenze, si raccolgono valutazioni a caldo soddisfacenti e ci si dice che \"la formazione è stata fatta\". Sei mesi dopo, nessuno saprebbe dire cosa è cambiato nel modo di lavorare delle persone. La cosa interessante è che questo non è un problema italiano: è uno schema globale documentato e con un nome tecnico, \"training transfer problem\".",
+            "cites": []
+          },
+          {
+            "text": "I dati confermano la portata del fenomeno. Le aziende americane investono oltre 100 miliardi di dollari all'anno in formazione aziendale, ma solo il 12% dei dipendenti applica davvero al proprio lavoro le skill apprese in formazione. Una survey McKinsey citata in letteratura rileva che solo il 25% dei rispondenti ritiene che la formazione abbia migliorato in modo misurabile le performance. Sul versante della percezione interna, il 62% dei manager HR ritiene di non riuscire a soddisfare i bisogni reali dei propri learner. Per le PMI italiane il quadro è amplificato dal contesto: l'OCSE evidenzia che le PMI italiane investono in formazione molto meno della media OCSE, e che la formazione, quando avviene, è spesso non strutturata e non collegata a obiettivi di business misurabili.",
+            "cites": [
+              "HBR via Sopact 2026",
+              "McKinsey via Shift E-Learning",
+              "ATD 2015 via Shift E-Learning",
+              "OECD 2024"
+            ]
+          },
+          {
+            "text": "Le cause profonde sono tre, e si rinforzano tra loro. La prima è strutturale: la formazione viene scelta come \"evento\" e non come \"percorso\". Una giornata d'aula isolata, senza follow-up sul campo, senza affiancamento, senza misurazione dei comportamenti a 30-60-90 giorni, è uno schema che la ricerca ha documentato essere quasi sempre inefficace. La seconda è di committenza: la formazione viene spesso decisa per \"obblighi\" (formazione finanziata, obblighi sicurezza, certificazioni) o per soddisfare una richiesta generica HR, senza che ci sia un committente di business che dichiari quali comportamenti devono cambiare e su quali numeri si vedrà il risultato. La terza è culturale: nelle PMI italiane c'è ancora una percezione della formazione come \"costo per recuperare un gap\", non come \"investimento per generare un vantaggio\". Questa cornice mentale porta a tagliare la formazione quando il bilancio si stringe, esattamente nel momento in cui servirebbe di più.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Il reframe da fare è radicale: la formazione non è un evento, è un percorso. E come tutti i percorsi, ha tre momenti: la preparazione (capire cosa deve cambiare e perché), l'esecuzione (l'apprendimento vero e proprio), e il consolidamento (applicare sul lavoro, ricevere feedback, correggere). Quasi tutte le PMI italiane investono solo nel secondo momento, e si stupiscono che i risultati non arrivino.",
+            "cites": []
+          },
+          {
+            "text": "Tre cambi di prospettiva concreti. Primo, partire sempre dal \"perché\": che comportamento voglio vedere cambiato nelle persone dopo la formazione? Quale KPI di business voglio influenzare? Senza questa domanda, qualunque corso è una scommessa. Secondo, investire nel post-formazione tanto quanto nella formazione stessa. Le ricerche sono chiare: l'efficacia della formazione si gioca al 70% nei 90 giorni successivi, attraverso affiancamento, feedback strutturato, occasioni di applicazione protetta. Senza questo presidio, l'80-88% dell'investimento iniziale evapora. Terzo, misurare sui comportamenti, non sui questionari di gradimento. La domanda giusta dopo una formazione non è \"ti è piaciuta?\", è \"cosa hai fatto di diverso questa settimana?\". Questo cambia completamente il livello della conversazione e mette tutti, formatore incluso, di fronte alla responsabilità del risultato.",
+            "cites": []
+          },
+          {
+            "text": "C'è anche un punto sul chi forma. La formazione veramente trasformativa raramente arriva da un'aula esterna fatta una tantum. Arriva più spesso da una combinazione di affiancamento operativo, mentor interni che diffondono pratiche, e momenti formativi strutturati che si inseriscono in un percorso più ampio. Le PMI che capiscono questo trasformano la formazione da costo episodico a leva strategica di sviluppo organizzativo.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Harvard Business Review, ricerca su training transfer, citata in Sopact, \"Training Effectiveness: How to Measure What Actually Matters\", 2026",
+        "McKinsey, ricerca su efficacia della formazione, citata in Shift E-Learning, \"10 Statistics on Corporate Training\"",
+        "ATD (Association for Talent Development), survey 2015, citata in Shift E-Learning",
+        "OECD, \"Raising Skills in SMEs in the Digital Transformation: The Case of Italy\", 2024",
+        "Modello Kirkpatrick (Donald Kirkpatrick, \"Evaluating Training Programs\", 1959)"
       ]
     }
   ]
