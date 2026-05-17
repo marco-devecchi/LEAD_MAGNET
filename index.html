@@ -1047,6 +1047,149 @@ async function generatePDF(lead){
     }).join('');
   }
 
+  // Helper: renderizza un box "insight" (Perché ti trovi qui / Come pensare al problema)
+  // - Titolo in alto in maiuscolo, colore categoria
+  // - Bordo laterale spesso colore categoria, sfondo molto chiaro stessa tinta
+  // - Sequenza di paragrafi, ognuno seguito (se presenti citazioni) da una riga piccola grigia
+  // - Gestisce automaticamente i page break, riprendendo il box (stesso titolo) nella nuova pagina
+  // Ritorna la nuova y dopo il box.
+  function renderInsightBox(doc, opts){
+    const { title, blocks, color, lightColor, startY, M, W, H } = opts;
+    const innerL = M + 18;            // padding sinistro contenuto (oltre la stripe)
+    const innerR = W - M - 16;
+    const textW  = innerR - innerL;
+    const stripeW = 4;
+    const padTop = 14, padBottom = 14;
+    const titleSize = 9, titleLeading = 14;
+    const bodySize = 10.2, bodyLeading = 14;
+    const citeSize = 8, citeLeading = 11;
+    const paraGap = 8;
+
+    let y = startY;
+    let pageStartY = y;
+
+    // Funzione per disegnare il "fondo" del box dall'alto y0 a y1 con la stripe colorata
+    const drawBoxBackground = (y0, y1)=>{
+      doc.setFillColor(lightColor);
+      doc.rect(M, y0, W-2*M, y1-y0, 'F');
+      doc.setFillColor(color);
+      doc.rect(M, y0, stripeW, y1-y0, 'F');
+    };
+
+    // Operazioni di disegno della pagina corrente, da eseguire dopo il fondo
+    let pageOps = [];
+
+    // Se non c'è spazio per il titolo + almeno una riga di body, vado a pagina nuova
+    if(y + padTop + titleSize + titleLeading + bodyLeading + padBottom > H - M){
+      doc.addPage();
+      y = M;
+      pageStartY = y;
+    }
+
+    // Titolo del box per la pagina corrente
+    let currentTitleY = pageStartY + padTop + titleSize;
+    pageOps.push({ kind:'title', y: currentTitleY });
+    y = currentTitleY + titleLeading;
+
+    const finalizePage = (endY)=>{
+      drawBoxBackground(pageStartY, endY);
+      for(const op of pageOps){
+        if(op.kind === 'title'){
+          doc.setFont('helvetica','bold');
+          doc.setFontSize(titleSize);
+          doc.setTextColor(color);
+          doc.text(title, innerL, op.y);
+        } else if(op.kind === 'body'){
+          doc.setFont('helvetica','normal');
+          doc.setFontSize(bodySize);
+          doc.setTextColor('#222831');
+          doc.text(op.lines, innerL, op.y);
+        } else if(op.kind === 'cite'){
+          doc.setFont('helvetica','italic');
+          doc.setFontSize(citeSize);
+          doc.setTextColor('#8a8f9c');
+          doc.text(op.lines, innerL, op.y);
+        }
+      }
+    };
+
+    for(let bi = 0; bi < blocks.length; bi++){
+      const block = blocks[bi];
+      const bodyLines = doc.splitTextToSize(softBreak(block.text, 60), textW);
+      const bodyH = bodyLines.length * bodyLeading;
+
+      let citeLines = null;
+      let citeH = 0;
+      if(block.cites && block.cites.length > 0){
+        const citeStr = '↳ ' + block.cites.join(' · ');
+        citeLines = doc.splitTextToSize(citeStr, textW);
+        citeH = 4 + citeLines.length * citeLeading;
+      }
+
+      const blockH = bodyH + citeH + (bi < blocks.length - 1 ? paraGap : 0);
+
+      // Se il blocco non entra, chiudo la pagina e ne apro una nuova
+      if(y + blockH + padBottom > H - M){
+        finalizePage(y + 4);
+        doc.addPage();
+        y = M;
+        pageStartY = y;
+        pageOps = [];
+        currentTitleY = pageStartY + padTop + titleSize;
+        pageOps.push({ kind:'title', y: currentTitleY });
+        y = currentTitleY + titleLeading;
+      }
+
+      // body
+      pageOps.push({ kind:'body', y: y + bodySize, lines: bodyLines });
+      y += bodyH;
+
+      // cite
+      if(citeH > 0){
+        y += 4;
+        pageOps.push({ kind:'cite', y: y + citeSize, lines: citeLines });
+        y += citeLines.length * citeLeading;
+      }
+
+      if(bi < blocks.length - 1){
+        y += paraGap;
+      }
+    }
+
+    y += padBottom;
+    finalizePage(y);
+    return y + 8;
+  }
+
+  // Helper: renderizza la sezione "Riferimenti completi"
+  function renderReferences(doc, opts){
+    const { refs, startY, M, W, H } = opts;
+    if(!refs || refs.length === 0) return startY;
+    let y = startY;
+    if(y > H - 120){
+      doc.addPage();
+      y = M;
+    }
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(8);
+    doc.setTextColor('#8a8f9c');
+    doc.text('RIFERIMENTI', M, y);
+    y += 12;
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(7.5);
+    doc.setTextColor('#8a8f9c');
+    for(const ref of refs){
+      const lines = doc.splitTextToSize('• ' + softBreak(ref, 80), W - 2*M);
+      if(y + lines.length * 9 > H - M){
+        doc.addPage();
+        y = M;
+      }
+      doc.text(lines, M, y);
+      y += lines.length * 9 + 2;
+    }
+    return y;
+  }
+
   // ------- COVER -------
   doc.setFillColor('#0E1014'); doc.rect(0,0,W,H,'F');
 
@@ -1286,6 +1429,32 @@ async function generatePDF(lead){
     doc.text(doc.splitTextToSize(q.text, W-2*M), M, y);
     y += doc.splitTextToSize(q.text, W-2*M).length * 12 + 18;
 
+    // ------ BOX INSIGHT 1: PERCHÉ TI TROVI QUI ------
+    if(q.why_it_happens && q.why_it_happens.blocks && q.why_it_happens.blocks.length > 0){
+      y = renderInsightBox(doc, {
+        title: 'PERCHÉ TI TROVI QUI',
+        blocks: q.why_it_happens.blocks,
+        color: cCol,
+        lightColor: catColorLight(q.cat),
+        startY: y,
+        M, W, H
+      });
+      y += 8;
+    }
+
+    // ------ BOX INSIGHT 2: COME PENSARE AL PROBLEMA ------
+    if(q.reframe && q.reframe.blocks && q.reframe.blocks.length > 0){
+      y = renderInsightBox(doc, {
+        title: 'COME PENSARE AL PROBLEMA',
+        blocks: q.reframe.blocks,
+        color: cCol,
+        lightColor: catColorLight(q.cat),
+        startY: y,
+        M, W, H
+      });
+      y += 10;
+    }
+
     // ------ TABELLA KPI ------
     if(y > H-100){ doc.addPage(); y = M; }
     doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
@@ -1435,6 +1604,12 @@ async function generatePDF(lead){
     });
     doc.setDrawColor(C.line); doc.setLineWidth(0.4);
     doc.line(M, y, W-M, y);
+
+    // ------ RIFERIMENTI ------
+    if(q.references && q.references.length > 0){
+      y += 18;
+      y = renderReferences(doc, { refs: q.references, startY: y, M, W, H });
+    }
   }
 
   // ------- ULTIMA PAGINA: Next steps -------
@@ -1562,7 +1737,7 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
     </div>
 
     <div class="example-modal-footer">
-      <button class="example-cta-btn" onclick="closeExampleModal();document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">
+      <button class="example-cta-btn" onclick="closeExampleModal();document.getElementById('leadForm').scrollIntoView({behavior:'smooth'});">
         Compila il check per ricevere il tuo report personalizzato →
       </button>
     </div>
