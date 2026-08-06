@@ -779,6 +779,10 @@ const SOGLIA_OK = 85;
    una tabella lunga prima delle azioni fa sembrare il metodo una pagella. */
 const KPI_IN_SCHEDA = 3;
 
+/* Aria sopra i titoli di sezione del PDF (Azioni, Come si misura) e
+   sotto il testo introduttivo, prima della tabella. In punti. */
+const ARIA_SEZIONE = 44;
+
 /* {KPI_CHECK} e {KPI_TOT} vengono sostituiti con i numeri veri del dataset. */
 const MSG_OK = {
   titolo: 'Nessuna area sotto soglia.',
@@ -1647,7 +1651,7 @@ async function generatePDF(lead){
      nel colore della leva, e un corpo piu' grande del testo corrente.
      Restituisce la y da cui riprendere. */
   function titoloSezione(testo, colore, y, nota){
-    y += 30;
+    y += ARIA_SEZIONE;
     if(y > H - 130){ doc.addPage(); y = M + 6; }
     doc.setDrawColor(colore); doc.setLineWidth(2.4);
     doc.line(M, y, M + 30, y);
@@ -1659,7 +1663,7 @@ async function generatePDF(lead){
       doc.setFont(FONT,'normal'); doc.setFontSize(9); doc.setTextColor(C.mute);
       doc.text(nota, dopo, y);
     }
-    return y + 16;
+    return y + 20;
   }
 
   /* Geometria comune alle tabelle KPI e Azioni. Dichiarata qui una volta
@@ -1676,7 +1680,7 @@ async function generatePDF(lead){
     const kpiIntro = intro;
     const kpiIntroLines = doc.splitTextToSize(kpiIntro, W-2*M);
     doc.text(kpiIntroLines, M, y);
-    y += kpiIntroLines.length * 12 + 10;
+    y += kpiIntroLines.length * 12 + 18;
 
     // Geometria tabella: 3 colonne (KPI, Descrizione, Benchmark)
     const colWidths = [
@@ -1836,7 +1840,7 @@ async function generatePDF(lead){
     const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono elencate in ordine di impatto atteso. Quanto costi metterle in pratica dipende da com'è fatta la tua azienda, e questo check non può saperlo: serve guardarci dentro.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
-    y += azIntroLines.length * 12 + 10;
+    y += azIntroLines.length * 12 + 18;
 
     // Geometria tabella Azioni: 2 colonne con padding cella esplicito
     /* Nessuna colonna di tempo o costo: il check non conosce l'azienda,
