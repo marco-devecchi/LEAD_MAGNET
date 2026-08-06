@@ -91,13 +91,18 @@ body{
 
 /* ===== Layout ===== */
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 56px}
+/* quando la finestra e' larga poco piu' del contenuto, questa
+   garantisce comunque una gronda ai lati */
+@media (min-width:1101px){ .wrap{max-width:calc(var(--maxw) + 112px)} }
 @media (max-width:640px){
   .wrap{padding:0 28px}
 }
 @media (max-width:380px){
   .wrap{padding:0 20px}
 }
-.screen{display:none; padding:60px 0 80px; animation:fadeIn .35s ease both}
+.screen{display:none; padding-top:60px; padding-bottom:80px; animation:fadeIn .35s ease both}
+/* NB: qui NON si usa la scorciatoia "padding", altrimenti azzera
+   il padding laterale di .wrap (che nel CSS viene prima). */
 .screen.active{display:block}
 @keyframes fadeIn{from{opacity:0; transform:translateY(8px)}to{opacity:1;transform:none}}
 
