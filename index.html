@@ -804,6 +804,11 @@ const CAT_LABEL = {
 };
 const etichettaCat = c => (CAT_LABEL[c] || c);
 
+/* Font del PDF. Vive qui, non dentro generatePDF, perche' lo usa
+   anche drawRadarPDF che e' una funzione separata.
+   Il valore vero viene assegnato quando il documento viene creato. */
+let FONT = 'helvetica';
+
 /* ---------- STATE ---------- */
 let DATASET = null;     // caricato da dataset.json
 let answers = {};       // { q1: 5, q2: 3, ... }
@@ -1165,7 +1170,7 @@ async function generatePDF(lead){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({unit:'pt', format:'a4'});
   // Montserrat se montserrat-jspdf.js e' stato caricato, altrimenti helvetica
-  const FONT = (doc.getFontList && doc.getFontList().Montserrat) ? 'Montserrat' : 'helvetica';
+  FONT = (doc.getFontList && doc.getFontList().Montserrat) ? 'Montserrat' : 'helvetica';
   doc.setFont(FONT, 'normal');
   const W = doc.internal.pageSize.getWidth();
   const H = doc.internal.pageSize.getHeight();
@@ -1442,7 +1447,7 @@ async function generatePDF(lead){
     doc.setFillColor(col); doc.circle(tabStartX+8, rowY+2, 4, 'F');
     // nome categoria
     doc.setFont(FONT,'bold'); doc.setFontSize(11); doc.setTextColor(C.ink);
-    doc.text(c, tabStartX+22, rowY+5);
+    doc.text(etichettaCat(c), tabStartX+22, rowY+5);
     // peso sotto
     doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
     doc.text('peso ' + DATASET.categories[c].weight + '%', tabStartX+22, rowY+16);
@@ -1543,7 +1548,9 @@ async function generatePDF(lead){
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
   doc.text('Cosa stai per leggere', M, y); y += 16;
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const m1 = `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 aree più critiche emerse dal tuo check. Ogni scheda contiene due tabelle: i KPI sottostanti l'area, e le azioni concrete suggerite per intervenire. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`;
+  const m1 = senzaCriticita
+    ? `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 sottocategorie con il punteggio più basso. Nessuna di queste è sotto soglia: le riportiamo per completezza, non perché richiedano un intervento. Ogni scheda contiene due tabelle: i KPI sottostanti l'area e le azioni suggerite. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`
+    : `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 aree emerse dal tuo check. Ogni scheda contiene due tabelle: i KPI sottostanti l'area, e le azioni concrete suggerite per intervenire. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`;
   const m1Lines = doc.splitTextToSize(m1, W-2*M);
   doc.text(m1Lines, M, y);
   y += m1Lines.length * 13 + 22;
@@ -1616,7 +1623,7 @@ async function generatePDF(lead){
     doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(20);
     doc.text('Le tre aree meno forti, per completezza', M, y); y += 28;
     doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-    const pre = doc.splitTextToSize('Nessuna di queste e\' sotto soglia. Le riportiamo perche\' sono le tre con il punteggio piu\' basso del tuo check: valgono come presidio, non come intervento.', W-2*M);
+    const pre = doc.splitTextToSize('Nessuna di queste è sotto soglia. Le riportiamo perché sono le tre con il punteggio più basso del tuo check: valgono come presidio, non come intervento.', W-2*M);
     doc.text(pre, M, y);
   }
 
@@ -1786,7 +1793,7 @@ async function generatePDF(lead){
     y += 14;
     // Intro tabella Azioni, dinamica in base allo score
     doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono elencate in ordine di impatto atteso. Quanto costi metterle in pratica dipende da come e' fatta la tua azienda, e questo check non puo' saperlo: serve guardarci dentro.";
+    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono elencate in ordine di impatto atteso. Quanto costi metterle in pratica dipende da com'è fatta la tua azienda, e questo check non può saperlo: serve guardarci dentro.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
     y += azIntroLines.length * 12 + 10;
