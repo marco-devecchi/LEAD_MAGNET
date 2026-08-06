@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Digital Maturity Check — Marco De Vecchi</title>
+<title>Tech-Check — Marco De Vecchi</title>
 <meta name="description" content="Misura il gap operativo della tua azienda su 4 leve chiave: Direzione, Execution, Tecnologia, Persone. Self-assessment gratuito basato su 71 KPI in 12 domande, 3 minuti." />
 
 <link rel="icon" type="image/png" href="assets/logo.jpg" />
 <link rel="apple-touch-icon" href="assets/logo.jpg" />
-<meta property="og:title" content="Digital Maturity Check — marco-devecchi" />
+<meta property="og:title" content="Tech-Check — marco-devecchi" />
 <meta property="og:description" content="Misura il gap operativo della tua azienda su 4 leve chiave: Direzione, Execution, Tecnologia, Persone. 12 domande, 3 minuti, report immediato." />
 <meta property="og:image" content="assets/logo.jpg" />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
 
 <!-- jsPDF (PDF lato client) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<!-- Montserrat per il PDF: DEVE stare dopo jsPDF, entrambi con defer -->
+<script src="montserrat-jspdf.js" defer></script>
 <script src="example-pages-data.js"></script>
 
 <style>
@@ -49,7 +51,7 @@ img,svg{max-width:100%; height:auto}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:'IBM Plex Sans', system-ui, sans-serif;
+  font-family:'Montserrat', system-ui, sans-serif;
   font-size:16px; line-height:1.55;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -62,7 +64,7 @@ body{
 /* ===== Top bar ===== */
 .topbar{
   display:flex; align-items:center; justify-content:space-between;
-  padding:22px 32px; border-bottom:1px solid var(--line);
+  padding:22px 56px; border-bottom:1px solid var(--line);
   position:sticky; top:0; backdrop-filter:blur(8px);
   background:rgba(14,16,20,.7); z-index:50;
 }
@@ -80,20 +82,20 @@ body{
   display:grid; place-items:center; overflow:hidden;
 }
 .brand-mark img{width:100%; height:100%; object-fit:contain; display:block}
-.brand-text{font-family:'Fraunces',serif; font-size:18px; font-weight:600; letter-spacing:-.01em}
-.brand-text small{display:block; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); letter-spacing:.12em; text-transform:uppercase; margin-top:2px}
+.brand-text{font-family:'Montserrat',sans-serif; font-size:18px; font-weight:600; letter-spacing:-.01em}
+.brand-text small{display:block; font-family:'Montserrat',sans-serif; font-size:10px; color:var(--ink-mute); letter-spacing:.12em; text-transform:uppercase; margin-top:2px}
 .tag{
-  font-family:'JetBrains Mono', monospace; font-size:11px;
+  font-family:'Montserrat', sans-serif; font-size:11px;
   color:var(--ink-mute); letter-spacing:.16em; text-transform:uppercase;
 }
 
 /* ===== Layout ===== */
-.wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 56px}
 @media (max-width:640px){
-  .wrap{padding:0 20px}
+  .wrap{padding:0 28px}
 }
 @media (max-width:380px){
-  .wrap{padding:0 16px}
+  .wrap{padding:0 20px}
 }
 .screen{display:none; padding:60px 0 80px; animation:fadeIn .35s ease both}
 .screen.active{display:block}
@@ -104,12 +106,12 @@ body{
 @media (max-width:920px){ .hero-grid{grid-template-columns:1fr; gap:40px} }
 .eyebrow{
   display:inline-flex; align-items:center; gap:8px;
-  font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent);
+  font-family:'Montserrat',sans-serif; font-size:11px; color:var(--accent);
   letter-spacing:.18em; text-transform:uppercase; margin-bottom:18px;
 }
 .eyebrow::before{content:""; width:24px; height:1px; background:var(--accent)}
 h1{
-  font-family:'Fraunces',serif; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-weight:600;
   font-size:clamp(34px, 5.4vw, 68px); line-height:1.06;
   letter-spacing:-.02em; margin:0 0 22px;
   overflow-wrap:break-word;
@@ -119,7 +121,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   h1{font-size:clamp(28px, 8vw, 44px); line-height:1.1}
 }
 .hero-sub{
-  font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+  font-family:'Montserrat',sans-serif; font-style:italic; font-weight:400;
   font-size:clamp(20px, 2.4vw, 26px); line-height:1.35;
   color:var(--ink-soft); margin:0 0 22px; max-width:680px;
   letter-spacing:-.005em;
@@ -129,7 +131,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .btn{
   display:inline-flex; align-items:center; gap:10px;
   padding:14px 22px; border-radius:10px; cursor:pointer;
-  font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:15px;
+  font-family:'Montserrat',sans-serif; font-weight:600; font-size:15px;
   border:1px solid transparent; text-decoration:none; transition:all .18s ease;
 }
 .btn-primary{
@@ -145,8 +147,8 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
 .meta-row{display:flex; gap:28px; margin-top:36px; flex-wrap:wrap}
 .meta-row > div{display:flex; flex-direction:column; gap:4px}
-.meta-row .num{font-family:'Fraunces',serif; font-size:30px; font-weight:600; color:var(--ink)}
-.meta-row .lbl{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute)}
+.meta-row .num{font-family:'Montserrat',sans-serif; font-size:30px; font-weight:600; color:var(--ink)}
+.meta-row .lbl{font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute)}
 
 /* Decorative right column on intro */
 .framework-card{
@@ -159,7 +161,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   background:radial-gradient(circle at center, rgba(91,141,239,.18), transparent 70%);
 }
 .framework-card h3{
-  font-family:'Fraunces',serif; font-size:18px; margin:0 0 16px; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-size:18px; margin:0 0 16px; font-weight:600;
 }
 .cat-row{
   display:grid; grid-template-columns:auto 1fr auto; gap:14px;
@@ -168,7 +170,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .cat-row:last-child{border-bottom:none}
 .cat-dot{width:10px; height:10px; border-radius:50%}
 .cat-name{font-weight:500}
-.cat-meta{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute)}
+.cat-meta{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute)}
 .steps-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
 @media (max-width:780px){
   .steps-grid{grid-template-columns:1fr}
@@ -181,14 +183,14 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 }
 .q-progress-bar{flex:1; height:3px; background:var(--line); border-radius:2px; overflow:hidden}
 .q-progress-fill{height:100%; background:var(--accent); transition:width .35s ease; width:0%}
-.q-progress-num{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-mute); letter-spacing:.08em}
+.q-progress-num{font-family:'Montserrat',sans-serif; font-size:12px; color:var(--ink-mute); letter-spacing:.08em}
 
 .q-card{
   background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
   padding:36px; box-shadow:var(--shadow);
 }
 .q-cat{
-  display:inline-block; font-family:'JetBrains Mono',monospace; font-size:10px;
+  display:inline-block; font-family:'Montserrat',sans-serif; font-size:10px;
   letter-spacing:.18em; text-transform:uppercase; padding:5px 10px;
   border-radius:4px; margin-bottom:16px;
 }
@@ -197,7 +199,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .q-cat[data-cat="Technology"] {background:rgba(79,180,122,.12);  color:var(--c-tech)}
 .q-cat[data-cat="Persone"]    {background:rgba(232,165,91,.12);  color:var(--c-pep)}
 
-.q-title{font-family:'Fraunces',serif; font-size:28px; line-height:1.2; margin:0 0 12px; font-weight:600; letter-spacing:-.01em}
+.q-title{font-family:'Montserrat',sans-serif; font-size:28px; line-height:1.2; margin:0 0 12px; font-weight:600; letter-spacing:-.01em}
 .q-text{color:var(--ink-soft); font-size:17px; margin:0 0 30px}
 
 .likert{
@@ -208,7 +210,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .likert label{
   display:flex; align-items:center; justify-content:center;
   height:54px; border:1px solid var(--line-2); border-radius:8px;
-  font-family:'Fraunces',serif; font-size:18px; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-size:18px; font-weight:600;
   color:var(--ink-soft); cursor:pointer; transition:all .15s ease;
   background:var(--bg-soft);
 }
@@ -248,11 +250,11 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
   padding:32px; box-shadow:var(--shadow); text-align:center;
 }
-.score-label{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); letter-spacing:.18em; text-transform:uppercase}
-.score-value{font-family:'Fraunces',serif; font-size:76px; font-weight:600; line-height:1; letter-spacing:-.03em; margin:14px 0 8px}
+.score-label{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute); letter-spacing:.18em; text-transform:uppercase}
+.score-value{font-family:'Montserrat',sans-serif; font-size:76px; font-weight:600; line-height:1; letter-spacing:-.03em; margin:14px 0 8px}
 .score-value small{font-size:24px; color:var(--ink-mute); font-weight:400}
 .score-tier{
-  display:inline-block; font-family:'JetBrains Mono',monospace;
+  display:inline-block; font-family:'Montserrat',sans-serif;
   padding:6px 12px; border-radius:6px; font-size:12px; letter-spacing:.12em;
   text-transform:uppercase; margin-top:8px;
 }
@@ -264,7 +266,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
   padding:28px; box-shadow:var(--shadow);
 }
-.radar-card h3{font-family:'Fraunces',serif; margin:0 0 18px; font-size:20px}
+.radar-card h3{font-family:'Montserrat',sans-serif; margin:0 0 18px; font-size:20px}
 #radar-chart{display:block; width:100%; height:auto}
 
 .cat-scores{display:grid; gap:10px; margin-top:8px}
@@ -272,11 +274,11 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .cat-score:first-child{border-top:none}
 .cat-score .dot{width:10px; height:10px; border-radius:50%}
 .cat-score .name{font-weight:500}
-.cat-score .pct{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-soft)}
-.cat-score .weight{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute)}
+.cat-score .pct{font-family:'Montserrat',sans-serif; font-size:13px; color:var(--ink-soft)}
+.cat-score .weight{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute)}
 
 .criticita{margin-top:36px}
-.criticita h3{font-family:'Fraunces',serif; font-size:24px; margin:0 0 6px; font-weight:600}
+.criticita h3{font-family:'Montserrat',sans-serif; font-size:24px; margin:0 0 6px; font-weight:600}
 .criticita-sub{color:var(--ink-mute); margin:0 0 22px}
 .crit-list{display:grid; gap:14px}
 .crit-card{
@@ -284,14 +286,14 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   padding:22px 24px; display:grid; grid-template-columns:auto 1fr auto; gap:18px; align-items:center;
 }
 .crit-card .rank{
-  font-family:'Fraunces',serif; font-size:34px; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-size:34px; font-weight:600;
   color:var(--ink-mute); line-height:1; min-width:38px;
 }
-.crit-card .crit-cat{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute)}
-.crit-card .crit-title{font-family:'Fraunces',serif; font-size:18px; font-weight:600; margin:2px 0 4px}
+.crit-card .crit-cat{font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute)}
+.crit-card .crit-title{font-family:'Montserrat',sans-serif; font-size:18px; font-weight:600; margin:2px 0 4px}
 .crit-card .crit-meta{font-size:13px; color:var(--ink-soft)}
 .crit-card .crit-score{
-  font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-size:14px; font-weight:600;
   padding:6px 12px; border-radius:6px;
 }
 .crit-card .crit-score.bad{background:rgba(226,106,106,.14); color:var(--crit)}
@@ -312,7 +314,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   background:radial-gradient(circle at center, rgba(241,162,17,.15), transparent 65%);
   pointer-events:none;
 }
-.cta-block h3{font-family:'Fraunces',serif; font-size:30px; margin:0 0 10px; font-weight:600; letter-spacing:-.01em; line-height:1.15}
+.cta-block h3{font-family:'Montserrat',sans-serif; font-size:30px; margin:0 0 10px; font-weight:600; letter-spacing:-.01em; line-height:1.15}
 .cta-block p{color:var(--ink-soft); margin:0 0 18px}
 .cta-bullets{list-style:none; padding:0; margin:0 0 18px; display:grid; gap:10px}
 .cta-bullets li{
@@ -331,7 +333,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .lead-form{
   background:var(--bg-card); border:1px solid var(--line-2); border-radius:12px; padding:24px;
 }
-.lead-form label{display:block; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:6px}
+.lead-form label{display:block; font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:6px}
 .lead-form input,
 .lead-form select{
   width:100%; padding:12px 14px; background:var(--bg); border:1px solid var(--line-2);
@@ -371,12 +373,12 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   background:rgba(79,180,122,.14); color:var(--good);
   display:grid; place-items:center; font-size:32px; font-weight:700;
 }
-.success-state h3{font-family:'Fraunces',serif; font-size:30px; margin:0 0 12px; font-weight:600}
+.success-state h3{font-family:'Montserrat',sans-serif; font-size:30px; margin:0 0 12px; font-weight:600}
 .success-state p{color:var(--ink-soft); max-width:480px; margin:0 auto 24px}
 
 /* footer */
 .footer{
-  border-top:1px solid var(--line); padding:30px 32px; margin-top:80px;
+  border-top:1px solid var(--line); padding:30px 56px; margin-top:80px;
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
   font-size:13px; color:var(--ink-mute);
 }
@@ -399,7 +401,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .privacy-section{margin-bottom:36px}
 .privacy-section:last-of-type{margin-bottom:18px}
 .privacy-section h2{
-  font-family:'Fraunces',serif; font-size:22px; font-weight:600;
+  font-family:'Montserrat',sans-serif; font-size:22px; font-weight:600;
   letter-spacing:-.01em; margin:0 0 14px; color:var(--ink);
   padding-bottom:10px; border-bottom:1px solid var(--line);
 }
@@ -430,7 +432,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
     <div class="brand-mark"><img src="assets/logo.jpg" alt="marco-devecchi logo" /></div>
     <div class="brand-text">marco-devecchi<small>Digital Transformation per PMI</small></div>
   </a>
-  <span class="tag">Digital Maturity Check · v1.0</span>
+  <span class="tag">Tech-Check · v1.0</span>
 </header>
 
 <!-- ============================================== -->
@@ -439,7 +441,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 <section class="screen active wrap" id="screen-intro">
   <div class="hero-grid">
     <div>
-      <div class="eyebrow">Self-assessment gratuito · 12 domande · 3 minuti</div>
+      <div class="eyebrow">Tech-Check · 12 domande · 3 minuti · gratuito</div>
       <h1>Misura il <em>gap operativo</em> della tua azienda</h1>
       <p class="hero-sub">Su 4 leve chiave: Direzione, Execution, Tecnologia, Persone. In 3 minuti.</p>
       <p class="lead">
@@ -461,27 +463,27 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
       <h3>Il framework in sintesi</h3>
       <div class="cat-row"><span class="cat-dot" style="background:var(--c-dir)"></span><span class="cat-name">Direzione</span><span class="cat-meta">35 KPI · 20%</span></div>
       <div class="cat-row"><span class="cat-dot" style="background:var(--c-exe)"></span><span class="cat-name">Execution</span><span class="cat-meta">48 KPI · 28%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Technology</span><span class="cat-meta">48 KPI · 28%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Tecnologia</span><span class="cat-meta">48 KPI · 28%</span></div>
       <div class="cat-row"><span class="cat-dot" style="background:var(--c-pep)"></span><span class="cat-name">Persone</span><span class="cat-meta">43 KPI · 25%</span></div>
     </aside>
   </div>
 
   <section id="how-it-works" style="margin-top:90px">
     <div class="eyebrow">Come funziona</div>
-    <h2 style="font-family:'Fraunces',serif; font-size:36px; font-weight:600; letter-spacing:-.01em; margin:0 0 32px">In 3 passaggi</h2>
+    <h2 style="font-family:'Montserrat',sans-serif; font-size:36px; font-weight:600; letter-spacing:-.01em; margin:0 0 32px">In 3 passaggi</h2>
     <div class="steps-grid">
       <div class="framework-card" style="padding:24px">
-        <div style="font-family:'Fraunces',serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">01</div>
+        <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">01</div>
         <h3 style="margin-top:14px">Rispondi a 12 domande</h3>
         <p style="color:var(--ink-soft); margin:0; font-size:14px">Una scala 1-7 per ognuna delle 4 leve della trasformazione digitale. Ti porta via meno di tre minuti.</p>
       </div>
       <div class="framework-card" style="padding:24px">
-        <div style="font-family:'Fraunces',serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">02</div>
+        <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">02</div>
         <h3 style="margin-top:14px">Ricevi l'abstract gratuito</h3>
         <p style="color:var(--ink-soft); margin:0; font-size:14px">Score di maturità, radar chart delle 4 categorie e top 3 aree critiche identificate dal sistema.</p>
       </div>
       <div class="framework-card" style="padding:24px">
-        <div style="font-family:'Fraunces',serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">03</div>
+        <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">03</div>
         <h3 style="margin-top:14px">Sblocca il report completo</h3>
         <p style="color:var(--ink-soft); margin:0; font-size:14px">PDF con KPI dettagliati, benchmark di settore e azioni concrete suggerite per ogni criticità.</p>
       </div>
@@ -601,8 +603,8 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   <div class="success-state hidden" id="success-state">
     <div class="check-icon">✓</div>
     <h3>Report inviato</h3>
-    <p>Stiamo generando il tuo PDF. Dovrebbe partire il download tra un istante. Ti abbiamo anche inviato copia all'indirizzo che hai indicato.</p>
-    <button class="btn btn-primary" id="btn-redownload">Scarica di nuovo il PDF</button>
+    <p>Il download parte tra un istante. Se non dovesse partire, usa il pulsante qui sotto.</p>
+    <button class="btn btn-primary" id="btn-redownload">Scarica il tuo PDF</button>
     <div style="margin-top:20px">
       <a href="#" class="btn btn-outline" id="link-call-2">Prenota una call con Marco</a>
     </div>
@@ -621,7 +623,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   <div class="eyebrow">Trattamento dei dati personali</div>
   <h1 style="margin-bottom:24px">Privacy <em>policy</em></h1>
   <p class="lead" style="max-width:680px">
-    Ai sensi degli artt. 13 e 14 del Regolamento UE 2016/679 (GDPR), ti forniamo le informazioni essenziali su come trattiamo i tuoi dati personali quando completi il <em>Digital Maturity Check</em> e richiedi il report PDF.
+    Ai sensi degli artt. 13 e 14 del Regolamento UE 2016/679 (GDPR), ti forniamo le informazioni essenziali su come trattiamo i tuoi dati personali quando completi il <em>Tech-Check</em> e richiedi il report PDF.
   </p>
 
   <article class="privacy-doc">
@@ -723,6 +725,18 @@ const LEAD_ENDPOINT = "/.netlify/functions/lead";
 // Link per la call con Marco (form esterno o Cal.com)
 const CALL_URL = "https://cal.com/marco-devecchi/call-conoscitiva";
 
+/* ---------- ETICHETTE CATEGORIE ----------
+   La CHIAVE resta quella del dataset (Direzione, Execution, Technology, Persone):
+   non va toccata, e' usata in dataset.json, nei selettori CSS [data-cat]
+   e negli attributi Brevo. Qui si cambia SOLO cio' che legge l'utente. */
+const CAT_LABEL = {
+  Direzione:  'Direzione',
+  Execution:  'Execution',
+  Technology: 'Tecnologia',
+  Persone:    'Persone',
+};
+const etichettaCat = c => (CAT_LABEL[c] || c);
+
 /* ---------- STATE ---------- */
 let DATASET = null;     // caricato da dataset.json
 let answers = {};       // { q1: 5, q2: 3, ... }
@@ -784,11 +798,11 @@ function renderQ(){
   const q  = DATASET.questions[cur];
   const tot= DATASET.questions.length;
   document.getElementById('q-num').textContent = String(cur+1).padStart(2,'0') + ' / ' + tot;
-  document.getElementById('q-cat-label').textContent = q.cat;
-  document.getElementById('q-progress-fill').style.width = ((cur)/(tot)*100) + '%';
+  document.getElementById('q-cat-label').textContent = etichettaCat(q.cat);
+  document.getElementById('q-progress-fill').style.width = ((cur+1)/tot*100) + '%';
 
   const cat = document.getElementById('q-cat');
-  cat.textContent = q.cat;
+  cat.textContent = etichettaCat(q.cat);
   cat.dataset.cat = q.cat;
 
   document.getElementById('q-title').textContent = q.title;
@@ -877,7 +891,7 @@ function renderResult(){
     cs.insertAdjacentHTML('beforeend', `
       <div class="cat-score">
         <span class="dot" style="background:${cat.color}"></span>
-        <span class="name">${c}</span>
+        <span class="name">${etichettaCat(c)}</span>
         <span class="pct">${pct}%</span>
         <span class="weight">peso ${cat.weight}%</span>
       </div>`);
@@ -896,7 +910,7 @@ function renderResult(){
       <div class="crit-card">
         <span class="rank">0${i+1}</span>
         <div>
-          <div class="crit-cat" style="color:${DATASET.categories[q.cat].color}">${q.cat}</div>
+          <div class="crit-cat" style="color:${DATASET.categories[q.cat].color}">${etichettaCat(q.cat)}</div>
           <div class="crit-title">${q.title}</div>
           <div class="crit-meta">${q.kpis.length} KPI sottostanti · <strong>${q.n_actions} azioni concrete</strong> disponibili nel report completo</div>
         </div>
@@ -948,9 +962,9 @@ function drawRadar(catScores){
     const x = cx + Math.cos(a)*lr, y = cy + Math.sin(a)*lr;
     const anchor = Math.abs(Math.cos(a))<0.2 ? 'middle' : (Math.cos(a)>0?'start':'end');
     html += `<text x="${x}" y="${y}" text-anchor="${anchor}" dominant-baseline="middle"
-      font-family="Fraunces,serif" font-size="13" font-weight="600" fill="${DATASET.categories[c].color}">${c}</text>`;
+      font-family="Montserrat,sans-serif" font-size="13" font-weight="600" fill="${DATASET.categories[c].color}">${etichettaCat(c)}</text>`;
     html += `<text x="${x}" y="${y+15}" text-anchor="${anchor}" dominant-baseline="middle"
-      font-family="JetBrains Mono,monospace" font-size="11" fill="#7A8090">${Math.round(catScores[c])}%</text>`;
+      font-family="Montserrat,sans-serif" font-size="11" fill="#7A8090">${Math.round(catScores[c])}%</text>`;
   });
   svg.innerHTML = html;
 }
@@ -1020,9 +1034,12 @@ async function generatePDF(lead){
   }
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({unit:'pt', format:'a4'});
+  // Montserrat se montserrat-jspdf.js e' stato caricato, altrimenti helvetica
+  const FONT = (doc.getFontList && doc.getFontList().Montserrat) ? 'Montserrat' : 'helvetica';
+  doc.setFont(FONT, 'normal');
   const W = doc.internal.pageSize.getWidth();
   const H = doc.internal.pageSize.getHeight();
-  const M = 48; // margine
+  const M = 62; // margine
   let y = M;
 
   const C = {
@@ -1080,9 +1097,15 @@ async function generatePDF(lead){
 
     // Operazioni di disegno della pagina corrente, da eseguire dopo il fondo
     let pageOps = [];
+    // true appena scrivo del testo sotto il titolo su questa pagina.
+    // Serve a non lasciare mai un'intestazione orfana in fondo alla pagina.
+    let paginaHaTesto = false;
 
-    // Se non c'è spazio per il titolo + almeno una riga di body, vado a pagina nuova
-    if(y + padTop + titleSize + titleLeading + bodyLeading + padBottom > H - M){
+    // Quanto spazio serve per titolo + le prime righe del primo blocco.
+    // Se ne riservassi una sola, il titolo finirebbe da solo in fondo alla pagina
+    // e verrebbe ristampato su quella dopo (l'intestazione doppia).
+    const righeMinime = 4;
+    if(y + padTop + titleSize + titleLeading + righeMinime*bodyLeading + padBottom > H - M){
       doc.addPage();
       y = M;
       pageStartY = y;
@@ -1097,17 +1120,17 @@ async function generatePDF(lead){
       drawBoxBackground(pageStartY, endY);
       for(const op of pageOps){
         if(op.kind === 'title'){
-          doc.setFont('helvetica','bold');
+          doc.setFont(FONT,'bold');
           doc.setFontSize(titleSize);
           doc.setTextColor(color);
           doc.text(title, innerL, op.y);
         } else if(op.kind === 'body'){
-          doc.setFont('helvetica','normal');
+          doc.setFont(FONT,'normal');
           doc.setFontSize(bodySize);
           doc.setTextColor('#222831');
           doc.text(op.lines, innerL, op.y);
         } else if(op.kind === 'cite'){
-          doc.setFont('helvetica','italic');
+          doc.setFont(FONT,'italic');
           doc.setFontSize(citeSize);
           doc.setTextColor('#8a8f9c');
           doc.text(op.lines, innerL, op.y);
@@ -1135,20 +1158,34 @@ async function generatePDF(lead){
 
       const blockH = bodyH + citeH + (bi < blocks.length - 1 ? paraGap : 0);
 
-      // Se il blocco non entra, chiudo la pagina e ne apro una nuova
-      if(y + blockH + padBottom > H - M){
-        finalizePage(y + 4);
+      // Se il blocco non entra, passo a pagina nuova.
+      const apriNuovaPagina = ()=>{
         doc.addPage();
         y = M;
         pageStartY = y;
         pageOps = [];
+        paginaHaTesto = false;
         currentTitleY = pageStartY + padTop + titleSize;
         pageOps.push({ kind:'title', y: currentTitleY });
         y = currentTitleY + titleLeading;
+      };
+      if(y + blockH + padBottom > H - M){
+        if(paginaHaTesto){
+          // la pagina ha contenuto: la chiudo e ne apro una nuova
+          finalizePage(y + 4);
+          apriNuovaPagina();
+        } else if(pageStartY > M){
+          // sotto il titolo non c'e' ancora niente: non disegno il box orfano,
+          // sposto tutto (titolo compreso) sulla pagina successiva
+          apriNuovaPagina();
+        }
+        // se pageStartY === M siamo gia' in cima a una pagina vuota:
+        // il blocco e' piu' alto di una pagina intera, lo scrivo comunque
       }
 
       // body
       pageOps.push({ kind:'body', y: y + bodySize, lines: bodyLines });
+      paginaHaTesto = true;
       y += bodyH;
 
       // cite
@@ -1177,12 +1214,12 @@ async function generatePDF(lead){
       doc.addPage();
       y = M;
     }
-    doc.setFont('helvetica','bold');
+    doc.setFont(FONT,'bold');
     doc.setFontSize(8);
     doc.setTextColor('#8a8f9c');
     doc.text('RIFERIMENTI', M, y);
     y += 12;
-    doc.setFont('helvetica','normal');
+    doc.setFont(FONT,'normal');
     doc.setFontSize(7.5);
     doc.setTextColor('#8a8f9c');
     for(const ref of refs){
@@ -1205,49 +1242,50 @@ async function generatePDF(lead){
     doc.addImage(LOGO_B64, 'JPEG', M, 50, 56, 46);
   } catch(e){ console.warn('Logo PDF skip:', e); }
 
-  doc.setTextColor('#F1A211'); doc.setFont('helvetica','bold');
+  doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold');
   doc.setFontSize(11); doc.text('MARCO DE VECCHI · DIGITAL TRANSFORMATION', M, 130);
 
-  doc.setTextColor('#ECEEF3'); doc.setFont('helvetica','normal');
+  doc.setTextColor('#ECEEF3'); doc.setFont(FONT,'normal');
   doc.setFontSize(34);
-  doc.text('Digital Maturity', M, 230);
-  doc.setFont('helvetica','bold');
-  doc.text('Assessment Report', M, 270);
+  doc.text('Tech-Check', M, 230);
+  doc.setFont(FONT,'bold');
+  doc.setFontSize(24);
+  doc.text('Report di maturita digitale', M, 268);
 
-  doc.setFont('helvetica','normal'); doc.setFontSize(12); doc.setTextColor('#B6BBC9');
-  doc.text(lead.company, M, 320);
+  doc.setFont(FONT,'normal'); doc.setFontSize(12); doc.setTextColor('#B6BBC9');
+  doc.text(doc.splitTextToSize(lead.company, W - 2*M), M, 320);
   doc.setFontSize(10); doc.setTextColor('#7A8090');
   doc.text(lead.name + ', ' + lead.role, M, 340);
   doc.text('Generato il ' + new Date().toLocaleDateString('it-IT', {day:'2-digit',month:'long',year:'numeric'}), M, 356);
 
   // big score on cover
   const tierObj = tier(lastResult.total);
-  doc.setFont('helvetica','bold'); doc.setFontSize(110); doc.setTextColor('#F1A211');
+  doc.setFont(FONT,'bold'); doc.setFontSize(110); doc.setTextColor('#F1A211');
   doc.text(String(Math.round(lastResult.total)), M, 510);
   doc.setFontSize(14); doc.setTextColor('#ECEEF3');
   doc.text('/100, Maturità ' + tierObj.word, M, 540);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
-  doc.text('Check basato su 71 KPI · framework completo: ' + DATASET.framework_total_kpis + ' KPI · 4 leve · 30 sottocategorie', M, H-60);
+  doc.text('Check basato su ' + DATASET.questions.reduce((a,q)=>a+q.kpis.length,0) + ' KPI · framework completo: ' + DATASET.framework_total_kpis + ' KPI · 4 leve · 30 sottocategorie', M, H-60);
   doc.text('Versione 1.0 · self-assessment 12 domande', M, H-46);
 
   // ------- PAGE 2: Sintesi e radar -------
   doc.addPage(); doc.setFillColor('#FFFFFF'); doc.rect(0,0,W,H,'F');
   y = M;
-  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont('helvetica','bold');
+  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
   doc.text('SINTESI ESECUTIVA', M, y); y += 26;
-  doc.setTextColor(C.ink); doc.setFont('helvetica','bold'); doc.setFontSize(22);
+  doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
   doc.text('Il quadro complessivo', M, y); y += 36;
 
   // Intro descrittiva
-  doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const intro = `In base alle 12 risposte fornite, il livello complessivo di maturità digitale di ${lead.company} è di ${Math.round(lastResult.total)}/100, classificato come "${tierObj.label.toLowerCase()}". Il punteggio è una media ponderata delle 4 leve del framework (Direzione 20%, Execution 28%, Technology 28%, Persone 25%) rinormalizzata su base 100.`;
+  doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
+  const intro = `In base alle 12 risposte fornite, il livello complessivo di maturità digitale di ${lead.company} è di ${Math.round(lastResult.total)}/100, classificato come "${tierObj.label.toLowerCase()}". Il punteggio è una media ponderata delle 4 leve del framework, rinormalizzata su base 100: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+DATASET.categories[c].weight+'%').join(', ')}.`;
   const introLines = doc.splitTextToSize(intro, W-2*M);
   doc.text(introLines, M, y);
   y += introLines.length * 13 + 20;
 
   // Sezione visuale: due titoletti
-  doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(C.ink);
+  doc.setFont(FONT,'bold'); doc.setFontSize(10); doc.setTextColor(C.ink);
   doc.text('Profilo per categoria', M, y);
   doc.text('Score per categoria', M+275, y);
   doc.setDrawColor(C.line); doc.setLineWidth(0.4);
@@ -1273,13 +1311,13 @@ async function generatePDF(lead){
     // pallino colore
     doc.setFillColor(col); doc.circle(tabStartX+8, rowY+2, 4, 'F');
     // nome categoria
-    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(C.ink);
+    doc.setFont(FONT,'bold'); doc.setFontSize(11); doc.setTextColor(C.ink);
     doc.text(c, tabStartX+22, rowY+5);
     // peso sotto
-    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
+    doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
     doc.text('peso ' + DATASET.categories[c].weight + '%', tabStartX+22, rowY+16);
     // percentuale grande a destra
-    doc.setFont('helvetica','bold'); doc.setFontSize(15); doc.setTextColor(col);
+    doc.setFont(FONT,'bold'); doc.setFontSize(15); doc.setTextColor(col);
     doc.text(pct + '%', tabEndX-6, rowY+8, {align:'right'});
   });
 
@@ -1287,8 +1325,8 @@ async function generatePDF(lead){
   y += 250;
 
   // Sotto, descrizione di cosa il lettore sta guardando
-  doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-  const expl = `Il radar a sinistra mostra la "forma" della tua organizzazione: più il quadrilatero arancio è ampio e regolare, più sei equilibrato sulle 4 leve. Eventuali "rientranze" indicano leve da rinforzare. La tabella a destra riporta lo score di ciascuna leva (0-100) e il peso che ha nel calcolo dello score complessivo: leve con peso maggiore (Execution e Technology, 28% ciascuna) influenzano di più il punteggio finale.`;
+  doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
+  const expl = `Il radar a sinistra mostra la "forma" della tua organizzazione: più il quadrilatero arancio è ampio e regolare, più sei equilibrato sulle 4 leve. Eventuali "rientranze" indicano leve da rinforzare. La tabella a destra riporta lo score di ciascuna leva (0-100) e il peso che ha nel calcolo dello score complessivo: le leve con peso maggiore influenzano di più il punteggio finale.`;
   const explLines = doc.splitTextToSize(expl, W-2*M);
   doc.text(explLines, M, y);
   y += explLines.length * 12 + 14;
@@ -1296,19 +1334,19 @@ async function generatePDF(lead){
   doc.setDrawColor(C.line); doc.setLineWidth(0.5); doc.line(M, y, W-M, y); y += 22;
 
   // ------- TOP 3 CRITICITÀ - DETTAGLIO -------
-  if(y > H-200){ doc.addPage(); y = M; }
-  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont('helvetica','bold');
+  if(y + 210 > H - M){ doc.addPage(); y = M; }
+  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
   doc.text('TOP 3 AREE CRITICHE', M, y); y += 26;
-  doc.setTextColor(C.ink); doc.setFont('helvetica','bold'); doc.setFontSize(18);
+  doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(18);
   doc.text('Dove intervenire per primo', M, y); y += 30;
 
-  doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
   const top3intro = doc.splitTextToSize('Le tre sottocategorie con il punteggio più basso. Nelle pagine successive trovi i KPI sottostanti, i benchmark di riferimento e le azioni concrete suggerite.', W-2*M);
   doc.text(top3intro, M, y);
   y += top3intro.length * 12 + 14;
 
   lastResult.top3.forEach((item, idx)=>{
-    if(y > H-100){ doc.addPage(); y = M; }
+    if(y + 84 > H - M){ doc.addPage(); y = M; }
     const q = item.q;
     const score = Math.round(item.score);
     const sevColor = score < 40 ? C.crit : C.warn;
@@ -1321,18 +1359,18 @@ async function generatePDF(lead){
     doc.setFillColor(cCol);
     doc.rect(M, y, 4, 70, 'F');
     // rank
-    doc.setFont('helvetica','bold'); doc.setFontSize(28); doc.setTextColor(C.mute);
+    doc.setFont(FONT,'bold'); doc.setFontSize(28); doc.setTextColor(C.mute);
     doc.text('0'+(idx+1), M+22, y+44);
     // categoria
-    doc.setFontSize(8); doc.setTextColor(cCol); doc.setFont('helvetica','bold');
-    doc.text(q.cat.toUpperCase(), M+66, y+22);
+    doc.setFontSize(8); doc.setTextColor(cCol); doc.setFont(FONT,'bold');
+    doc.text(etichettaCat(q.cat).toUpperCase(), M+66, y+22);
     doc.setFontSize(14); doc.setTextColor(C.ink);
     doc.text(q.title, M+66, y+40);
-    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(9); doc.setTextColor(C.soft);
     doc.text(q.kpis.length + ' KPI sottostanti · ' + q.n_actions + ' azioni concrete suggerite', M+66, y+56);
     // score badge
     doc.setFillColor(sevColor); doc.roundedRect(W-M-80, y+22, 64, 28, 4, 4, 'F');
-    doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor('#FFFFFF');
+    doc.setFont(FONT,'bold'); doc.setFontSize(14); doc.setTextColor('#FFFFFF');
     doc.text(score+'%', W-M-48, y+41, {align:'center'});
     y += 84;
   });
@@ -1340,30 +1378,30 @@ async function generatePDF(lead){
   // ------- PAGINA METODO: Come leggere questo report -------
   doc.addPage();
   y = M;
-  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont('helvetica','bold');
+  doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
   doc.text('METODO', M, y); y += 26;
-  doc.setTextColor(C.ink); doc.setFont('helvetica','bold'); doc.setFontSize(22);
+  doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
   doc.text('Come leggere questo report', M, y); y += 36;
 
   // Blocco 1 — Cosa stai per leggere
-  doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
+  doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
   doc.text('Cosa stai per leggere', M, y); y += 16;
-  doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
   const m1 = `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 aree più critiche emerse dal tuo check. Ogni scheda contiene due tabelle: i KPI sottostanti l'area, e le azioni concrete suggerite per intervenire. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`;
   const m1Lines = doc.splitTextToSize(m1, W-2*M);
   doc.text(m1Lines, M, y);
   y += m1Lines.length * 13 + 22;
 
   // Blocco 2 — Come leggere la colonna TUO
-  doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
+  doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
   doc.text('Come leggere la colonna "TUO" e la colonna "Benchmark"', M, y); y += 16;
-  doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
   const m2 = `Per ogni KPI vedi due valori: il "TUO" e il "Benchmark". Il "TUO" rappresenta il punteggio della sottocategoria a cui il KPI appartiene (su scala 0-100), derivato dalla risposta che hai dato nel check. Il "Benchmark" è il valore di riferimento del framework KPI per quel singolo indicatore: è il livello a cui dovresti tendere per essere considerato "in linea con le best practice".`;
   const m2Lines = doc.splitTextToSize(m2, W-2*M);
   doc.text(m2Lines, M, y);
   y += m2Lines.length * 13 + 16;
 
-  doc.setFont('helvetica','normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
   const m2b = `Il valore "TUO" è quindi un'approssimazione: ti dice come stai messo a livello di sottocategoria, ma non ti dice il valore esatto del singolo KPI. Per ottenere quel dato servirebbe misurarlo direttamente in azienda (es. tempo medio di delivery, percentuale di processi documentati, eNPS, ecc.).`;
   const m2bLines = doc.splitTextToSize(m2b, W-2*M);
   doc.text(m2bLines, M, y);
@@ -1383,9 +1421,9 @@ async function generatePDF(lead){
   doc.roundedRect(M, blockY, W-2*M, blockH, 6, 6, 'FD');
   // contenuto del blocco
   let by = blockY + 22;
-  doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(C.accent);
+  doc.setFont(FONT,'bold'); doc.setFontSize(11); doc.setTextColor(C.accent);
   doc.text(m3Title, M+16, by); by += 18;
-  doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.ink);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.ink);
   doc.text(m3Lines, M+16, by); by += m3Lines.length*13 + 10;
   doc.text(m3bLines, M+16, by);
 
@@ -1393,9 +1431,9 @@ async function generatePDF(lead){
 
   // Blocco 4 — Soglie semaforo (per chiarire i colori)
   if(y > H-110){ doc.addPage(); y = M; }
-  doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
+  doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
   doc.text('Soglie semaforo', M, y); y += 18;
-  doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
+  doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
   doc.text('Il colore del punteggio "TUO" segue questa logica:', M, y); y += 18;
 
   const soglie = [
@@ -1405,9 +1443,9 @@ async function generatePDF(lead){
   ];
   soglie.forEach(s=>{
     doc.setFillColor(s.col); doc.roundedRect(M, y, 70, 18, 3, 3, 'F');
-    doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor('#FFFFFF');
+    doc.setFont(FONT,'bold'); doc.setFontSize(9); doc.setTextColor('#FFFFFF');
     doc.text(s.label, M+35, y+12, {align:'center'});
-    doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
     doc.text(s.desc, M+82, y+12);
     y += 26;
   });
@@ -1420,16 +1458,16 @@ async function generatePDF(lead){
     y = M;
 
     // Header pagina
-    doc.setTextColor(cCol); doc.setFontSize(9); doc.setFont('helvetica','bold');
-    doc.text(q.cat.toUpperCase() + ' · ' + q.sub.toUpperCase(), M, y); y += 26;
+    doc.setTextColor(cCol); doc.setFontSize(9); doc.setFont(FONT,'bold');
+    doc.text(etichettaCat(q.cat).toUpperCase() + ' · ' + q.sub.toUpperCase(), M, y); y += 26;
     doc.setTextColor(C.ink); doc.setFontSize(20);
     doc.text(q.title, M, y); y += 30;
 
     // Score della sottocategoria, in evidenza
     const scoreStr = score + '/100';
-    doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
     doc.text('Punteggio sottocategoria:', M, y);
-    doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.setTextColor(cCol);
+    doc.setFont(FONT,'bold'); doc.setFontSize(13); doc.setTextColor(cCol);
     doc.text(scoreStr, M+135, y);
     y += 16;
     // Riga di chiarimento: cosa rappresenta davvero questo punteggio + interpretazione dinamica
@@ -1444,12 +1482,12 @@ async function generatePDF(lead){
       interpretazione = "sei in linea con gli standard di eccellenza in quest'area.";
     }
     const chiarimento = "Frutto della tua singola risposta al check rapido. È una fotografia indicativa: ti dice che in quest'area " + interpretazione + " Per una misurazione completa servono i KPI sottostanti.";
-    doc.setFont('helvetica','italic'); doc.setFontSize(8.5); doc.setTextColor(C.mute);
+    doc.setFont(FONT,'italic'); doc.setFontSize(8.5); doc.setTextColor(C.mute);
     const chiarLines = doc.splitTextToSize(chiarimento, W - 2*M);
     doc.text(chiarLines, M, y);
     y += chiarLines.length * 11 + 14;
     // Descrizione domanda sottostante
-    doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
     doc.text(doc.splitTextToSize(q.text, W-2*M), M, y);
     y += doc.splitTextToSize(q.text, W-2*M).length * 12 + 18;
 
@@ -1481,10 +1519,10 @@ async function generatePDF(lead){
 
     // ------ TABELLA KPI ------
     if(y > H-130){ doc.addPage(); y = M; }
-    doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
+    doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
     doc.text('KPI sottostanti', M, y); y += 14;
     // Intro tabella KPI
-    doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
     const kpiIntro = "Il tuo punteggio sopra è il primo indicatore aggregato. Per misurare quest'area in profondità, il framework usa i KPI specifici che vedi qui sotto, ognuno con il suo benchmark di eccellenza. Servono come bussola per capire dove e come intervenire concretamente.";
     const kpiIntroLines = doc.splitTextToSize(kpiIntro, W-2*M);
     doc.text(kpiIntroLines, M, y);
@@ -1506,7 +1544,7 @@ async function generatePDF(lead){
     const drawKpiHeader = (yy)=>{
       doc.setFillColor(cCol);
       doc.rect(M, yy, tblW, 22, 'F');
-      doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
+      doc.setFont(FONT,'bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
       doc.text('KPI',         colX[0]+PAD_L, yy+14);
       doc.text('DESCRIZIONE', colX[1]+PAD_L, yy+14);
       doc.text('BENCHMARK',   colX[2]+colWidths[2]/2, yy+14, {align:'center'});
@@ -1517,10 +1555,10 @@ async function generatePDF(lead){
 
     // Righe KPI
     q.kpis.forEach((k, idx)=>{
-      doc.setFont('helvetica','bold'); doc.setFontSize(9);
+      doc.setFont(FONT,'bold'); doc.setFontSize(9);
       const nameLines  = doc.splitTextToSize(softBreak(k.name, 32), textW[0]);
 
-      doc.setFont('helvetica','normal'); doc.setFontSize(8.5);
+      doc.setFont(FONT,'normal'); doc.setFontSize(8.5);
       const descLines  = doc.splitTextToSize(softBreak(k.desc || '', 40), textW[1]);
       const benchTxt   = k.benchmark || '—';
       const benchLines = doc.splitTextToSize(softBreak(benchTxt, 20), textW[2]);
@@ -1545,15 +1583,15 @@ async function generatePDF(lead){
       }
 
       // Nome KPI
-      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(C.ink);
+      doc.setFont(FONT,'bold'); doc.setFontSize(9); doc.setTextColor(C.ink);
       doc.text(nameLines, colX[0]+PAD_L, y+12);
 
       // Descrizione
-      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(C.soft);
+      doc.setFont(FONT,'normal'); doc.setFontSize(8.5); doc.setTextColor(C.soft);
       doc.text(descLines, colX[1]+PAD_L, y+12);
 
       // Benchmark (centrato nella sua cella, colore categoria)
-      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(cCol);
+      doc.setFont(FONT,'bold'); doc.setFontSize(9); doc.setTextColor(cCol);
       doc.text(benchLines, colX[2]+colWidths[2]/2, y+12, {align:'center'});
 
       y += rowH;
@@ -1584,13 +1622,13 @@ async function generatePDF(lead){
     }
     const azionsFiltered = q.actions_preview.slice(0, azNum);
 
-    doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
+    doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
     doc.text('Azioni concrete suggerite', M, y);
-    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(C.mute);
+    doc.setFont(FONT,'normal'); doc.setFontSize(9); doc.setTextColor(C.mute);
     doc.text('(' + azNum + ' azioni su ' + q.actions_preview.length + ' del framework)', M+170, y);
     y += 14;
     // Intro tabella Azioni, dinamica in base allo score
-    doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
+    doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
     const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono ordinate per impatto, ma vanno scelte e priorizzate in base al contesto aziendale; la stima oraria a fianco di ognuna serve come riferimento di effort.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
@@ -1604,7 +1642,7 @@ async function generatePDF(lead){
     const drawAzHeader = (yy)=>{
       doc.setFillColor(cCol);
       doc.rect(M, yy, tblW, 22, 'F');
-      doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
+      doc.setFont(FONT,'bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
       doc.text('AZIONE',                   azX[0]+PAD_L, yy+14);
       doc.text('COSA FARE CONCRETAMENTE',  azX[1]+PAD_L, yy+14);
     };
@@ -1613,9 +1651,9 @@ async function generatePDF(lead){
     y += 22;
 
     azionsFiltered.forEach((a, idx)=>{
-      doc.setFont('helvetica','bold'); doc.setFontSize(9);
+      doc.setFont(FONT,'bold'); doc.setFontSize(9);
       const azLines  = doc.splitTextToSize(softBreak(a.name, 32), azTextW[0]);
-      doc.setFont('helvetica','normal'); doc.setFontSize(8.5);
+      doc.setFont(FONT,'normal'); doc.setFontSize(8.5);
       const desLines = doc.splitTextToSize(softBreak(a.desc, 40), azTextW[1]);
       const rowH = Math.max(azLines.length, desLines.length, 1) * 11 + 14;
 
@@ -1635,11 +1673,11 @@ async function generatePDF(lead){
       doc.line(azX[1], y, azX[1], y + rowH);
 
       // Azione
-      doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(C.ink);
+      doc.setFont(FONT,'bold'); doc.setFontSize(9); doc.setTextColor(C.ink);
       doc.text(azLines, azX[0]+PAD_L, y+12);
 
       // Descrizione
-      doc.setFont('helvetica','normal'); doc.setFontSize(8.5); doc.setTextColor(C.soft);
+      doc.setFont(FONT,'normal'); doc.setFontSize(8.5); doc.setTextColor(C.soft);
       doc.text(desLines, azX[1]+PAD_L, y+12);
 
       y += rowH;
@@ -1657,18 +1695,18 @@ async function generatePDF(lead){
   // ------- ULTIMA PAGINA: Next steps -------
   doc.addPage();
   doc.setFillColor('#0E1014'); doc.rect(0,0,W,H,'F');
-  doc.setTextColor('#F1A211'); doc.setFont('helvetica','bold'); doc.setFontSize(10);
+  doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold'); doc.setFontSize(10);
   doc.text('PROSSIMI PASSI', M, 100);
-  doc.setTextColor('#ECEEF3'); doc.setFontSize(28); doc.setFont('helvetica','normal');
+  doc.setTextColor('#ECEEF3'); doc.setFontSize(28); doc.setFont(FONT,'normal');
   doc.text('Vuoi un confronto', M, 160);
-  doc.setFont('helvetica','bold');
+  doc.setFont(FONT,'bold');
   doc.text('diretto sui risultati?', M, 200);
 
-  doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.setTextColor('#B6BBC9');
+  doc.setFont(FONT,'normal'); doc.setFontSize(11); doc.setTextColor('#B6BBC9');
   const next = `Una call di 30' con Marco per leggere insieme i punteggi nel contesto della tua azienda, validare le priorità e capire dove conviene partire. Se ha senso, costruiamo un piano di intervento. Se non ha senso, te lo dico.`;
   doc.text(doc.splitTextToSize(next, W-2*M), M, 250);
 
-  doc.setTextColor('#F1A211'); doc.setFont('helvetica','bold'); doc.setFontSize(13);
+  doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold'); doc.setFontSize(13);
   doc.text('Prenota: ' + CALL_URL, M, 380);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
@@ -1676,7 +1714,7 @@ async function generatePDF(lead){
   doc.text('Report generato per ' + lead.company + ' · ' + lead.email, M, H-46);
 
   // SAVE
-  const fname = 'Digital_Maturity_Report_' + slug(lead.company) + '.pdf';
+  const fname = 'Tech-Check_' + slug(lead.company) + '.pdf';
   doc.save(fname);
 }
 
@@ -1728,16 +1766,16 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
     doc.circle(x, y, 2.6, 'F');
   });
   // label
-  doc.setFont('helvetica','bold'); doc.setFontSize(10);
+  doc.setFont(FONT,'bold'); doc.setFontSize(10);
   cats.forEach((c,i)=>{
     const a = angle(i); const lr = R+18;
     const x = cx+Math.cos(a)*lr, y = cy+Math.sin(a)*lr;
     const align = Math.abs(Math.cos(a))<0.2 ? 'center' : (Math.cos(a)>0?'left':'right');
     doc.setTextColor(catColor(c));
-    doc.text(c, x, y, {align});
-    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor('#525866');
+    doc.text(etichettaCat(c), x, y, {align});
+    doc.setFont(FONT,'normal'); doc.setFontSize(9); doc.setTextColor('#525866');
     doc.text(Math.round(catScores[c])+'%', x, y+11, {align});
-    doc.setFont('helvetica','bold'); doc.setFontSize(10);
+    doc.setFont(FONT,'bold'); doc.setFontSize(10);
   });
 }
 </script>
@@ -1779,7 +1817,7 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
     </div>
 
     <div class="example-modal-footer">
-      <button class="example-cta-btn" onclick="closeExampleModal();document.getElementById('leadForm').scrollIntoView({behavior:'smooth'});">
+      <button class="example-cta-btn" onclick="closeExampleModal();document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">
         Compila il check per ricevere il tuo report personalizzato →
       </button>
     </div>
