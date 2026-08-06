@@ -41,10 +41,10 @@
 <style>
 :root{
   --bg:        #0E1014;
-  --bg-soft:   #161922;
-  --bg-card:   #1B1F2A;
-  --line:      #2A2F3D;
-  --line-2:    #353B4C;
+  --bg-soft:   #1A1A1A;  /* fondi secondari: input, bottoni scala */
+  --bg-card:   #202020;  /* TUTTI i box: stesso grigio del sito */
+  --line:      #2E2E2E;
+  --line-2:    #3A3A3A;
   --ink:       #ECEEF3;
   --ink-soft:  #B6BBC9;
   --ink-mute:  #7A8090;
@@ -71,9 +71,12 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   min-height:100vh;
-  background-image:
-    radial-gradient(900px 500px at 90% -10%, rgba(91,141,239,.10), transparent 60%),
-    radial-gradient(700px 500px at -10% 110%, rgba(241,162,17,.07), transparent 60%);
+  /* Fondo pieno, senza sfumature: prima due aloni (uno blu, uno oro)
+     facevano cambiare colore allo sfondo da un angolo all'altro.
+     Per rimetterli basta togliere il commento qui sotto. */
+  /* background-image:
+       radial-gradient(900px 500px at 90% -10%, rgba(91,141,239,.10), transparent 60%),
+       radial-gradient(700px 500px at -10% 110%, rgba(241,162,17,.07), transparent 60%); */
 }
 
 /* ===== Top bar ===== */
@@ -180,14 +183,11 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
 /* Decorative right column on intro */
 .framework-card{
-  background:linear-gradient(180deg, var(--bg-card), var(--bg-soft));
+  background:var(--bg-card);
   border:1px solid var(--line); border-radius:18px; padding:28px;
   box-shadow:var(--shadow); position:relative; overflow:hidden;
 }
-.framework-card::before{
-  content:""; position:absolute; inset:auto -40% -60% auto; width:280px; height:280px;
-  background:radial-gradient(circle at center, rgba(91,141,239,.18), transparent 70%);
-}
+.framework-card::before{ content:none; }
 .framework-card h3{
   font-family:'Montserrat',sans-serif; font-size:18px; margin:0 0 16px; font-weight:600;
 }
@@ -329,7 +329,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
 /* ===== CTA Block ===== */
 .cta-block{
-  margin-top:42px; background:linear-gradient(135deg, var(--bg-card), var(--bg-soft));
+  margin-top:42px; background:var(--bg-card);
   border:1px solid var(--line); border-radius:18px; padding:38px;
   display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;
   position:relative; overflow:hidden;
@@ -337,11 +337,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 @media (max-width:780px){
   .cta-block{grid-template-columns:1fr; gap:32px; padding:28px}
 }
-.cta-block::before{
-  content:""; position:absolute; inset:-40% -10% auto auto; width:380px; height:380px;
-  background:radial-gradient(circle at center, rgba(241,162,17,.15), transparent 65%);
-  pointer-events:none;
-}
+.cta-block::before{ content:none; }
 .cta-block h3{font-family:'Montserrat',sans-serif; font-size:30px; margin:0 0 10px; font-weight:600; letter-spacing:-.01em; line-height:1.15}
 .cta-block p{color:var(--ink-soft); margin:0 0 18px}
 .cta-bullets{list-style:none; padding:0; margin:0 0 18px; display:grid; gap:10px}
