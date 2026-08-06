@@ -1786,12 +1786,15 @@ async function generatePDF(lead){
     y += 14;
     // Intro tabella Azioni, dinamica in base allo score
     doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono ordinate per impatto, ma vanno scelte e priorizzate in base al contesto aziendale; la stima oraria a fianco di ognuna serve come riferimento di effort.";
+    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono elencate in ordine di impatto atteso. Quanto costi metterle in pratica dipende da come e' fatta la tua azienda, e questo check non puo' saperlo: serve guardarci dentro.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
     y += azIntroLines.length * 12 + 10;
 
     // Geometria tabella Azioni: 2 colonne con padding cella esplicito
+    /* Nessuna colonna di tempo o costo: il check non conosce l'azienda,
+       quindi non e' in grado di stimare quanto costera' un'azione al lettore.
+       Le ore restano nel dataset, per uso interno. */
     const azWidths = [ tblW * 0.32, tblW * 0.68 ];
     const azX = [M, M + azWidths[0]];
     const azTextW = azWidths.map(w => Math.max(10, w - PAD_L - PAD_R));
@@ -1825,7 +1828,7 @@ async function generatePDF(lead){
         doc.rect(M, y, tblW, rowH, 'F');
       }
 
-      // Separatore verticale tra le 2 colonne
+      // Separatori verticali tra le 3 colonne
       doc.setDrawColor('#E6E8EE'); doc.setLineWidth(0.3);
       doc.line(azX[1], y, azX[1], y + rowH);
 
