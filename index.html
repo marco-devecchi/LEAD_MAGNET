@@ -1170,7 +1170,18 @@ async function generatePDF(lead){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({unit:'pt', format:'a4'});
   // Montserrat se montserrat-jspdf.js e' stato caricato, altrimenti helvetica
-  FONT = (doc.getFontList && doc.getFontList().Montserrat) ? 'Montserrat' : 'helvetica';
+  /* Montserrat solo se sono registrati TUTTI gli stili che il report usa.
+     Se ne manca uno, jsPDF va in eccezione appena lo incontra e il PDF non
+     esce affatto: meglio ripiegare su helvetica e consegnare comunque. */
+  FONT = 'helvetica';
+  try {
+    var _stili = (doc.getFontList && doc.getFontList().Montserrat) || [];
+    if (['normal','bold','italic'].every(function(x){ return _stili.indexOf(x) >= 0; })) {
+      FONT = 'Montserrat';
+    } else if (_stili.length) {
+      console.warn('Montserrat incompleto, stili trovati:', _stili, '- uso helvetica.');
+    }
+  } catch (e) { console.warn('Controllo font fallito, uso helvetica.', e); }
   doc.setFont(FONT, 'normal');
   const W = doc.internal.pageSize.getWidth();
   const H = doc.internal.pageSize.getHeight();
@@ -1385,7 +1396,7 @@ async function generatePDF(lead){
   doc.text('Tech-Check', M, 230);
   doc.setFont(FONT,'bold');
   doc.setFontSize(24);
-  doc.text('Report di maturita digitale', M, 268);
+  doc.text('Report di maturità digitale', M, 268);
 
   doc.setFont(FONT,'normal'); doc.setFontSize(12); doc.setTextColor('#B6BBC9');
   doc.text(doc.splitTextToSize(lead.company, W - 2*M), M, 320);
