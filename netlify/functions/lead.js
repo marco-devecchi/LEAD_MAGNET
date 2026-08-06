@@ -8,7 +8,7 @@
  *                       Default: "*"  (utile per testing, da restringere in produzione)
  *
  * BODY atteso (POST JSON):
- *   { name, email, company, role, score_total, cat_scores, answers, ts }
+ *   { name, email, company, role, sector, privacy, score_total, cat_scores, answers, ts }
  */
 
 exports.handler = async (event) => {
@@ -30,7 +30,7 @@ exports.handler = async (event) => {
   try { body = JSON.parse(event.body || '{}'); }
   catch { return { statusCode: 400, headers: cors, body: 'Invalid JSON' }; }
 
-  const { name, email, company, role, sector, score_total, cat_scores, answers, ts } = body;
+  const { name, email, company, role, sector, privacy, score_total, cat_scores, answers, ts } = body;
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return { statusCode: 400, headers: cors, body: 'Invalid email' };
   }
@@ -62,6 +62,11 @@ exports.handler = async (event) => {
       SCORE_PEP:  cat_scores?.Persone    ?? null,
       ANSWER_JSON: JSON.stringify(answers || {}),
       ASSESSMENT_TS: ts || new Date().toISOString(),
+      // Prova del consenso: senza questi due campi non e' dimostrabile.
+      // NB: oggi la checkbox e' una sola e obbligatoria, quindi copre
+      // l'informativa ma NON il consenso marketing (che dev'essere libero).
+      PRIVACY_OK: privacy === true,
+      PRIVACY_TS: privacy === true ? (ts || new Date().toISOString()) : null,
     },
     listIds: listId ? [listId] : undefined,
     updateEnabled: true,
