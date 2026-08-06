@@ -309,6 +309,16 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .cat-score .weight{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute)}
 
 .criticita{margin-top:36px}
+.crit-ok{
+  background:var(--bg-card); border:1px solid var(--box-line);
+  border-radius:var(--radius); padding:32px 34px;
+}
+.crit-ok h3{font-family:'Montserrat',sans-serif; font-size:24px; font-weight:600; margin:0 0 14px; color:var(--ink)}
+.crit-ok p{color:var(--ink-soft); margin:0 0 12px; font-size:15.5px}
+.crit-ok p:last-child{margin-bottom:0}
+.crit-ok .rilievo{color:var(--ink); font-weight:600}
+.crit-ok .chiusura{color:var(--accent); font-weight:600}
+@media (max-width:640px){ .crit-ok{padding:24px 22px} }
 .criticita h3{font-family:'Montserrat',sans-serif; font-size:24px; margin:0 0 6px; font-weight:600}
 .criticita-sub{color:var(--ink-mute); margin:0 0 22px}
 .crit-list{display:grid; gap:14px}
@@ -579,6 +589,15 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
     <h3 id="crit-title">—</h3>
     <p class="criticita-sub" id="crit-sub">—</p>
     <div class="crit-list" id="crit-list"></div>
+
+    <!-- compare al posto delle tre schede quando il punteggio supera SOGLIA_OK -->
+    <div class="crit-ok hidden" id="crit-ok">
+      <h3 id="ok-titolo">—</h3>
+      <p id="ok-p1">—</p>
+      <p id="ok-p2">—</p>
+      <p class="rilievo" id="ok-p3">—</p>
+      <p class="chiusura" id="ok-p4">—</p>
+    </div>
   </div>
 
   <div class="cta-block" id="cta-block">
@@ -751,6 +770,24 @@ const LOGO_B64 = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1B
 // Endpoint Netlify Function (relativo: stesso dominio della deploy).
 // Lascia "" per disattivare l'invio (debug locale) — il PDF si genera comunque.
 const LEAD_ENDPOINT = "/.netlify/functions/lead";
+
+/* Sopra questo punteggio complessivo il blocco delle tre aree sparisce
+   e al suo posto compare il messaggio qui sotto. */
+const SOGLIA_OK = 85;
+
+/* {KPI_CHECK} e {KPI_TOT} vengono sostituiti con i numeri veri del dataset. */
+const MSG_OK = {
+  titolo: 'Nessuna area sotto soglia.',
+  p1: 'Su queste dodici domande non emerge nessuna criticità: le fondamenta ci sono, e non è scontato.',
+  p2: 'Ma il diavolo si nasconde nei dettagli, e questo check ne vede pochi. Ha una voce sola, la tua, e misura {KPI_CHECK} dei {KPI_TOT} KPI del framework. Quando le stesse domande arrivano anche al CFO, ai responsabili di funzione e a chi esegue tutti i giorni, il punteggio quasi mai coincide: non perché qualcuno sbagli, ma perché ognuno vede un pezzo diverso dell\'azienda.',
+  p3: 'È nella distanza tra quelle risposte che si nasconde quello che nessuno sta guardando.',
+  p4: 'Se il quadro è davvero questo, non ti serve un intervento. Ti serve una controprova.',
+};
+
+function testoMsgOk(t){
+  const nCheck = DATASET.questions.reduce((a,q)=>a+q.kpis.length,0);
+  return String(t).replace('{KPI_CHECK}', nCheck).replace('{KPI_TOT}', DATASET.framework_total_kpis);
+}
 
 // Link per la call con Marco (form esterno o Cal.com)
 const CALL_URL = "https://cal.com/marco-devecchi/call-conoscitiva";
@@ -975,7 +1012,20 @@ function renderResult(){
 
   drawRadar(lastResult.catScores);
 
-  // criticità: titolo e sottotitolo dipendono dal punteggio complessivo
+  // criticità: sopra SOGLIA_OK niente elenco, solo il messaggio
+  const nienteCriticita = lastResult.total >= SOGLIA_OK;
+  document.getElementById('crit-title').classList.toggle('hidden', nienteCriticita);
+  document.getElementById('crit-sub').classList.toggle('hidden', nienteCriticita);
+  document.getElementById('crit-list').classList.toggle('hidden', nienteCriticita);
+  document.getElementById('crit-ok').classList.toggle('hidden', !nienteCriticita);
+
+  if(nienteCriticita){
+    document.getElementById('ok-titolo').textContent = MSG_OK.titolo;
+    ['p1','p2','p3','p4'].forEach(k=>{
+      document.getElementById('ok-'+k).textContent = testoMsgOk(MSG_OK[k]);
+    });
+  }
+
   const bt = bloccoTop3(lastResult.total);
   document.getElementById('crit-title').textContent = bt.titolo;
   document.getElementById('crit-sub').textContent   = bt.sottotitolo;
@@ -1416,7 +1466,31 @@ async function generatePDF(lead){
   // ------- TOP 3 CRITICITÀ - DETTAGLIO -------
   if(y + 210 > H - M){ doc.addPage(); y = M; }
   doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
+  const senzaCriticita = lastResult.total >= SOGLIA_OK;
   const BT = bloccoTop3(lastResult.total);
+
+  if(senzaCriticita){
+    // Riquadro al posto delle tre schede: stesso testo della pagina.
+    doc.text('IL TUO QUADRO', M, y); y += 26;
+    doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(18);
+    doc.text(MSG_OK.titolo, M, y); y += 26;
+
+    const paragrafi = [
+      { t: MSG_OK.p1, size:10.5, col:C.soft,  bold:false },
+      { t: MSG_OK.p2, size:10.5, col:C.soft,  bold:false },
+      { t: MSG_OK.p3, size:10.5, col:C.ink,   bold:true  },
+      { t: MSG_OK.p4, size:11,   col:C.accent,bold:true  },
+    ];
+    for(const par of paragrafi){
+      doc.setFont(FONT, par.bold ? 'bold' : 'normal');
+      doc.setFontSize(par.size); doc.setTextColor(par.col);
+      const ln = doc.splitTextToSize(testoMsgOk(par.t), W-2*M);
+      if(y + ln.length*13 > H - M){ doc.addPage(); y = M; }
+      doc.text(ln, M, y);
+      y += ln.length * 13 + 10;
+    }
+    y += 8;
+  } else {
   doc.text(BT.occhiello, M, y); y += 26;
   doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(18);
   doc.text(BT.pdfTitolo, M, y); y += 30;
@@ -1455,6 +1529,7 @@ async function generatePDF(lead){
     doc.text(score+'%', W-M-48, y+41, {align:'center'});
     y += 84;
   });
+  } // fine else: elenco delle tre aree
 
   // ------- PAGINA METODO: Come leggere questo report -------
   doc.addPage();
@@ -1532,6 +1607,19 @@ async function generatePDF(lead){
   });
 
   // ------- DETTAGLIO TOP 3: KPI + AZIONI in tabelle -------
+  if(senzaCriticita){
+    // Le schede di dettaglio restano: sono la parte piu' utile del report.
+    // Cambia solo la premessa, perche' qui non sono "criticita'".
+    doc.addPage(); y = M;
+    doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
+    doc.text('APPROFONDIMENTO', M, y); y += 26;
+    doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(20);
+    doc.text('Le tre aree meno forti, per completezza', M, y); y += 28;
+    doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
+    const pre = doc.splitTextToSize('Nessuna di queste e\' sotto soglia. Le riportiamo perche\' sono le tre con il punteggio piu\' basso del tuo check: valgono come presidio, non come intervento.', W-2*M);
+    doc.text(pre, M, y);
+  }
+
   for(const item of lastResult.top3){
     doc.addPage();
     const q = item.q; const score = Math.round(item.score);
