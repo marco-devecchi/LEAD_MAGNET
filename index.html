@@ -43,8 +43,11 @@
   --bg:        #0E1014;
   --bg-soft:   #1A1A1A;  /* fondi secondari: input, bottoni scala */
   --bg-card:   #202020;  /* TUTTI i box: stesso grigio del sito */
-  --line:      #2E2E2E;
-  --line-2:    #3A3A3A;
+  --line:      rgba(245,243,239,0.12);  /* separatori interni */
+  --line-2:    rgba(245,243,239,0.22);  /* bordi dei campi */
+  /* Bordo dei box. Per tornare al neutro basta cambiare questa riga
+     in: rgba(245,243,239,0.26) */
+  --box-line:  rgba(241,162,17,0.32);
   --ink:       #ECEEF3;
   --ink-soft:  #B6BBC9;
   --ink-mute:  #7A8090;
@@ -56,8 +59,8 @@
   --good:      #4FB47A;
   --warn:      #E8A55B;
   --crit:      #E26A6A;
-  --radius:    14px;
-  --shadow:    0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 40px -20px rgba(0,0,0,.6);
+  --radius:    12px;
+  --shadow:    none;  /* le schede si staccano col bordo, non con l'ombra */
   --maxw:      1100px;
 }
 *{box-sizing:border-box; min-width:0}
@@ -184,7 +187,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 /* Decorative right column on intro */
 .framework-card{
   background:var(--bg-card);
-  border:1px solid var(--line); border-radius:18px; padding:28px;
+  border:1px solid var(--box-line); border-radius:var(--radius); padding:28px;
   box-shadow:var(--shadow); position:relative; overflow:hidden;
 }
 .framework-card::before{ content:none; }
@@ -214,7 +217,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .q-progress-num{font-family:'Montserrat',sans-serif; font-size:12px; color:var(--ink-mute); letter-spacing:.08em}
 
 .q-card{
-  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius);
   padding:36px; box-shadow:var(--shadow);
 }
 .q-cat{
@@ -275,7 +278,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 }
 
 .score-block{
-  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius);
   padding:32px; box-shadow:var(--shadow); text-align:center;
 }
 .score-label{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute); letter-spacing:.18em; text-transform:uppercase}
@@ -291,7 +294,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .tier-crit{background:rgba(226,106,106,.14); color:var(--crit)}
 
 .radar-card{
-  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius);
   padding:28px; box-shadow:var(--shadow);
 }
 .radar-card h3{font-family:'Montserrat',sans-serif; margin:0 0 18px; font-size:20px}
@@ -310,7 +313,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .criticita-sub{color:var(--ink-mute); margin:0 0 22px}
 .crit-list{display:grid; gap:14px}
 .crit-card{
-  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius);
   padding:22px 24px; display:grid; grid-template-columns:auto 1fr auto; gap:18px; align-items:center;
 }
 .crit-card .rank{
@@ -330,7 +333,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 /* ===== CTA Block ===== */
 .cta-block{
   margin-top:42px; background:var(--bg-card);
-  border:1px solid var(--line); border-radius:18px; padding:38px;
+  border:1px solid var(--box-line); border-radius:var(--radius); padding:38px;
   display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;
   position:relative; overflow:hidden;
 }
@@ -355,7 +358,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
 /* Lead form */
 .lead-form{
-  background:var(--bg-card); border:1px solid var(--line-2); border-radius:12px; padding:24px;
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius); padding:24px;
 }
 .lead-form label{display:block; font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:6px}
 .lead-form input,
@@ -390,7 +393,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 /* Success / PDF state */
 .success-state{
   text-align:center; padding:50px 30px;
-  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-card); border:1px solid var(--box-line); border-radius:var(--radius);
 }
 .success-state .check-icon{
   width:64px; height:64px; margin:0 auto 20px; border-radius:50%;
@@ -416,7 +419,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 }
 .privacy-doc{
   max-width:740px; margin-top:24px;
-  background:var(--bg-card); border:1px solid var(--line);
+  background:var(--bg-card); border:1px solid var(--box-line);
   border-radius:var(--radius); padding:48px; box-shadow:var(--shadow);
 }
 @media (max-width:640px){
