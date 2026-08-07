@@ -1,0 +1,20 @@
+# File che NON devono essere pubblicati come pagine del sito.
+# Senza questo elenco Cloudflare pubblica tutta la cartella, .git compresa,
+# e chiunque puo' scaricarsi la cronologia del repository.
+.git
+.git/**
+.github/**
+node_modules/**
+
+# Codice del Worker: deve essere eseguito, non servito
+worker.js
+wrangler.jsonc
+.assetsignore
+
+# Residui Netlify, da cancellare dal repo quando la migrazione e' finita
+netlify/**
+netlify.toml
+
+# Documentazione interna
+ABOUT.md
+*.md
