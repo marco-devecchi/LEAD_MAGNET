@@ -108,29 +108,7 @@ export async function onRequestPost({ request, env }) {
       return rispondi({ ok: false, status: resp.status });
     }
 
-    /* DIAGNOSTICA TEMPORANEA
-       Rilegge il contatto appena scritto e restituisce gli attributi che
-       Brevo dice di avere davvero. Serve a vedere cosa viene accettato e
-       cosa scartato, invece di ipotizzarlo. Da togliere quando il problema
-       dei campi privacy sara' risolto: aggiunge una chiamata per ogni lead
-       e allunga la risposta di qualche decimo di secondo. */
-    let salvato = null;
-    try {
-      const ver = await fetch(
-        "https://api.brevo.com/v3/contacts/" + encodeURIComponent(email),
-        { headers: { accept: "application/json", "api-key": apiKey } }
-      );
-      if (ver.ok) {
-        const dati = await ver.json();
-        salvato = dati.attributes || null;
-      } else {
-        salvato = { errore_rilettura: ver.status };
-      }
-    } catch (e) {
-      salvato = { errore_rilettura: String(e) };
-    }
-
-    return rispondi({ ok: true, inviato: payload.attributes, salvato });
+    return rispondi({ ok: true });
   } catch (e) {
     console.error("Eccezione nel salvataggio della lead:", e);
     return rispondi({ ok: false, reason: "exception" });
