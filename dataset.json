@@ -3,22 +3,22 @@
   "framework_total_kpis": 174,
   "categories": {
     "Direzione": {
-      "weight": 20,
+      "weight": 20.1,
       "color": "#3B6FD6",
       "short": "Direzione"
     },
     "Execution": {
-      "weight": 28,
+      "weight": 27.6,
       "color": "#D64545",
       "short": "Execution"
     },
     "Technology": {
-      "weight": 28,
+      "weight": 27.6,
       "color": "#3FA66B",
       "short": "Technology"
     },
     "Persone": {
-      "weight": 25,
+      "weight": 24.7,
       "color": "#E08A3C",
       "short": "Persone"
     }
@@ -410,7 +410,7 @@
         {
           "num": 35,
           "name": "N. fonti dati per decisioni strategiche",
-          "desc": "Numero di fonti dati distinte utilizzate per supportare le decisioni strategiche.",
+          "desc": "Quante fonti indipendenti concorrono a una decisione importante. Tre fonti che convergono rendono la decisione solida, una sola la rende fragile.",
           "benchmark": ">3"
         }
       ],
