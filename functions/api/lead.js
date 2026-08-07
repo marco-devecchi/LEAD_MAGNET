@@ -83,8 +83,11 @@ export async function onRequestPost({ request, env }) {
       ANSWER_JSON: JSON.stringify(answers || {}),
       ASSESSMENT_TS: quando,
       // Prova del consenso: senza questi due campi non e' dimostrabile.
-      PRIVACY_OK: privacy === true,
-      PRIVACY_TS: privacy === true ? quando : null,
+      // Entrambi come TESTO: un attributo di testo su Brevo accetta
+      // qualsiasi valore senza conversioni, mentre il tipo booleano
+      // si e' rivelato inaffidabile via API.
+      PRIVACY_OK: privacy === true ? "true" : "false",
+      PRIVACY_TS: privacy === true ? quando : "",
     },
     listIds: listId ? [listId] : undefined,
     updateEnabled: true,
