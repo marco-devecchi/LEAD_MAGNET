@@ -178,7 +178,7 @@
       "reframe": {
         "blocks": [
           {
-            "text": "L'azienda è un organismo le cui parti devono pensare all'unisono per raggiungere obiettivi sfidanti. Lasciare le persone all'oscuro non le rende più controllabili: alimenta sfiducia, sospetto, distacco. Si innesca un circolo vizioso — il fondatore non si fida, le persone non si sentono coinvolte, nessuno rema nella stessa direzione, e il fondatore si conferma che non si poteva contare su di loro.",
+            "text": "L'azienda è un organismo le cui parti devono pensare all'unisono per raggiungere obiettivi sfidanti. Lasciare le persone all'oscuro non le rende più controllabili: alimenta sfiducia, sospetto, distacco. Si innesca un circolo vizioso: il fondatore non si fida, le persone non si sentono coinvolte, nessuno rema nella stessa direzione, e il fondatore si conferma che non si poteva contare su di loro.",
             "cites": []
           },
           {
@@ -1425,13 +1425,13 @@
       "kpis": [
         {
           "num": 114,
-          "name": "MTTR — Mean Time to Respond agli incidenti",
+          "name": "MTTR, tempo medio per rimettere in piedi i sistemi",
           "desc": "Tempo medio dalla rilevazione di un incidente di sicurezza alla sua risoluzione completa.",
           "benchmark": "<4 ore (critici)"
         },
         {
           "num": 115,
-          "name": "MTTD — Mean Time to Detect gli incidenti",
+          "name": "MTTD, tempo medio per accorgersi di un incidente",
           "desc": "Tempo medio dalla comparsa di un incidente di sicurezza alla sua rilevazione da parte del team.",
           "benchmark": "<1 ora (critici)"
         },
@@ -2066,7 +2066,7 @@
         },
         {
           "num": 156,
-          "name": "eNPS — Employee Net Promoter Score",
+          "name": "eNPS, quanto i dipendenti consiglierebbero l'azienda",
           "desc": "Employee Net Promoter Score: misura la probabilità che un dipendente raccomandi l'organizzazione come posto dove lavorare. Proxy del cambiamento culturale reale.",
           "benchmark": ">20"
         }
