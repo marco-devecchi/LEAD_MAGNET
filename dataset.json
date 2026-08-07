@@ -29,9 +29,9 @@
       "cat": "Direzione",
       "sub": "Strategia condivisa",
       "title": "Strategia condivisa",
-      "text": "Nella tua azienda la strategia è formalizzata in un documento aggiornato e i manager la comprendono e la sanno tradurre in azioni per i loro team.",
-      "anchor_low": "Nessuna strategia scritta, ognuno va per conto suo",
-      "anchor_high": "Strategia documentata, condivisa e revisionata regolarmente",
+      "text": "I tuoi manager sanno tradurre la strategia aziendale in azioni concrete per i loro team.",
+      "anchor_low": "Nessuno saprebbe dire dove sta andando l'azienda",
+      "anchor_high": "Ogni manager sa tradurla in priorità per il suo team",
       "kpis": [
         {
           "num": 1,
@@ -200,14 +200,14 @@
       "cat": "Direzione",
       "sub": "Definizione obiettivi",
       "title": "Definizione obiettivi",
-      "text": "Gli obiettivi aziendali sono definiti in modo SMART (misurabili, con scadenze, con un responsabile) e collegati agli obiettivi individuali dei collaboratori.",
-      "anchor_low": "Obiettivi vaghi o assenti",
-      "anchor_high": "Sistema di performance management strutturato e attivo",
+      "text": "Ogni obiettivo aziendale ha un numero che lo misura, una scadenza e un responsabile con nome e cognome.",
+      "anchor_low": "Obiettivi vaghi, nessuno ne risponde",
+      "anchor_high": "Misura, scadenza e responsabile per ognuno",
       "kpis": [
         {
           "num": 11,
           "name": "% obiettivi definiti con KPI misurabili (SMART)",
-          "desc": "Percentuale di obiettivi definiti con criteri SMART (Specifici, Misurabili, Achievable, Rilevanti, Temporali).",
+          "desc": "Percentuale di obiettivi definiti con criteri SMART: specifici, misurabili, con una scadenza e un responsabile.",
           "benchmark": ">80%"
         },
         {
@@ -377,11 +377,11 @@
     {
       "id": "q3",
       "cat": "Direzione",
-      "sub": "Cultura decisionale data-driven",
+      "sub": "Cultura decisionale basata sui dati",
       "title": "Decisioni basate sui dati",
-      "text": "Le decisioni importanti sono basate su dati e KPI (non solo su intuizione) e i dati sono accessibili rapidamente quando servono.",
-      "anchor_low": "Decisioni 'a sensazione', dati lenti o inaffidabili",
-      "anchor_high": "KPI sempre disponibili, decisioni supportate dai numeri",
+      "text": "Le decisioni importanti si prendono guardando i numeri, non solo l'esperienza di chi decide.",
+      "anchor_low": "Si decide a sensazione",
+      "anchor_high": "Nessuna decisione importante senza i numeri davanti",
       "kpis": [
         {
           "num": 31,
@@ -556,9 +556,9 @@
       "cat": "Execution",
       "sub": "Processi operativi",
       "title": "Processi operativi",
-      "text": "I processi chiave sono documentati, hanno un owner definito e sono eseguiti in modo standardizzato (non variano da persona a persona).",
-      "anchor_low": "Tutto dipende dalle persone, niente è scritto",
-      "anchor_high": "Processi mappati, standard, con responsabili chiari",
+      "text": "I processi chiave si svolgono sempre allo stesso modo, chiunque li esegua.",
+      "anchor_low": "Ognuno fa a modo suo",
+      "anchor_high": "Stesso processo per tutti, sempre",
       "kpis": [
         {
           "num": 36,
@@ -767,11 +767,11 @@
     {
       "id": "q5",
       "cat": "Execution",
-      "sub": "Project execution e delivery",
+      "sub": "Esecuzione e consegna dei progetti",
       "title": "Esecuzione progetti",
-      "text": "I progetti vengono completati nei tempi e nel budget previsti, senza scostamenti significativi e senza modificare gli obiettivi in corsa.",
-      "anchor_low": "Progetti spesso in ritardo o fuori budget",
-      "anchor_high": "Time-to-market rapido, deliverable on-time/on-budget",
+      "text": "I progetti arrivano a destinazione nei tempi e nel budget promessi all'inizio.",
+      "anchor_low": "Quasi sempre in ritardo o fuori budget",
+      "anchor_high": "Consegnati come promesso",
       "kpis": [
         {
           "num": 42,
@@ -1004,11 +1004,11 @@
     {
       "id": "q6",
       "cat": "Execution",
-      "sub": "Automazione processi",
+      "sub": "Automazione dei processi",
       "title": "Automazione processi",
-      "text": "Una quota significativa dei processi è automatizzata e i sistemi sono integrati end-to-end, riducendo attività manuali e duplicazioni di dati.",
-      "anchor_low": "Tutto manuale, dati ribattuti tra sistemi",
-      "anchor_high": "Workflow digitalizzati, sistemi integrati, automazioni attive",
+      "text": "I dati passano da un sistema all'altro da soli, senza che qualcuno li ribatta a mano.",
+      "anchor_low": "Tutto a mano, dati ribattuti più volte",
+      "anchor_high": "Sistemi che si parlano, nessun reinserimento",
       "kpis": [
         {
           "num": 61,
@@ -1213,11 +1213,11 @@
     {
       "id": "q7",
       "cat": "Technology",
-      "sub": "Data governance e qualità del dato",
+      "sub": "Governo e qualità dei dati",
       "title": "Qualità e governance dei dati",
-      "text": "I dati aziendali sono completi, accurati, non duplicati, facilmente accessibili e c'è un modello di data governance formalizzato.",
-      "anchor_low": "Dati sparsi, inaffidabili, duplicati",
-      "anchor_high": "Dati integrati, governati, alta qualità",
+      "text": "Quando due persone cercano lo stesso dato, trovano lo stesso numero.",
+      "anchor_low": "Ogni funzione ha i suoi numeri, e non coincidono",
+      "anchor_high": "Un dato solo, uguale per tutti",
       "kpis": [
         {
           "num": 126,
@@ -1419,9 +1419,9 @@
       "cat": "Technology",
       "sub": "Cybersecurity e resilienza",
       "title": "Cybersecurity",
-      "text": "L'azienda ha controlli di sicurezza aggiornati, sa rilevare e rispondere rapidamente agli incidenti e adotta framework riconosciuti (NIST, ISO 27001).",
-      "anchor_low": "Nessuna gestione strutturata della sicurezza",
-      "anchor_high": "Framework adottato, MTTR/MTTD bassi, vulnerabilità sotto controllo",
+      "text": "Se domani un attacco bloccasse i sistemi, sapreste cosa fare e in quanto tempo tornereste operativi.",
+      "anchor_low": "Non ci abbiamo mai pensato seriamente",
+      "anchor_high": "Piano scritto, provato, aggiornato",
       "kpis": [
         {
           "num": 114,
@@ -1456,7 +1456,7 @@
         {
           "num": 119,
           "name": "Adozione framework sicurezza (NIST / ISO 27001)",
-          "desc": "Grado di adozione di framework di sicurezza internazionali come NIST o ISO 27001.",
+          "desc": "Grado di adozione di framework di sicurezza internazionali: NIST, che è una guida, e ISO 27001, che si certifica.",
           "benchmark": "Certificato o in corso"
         }
       ],
@@ -1627,9 +1627,9 @@
       "cat": "Technology",
       "sub": "Utilizzo reale delle tecnologie",
       "title": "Adozione delle tecnologie",
-      "text": "Le piattaforme e i software acquistati vengono realmente utilizzati dai team (non rimangono shelfware) e le licenze attive corrispondono all'uso reale.",
-      "anchor_low": "Molti tool comprati e non usati, lavoro fuori sistema",
-      "anchor_high": "Adozione piena, licenze allineate all'uso reale",
+      "text": "Il software che paghi viene usato davvero dalle persone per cui l'hai comprato.",
+      "anchor_low": "Molte licenze pagate e poco usate",
+      "anchor_high": "Quello che paghiamo lo usiamo",
       "kpis": [
         {
           "num": 90,
@@ -1651,8 +1651,8 @@
         },
         {
           "num": 93,
-          "name": "Tasso di utilizzo per utente (activity rate)",
-          "desc": "Frequenza e intensità di utilizzo di una piattaforma da parte di ogni singolo utente.",
+          "name": "Intensità di utilizzo per utente",
+          "desc": "Con quale frequenza ogni singolo utente usa davvero la piattaforma.",
           "benchmark": ">70%"
         },
         {
@@ -1825,9 +1825,9 @@
       "cat": "Persone",
       "sub": "Competenze e utilizzo reale",
       "title": "Competenze e skill",
-      "text": "Le competenze presenti sono mappate, allineate ai ruoli e utilizzate concretamente nel lavoro quotidiano (no gap critici scoperti).",
-      "anchor_low": "Skill non mappate, gap critici, competenze non usate",
-      "anchor_high": "Skill mapping completo, ruoli allineati, gap coperti",
+      "text": "Le persone hanno le competenze che il loro lavoro richiede oggi, non quelle che richiedeva cinque anni fa.",
+      "anchor_low": "Gap evidenti, si va avanti come si può",
+      "anchor_high": "Competenze allineate a quello che serve adesso",
       "kpis": [
         {
           "num": 132,
@@ -2022,11 +2022,11 @@
     {
       "id": "q11",
       "cat": "Persone",
-      "sub": "Engagement e ownership",
+      "sub": "Coinvolgimento e responsabilità diffusa",
       "title": "Engagement e ownership",
-      "text": "I dipendenti si sentono coinvolti e responsabili dei risultati, prendono iniziative autonome e l'eNPS è positivo.",
-      "anchor_low": "Bassa motivazione, poche iniziative dal basso",
-      "anchor_high": "Engagement alto, ownership diffusa, eNPS positivo",
+      "text": "Le persone prendono iniziative senza aspettare che qualcuno glielo chieda.",
+      "anchor_low": "Si fa il compitino, nulla di più",
+      "anchor_high": "Le proposte arrivano dal basso",
       "kpis": [
         {
           "num": 150,
@@ -2067,7 +2067,7 @@
         {
           "num": 156,
           "name": "eNPS, quanto i dipendenti consiglierebbero l'azienda",
-          "desc": "Employee Net Promoter Score: misura la probabilità che un dipendente raccomandi l'organizzazione come posto dove lavorare. Proxy del cambiamento culturale reale.",
+          "desc": "Quanto i dipendenti consiglierebbero l'azienda a un amico come posto di lavoro. Va da -100 a +100.",
           "benchmark": ">20"
         }
       ],
@@ -2260,9 +2260,9 @@
       "cat": "Persone",
       "sub": "Formazione efficace",
       "title": "Formazione efficace",
-      "text": "La formazione erogata viene applicata nel lavoro quotidiano in tempi rapidi ed è collegata agli obiettivi di business.",
-      "anchor_low": "Formazione episodica, non applicata",
-      "anchor_high": "Formazione mirata, applicata subito, collegata al business",
+      "text": "Quello che le persone imparano in aula si vede nel lavoro entro poche settimane.",
+      "anchor_low": "Si fa formazione, poi tutto come prima",
+      "anchor_high": "Si applica subito e si vede",
       "kpis": [
         {
           "num": 138,
