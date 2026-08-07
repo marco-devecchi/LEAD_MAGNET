@@ -501,10 +501,10 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
     <aside class="framework-card">
       <h3>Il framework in sintesi</h3>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-dir)"></span><span class="cat-name">Direzione</span><span class="cat-meta">35 KPI · 20%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-exe)"></span><span class="cat-name">Execution</span><span class="cat-meta">48 KPI · 28%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Tecnologia</span><span class="cat-meta">48 KPI · 28%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-pep)"></span><span class="cat-name">Persone</span><span class="cat-meta">43 KPI · 25%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-dir)"></span><span class="cat-name">Direzione</span><span class="cat-meta">35 KPI · 20,1%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-exe)"></span><span class="cat-name">Execution</span><span class="cat-meta">48 KPI · 27,6%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Tecnologia</span><span class="cat-meta">48 KPI · 27,6%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-pep)"></span><span class="cat-name">Persone</span><span class="cat-meta">43 KPI · 24,7%</span></div>
     </aside>
   </div>
 
@@ -640,7 +640,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
       <div class="check">
         <input type="checkbox" id="lead-privacy" required />
-        <label for="lead-privacy" style="font-family:inherit; font-size:12px; letter-spacing:0; text-transform:none; color:var(--ink-mute); margin:0">Ho letto e accetto la <a href="#" onclick="event.preventDefault(); openPrivacy()" style="color:var(--accent)">privacy policy</a>. I dati sono trattati per inviare il report e, solo se acconsento, comunicazioni sul framework KPI.</label>
+        <label for="lead-privacy" style="font-family:inherit; font-size:12px; letter-spacing:0; text-transform:none; color:var(--ink-mute); margin:0">Ho letto e accetto la <a href="#" onclick="event.preventDefault(); openPrivacy()" style="color:var(--accent)">privacy policy</a>. I dati servono a inviarti il report e a un eventuale contatto sui contenuti del framework. Nessuna newsletter.</label>
       </div>
       <div class="form-error" id="form-error"></div>
       <button type="submit" class="btn btn-primary submit-btn" id="lead-submit">Genera il report PDF</button>
@@ -703,7 +703,6 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
       <ul>
         <li><strong>Generazione e invio del report</strong> richiesto (base giuridica: esecuzione di una richiesta dell'interessato, art. 6.1.b GDPR).</li>
         <li><strong>Eventuale follow-up commerciale</strong> sui contenuti del framework KPI e sui servizi di consulenza correlati (base giuridica: legittimo interesse, art. 6.1.f GDPR).</li>
-        <li><strong>Comunicazioni di marketing</strong> tramite newsletter periodica solo se acconsenti esplicitamente (base giuridica: consenso, art. 6.1.a GDPR). Puoi revocare il consenso in qualsiasi momento.</li>
       </ul>
     </section>
 
@@ -720,7 +719,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
     <section class="privacy-section">
       <h2>5. Per quanto tempo conserviamo i dati</h2>
-      <p>I dati di contatto e le risposte al questionario sono conservati fino a quando esiste un legittimo interesse al follow-up consulenziale o, in caso di iscrizione alla newsletter, fino alla revoca del consenso. Puoi richiedere la cancellazione in ogni momento.</p>
+      <p>I dati di contatto e le risposte al questionario sono conservati fino a quando esiste un legittimo interesse al follow-up consulenziale. Puoi richiedere la cancellazione, o opporti al trattamento, in qualsiasi momento.</p>
     </section>
 
     <section class="privacy-section">
@@ -733,7 +732,6 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
         <li>Limitazione del trattamento</li>
         <li>Portabilità dei dati</li>
         <li>Opposizione al trattamento</li>
-        <li>Revoca del consenso (per le finalità marketing)</li>
       </ul>
       <p>Per esercitare questi diritti scrivi a <a href="mailto:marco.devecchi@pm.me">marco.devecchi@pm.me</a>. Hai inoltre diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
     </section>
@@ -811,6 +809,10 @@ const CAT_LABEL = {
   Persone:    'Persone',
 };
 const etichettaCat = c => (CAT_LABEL[c] || c);
+
+/* I pesi hanno un decimale (sommano esattamente 100,0).
+   In italiano il separatore decimale e' la virgola, non il punto. */
+const pesoIt = w => String(w).replace('.', ',');
 
 /* Font del PDF. Vive qui, non dentro generatePDF, perche' lo usa
    anche drawRadarPDF che e' una funzione separata.
@@ -1019,7 +1021,7 @@ function renderResult(){
         <span class="dot" style="background:${cat.color}"></span>
         <span class="name">${etichettaCat(c)}</span>
         <span class="pct">${pct}%</span>
-        <span class="weight">peso ${cat.weight}%</span>
+        <span class="weight">peso ${pesoIt(cat.weight)}%</span>
       </div>`);
   });
 
@@ -1433,7 +1435,7 @@ async function generatePDF(lead){
 
   // Intro descrittiva
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const intro = `In base alle 12 risposte fornite, il livello complessivo di maturità digitale di ${lead.company} è di ${Math.round(lastResult.total)}/100, classificato come "${tierObj.label.toLowerCase()}". Il punteggio è una media ponderata delle 4 leve del framework, rinormalizzata su base 100: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+DATASET.categories[c].weight+'%').join(', ')}.`;
+  const intro = `In base alle 12 risposte fornite, il livello complessivo di maturità digitale di ${lead.company} è di ${Math.round(lastResult.total)}/100, classificato come "${tierObj.label.toLowerCase()}". Il punteggio è una media ponderata delle 4 leve del framework, rinormalizzata su base 100: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+pesoIt(DATASET.categories[c].weight)+'%').join(', ')}.`;
   const introLines = doc.splitTextToSize(intro, W-2*M);
   doc.text(introLines, M, y);
   y += introLines.length * 13 + 20;
@@ -1469,7 +1471,7 @@ async function generatePDF(lead){
     doc.text(etichettaCat(c), tabStartX+22, rowY+5);
     // peso sotto
     doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
-    doc.text('peso ' + DATASET.categories[c].weight + '%', tabStartX+22, rowY+16);
+    doc.text('peso ' + pesoIt(DATASET.categories[c].weight) + '%', tabStartX+22, rowY+16);
     // percentuale grande a destra
     doc.setFont(FONT,'bold'); doc.setFontSize(15); doc.setTextColor(col);
     doc.text(pct + '%', tabEndX-6, rowY+8, {align:'right'});
