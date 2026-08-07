@@ -313,6 +313,13 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .cat-score .weight{font-family:'Montserrat',sans-serif; font-size:11px; color:var(--ink-mute)}
 
 .criticita{margin-top:36px}
+.settore-box{
+  margin-top:28px; background:var(--bg-card); border:1px solid var(--box-line);
+  border-radius:var(--radius); padding:26px 28px;
+}
+.settore-box h3{font-family:'Montserrat',sans-serif; font-size:20px; font-weight:600; margin:8px 0 12px; color:var(--ink)}
+.settore-box p{color:var(--ink-soft); margin:0; font-size:15px}
+.settore-box .settore-fonte{margin-top:12px; font-size:12px; color:var(--ink-mute)}
 .crit-ok{
   background:var(--bg-card); border:1px solid var(--box-line);
   border-radius:var(--radius); padding:32px 34px;
@@ -588,6 +595,13 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
       <svg id="radar-chart" viewBox="0 0 460 360" xmlns="http://www.w3.org/2000/svg" aria-label="Radar chart maturità digitale"></svg>
       <div class="cat-scores" id="cat-scores"></div>
     </div>
+  </div>
+
+  <div class="settore-box hidden" id="settore-box">
+    <span class="score-label">Il tuo settore</span>
+    <h3 id="settore-nome">...</h3>
+    <p id="settore-testo">...</p>
+    <p class="settore-fonte" id="settore-fonte">...</p>
   </div>
 
   <div class="criticita">
@@ -1031,6 +1045,19 @@ function renderResult(){
   });
 
   drawRadar(lastResult.catScores);
+
+  // il settore lo abbiamo solo dopo che il form e' stato compilato:
+  // in pagina lo mostriamo se disponibile
+  const _sett = (DATASET.sectors || {})[(document.getElementById('lead-sector')||{}).value];
+  const boxSett = document.getElementById('settore-box');
+  if(boxSett){
+    boxSett.classList.toggle('hidden', !_sett);
+    if(_sett){
+      document.getElementById('settore-nome').textContent = document.getElementById('lead-sector').value;
+      document.getElementById('settore-testo').textContent = _sett.testo;
+      document.getElementById('settore-fonte').textContent = 'Fonte: ' + _sett.fonte;
+    }
+  }
 
   // criticità: sopra SOGLIA_OK niente elenco, solo il messaggio
   const nienteCriticita = lastResult.total >= SOGLIA_OK;
@@ -1493,6 +1520,33 @@ async function generatePDF(lead){
   y += explLines.length * 12 + 14;
 
   doc.setDrawColor(C.line); doc.setLineWidth(0.5); doc.line(M, y, W-M, y); y += 22;
+
+  // ------- IL TUO SETTORE -------
+  // Il settore lo dichiara l'utente nel form: usiamo quello per dare
+  // un riferimento esterno, non una media generica.
+  const datiSettore = (DATASET.sectors || {})[lead.sector];
+  if(datiSettore){
+    if(y + 130 > H - M){ doc.addPage(); y = M; }
+    doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
+    doc.text('IL TUO SETTORE', M, y); y += 24;
+    doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(16);
+    doc.text(lead.sector, M, y); y += 22;
+
+    doc.setFillColor('#F7F8FA');
+    doc.setDrawColor(C.accent); doc.setLineWidth(0.8);
+    // ATTENZIONE: splitTextToSize misura con il font CORRENTE.
+    // Va impostato prima, altrimenti calcola le righe su un corpo diverso
+    // da quello con cui verranno stampate.
+    doc.setFont(FONT,'normal'); doc.setFontSize(10.5);
+    const testoLines = doc.splitTextToSize(datiSettore.testo, W-2*M-32);
+    const boxH = 20 + testoLines.length*13 + 14 + 12;
+    doc.roundedRect(M, y, W-2*M, boxH, 6, 6, 'FD');
+    doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.ink);
+    doc.text(testoLines, M+16, y+26);
+    doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
+    doc.text('Fonte: ' + datiSettore.fonte, M+16, y + boxH - 12);
+    y += boxH + 26;
+  }
 
   // ------- TOP 3 CRITICITÀ - DETTAGLIO -------
   if(y + 210 > H - M){ doc.addPage(); y = M; }
