@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tech-Check | Marco De Vecchi</title>
-<meta name="description" content="Tech-Check: misura il gap operativo della tua azienda su 4 leve chiave - Direzione, Execution, Tecnologia, Persone. Gratuito, 12 domande, 3 minuti, report immediato." />
-<link rel="canonical" href="https://check.marco-devecchi.com/" />
+<title>Tech-Check for SMEs | Marco De Vecchi</title>
+<meta name="description" content="Tech-Check: assess your company's operational maturity across four key areas: Direction, Execution, Technology and People. Free, 12 questions, 3 minutes, instant report." />
+<link rel="canonical" href="https://check.marco-devecchi.com/en/" />
 
 <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 <link rel="apple-touch-icon" href="assets/logo.jpg" />
@@ -13,19 +13,19 @@
 <!-- Anteprima social. Gli URL DEVONO essere assoluti: con un percorso
      relativo LinkedIn, WhatsApp e X non caricano l'immagine. -->
 <meta property="og:site_name" content="Marco De Vecchi - Human Tech" />
-<meta property="og:locale" content="it_IT" />
+<meta property="og:locale" content="en_GB" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://check.marco-devecchi.com/" />
-<meta property="og:title" content="Tech-Check - Misura il gap operativo della tua azienda" />
-<meta property="og:description" content="4 leve, 12 domande, 3 minuti. Report immediato e gratuito, costruito su un framework di 174 KPI." />
+<meta property="og:url" content="https://check.marco-devecchi.com/en/" />
+<meta property="og:title" content="Tech-Check - Assess your company's operational maturity" />
+<meta property="og:description" content="Four areas, 12 questions, 3 minutes. An instant, free report built on a framework of 174 KPIs." />
 <meta property="og:image" content="https://check.marco-devecchi.com/assets/social-card.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Tech-Check di Marco De Vecchi" />
+<meta property="og:image:alt" content="Tech-Check by Marco De Vecchi" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Tech-Check - Misura il gap operativo della tua azienda" />
-<meta name="twitter:description" content="4 leve, 12 domande, 3 minuti. Report immediato e gratuito." />
+<meta name="twitter:title" content="Tech-Check - Assess your company's operational maturity" />
+<meta name="twitter:description" content="Four areas, 12 questions, 3 minutes. An instant, free report." />
 <meta name="twitter:image" content="https://check.marco-devecchi.com/assets/social-card.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,10 +52,10 @@
   --ink-soft:  #B6BBC9;
   --ink-mute:  #7A8090;
   --accent:    #F1A211; /* arancio brand marco-devecchi */
-  --c-dir:     #5B8DEF; /* Direzione  - blu */
+  --c-dir:     #5B8DEF; /* Direction  - blu */
   --c-exe:     #E26A6A; /* Execution  - rosso */
   --c-tech:    #4FB47A; /* Technology - verde */
-  --c-pep:     #E8A55B; /* Persone    - arancio */
+  --c-pep:     #E8A55B; /* People    - arancio */
   --good:      #4FB47A;
   --warn:      #E8A55B;
   --crit:      #E26A6A;
@@ -131,7 +131,7 @@ body{
 }
 .screen{display:none; padding-top:60px; padding-bottom:80px; animation:fadeIn .35s ease both}
 /* NB: qui NON si usa la scorciatoia "padding", altrimenti azzera
-   il padding laterale di .wrap (che nel CSS viene prima). */
+   il padding laterale of .wrap (che nel CSS viene prima). */
 .screen.active{display:block}
 @keyframes fadeIn{from{opacity:0; transform:translateY(8px)}to{opacity:1;transform:none}}
 
@@ -225,10 +225,10 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
   letter-spacing:.18em; text-transform:uppercase; padding:5px 10px;
   border-radius:4px; margin-bottom:16px;
 }
-.q-cat[data-cat="Direzione"]  {background:rgba(91,141,239,.12); color:var(--c-dir)}
+.q-cat[data-cat="Direction"]  {background:rgba(91,141,239,.12); color:var(--c-dir)}
 .q-cat[data-cat="Execution"]  {background:rgba(226,106,106,.12); color:var(--c-exe)}
 .q-cat[data-cat="Technology"] {background:rgba(79,180,122,.12);  color:var(--c-tech)}
-.q-cat[data-cat="Persone"]    {background:rgba(232,165,91,.12);  color:var(--c-pep)}
+.q-cat[data-cat="People"]    {background:rgba(232,165,91,.12);  color:var(--c-pep)}
 
 .q-title{font-family:'Montserrat',sans-serif; font-size:28px; line-height:1.2; margin:0 0 12px; font-weight:600; letter-spacing:-.01em}
 .q-text{color:var(--ink-soft); font-size:17px; margin:0 0 30px}
@@ -401,7 +401,7 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 .lead-form .check input[type="checkbox"]{
   width:20px; height:20px; margin:0; flex-shrink:0;
   accent-color:var(--accent); cursor:pointer;
-  margin-top:1px; /* allinea con la prima riga di testo */
+  margin-top:1px; /* allinea con la prima riga of testo */
 }
 .lead-form .check label{cursor:pointer}
 .lead-form .submit-btn{width:100%; justify-content:center}
@@ -479,13 +479,13 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 <body>
 
 <header class="topbar">
-  <a class="brand" href="https://marco-devecchi.com">
+  <a class="brand" href="https://www.marco-devecchi.com/en/">
     <img src="assets/marco-de-vecchi-human-tech-logo.png"
          alt="Marco De Vecchi - Human Tech" width="132" height="46" />
   </a>
   <div class="topbar-meta">
-    <span class="tag">Tech-Check · v1.0</span><a class="tag" href="/en/" hreflang="en" aria-label="English version">EN</a>
-    <span class="tag-sub">Digital Transformation per PMI</span>
+    <span class="tag">Tech-Check · v1.0</span><a class="tag" href="/" hreflang="it" aria-label="Italian version">IT</a>
+    <span class="tag-sub">Digital transformation for SMEs</span>
   </div>
 </header>
 
@@ -495,51 +495,51 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 <section class="screen active wrap" id="screen-intro">
   <div class="hero-grid">
     <div>
-      <div class="eyebrow">Tech-Check · 12 domande · 3 minuti · gratuito</div>
-      <h1>Misura il <em>gap operativo</em> della tua azienda</h1>
-      <p class="hero-sub">Su 4 leve chiave: Direzione, Execution, Tecnologia, Persone. In 3 minuti.</p>
+      <div class="eyebrow">Tech-Check · 12 questions · 3 minutes · free</div>
+      <h1>Find the <em>operational gaps</em> holding your company back</h1>
+      <p class="hero-sub">Across four key areas: Direction, Execution, Technology and People. In three minutes.</p>
       <p class="lead">
-        Il framework completo è composto da <strong>174 KPI</strong>, frutto della ricerca scientifica e di oltre <strong>20 anni di esperienza sul campo</strong> nella trasformazione digitale delle PMI. Il check rapido ne utilizza <strong>71</strong>: rispondi a 12 domande e ricevi subito un quadro delle aree più critiche, con un percorso chiaro per intervenire.
+        The complete framework includes <strong>174 KPIs</strong>, grounded in research and more than <strong>20 years of hands-on experience</strong> in SME digital transformation. This rapid check uses <strong>71</strong> of them: answer 12 questions and immediately see the areas that need the most attention, with a clear route forward.
       </p>
       <div class="cta-row">
-        <button class="btn btn-primary btn-arrow" onclick="goTo('quest')">Inizia il check</button>
-        <button class="btn btn-ghost" onclick="openExampleModal()">Sfoglia un esempio di report</button>
+        <button class="btn btn-primary btn-arrow" onclick="goTo('quest')">Start the check</button>
+        <button class="btn btn-ghost" onclick="openExampleModal()">View a sample report</button>
       </div>
       <div class="meta-row">
-        <div><span class="num">174</span><span class="lbl">KPI nel framework</span></div>
-        <div><span class="num">12</span><span class="lbl">Domande nel check</span></div>
-        <div><span class="num">~3'</span><span class="lbl">Tempo richiesto</span></div>
-        <div><span class="num">0€</span><span class="lbl">Costo del report</span></div>
+        <div><span class="num">174</span><span class="lbl">KPIs in the framework</span></div>
+        <div><span class="num">12</span><span class="lbl">Questions in the check</span></div>
+        <div><span class="num">~3'</span><span class="lbl">Time required</span></div>
+        <div><span class="num">0€</span><span class="lbl">Report cost</span></div>
       </div>
     </div>
 
     <aside class="framework-card">
-      <h3>Il framework in sintesi</h3>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-dir)"></span><span class="cat-name">Direzione</span><span class="cat-meta">35 KPI · 20,1%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-exe)"></span><span class="cat-name">Execution</span><span class="cat-meta">48 KPI · 27,6%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Tecnologia</span><span class="cat-meta">48 KPI · 27,6%</span></div>
-      <div class="cat-row"><span class="cat-dot" style="background:var(--c-pep)"></span><span class="cat-name">Persone</span><span class="cat-meta">43 KPI · 24,7%</span></div>
+      <h3>The framework at a glance</h3>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-dir)"></span><span class="cat-name">Direction</span><span class="cat-meta">35 KPIs · 20.1%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-exe)"></span><span class="cat-name">Execution</span><span class="cat-meta">48 KPIs · 27.6%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-tech)"></span><span class="cat-name">Technology</span><span class="cat-meta">48 KPIs · 27.6%</span></div>
+      <div class="cat-row"><span class="cat-dot" style="background:var(--c-pep)"></span><span class="cat-name">People</span><span class="cat-meta">43 KPIs · 24.7%</span></div>
     </aside>
   </div>
 
   <section id="how-it-works" style="margin-top:90px">
-    <div class="eyebrow">Come funziona</div>
-    <h2 style="font-family:'Montserrat',sans-serif; font-size:36px; font-weight:600; letter-spacing:-.01em; margin:0 0 32px">In 3 passaggi</h2>
+    <div class="eyebrow">How it works</div>
+    <h2 style="font-family:'Montserrat',sans-serif; font-size:36px; font-weight:600; letter-spacing:-.01em; margin:0 0 32px">Three simple steps</h2>
     <div class="steps-grid">
       <div class="framework-card" style="padding:24px">
         <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">01</div>
-        <h3 style="margin-top:14px">Rispondi a 12 domande</h3>
-        <p style="color:var(--ink-soft); margin:0; font-size:14px">Una scala 1-7 per ognuna delle 4 leve della trasformazione digitale. Ti porta via meno di tre minuti.</p>
+        <h3 style="margin-top:14px">Answer 12 questions</h3>
+        <p style="color:var(--ink-soft); margin:0; font-size:14px">Rate each of the four areas on a 1–7 scale. It takes less than three minutes.</p>
       </div>
       <div class="framework-card" style="padding:24px">
         <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">02</div>
-        <h3 style="margin-top:14px">Ricevi l'abstract gratuito</h3>
-        <p style="color:var(--ink-soft); margin:0; font-size:14px">Score di maturità, radar chart delle 4 categorie e top 3 aree critiche identificate dal sistema.</p>
+        <h3 style="margin-top:14px">Get your free overview</h3>
+        <p style="color:var(--ink-soft); margin:0; font-size:14px">Your maturity score, a radar chart of the four areas and the three priorities identified by the system.</p>
       </div>
       <div class="framework-card" style="padding:24px">
         <div style="font-family:'Montserrat',sans-serif; font-size:42px; font-weight:600; color:var(--accent); line-height:1">03</div>
-        <h3 style="margin-top:14px">Sblocca il report completo</h3>
-        <p style="color:var(--ink-soft); margin:0; font-size:14px">PDF con KPI dettagliati, benchmark di settore e azioni concrete suggerite per ogni criticità.</p>
+        <h3 style="margin-top:14px">Unlock the full report</h3>
+        <p style="color:var(--ink-soft); margin:0; font-size:14px">A PDF with detailed KPIs, industry benchmarks and practical actions for every issue identified.</p>
       </div>
     </div>
   </section>
@@ -567,11 +567,11 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
       <div class="anchor-low" id="anchor-low">...</div>
       <div class="anchor-high" id="anchor-high">...</div>
     </div>
-    <p class="q-suggerimento">Se sei a metà fra due valori, rispondi pensando all'anello più debole.</p>
+    <p class="q-suggerimento">If you are between two scores, answer with the weakest link in mind.</p>
 
     <div class="q-nav">
-      <button class="btn btn-outline" id="btn-prev" onclick="prevQ()">← Indietro</button>
-      <button class="btn btn-primary btn-arrow" id="btn-next" onclick="nextQ()" disabled>Avanti</button>
+      <button class="btn btn-outline" id="btn-prev" onclick="prevQ()">← Back</button>
+      <button class="btn btn-primary btn-arrow" id="btn-next" onclick="nextQ()" disabled>Next</button>
     </div>
   </article>
 </section>
@@ -580,13 +580,13 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 <!-- SCREEN 3 | RESULT (abstract)                   -->
 <!-- ============================================== -->
 <section class="screen wrap" id="screen-result">
-  <div class="eyebrow">Il tuo quadro · Abstract gratuito</div>
-  <h1 style="margin-bottom:30px">Maturità digitale: <em id="result-tier-word">...</em></h1>
+  <div class="eyebrow">Your overview · Free summary</div>
+  <h1 style="margin-bottom:30px">Digital maturity: <em id="result-tier-word">...</em></h1>
 
   <div class="result-grid">
     <div class="score-block">
       <div class="score-meta">
-        <span class="score-label">Score complessivo di maturità digitale</span>
+        <span class="score-label">Overall digital maturity score</span>
         <div style="margin-top:10px"><span class="score-tier" id="score-tier">...</span></div>
       </div>
       <div class="score-numbers">
@@ -594,14 +594,14 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
       </div>
     </div>
     <div class="radar-card">
-      <h3>Profilo per categoria</h3>
-      <svg id="radar-chart" viewBox="0 0 460 360" xmlns="http://www.w3.org/2000/svg" aria-label="Radar chart maturità digitale"></svg>
+      <h3>Profile by area</h3>
+      <svg id="radar-chart" viewBox="0 0 460 360" xmlns="http://www.w3.org/2000/svg" aria-label="Digital maturity radar chart"></svg>
       <div class="cat-scores" id="cat-scores"></div>
     </div>
   </div>
 
   <div class="settore-box hidden" id="settore-box">
-    <span class="score-label">Il tuo settore</span>
+    <span class="score-label">Your industry</span>
     <h3 id="settore-nome">...</h3>
     <p id="settore-testo">...</p>
     <p class="settore-fonte" id="settore-fonte">...</p>
@@ -624,60 +624,60 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 
   <div class="cta-block" id="cta-block">
     <div>
-      <h3>Sblocca il report completo</h3>
-      <p>Un PDF dettagliato con tutti i KPI dietro le tue risposte, i benchmark di settore e le azioni concrete suggerite per migliorare ogni area critica.</p>
+      <h3>Unlock the full report</h3>
+      <p>A detailed PDF showing the KPIs behind your answers, relevant industry benchmarks and practical actions to improve every priority area.</p>
       <ul class="cta-bullets">
-        <li>Mappa dei <strong id="cta-kpi-count">...</strong> KPI sottostanti le tue 12 risposte (su un framework completo di <strong id="cta-framework-count">...</strong>)</li>
-        <li>Oltre <strong id="cta-action-count">...</strong> azioni operative concrete, descritte una per una</li>
-        <li>Piano di intervento priorizzato per le tue aree più critiche</li>
-        <li>Versione PDF da condividere con il team</li>
+        <li>A map of the <strong id="cta-kpi-count">...</strong> KPIs behind your 12 answers (from a complete framework of <strong id="cta-framework-count">...</strong>)</li>
+        <li>More than <strong id="cta-action-count">...</strong> practical actions, each explained clearly</li>
+        <li>A prioritised action plan for the areas that need it most</li>
+        <li>A PDF version you can share with your team</li>
       </ul>
-      <p style="font-size:13px; color:var(--ink-mute); margin:14px 0 0">Lasciaci la mail: il PDF parte istantaneo, niente spam mai.</p>
-      <p style="font-size:13px; margin:8px 0 0"><a href="#" onclick="event.preventDefault(); openExampleModal()" style="color:var(--accent); text-decoration:underline">Sfoglia un report di esempio</a> per vedere cosa riceverai</p>
+      <p style="font-size:13px; color:var(--ink-mute); margin:14px 0 0">Enter your email and the PDF will download immediately. No spam.</p>
+      <p style="font-size:13px; margin:8px 0 0"><a href="#" onclick="event.preventDefault(); openExampleModal()" style="color:var(--accent); text-decoration:underline">View a sample report</a> to see what you will receive</p>
     </div>
     <form class="lead-form" id="lead-form" novalidate>
-      <label for="lead-name">Nome e cognome</label>
-      <input type="text" id="lead-name" required autocomplete="name" placeholder="Es. Anna Rossi" />
+      <label for="lead-name">Full name</label>
+      <input type="text" id="lead-name" required autocomplete="name" placeholder="e.g. Anna Smith" />
 
-      <label for="lead-email">Email aziendale</label>
-      <input type="email" id="lead-email" required autocomplete="email" placeholder="anna@azienda.it" />
+      <label for="lead-email">Work email</label>
+      <input type="email" id="lead-email" required autocomplete="email" placeholder="anna@company.com" />
 
-      <label for="lead-company">Azienda</label>
-      <input type="text" id="lead-company" required autocomplete="organization" placeholder="Es. Rossi & C. Srl" />
+      <label for="lead-company">Company</label>
+      <input type="text" id="lead-company" required autocomplete="organization" placeholder="e.g. Smith & Co Ltd" />
 
-      <label for="lead-role">Ruolo</label>
-      <input type="text" id="lead-role" required autocomplete="organization-title" placeholder="Es. Direttore Operations" />
+      <label for="lead-role">Role</label>
+      <input type="text" id="lead-role" required autocomplete="organization-title" placeholder="e.g. Operations Director" />
 
-      <label for="lead-sector">Settore</label>
+      <label for="lead-sector">Industry</label>
       <select id="lead-sector" required>
-        <option value="">Seleziona il settore della tua azienda</option>
-        <option value="Manifattura e produzione">Manifattura e produzione</option>
-        <option value="Commercio e distribuzione">Commercio e distribuzione</option>
-        <option value="Servizi alle imprese">Servizi alle imprese</option>
-        <option value="Servizi alle persone">Servizi alle persone</option>
-        <option value="Costruzioni e immobiliare">Costruzioni e immobiliare</option>
-        <option value="Agricoltura, energia e risorse">Agricoltura, energia e risorse</option>
-        <option value="Altro / Multi-settore">Altro / Multi-settore</option>
+        <option value="">Select your company’s industry</option>
+        <option value="Manufacturing and production">Manufacturing and production</option>
+        <option value="Retail and distribution">Retail and distribution</option>
+        <option value="Business services">Business services</option>
+        <option value="Consumer services">Consumer services</option>
+        <option value="Construction and property">Construction and property</option>
+        <option value="Agriculture, energy and resources">Agriculture, energy and resources</option>
+        <option value="Other / Multi-sector">Other / Multi-sector</option>
       </select>
 
       <div class="check">
         <input type="checkbox" id="lead-privacy" required />
-        <label for="lead-privacy" style="font-family:inherit; font-size:12px; letter-spacing:0; text-transform:none; color:var(--ink-mute); margin:0">Ho letto e accetto la <a href="#" onclick="event.preventDefault(); openPrivacy()" style="color:var(--accent)">privacy policy</a>. I dati servono a inviarti il report e a un eventuale contatto sui contenuti del framework. Nessuna newsletter.</label>
+        <label for="lead-privacy" style="font-family:inherit; font-size:12px; letter-spacing:0; text-transform:none; color:var(--ink-mute); margin:0">I have read and accept the <a href="#" onclick="event.preventDefault(); openPrivacy()" style="color:var(--accent)">privacy policy</a>. We use your data to send the report and, where relevant, to contact you about the framework. No newsletter.</label>
       </div>
       <div class="form-error" id="form-error"></div>
-      <button type="submit" class="btn btn-primary submit-btn" id="lead-submit">Genera il report PDF</button>
-      <div class="small-link">Oppure <a href="#" id="link-call">prenota una call diretta con Marco</a></div>
+      <button type="submit" class="btn btn-primary submit-btn" id="lead-submit">Generate the PDF report</button>
+      <div class="small-link">Alternatively, <a href="#" id="link-call">book a call directly with Marco</a></div>
     </form>
   </div>
 
   <!-- success state, swapped after submit -->
   <div class="success-state hidden" id="success-state">
     <div class="check-icon">✓</div>
-    <h3>Report inviato</h3>
-    <p>Il download parte tra un istante. Se non dovesse partire, usa il pulsante qui sotto.</p>
-    <button class="btn btn-primary" id="btn-redownload">Scarica il tuo PDF</button>
+    <h3>Report ready</h3>
+    <p>Your download will begin shortly. If it does not, use the button below.</p>
+    <button class="btn btn-primary" id="btn-redownload">Download your PDF</button>
     <div style="margin-top:20px">
-      <a href="#" class="btn btn-outline" id="link-call-2">Prenota una call con Marco</a>
+      <a href="#" class="btn btn-outline" id="link-call-2">Book a call with Marco</a>
     </div>
   </div>
 </section>
@@ -687,95 +687,35 @@ h1 em{ font-style:italic; color:var(--accent); font-weight:500 }
 <!-- ============================================== -->
 <section class="screen wrap" id="screen-privacy">
   <div class="privacy-head">
-    <button class="btn btn-outline" onclick="closePrivacy()">← Torna indietro</button>
-    <span class="tag">Documento informativo · Aggiornato Maggio 2026</span>
+    <button class="btn btn-outline" onclick="closePrivacy()">← Back</button>
+    <span class="tag">Privacy notice · Updated May 2026</span>
   </div>
 
-  <div class="eyebrow">Trattamento dei dati personali</div>
-  <h1 style="margin-bottom:24px">Privacy <em>policy</em></h1>
+  <div class="eyebrow">Personal data processing</div>
+  <h1 style="margin-bottom:24px">Privacy <em>notice</em></h1>
   <p class="lead" style="max-width:680px">
-    Ai sensi degli artt. 13 e 14 del Regolamento UE 2016/679 (GDPR), ti forniamo le informazioni essenziali su come trattiamo i tuoi dati personali quando completi il <em>Tech-Check</em> e richiedi il report PDF.
+    Under Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR), this notice explains how we process your personal data when you complete the <em>Tech-Check</em> and request the PDF report.
   </p>
 
   <article class="privacy-doc">
-
-    <section class="privacy-section">
-      <h2>1. Titolare del trattamento</h2>
-      <p>
-        <strong>marco-devecchi s.r.l.s.</strong><br/>
-        Via Crescenzio 97, 00193 Roma<br/>
-        P.IVA 18372481004<br/>
-        PEC: <a href="mailto:marco-devecchi@pec.it">marco-devecchi@pec.it</a><br/>
-        Email: <a href="mailto:marco.devecchi@pm.me">marco.devecchi@pm.me</a>
-      </p>
-    </section>
-
-    <section class="privacy-section">
-      <h2>2. Quali dati raccogliamo</h2>
-      <ul>
-        <li><strong>Dati di contatto</strong>: nome, cognome, email aziendale, nome dell'azienda, ruolo professionale.</li>
-        <li><strong>Risposte al questionario</strong>: i 12 punteggi (scala da 1 a 7) che hai indicato e gli score derivati per le 4 categorie del framework.</li>
-        <li><strong>Metadati tecnici minimi</strong>: data e ora dell'invio. Non utilizziamo cookie di profilazione, tracker pubblicitari o strumenti di analytics di terze parti.</li>
-      </ul>
-    </section>
-
-    <section class="privacy-section">
-      <h2>3. Perché trattiamo i tuoi dati</h2>
-      <p>I dati sono trattati per le seguenti finalità:</p>
-      <ul>
-        <li><strong>Generazione e invio del report</strong> richiesto (base giuridica: esecuzione di una richiesta dell'interessato, art. 6.1.b GDPR).</li>
-        <li><strong>Eventuale follow-up commerciale</strong> sui contenuti del framework KPI e sui servizi di consulenza correlati (base giuridica: legittimo interesse, art. 6.1.f GDPR).</li>
-      </ul>
-    </section>
-
-    <section class="privacy-section">
-      <h2>4. Con chi condividiamo i dati</h2>
-      <p>I tuoi dati sono trattati esclusivamente da Marco De Vecchi e dai seguenti responsabili esterni del trattamento, tutti vincolati da contratti che ne garantiscono la protezione:</p>
-      <ul>
-        <li><strong>Brevo SAS</strong> (Francia): piattaforma di gestione contatti e invio email.</li>
-        <li><strong>Cloudflare, Inc.</strong> (USA, con clausole contrattuali standard UE): hosting del sito ed esecuzione della funzione che registra la richiesta.</li>
-        <li><strong>Cal.com Inc.</strong> (USA, con clausole contrattuali standard UE): solo se prenoti una call.</li>
-      </ul>
-      <p>I tuoi dati <strong>non vengono ceduti, venduti o trasferiti</strong> ad altri soggetti per finalità commerciali.</p>
-    </section>
-
-    <section class="privacy-section">
-      <h2>5. Per quanto tempo conserviamo i dati</h2>
-      <p>I dati di contatto e le risposte al questionario sono conservati fino a quando esiste un legittimo interesse al follow-up consulenziale. Puoi richiedere la cancellazione, o opporti al trattamento, in qualsiasi momento.</p>
-    </section>
-
-    <section class="privacy-section">
-      <h2>6. I tuoi diritti</h2>
-      <p>In qualità di interessato puoi esercitare i diritti previsti dagli artt. da 15 a 22 GDPR:</p>
-      <ul>
-        <li>Accesso ai dati e copia degli stessi</li>
-        <li>Rettifica di dati inesatti</li>
-        <li>Cancellazione (diritto all'oblio)</li>
-        <li>Limitazione del trattamento</li>
-        <li>Portabilità dei dati</li>
-        <li>Opposizione al trattamento</li>
-      </ul>
-      <p>Per esercitare questi diritti scrivi a <a href="mailto:marco.devecchi@pm.me">marco.devecchi@pm.me</a>. Hai inoltre diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
-    </section>
-
-    <section class="privacy-section">
-      <h2>7. Sicurezza</h2>
-      <p>Adottiamo misure tecniche e organizzative adeguate a proteggere i tuoi dati: trasmissione cifrata HTTPS, accesso ristretto agli archivi, password robuste e autenticazione a due fattori sui sistemi che gestiscono i dati.</p>
-    </section>
-
-    <p class="privacy-disclaimer">
-      Ultimo aggiornamento: Maggio 2026. La presente informativa potrà essere aggiornata; le versioni precedenti restano disponibili su richiesta.
-    </p>
+    <section class="privacy-section"><h2>1. Data controller</h2><p><strong>marco-devecchi s.r.l.s.</strong><br/>Via Crescenzio 97, 00193 Rome, Italy<br/>VAT number 18372481004<br/>Certified email: <a href="mailto:marco-devecchi@pec.it">marco-devecchi@pec.it</a><br/>Email: <a href="mailto:marco-devecchi@pm.me">marco-devecchi@pm.me</a></p></section>
+    <section class="privacy-section"><h2>2. Data we collect</h2><ul><li><strong>Contact details</strong>: full name, work email, company name and professional role.</li><li><strong>Questionnaire answers</strong>: the 12 scores you provide on a 1–7 scale and the scores calculated for the framework’s four areas.</li><li><strong>Minimal technical metadata</strong>: date and time of submission. We do not use profiling cookies, advertising trackers or third-party analytics tools.</li></ul></section>
+    <section class="privacy-section"><h2>3. Why we process your data</h2><p>We process your data to:</p><ul><li><strong>Generate and deliver the requested report</strong> (legal basis: performance of a request made by the data subject, Article 6(1)(b) GDPR).</li><li><strong>Follow up where relevant</strong> about the KPI framework and related advisory services (legal basis: legitimate interest, Article 6(1)(f) GDPR).</li></ul></section>
+    <section class="privacy-section"><h2>4. Who we share data with</h2><p>Your data is processed only by Marco De Vecchi and the following external processors, each bound by contractual data-protection obligations:</p><ul><li><strong>Brevo SAS</strong> (France): contact management and email delivery.</li><li><strong>Cloudflare, Inc.</strong> (United States, subject to EU Standard Contractual Clauses): website hosting and execution of the function that records your request.</li><li><strong>Cal.com Inc.</strong> (United States, subject to EU Standard Contractual Clauses): only if you book a call.</li></ul><p>Your data is <strong>not disclosed, sold or transferred</strong> to other parties for commercial purposes.</p></section>
+    <section class="privacy-section"><h2>5. How long we retain data</h2><p>Contact details and questionnaire answers are retained while a legitimate interest in an advisory follow-up exists. You may request deletion or object to processing at any time.</p></section>
+    <section class="privacy-section"><h2>6. Your rights</h2><p>As a data subject, you may exercise the rights provided by Articles 15–22 GDPR:</p><ul><li>Access to and a copy of your data</li><li>Correction of inaccurate data</li><li>Erasure</li><li>Restriction of processing</li><li>Data portability</li><li>Objection to processing</li></ul><p>To exercise these rights, email <a href="mailto:marco-devecchi@pm.me">marco-devecchi@pm.me</a>. You may also lodge a complaint with the Italian Data Protection Authority (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p></section>
+    <section class="privacy-section"><h2>7. Security</h2><p>We use appropriate technical and organisational measures to protect your data, including encrypted HTTPS transmission, restricted access, strong passwords and two-factor authentication on systems that process data.</p></section>
+    <p class="privacy-disclaimer">Last updated: May 2026. This notice may be updated; previous versions are available on request.</p>
   </article>
 
   <div style="text-align:center; margin-top:48px">
-    <button class="btn btn-primary" onclick="closePrivacy()">← Torna al check</button>
+    <button class="btn btn-primary" onclick="closePrivacy()">← Return to the check</button>
   </div>
 </section>
 
 <footer class="footer wrap">
-  <div>© Marco De Vecchi, KPI Framework v2.0 · Aprile 2026</div>
-  <div><a href="#" onclick="event.preventDefault(); openPrivacy()">Privacy</a> · <a href="mailto:marco.devecchi@pm.me">Contatti</a></div>
+  <div>© Marco De Vecchi, KPI Framework v2.0 · April 2026</div>
+  <div><a href="#" onclick="event.preventDefault(); openPrivacy()">Privacy</a> · <a href="mailto:marco-devecchi@pm.me">Contact</a></div>
 </footer>
 
 <!-- ============================================================ -->
@@ -799,17 +739,17 @@ const SOGLIA_OK = 85;
    una tabella lunga prima delle azioni fa sembrare il metodo una pagella. */
 const KPI_IN_SCHEDA = 3;
 
-/* Aria sopra i titoli di sezione del PDF (Azioni, Come si misura) e
+/* Aria sopra i titoli of sezione del PDF (Azioni, How to measure progress) e
    sotto il testo introduttivo, prima della tabella. In punti. */
 const ARIA_SEZIONE = 44;
 
 /* {KPI_CHECK} e {KPI_TOT} vengono sostituiti con i numeri veri del dataset. */
 const MSG_OK = {
-  titolo: 'Nessuna area sotto soglia.',
-  p1: 'Su queste dodici domande non emerge nessuna criticità: le fondamenta ci sono, e non è scontato.',
-  p2: 'Ma il diavolo si nasconde nei dettagli, e questo check ne vede pochi. Ha una voce sola, la tua, e misura {KPI_CHECK} dei {KPI_TOT} KPI del framework. Quando le stesse domande arrivano anche al CFO, ai responsabili di funzione e a chi esegue tutti i giorni, il punteggio quasi mai coincide: non perché qualcuno sbagli, ma perché ognuno vede un pezzo diverso dell\'azienda.',
-  p3: 'È nella distanza tra quelle risposte che si nasconde quello che nessuno sta guardando.',
-  p4: 'Se il quadro è davvero questo, non ti serve un intervento. Ti serve una controprova.',
+  titolo: 'No area is below the threshold.',
+  p1: 'Your answers reveal no critical issues: the foundations are in place, and that should not be taken for granted.',
+  p2: 'The detail is where hidden issues emerge, and this rapid check sees only part of it. It reflects one perspective, yours, and covers {KPI_CHECK} of the framework\'s {KPI_TOT} KPIs. When the same questions are put to the CFO, functional managers and operational staff, the scores rarely match. Not because anyone is wrong, but because each person sees a different part of the company.',
+  p3: 'The gaps between those answers reveal what no one is currently seeing.',
+  p4: 'If this picture is accurate, you may not need an intervention. You need independent confirmation.',
 };
 
 function testoMsgOk(t){
@@ -821,20 +761,20 @@ function testoMsgOk(t){
 const CALL_URL = "https://cal.com/marco-devecchi/call-conoscitiva";
 
 /* ---------- ETICHETTE CATEGORIE ----------
-   La CHIAVE resta quella del dataset (Direzione, Execution, Technology, Persone):
+   La CHIAVE resta quella del dataset (Direction, Execution, Technology, People):
    non va toccata, e' usata in dataset.json, nei selettori CSS [data-cat]
    e negli attributi Brevo. Qui si cambia SOLO cio' che legge l'utente. */
 const CAT_LABEL = {
-  Direzione:  'Direzione',
+  Direzione:  'Direction',
   Execution:  'Execution',
-  Technology: 'Tecnologia',
-  Persone:    'Persone',
+  Technology: 'Technology',
+  Persone:    'People',
 };
 const etichettaCat = c => (CAT_LABEL[c] || c);
 
 /* I pesi hanno un decimale (sommano esattamente 100,0).
    In italiano il separatore decimale e' la virgola, non il punto. */
-const pesoIt = w => String(w).replace('.', ',');
+const pesoIt = w => String(w);
 
 /* Font del PDF. Vive qui, non dentro generatePDF, perche' lo usa
    anche drawRadarPDF che e' una funzione separata.
@@ -853,7 +793,7 @@ let lastResult = null;  // ultimo risultato calcolato (per redownload PDF)
     const res = await fetch('dataset.json', {cache:'no-store'});
     DATASET = await res.json();
   }catch(e){
-    alert('Errore caricamento dataset. Verifica che dataset.json sia nella stessa cartella di index.html.');
+    alert('The dataset could not be loaded. Check that dataset.json is in the same folder as index.html.');
     console.error(e);
     return;
   }
@@ -864,7 +804,7 @@ let lastResult = null;  // ultimo risultato calcolato (per redownload PDF)
   const actionsRounded = Math.floor(totalActions / 100) * 100;
 
   document.getElementById('cta-kpi-count').textContent       = kpisInCheck;
-  document.getElementById('cta-framework-count').textContent = DATASET.framework_total_kpis + ' KPI';
+  document.getElementById('cta-framework-count').textContent = DATASET.framework_total_kpis + ' KPIs';
   document.getElementById('cta-action-count').textContent    = actionsRounded;
   document.getElementById('link-call').href   = CALL_URL;
   document.getElementById('link-call-2').href = CALL_URL;
@@ -927,7 +867,7 @@ function renderQ(){
   document.getElementById('btn-prev').disabled = (cur===0);
   const next = document.getElementById('btn-next');
   next.disabled = (typeof answers[q.id] === 'undefined');
-  next.textContent = (cur === tot-1) ? 'Vedi i risultati' : 'Avanti';
+  next.textContent = (cur === tot-1) ? 'View results' : 'Next';
   if(cur === tot-1) next.classList.remove('btn-arrow'); else next.classList.add('btn-arrow');
 }
 function onPick(v){
@@ -955,7 +895,7 @@ function compute(){
     const qs = DATASET.questions.filter(q=>q.cat===c);
     catScores[c] = qs.reduce((a,q)=>a+qScores[q.id],0) / qs.length;
   }
-  // overall: weighted avg, pesi rinormalizzati su 101
+  // overall: weighted avg, pesi rinormalizzati of 101
   const sumW = Object.values(DATASET.categories).reduce((a,c)=>a+c.weight,0);
   let total  = 0;
   for(const c of Object.keys(DATASET.categories)){
@@ -970,24 +910,24 @@ function compute(){
   return { qScores, catScores, total, top3 };
 }
 function tier(score){
-  if(score < 40)  return {key:'crit', label:'Critico',     word:'critica'};
-  if(score < 65)  return {key:'warn', label:'Da migliorare', word:'da migliorare'};
-  return                {key:'good', label:'Buono',        word:'buona'};
+  if(score < 40)  return {key:'crit', label:'Critical',     word:'critical'};
+  if(score < 65)  return {key:'warn', label:'Needs improvement', word:'needs improvement'};
+  return                {key:'good', label:'Good',        word:'good'};
 }
 
-/* Quante azioni ha senso proporre su un'area, dato il SUO punteggio.
-   Unica fonte di verita': la usano sia la pagina dei risultati sia il PDF,
+/* Quante azioni ha senso proporre of un'area, dato il SUO punteggio.
+   Unica fonte of verita': la usano sia la pagina dei risultati sia il PDF,
    cosi' non possono piu' annunciare numeri diversi. */
 function azioniPerPunteggio(score, disponibili){
   let n, nota;
   if(score < 40){
-    n = 15; nota = "intervento prioritario, ampio set di azioni per riportare l'area su standard accettabili";
+    n = 15; nota = "priority intervention, with a broad set of actions to bring the area up to an acceptable standard";
   } else if(score < 65){
-    n = 8;  nota = "interventi mirati per chiudere il gap rispetto agli standard di eccellenza";
+    n = 8;  nota = "targeted actions to close the gap against best-practice standards";
   } else if(score < 80){
-    n = 4;  nota = "azioni di affinamento per consolidare e portare l'area verso l'eccellenza";
+    n = 4;  nota = "refinement actions to consolidate performance and move the area towards excellence";
   } else {
-    n = 2;  nota = "azioni di mantenimento per preservare il livello raggiunto";
+    n = 2;  nota = "maintenance actions to preserve the level achieved";
   }
   return { n: Math.min(n, disponibili), nota };
 }
@@ -996,28 +936,28 @@ function azioniPerPunteggio(score, disponibili){
    A 83/100 non sono "aree critiche": dirlo fa perdere credibilita' al report. */
 function bloccoTop3(total){
   if(total < 40) return {
-    occhiello: 'TOP 3 AREE CRITICHE',
-    titolo:    'Le 3 aree più critiche',
-    sottotitolo:'Le tre sottocategorie con il punteggio più basso. Ognuna ha un set di azioni concrete pronte all\'uso.',
-    pdfTitolo: 'Dove intervenire per primo',
+    occhiello: 'TOP 3 CRITICAL AREAS',
+    titolo:    'The three most critical areas',
+    sottotitolo:'The three lowest-scoring subcategories. Each includes a practical set of actions you can use.',
+    pdfTitolo: 'Where to act first',
   };
   if(total < 65) return {
-    occhiello: 'TOP 3 PUNTI DEBOLI',
-    titolo:    'I 3 punti più deboli',
-    sottotitolo:'Le tre sottocategorie dove il divario dagli standard è più ampio. Sono le prime su cui conviene lavorare.',
-    pdfTitolo: 'Da dove conviene partire',
+    occhiello: 'TOP 3 WEAKNESSES',
+    titolo:    'The three weakest areas',
+    sottotitolo:'The three subcategories with the widest gap against the standard. These are the best place to start.',
+    pdfTitolo: 'Where to start',
   };
   if(total < 80) return {
-    occhiello: 'TOP 3 MARGINI DI MIGLIORAMENTO',
-    titolo:    'I 3 margini di miglioramento',
-    sottotitolo:'Il quadro complessivo è solido. Queste sono le tre sottocategorie dove resta più spazio di guadagno.',
-    pdfTitolo: 'Dove puoi ancora guadagnare',
+    occhiello: 'TOP 3 OPPORTUNITIES FOR IMPROVEMENT',
+    titolo:    'The three greatest opportunities',
+    sottotitolo:'The overall picture is sound. These are the three subcategories with the greatest remaining upside.',
+    pdfTitolo: 'Where you can still improve',
   };
   return {
-    occhiello: 'TOP 3 PUNTI DI ATTENZIONE',
-    titolo:    'I 3 punti di attenzione',
-    sottotitolo:'Nessuna area critica. Queste tre sono semplicemente le meno forti: meritano un presidio, non un intervento.',
-    pdfTitolo: 'Dove tenere alta l\'attenzione',
+    occhiello: 'TOP 3 AREAS TO MONITOR',
+    titolo:    'Three areas to monitor',
+    sottotitolo:'There are no critical areas. These are simply the three least strong and should be monitored rather than treated as urgent interventions.',
+    pdfTitolo: 'Where to maintain focus',
   };
 }
 
@@ -1043,7 +983,7 @@ function renderResult(){
         <span class="dot" style="background:${cat.color}"></span>
         <span class="name">${etichettaCat(c)}</span>
         <span class="pct">${pct}%</span>
-        <span class="weight">peso ${pesoIt(cat.weight)}%</span>
+        <span class="weight">weight ${pesoIt(cat.weight)}%</span>
       </div>`);
   });
 
@@ -1058,7 +998,7 @@ function renderResult(){
     if(_sett){
       document.getElementById('settore-nome').textContent = document.getElementById('lead-sector').value;
       document.getElementById('settore-testo').textContent = _sett.testo;
-      document.getElementById('settore-fonte').textContent = 'Fonte: ' + _sett.fonte;
+      document.getElementById('settore-fonte').textContent = 'Source: ' + _sett.fonte;
     }
   }
 
@@ -1092,7 +1032,7 @@ function renderResult(){
         <div>
           <div class="crit-cat" style="color:${DATASET.categories[q.cat].color}">${etichettaCat(q.cat)}</div>
           <div class="crit-title">${q.title}</div>
-          <div class="crit-meta">${q.kpis.length} KPI sottostanti · <strong>${azioniPerPunteggio(score, q.n_actions).n} azioni</strong> suggerite per il tuo livello, su ${q.n_actions} disponibili</div>
+          <div class="crit-meta">${q.kpis.length} underlying KPIs · <strong>${azioniPerPunteggio(score, q.n_actions).n} actions</strong> suggested for your level, from ${q.n_actions} available</div>
         </div>
         <span class="crit-score ${tierKey}">${score}%</span>
       </div>`);
@@ -1163,17 +1103,17 @@ document.getElementById('lead-form').addEventListener('submit', async function(e
     privacy: document.getElementById('lead-privacy').checked,
   };
   if(!lead.name || !lead.email || !lead.company || !lead.role || !lead.sector){
-    err.textContent = 'Compila tutti i campi.'; err.classList.add('show'); return;
+    err.textContent = 'Please complete every field.'; err.classList.add('show'); return;
   }
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email)){
-    err.textContent = "Email non valida."; err.classList.add('show'); return;
+    err.textContent = "Please enter a valid email address."; err.classList.add('show'); return;
   }
   if(!lead.privacy){
-    err.textContent = "Devi accettare la privacy policy per ricevere il report."; err.classList.add('show'); return;
+    err.textContent = "You must accept the privacy policy to receive the report."; err.classList.add('show'); return;
   }
 
   const btn = document.getElementById('lead-submit');
-  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Generazione in corso...';
+  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Generating your report...';
 
   // fire-and-forget al backend (non blocca il PDF)
   if(LEAD_ENDPOINT){
@@ -1196,8 +1136,8 @@ document.getElementById('lead-form').addEventListener('submit', async function(e
     await generatePDF(lead);
   }catch(e){
     console.error(e);
-    alert('Errore nella generazione del PDF. Riprova o contattaci direttamente.');
-    btn.disabled = false; btn.textContent = 'Genera il report PDF';
+    alert('The PDF could not be generated. Please try again or contact us directly.');
+    btn.disabled = false; btn.textContent = 'Generate the PDF report';
     return;
   }
 
@@ -1217,7 +1157,7 @@ async function generatePDF(lead){
   // Montserrat se montserrat-jspdf.js e' stato caricato, altrimenti helvetica
   /* Montserrat solo se sono registrati TUTTI gli stili che il report usa.
      Se ne manca uno, jsPDF va in eccezione appena lo incontra e il PDF non
-     esce affatto: meglio ripiegare su helvetica e consegnare comunque. */
+     esce affatto: meglio ripiegare of helvetica e consegnare comunque. */
   FONT = 'helvetica';
   try {
     var _stili = (doc.getFontList && doc.getFontList().Montserrat) || [];
@@ -1239,9 +1179,9 @@ async function generatePDF(lead){
     dir:'#3B6FD6', exe:'#D64545', tech:'#3FA66B', pep:'#E08A3C',
     crit:'#C13C3C', warn:'#C8862F', good:'#3B8B5B',
   };
-  const catColor = c => ({Direzione:C.dir,Execution:C.exe,Technology:C.tech,Persone:C.pep})[c];
-  // versione "tinta" molto chiara di ciascun colore categoria (~6% di saturazione)
-  const catColorLight = c => ({Direzione:'#EEF3FC',Execution:'#FCEEEE',Technology:'#EEF8F2',Persone:'#FCF3EA'})[c];
+  const catColor = c => ({Direction:C.dir,Execution:C.exe,Technology:C.tech,People:C.pep})[c];
+  // versione "tinta" molto chiara of ciascun colore categoria (~6% of saturazione)
+  const catColorLight = c => ({Direction:'#EEF3FC',Execution:'#FCEEEE',Technology:'#EEF8F2',People:'#FCF3EA'})[c];
 
   // Helper: spezza parole lunghe inserendo uno spazio (jsPDF spezza solo sugli spazi).
   // Soglia conservativa: rompe solo quando la parola supera maxLen caratteri.
@@ -1250,7 +1190,7 @@ async function generatePDF(lead){
     return String(s).split(/(\s+)/).map(tok=>{
       if(/^\s+$/.test(tok)) return tok;
       if(tok.length <= maxLen) return tok;
-      // spezza ogni maxLen char con uno spazio (consentendo a jsPDF di andare a capo lì)
+      // spezza ogni maxLen char con uno spazio (consentendo a jsPDF of andare a capo lì)
       return tok.replace(new RegExp('(.{'+maxLen+'})','g'), '$1 ').trim();
     }).join('');
   }
@@ -1258,13 +1198,13 @@ async function generatePDF(lead){
   // Helper: renderizza un box "insight" (Perché ti trovi qui / Come pensare al problema)
   // - Titolo in alto in maiuscolo, colore categoria
   // - Bordo laterale spesso colore categoria, sfondo molto chiaro stessa tinta
-  // - Sequenza di paragrafi, ognuno seguito (se presenti citazioni) da una riga piccola grigia
+  // - Sequenza of paragrafi, ognuno seguito (se presenti citazioni) da una riga piccola grigia
   // - Gestisce automaticamente i page break, riprendendo il box (stesso titolo) nella nuova pagina
   // Ritorna la nuova y dopo il box.
   function renderInsightBox(doc, opts){
     const { title, blocks, color, lightColor, startY, M, W, H } = opts;
     // Padding interno generoso: 22pt a sinistra (oltre la stripe), 22pt a destra
-    // Per evitare overflow su testi con parole lunghe o spaziature jsPDF irregolari
+    // Per evitare overflow of testi con parole lunghe o spaziature jsPDF irregolari
     const innerL = M + 22;
     const innerR = W - M - 22;
     const textW  = innerR - innerL;
@@ -1286,15 +1226,15 @@ async function generatePDF(lead){
       doc.rect(M, y0, stripeW, y1-y0, 'F');
     };
 
-    // Operazioni di disegno della pagina corrente, da eseguire dopo il fondo
+    // Operazioni of disegno della pagina corrente, da eseguire dopo il fondo
     let pageOps = [];
-    // true appena scrivo del testo sotto il titolo su questa pagina.
+    // true appena scrivo del testo sotto il titolo of questa pagina.
     // Serve a non lasciare mai un'intestazione orfana in fondo alla pagina.
     let paginaHaTesto = false;
 
     // Quanto spazio serve per titolo + le prime righe del primo blocco.
     // Se ne riservassi una sola, il titolo finirebbe da solo in fondo alla pagina
-    // e verrebbe ristampato su quella dopo (l'intestazione doppia).
+    // e verrebbe ristampato of quella dopo (l'intestazione doppia).
     const righeMinime = 4;
     if(y + padTop + titleSize + titleLeading + righeMinime*bodyLeading + padBottom > H - M){
       doc.addPage();
@@ -1333,7 +1273,7 @@ async function generatePDF(lead){
       const block = blocks[bi];
       // Safety: passo a splitTextToSize una larghezza leggermente inferiore a textW
       // per evitare che jsPDF lasci sbordare l'ultima parola della riga.
-      // softBreak con maxLen=40 garantisce wrap anche su pseudo-parole lunghe (URL, citazioni)
+      // softBreak con maxLen=40 garantisce wrap anche of pseudo-parole lunghe (URL, citazioni)
       const safeW = textW - 8;
       const bodyLines = doc.splitTextToSize(softBreak(block.text, 40), safeW);
       const bodyH = bodyLines.length * bodyLeading;
@@ -1371,7 +1311,7 @@ async function generatePDF(lead){
           apriNuovaPagina();
         }
         // se pageStartY === M siamo gia' in cima a una pagina vuota:
-        // il blocco e' piu' alto di una pagina intera, lo scrivo comunque
+        // il blocco e' piu' alto of una pagina intera, lo scrivo comunque
       }
 
       // body
@@ -1441,53 +1381,53 @@ async function generatePDF(lead){
   doc.text('Tech-Check', M, 230);
   doc.setFont(FONT,'bold');
   doc.setFontSize(24);
-  doc.text('Report di maturità digitale', M, 268);
+  doc.text('Digital maturity report', M, 268);
 
   doc.setFont(FONT,'normal'); doc.setFontSize(12); doc.setTextColor('#B6BBC9');
   doc.text(doc.splitTextToSize(lead.company, W - 2*M), M, 320);
   doc.setFontSize(10); doc.setTextColor('#7A8090');
   doc.text(lead.name + ', ' + lead.role, M, 340);
-  doc.text('Generato il ' + new Date().toLocaleDateString('it-IT', {day:'2-digit',month:'long',year:'numeric'}), M, 356);
+  doc.text('Generated on ' + new Date().toLocaleDateString('en-GB', {day:'2-digit',month:'long',year:'numeric'}), M, 356);
 
   // big score on cover
   const tierObj = tier(lastResult.total);
   doc.setFont(FONT,'bold'); doc.setFontSize(110); doc.setTextColor('#F1A211');
   doc.text(String(Math.round(lastResult.total)), M, 510);
   doc.setFontSize(14); doc.setTextColor('#ECEEF3');
-  doc.text('/100, Maturità ' + tierObj.word, M, 540);
+  doc.text('/100, Maturity: ' + tierObj.word, M, 540);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
-  doc.text('Check basato su ' + DATASET.questions.reduce((a,q)=>a+q.kpis.length,0) + ' KPI · framework completo: ' + DATASET.framework_total_kpis + ' KPI · 4 leve · 30 sottocategorie', M, H-60);
-  doc.text('Versione 1.0 · self-assessment 12 domande', M, H-46);
+  doc.text('Check based on ' + DATASET.questions.reduce((a,q)=>a+q.kpis.length,0) + ' KPIs · complete framework: ' + DATASET.framework_total_kpis + ' KPIs · 4 areas · 30 subcategories', M, H-60);
+  doc.text('Version 1.0 · 12-question self-assessment', M, H-46);
 
   // ------- PAGE 2: Sintesi e radar -------
   doc.addPage(); doc.setFillColor('#FFFFFF'); doc.rect(0,0,W,H,'F');
   y = M;
   doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
-  doc.text('SINTESI ESECUTIVA', M, y); y += 26;
+  doc.text('EXECUTIVE SUMMARY', M, y); y += 26;
   doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
-  doc.text('Il quadro complessivo', M, y); y += 36;
+  doc.text('Overall picture', M, y); y += 36;
 
   // Intro descrittiva
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const intro = `In base alle 12 risposte fornite, il livello complessivo di maturità digitale di ${lead.company} è di ${Math.round(lastResult.total)}/100, classificato come "${tierObj.label.toLowerCase()}". Il punteggio è una media ponderata delle 4 leve del framework, rinormalizzata su base 100: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+pesoIt(DATASET.categories[c].weight)+'%').join(', ')}.`;
+  const intro = `Based on the 12 answers provided, ${lead.company}'s overall digital maturity score is ${Math.round(lastResult.total)}/100, classified as "${tierObj.label.toLowerCase()}". The score is a weighted average of the framework's four areas, normalised to a 100-point scale: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+pesoIt(DATASET.categories[c].weight)+'%').join(', ')}.`;
   const introLines = doc.splitTextToSize(intro, W-2*M);
   doc.text(introLines, M, y);
   y += introLines.length * 13 + 20;
 
   // Sezione visuale: due titoletti
   doc.setFont(FONT,'bold'); doc.setFontSize(10); doc.setTextColor(C.ink);
-  doc.text('Profilo per categoria', M, y);
-  doc.text('Score per categoria', M+275, y);
+  doc.text('Profile by area', M, y);
+  doc.text('Score by area', M+275, y);
   doc.setDrawColor(C.line); doc.setLineWidth(0.4);
   doc.line(M, y+5, M+250, y+5);
   doc.line(M+275, y+5, W-M, y+5);
   y += 14;
 
-  // Radar a sinistra (centrato in un'area di ~250pt larghezza)
+  // Radar a sinistra (centrato in un'area of ~250pt larghezza)
   drawRadarPDF(doc, lastResult.catScores, M+105, y+105, 80);
 
-  // Tabella score per categoria a destra (spostata di sicurezza, no overlap)
+  // Tabella score per categoria a destra (spostata of sicurezza, no overlap)
   const tabStartX = M + 275;
   const tabEndX   = W - M;
   let tx = tabStartX, ty = y + 16;
@@ -1504,50 +1444,50 @@ async function generatePDF(lead){
     // nome categoria
     doc.setFont(FONT,'bold'); doc.setFontSize(11); doc.setTextColor(C.ink);
     doc.text(etichettaCat(c), tabStartX+22, rowY+5);
-    // peso sotto
+    // weight sotto
     doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
-    doc.text('peso ' + pesoIt(DATASET.categories[c].weight) + '%', tabStartX+22, rowY+16);
+    doc.text('weight ' + pesoIt(DATASET.categories[c].weight) + '%', tabStartX+22, rowY+16);
     // percentuale grande a destra
     doc.setFont(FONT,'bold'); doc.setFontSize(15); doc.setTextColor(col);
     doc.text(pct + '%', tabEndX-6, rowY+8, {align:'right'});
   });
 
-  // Posiziono y dopo l'area visuale (radar = ~210pt + un po' di respiro per evitare overlap con la tabella score più alta)
+  // Posiziono y dopo l'area visuale (radar = ~210pt + un po' of respiro per evitare overlap con la tabella score più alta)
   y += 250;
 
-  // Sotto, descrizione di cosa il lettore sta guardando
+  // Sotto, descrizione of cosa il lettore sta guardando
   doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-  const expl = `Il radar a sinistra mostra la "forma" della tua organizzazione: più il quadrilatero arancio è ampio e regolare, più sei equilibrato sulle 4 leve. Eventuali "rientranze" indicano leve da rinforzare. La tabella a destra riporta lo score di ciascuna leva (0-100) e il peso che ha nel calcolo dello score complessivo: le leve con peso maggiore influenzano di più il punteggio finale.`;
+  const expl = `The radar chart shows the shape of your organisation. The larger and more regular the orange area, the more balanced your performance across the four areas. Indentations indicate where reinforcement may be needed. The table reports each area’s score on a 0–100 scale and its weighting in the overall result.`;
   const explLines = doc.splitTextToSize(expl, W-2*M);
   doc.text(explLines, M, y);
   y += explLines.length * 12 + 14;
 
   doc.setDrawColor(C.line); doc.setLineWidth(0.5); doc.line(M, y, W-M, y); y += 22;
 
-  // ------- IL TUO SETTORE -------
+  // ------- YOUR INDUSTRY -------
   // Il settore lo dichiara l'utente nel form: usiamo quello per dare
   // un riferimento esterno, non una media generica.
-  const datiSettore = (DATASET.sectors || {})[lead.sector];
-  if(datiSettore){
+  const datiIndustry = (DATASET.sectors || {})[lead.sector];
+  if(datiIndustry){
     if(y + 130 > H - M){ doc.addPage(); y = M; }
     doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
-    doc.text('IL TUO SETTORE', M, y); y += 24;
+    doc.text('YOUR INDUSTRY', M, y); y += 24;
     doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(16);
     doc.text(lead.sector, M, y); y += 22;
 
     doc.setFillColor('#F7F8FA');
     doc.setDrawColor(C.accent); doc.setLineWidth(0.8);
     // ATTENZIONE: splitTextToSize misura con il font CORRENTE.
-    // Va impostato prima, altrimenti calcola le righe su un corpo diverso
+    // Va impostato prima, altrimenti calcola le righe of un corpo diverso
     // da quello con cui verranno stampate.
     doc.setFont(FONT,'normal'); doc.setFontSize(10.5);
-    const testoLines = doc.splitTextToSize(datiSettore.testo, W-2*M-32);
+    const testoLines = doc.splitTextToSize(datiIndustry.testo, W-2*M-32);
     const boxH = 20 + testoLines.length*13 + 14 + 12;
     doc.roundedRect(M, y, W-2*M, boxH, 6, 6, 'FD');
     doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.ink);
     doc.text(testoLines, M+16, y+26);
     doc.setFont(FONT,'normal'); doc.setFontSize(8); doc.setTextColor(C.mute);
-    doc.text('Fonte: ' + datiSettore.fonte, M+16, y + boxH - 12);
+    doc.text('Source: ' + datiIndustry.fonte, M+16, y + boxH - 12);
     y += boxH + 26;
   }
 
@@ -1559,7 +1499,7 @@ async function generatePDF(lead){
 
   if(senzaCriticita){
     // Riquadro al posto delle tre schede: stesso testo della pagina.
-    doc.text('IL TUO QUADRO', M, y); y += 26;
+    doc.text('YOUR OVERVIEW', M, y); y += 26;
     doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(18);
     doc.text(MSG_OK.titolo, M, y); y += 26;
 
@@ -1584,7 +1524,7 @@ async function generatePDF(lead){
   doc.text(BT.pdfTitolo, M, y); y += 30;
 
   doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
-  const top3intro = doc.splitTextToSize(BT.sottotitolo + ' Nelle pagine successive trovi i KPI sottostanti, i benchmark di riferimento e le azioni suggerite.', W-2*M);
+  const top3intro = doc.splitTextToSize(BT.sottotitolo + ' The following pages show the underlying KPIs, reference benchmarks and suggested actions.', W-2*M);
   doc.text(top3intro, M, y);
   y += top3intro.length * 12 + 14;
 
@@ -1610,7 +1550,7 @@ async function generatePDF(lead){
     doc.setFontSize(14); doc.setTextColor(C.ink);
     doc.text(q.title, M+66, y+40);
     doc.setFont(FONT,'normal'); doc.setFontSize(9); doc.setTextColor(C.soft);
-    doc.text(q.kpis.length + ' KPI sottostanti · ' + azioniPerPunteggio(score, q.n_actions).n + ' azioni suggerite per il tuo livello', M+66, y+56);
+    doc.text(q.kpis.length + ' underlying KPIs · ' + azioniPerPunteggio(score, q.n_actions).n + ' suggested actions for your level', M+66, y+56);
     // score badge
     doc.setFillColor(sevColor); doc.roundedRect(W-M-80, y+22, 64, 28, 4, 4, 'F');
     doc.setFont(FONT,'bold'); doc.setFontSize(14); doc.setTextColor('#FFFFFF');
@@ -1619,36 +1559,36 @@ async function generatePDF(lead){
   });
   } // fine else: elenco delle tre aree
 
-  // ------- PAGINA METODO: Come leggere questo report -------
+  // ------- PAGINA METHOD: How to read this report -------
   doc.addPage();
   y = M;
   doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
-  doc.text('METODO', M, y); y += 26;
+  doc.text('METHOD', M, y); y += 26;
   doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
-  doc.text('Come leggere questo report', M, y); y += 36;
+  doc.text('How to read this report', M, y); y += 36;
 
-  // Blocco 1: Cosa stai per leggere
+  // Blocco 1: What you are about to read
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
-  doc.text('Cosa stai per leggere', M, y); y += 16;
+  doc.text('What you are about to read', M, y); y += 16;
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
   const m1 = senzaCriticita
-    ? `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 sottocategorie con il punteggio più basso. Nessuna di queste è sotto soglia: le riportiamo per completezza, non perché richiedano un intervento. Ogni scheda contiene due tabelle: i KPI sottostanti l'area e le azioni suggerite. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`
-    : `Nelle pagine successive trovi una scheda di approfondimento per ognuna delle 3 aree emerse dal tuo check. Ogni scheda contiene due tabelle: i KPI sottostanti l'area, e le azioni concrete suggerite per intervenire. Le tabelle sono colorate con il colore della leva di appartenenza (Direzione blu, Execution rosso, Tecnologia verde, Persone arancio).`;
+    ? `The following pages provide a detailed view of the three lowest-scoring subcategories. None is below the threshold: they are included for completeness, not because they require intervention. Each section contains two tables covering the underlying KPIs and suggested actions. Tables use the colour assigned to each area: Direction blue, Execution red, Technology green and People orange.`
+    : `The following pages provide a detailed view of the three areas identified by your check. Each section contains two tables covering the underlying KPIs and the practical actions suggested. Tables use the colour assigned to each area: Direction blue, Execution red, Technology green and People orange.`;
   const m1Lines = doc.splitTextToSize(m1, W-2*M);
   doc.text(m1Lines, M, y);
   y += m1Lines.length * 13 + 22;
 
   // Blocco 2: Come leggere la colonna TUO
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
-  doc.text('Come leggere la colonna "TUO" e la colonna "Benchmark"', M, y); y += 16;
+  doc.text('How to read the “YOUR SCORE” and “Benchmark” columns', M, y); y += 16;
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const m2 = `Per ogni KPI vedi due valori: il "TUO" e il "Benchmark". Il "TUO" rappresenta il punteggio della sottocategoria a cui il KPI appartiene (su scala 0-100), derivato dalla risposta che hai dato nel check. Il "Benchmark" è il valore di riferimento del framework KPI per quel singolo indicatore: è il livello a cui dovresti tendere per essere considerato "in linea con le best practice".`;
+  const m2 = `Each KPI shows two values: “YOUR SCORE” and “Benchmark”. “YOUR SCORE” represents the score of the subcategory to which that KPI belongs, on a 0–100 scale, derived from your answer. “Benchmark” is the KPI framework reference value for that indicator: the level to aim for in order to align with best practice.`;
   const m2Lines = doc.splitTextToSize(m2, W-2*M);
   doc.text(m2Lines, M, y);
   y += m2Lines.length * 13 + 16;
 
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const m2b = `Il valore "TUO" è quindi un'approssimazione: ti dice come stai messo a livello di sottocategoria, ma non ti dice il valore esatto del singolo KPI. Per ottenere quel dato servirebbe misurarlo direttamente in azienda (es. tempo medio di delivery, percentuale di processi documentati, eNPS, ecc.).`;
+  const m2b = `“YOUR SCORE” is therefore an approximation. It shows your position at subcategory level, but not the exact value of an individual KPI. Obtaining that figure requires direct measurement within the company, such as average delivery time, percentage of documented processes or eNPS.`;
   const m2bLines = doc.splitTextToSize(m2b, W-2*M);
   doc.text(m2bLines, M, y);
   y += m2bLines.length * 13 + 22;
@@ -1657,10 +1597,10 @@ async function generatePDF(lead){
   doc.setFillColor('#FFF7E6'); // sfondo giallo tenue per evidenziare
   doc.setDrawColor(C.accent); doc.setLineWidth(0.8);
   const blockY = y;
-  // calcolo altezza blocco prima di disegnarlo
-  const m3Title = `Questo è un primo quadro della situazione`;
-  const m3 = `Il check rapido in 12 domande è progettato per darti un'istantanea della tua maturità digitale in 3 minuti. È utile per capire dove ti collochi a grandi linee e su quali leve concentrare l'attenzione, ma non sostituisce un'analisi approfondita: per costruire un quadro completo e dettagliato è necessario un assessment vero, di circa 20 minuti, somministrato a più figure chiave dell'azienda (CEO, CFO, CTO, HR Manager, responsabili di funzione) e a un campione del personale operativo.`;
-  const m3b = `Solo così è possibile triangolare le percezioni, individuare i KPI realmente critici, calcolare i valori esatti e impostare un piano di intervento misurabile. Il report che stai leggendo è il punto di partenza ideale per quella conversazione.`;
+  // calcolo altezza blocco prima of disegnarlo
+  const m3Title = `This is an initial overview`;
+  const m3 = `The 12-question rapid check is designed to give you a three-minute snapshot of your digital maturity. It helps you understand your broad position and where to focus attention, but it does not replace an in-depth assessment. A complete and detailed picture requires a structured assessment of around 20 minutes, completed by several key people in the company, including the CEO, CFO, CTO, HR Manager, functional managers and a sample of operational staff.`;
+  const m3b = `Only then can different perspectives be compared, genuinely critical KPIs identified, exact values calculated and a measurable action plan established. This report is an ideal starting point for that conversation.`;
   const m3Lines = doc.splitTextToSize(m3, W-2*M-32);
   const m3bLines = doc.splitTextToSize(m3b, W-2*M-32);
   const blockH = 16 + 14 + m3Lines.length*13 + 12 + m3bLines.length*13 + 18;
@@ -1675,17 +1615,17 @@ async function generatePDF(lead){
 
   y = blockY + blockH + 30;
 
-  // Blocco 4: Soglie semaforo (per chiarire i colori)
+  // Blocco 4: Traffic-light thresholds (per chiarire i colori)
   if(y > H-110){ doc.addPage(); y = M; }
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
-  doc.text('Soglie semaforo', M, y); y += 18;
+  doc.text('Traffic-light thresholds', M, y); y += 18;
   doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
-  doc.text('Il colore del punteggio "TUO" segue questa logica:', M, y); y += 18;
+  doc.text('The colour of “YOUR SCORE” follows this logic:', M, y); y += 18;
 
   const soglie = [
-    {col: C.crit,  label: '< 40%',     desc: 'Critico: area che richiede un intervento prioritario'},
-    {col: C.warn,  label: 'da 40% a 65%', desc: 'Da migliorare: sotto lo standard di eccellenza, c\'è margine'},
-    {col: C.good,  label: '> 65%',     desc: 'Buono: in linea o sopra lo standard di eccellenza'},
+    {col: C.crit,  label: '< 40%',     desc: 'Critical: the area requires priority intervention'},
+    {col: C.warn,  label: '40% to 65%', desc: 'Needs improvement: below the best-practice standard, with meaningful room to improve'},
+    {col: C.good,  label: '> 65%',     desc: 'Good: aligned with or above the best-practice standard'},
   ];
   soglie.forEach(s=>{
     doc.setFillColor(s.col); doc.roundedRect(M, y, 70, 18, 3, 3, 'F');
@@ -1698,20 +1638,20 @@ async function generatePDF(lead){
 
   // ------- DETTAGLIO TOP 3: KPI + AZIONI in tabelle -------
   if(senzaCriticita){
-    // Le schede di dettaglio restano: sono la parte piu' utile del report.
+    // Le schede of dettaglio restano: sono la parte piu' utile del report.
     // Cambia solo la premessa, perche' qui non sono "criticita'".
     doc.addPage(); y = M;
     doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
-    doc.text('APPROFONDIMENTO', M, y); y += 26;
+    doc.text('DETAILED ANALYSIS', M, y); y += 26;
     doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(20);
-    doc.text('Le tre aree meno forti, per completezza', M, y); y += 28;
+    doc.text('The three least strong areas, for completeness', M, y); y += 28;
     doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-    const pre = doc.splitTextToSize('Nessuna di queste è sotto soglia. Le riportiamo perché sono le tre con il punteggio più basso del tuo check: valgono come presidio, non come intervento.', W-2*M);
+    const pre = doc.splitTextToSize('None of these areas is below the threshold. They are included because they received the three lowest scores in your check: they warrant monitoring, not intervention.', W-2*M);
     doc.text(pre, M, y);
   }
 
 
-  /* Titolo di sezione dentro la scheda: stacco generoso sopra, un filetto
+  /* Titolo of sezione dentro la scheda: stacco generoso sopra, un filetto
      nel colore della leva, e un corpo piu' grande del testo corrente.
      Restituisce la y da cui riprendere. */
   function titoloSezione(testo, colore, y, nota){
@@ -1761,8 +1701,8 @@ async function generatePDF(lead){
       doc.setFillColor(cCol);
       doc.rect(M, yy, tblW, 22, 'F');
       doc.setFont(FONT,'bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
-      doc.text(segue ? 'KPI (segue)' : 'KPI', colX[0]+PAD_L, yy+14);
-      doc.text('DESCRIZIONE', colX[1]+PAD_L, yy+14);
+      doc.text(segue ? 'KPIs (continued)' : 'KPI', colX[0]+PAD_L, yy+14);
+      doc.text('DESCRIPTION', colX[1]+PAD_L, yy+14);
       doc.text('BENCHMARK',   colX[2]+colWidths[2]/2, yy+14, {align:'center'});
     };
 
@@ -1781,7 +1721,7 @@ async function generatePDF(lead){
 
       const rowH = Math.max(nameLines.length, descLines.length, benchLines.length, 1) * 11 + 14;
 
-      // Prima si spezzava con 50pt di franchigia mentre il margine e' 62:
+      // Prima si spezzava con 50pt of franchigia mentre il margine e' 62:
       // si lasciava mezza pagina bianca. Ora si riempie fino al margine.
       if(y + rowH > H - M){
         doc.addPage(); y = M;
@@ -1838,22 +1778,22 @@ async function generatePDF(lead){
     // Score della sottocategoria, in evidenza
     const scoreStr = score + '/100';
     doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
-    doc.text('Punteggio sottocategoria:', M, y);
+    doc.text('Subcategory score:', M, y);
     doc.setFont(FONT,'bold'); doc.setFontSize(13); doc.setTextColor(cCol);
     doc.text(scoreStr, M+135, y);
     y += 16;
-    // Riga di chiarimento: cosa rappresenta davvero questo punteggio + interpretazione dinamica
+    // Riga of chiarimento: cosa rappresenta davvero questo punteggio + interpretazione dinamica
     let interpretazione;
     if(score < 40){
-      interpretazione = "sei in una situazione critica che richiede intervento prioritario.";
+      interpretazione = "you are in a critical situation requiring priority intervention.";
     } else if(score < 65){
-      interpretazione = "sei sotto lo standard di eccellenza, hai margini di miglioramento importanti.";
+      interpretazione = "you are below the best-practice standard and have significant room to improve.";
     } else if(score < 80){
-      interpretazione = "sei a livello sufficiente con margini di miglioramento concreti.";
+      interpretazione = "you are at an adequate level with clear room to improve.";
     } else {
-      interpretazione = "sei in linea con gli standard di eccellenza in quest'area.";
+      interpretazione = "you are aligned with best-practice standards in this area.";
     }
-    const chiarimento = "Frutto della tua singola risposta al check rapido. È una fotografia indicativa: ti dice che in quest'area " + interpretazione + " Per una misurazione completa servono i KPI sottostanti.";
+    const chiarimento = "Based on your single answer in the rapid check. This is an indicative snapshot showing that in this area " + interpretazione + " A complete measurement requires the underlying KPIs.";
     doc.setFont(FONT,'italic'); doc.setFontSize(8.5); doc.setTextColor(C.mute);
     const chiarLines = doc.splitTextToSize(chiarimento, W - 2*M);
     doc.text(chiarLines, M, y);
@@ -1863,10 +1803,10 @@ async function generatePDF(lead){
     doc.text(doc.splitTextToSize(q.text, W-2*M), M, y);
     y += doc.splitTextToSize(q.text, W-2*M).length * 12 + 18;
 
-    // ------ BOX INSIGHT 1: PERCHÉ TI TROVI QUI ------
+    // ------ BOX INSIGHT 1: WHY YOU ARE HERE ------
     if(q.why_it_happens && q.why_it_happens.blocks && q.why_it_happens.blocks.length > 0){
       y = renderInsightBox(doc, {
-        title: 'PERCHÉ TI TROVI QUI',
+        title: 'WHY YOU ARE HERE',
         blocks: q.why_it_happens.blocks,
         color: cCol,
         lightColor: catColorLight(q.cat),
@@ -1876,10 +1816,10 @@ async function generatePDF(lead){
       y += 8;
     }
 
-    // ------ BOX INSIGHT 2: COME PENSARE AL PROBLEMA ------
+    // ------ BOX INSIGHT 2: HOW TO FRAME THE PROBLEM ------
     if(q.reframe && q.reframe.blocks && q.reframe.blocks.length > 0){
       y = renderInsightBox(doc, {
-        title: 'COME PENSARE AL PROBLEMA',
+        title: 'HOW TO FRAME THE PROBLEM',
         blocks: q.reframe.blocks,
         color: cCol,
         lightColor: catColorLight(q.cat),
@@ -1897,18 +1837,18 @@ async function generatePDF(lead){
     const azNum = az.n, azTierLabel = az.nota;
     const azionsFiltered = q.actions_preview.slice(0, azNum);
 
-    y = titoloSezione('Azioni concrete suggerite', cCol, y,
-          '(' + azNum + ' su ' + q.actions_preview.length + ' del framework)');
+    y = titoloSezione('Suggested practical actions', cCol, y,
+          '(' + azNum + ' of ' + q.actions_preview.length + ' in the framework)');
     // Intro tabella Azioni, dinamica in base allo score
     doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-    const azIntro = "In base al tuo punteggio in quest'area, di seguito propongo " + azionsFiltered.length + " azioni: " + azTierLabel + ". Sono elencate in ordine di impatto atteso. Quanto costi metterle in pratica dipende da com'è fatta la tua azienda, e questo check non può saperlo: serve guardarci dentro.";
+    const azIntro = "Based on your score in this area, the report suggests " + azionsFiltered.length + " actions: " + azTierLabel + ". They are listed in order of expected impact. The cost of implementation depends on how your company operates, which this check cannot determine without a closer look.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
     y += azIntroLines.length * 12 + 18;
 
     // Geometria tabella Azioni: 2 colonne con padding cella esplicito
-    /* Nessuna colonna di tempo o costo: il check non conosce l'azienda,
-       quindi non e' in grado di stimare quanto costera' un'azione al lettore.
+    /* Nessuna colonna of tempo o costo: il check non conosce l'azienda,
+       quindi non e' in grado of stimare quanto costera' un'azione al lettore.
        Le ore restano nel dataset, per uso interno. */
     const azWidths = [ tblW * 0.32, tblW * 0.68 ];
     const azX = [M, M + azWidths[0]];
@@ -1918,8 +1858,8 @@ async function generatePDF(lead){
       doc.setFillColor(cCol);
       doc.rect(M, yy, tblW, 22, 'F');
       doc.setFont(FONT,'bold'); doc.setFontSize(8.5); doc.setTextColor('#FFFFFF');
-      doc.text(segue ? 'AZIONE (segue)' : 'AZIONE', azX[0]+PAD_L, yy+14);
-      doc.text('COSA FARE CONCRETAMENTE',  azX[1]+PAD_L, yy+14);
+      doc.text(segue ? 'ACTION (continued)' : 'ACTION', azX[0]+PAD_L, yy+14);
+      doc.text('WHAT TO DO IN PRACTICE',  azX[1]+PAD_L, yy+14);
     };
 
     drawAzHeader(y);
@@ -1966,10 +1906,10 @@ async function generatePDF(lead){
       const principali = q.kpis.slice(0, KPI_IN_SCHEDA);
       const quanti = q.kpis.length;
       const intro = quanti > principali.length
-        ? "Questi sono i numeri con cui capirai se le azioni hanno funzionato. Ne riporto " + principali.length + " su " + quanti + ": gli altri sono in appendice, e non servono per decidere, servono per verificare."
-        : "Questi sono i numeri con cui capirai se le azioni hanno funzionato.";
-      y = titoloSezione('Come si misura', cCol, y,
-            quanti > principali.length ? '(' + principali.length + ' di ' + quanti + ', gli altri in appendice)' : '');
+        ? "These figures will show whether the actions have worked. This report includes " + principali.length + " of " + quanti + "; the remainder are in the appendix. They are not needed to decide where to start, but to verify progress."
+        : "These figures will show whether the actions have worked.";
+      y = titoloSezione('How to measure progress', cCol, y,
+            quanti > principali.length ? '(' + principali.length + ' of ' + quanti + ', the remainder in the appendix)' : '');
       y = tabellaKPI(principali, cCol, intro, y);
     }
 
@@ -1980,18 +1920,18 @@ async function generatePDF(lead){
     }
   }
 
-  // ------- APPENDICE: tutti i KPI delle tre aree -------
+  // ------- APPENDIX: tutti i KPI delle tre aree -------
   {
     const conAppendice = lastResult.top3.filter(it => it.q.kpis.length > KPI_IN_SCHEDA);
     if(conAppendice.length){
       doc.addPage(); y = M;
       doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
-      doc.text('APPENDICE', M, y); y += 26;
+      doc.text('APPENDIX', M, y); y += 26;
       doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
-      doc.text('Tutti i KPI delle aree analizzate', M, y); y += 30;
+      doc.text('All KPIs for the areas analysed', M, y); y += 30;
       doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
       const introApp = doc.splitTextToSize(
-        "Qui trovi per intero gli indicatori che stanno sotto ciascuna delle aree analizzate, con il rispettivo benchmark. Non servono per decidere da dove partire: quello lo dicono le azioni. Servono per verificare, fra sei mesi, che qualcosa sia cambiato davvero.",
+        "This appendix lists every indicator underlying the areas analysed, together with its benchmark. The actions determine where to start; these indicators allow you to verify in six months that measurable change has actually occurred.",
         W-2*M);
       doc.text(introApp, M, y);
       y += introApp.length * 13 + 22;
@@ -2006,7 +1946,7 @@ async function generatePDF(lead){
         doc.text(q.title, M, y); y += 24;
         y = titoloSezione(q.kpis.length + ' KPI', cCol, y - 14, '') - 4;
         y = tabellaKPI(q.kpis, cCol,
-              "Tutti gli indicatori del framework per questa sottocategoria.", y);
+              "All framework indicators for this subcategory.", y);
         y += 16;
       });
     }
@@ -2016,22 +1956,22 @@ async function generatePDF(lead){
   doc.addPage();
   doc.setFillColor('#0E1014'); doc.rect(0,0,W,H,'F');
   doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold'); doc.setFontSize(10);
-  doc.text('PROSSIMI PASSI', M, 100);
+  doc.text('NEXT STEPS', M, 100);
   doc.setTextColor('#ECEEF3'); doc.setFontSize(28); doc.setFont(FONT,'normal');
-  doc.text('Vuoi un confronto', M, 160);
+  doc.text('Would you like to discuss', M, 160);
   doc.setFont(FONT,'bold');
-  doc.text('diretto sui risultati?', M, 200);
+  doc.text('your results directly?', M, 200);
 
   doc.setFont(FONT,'normal'); doc.setFontSize(11); doc.setTextColor('#B6BBC9');
-  const next = `Una call di 30' con Marco per leggere insieme i punteggi nel contesto della tua azienda, validare le priorità e capire dove conviene partire. Se ha senso, costruiamo un piano di intervento. Se non ha senso, te lo dico.`;
+  const next = `A 30-minute call with Marco to review the scores in the context of your company, validate priorities and identify the right starting point. If there is a sound case for action, we will outline a plan. If there is not, I will tell you.`;
   doc.text(doc.splitTextToSize(next, W-2*M), M, 250);
 
   doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold'); doc.setFontSize(13);
-  doc.text('Prenota: ' + CALL_URL, M, 380);
+  doc.text('Book: ' + CALL_URL, M, 380);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
-  doc.text('© Marco De Vecchi · KPI Framework v2.0 · Aprile 2026', M, H-60);
-  doc.text('Report generato per ' + lead.company + ' · ' + lead.email, M, H-46);
+  doc.text('© Marco De Vecchi · KPI Framework v2.0 · April 2026', M, H-60);
+  doc.text('Report generated for ' + lead.company + ' · ' + lead.email, M, H-46);
 
   // SAVE
   const fname = 'Tech-Check_' + slug(lead.company) + '.pdf';
@@ -2044,7 +1984,7 @@ function slug(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036
 function drawRadarPDF(doc, catScores, cx, cy, R){
   const cats = Object.keys(catScores);
   const angle = i => (-Math.PI/2) + (i * 2*Math.PI / cats.length);
-  const catColor = c => ({Direzione:'#3B6FD6',Execution:'#D64545',Technology:'#3FA66B',Persone:'#E08A3C'})[c];
+  const catColor = c => ({Direction:'#3B6FD6',Execution:'#D64545',Technology:'#3FA66B',People:'#E08A3C'})[c];
 
   // griglia
   doc.setLineWidth(0.4);
@@ -2101,7 +2041,7 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
 </script>
 <!-- ============================================ -->
 <!-- MODAL ESEMPIO REPORT - INIZIO               -->
-<!-- Inserisci questo blocco PRIMA di </body>    -->
+<!-- Inserisci questo blocco PRIMA of </body>    -->
 <!-- ============================================ -->
 
 <div id="exampleModal" class="example-modal" style="display:none;">
@@ -2110,9 +2050,9 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
     <button class="example-modal-close" onclick="closeExampleModal()">&times;</button>
     
     <div class="example-modal-header">
-      <p class="example-modal-subtitle">Anteprima di esempio</p>
-      <h3 class="example-modal-title">Questo è un report di esempio</h3>
-      <p class="example-modal-desc">Il tuo report sarà personalizzato sui tuoi risultati effettivi</p>
+      <p class="example-modal-subtitle">Sample preview</p>
+      <h3 class="example-modal-title">This is a sample report</h3>
+      <p class="example-modal-desc">Your report will be tailored to your actual results</p>
     </div>
 
     <div class="example-modal-viewer">
@@ -2123,9 +2063,9 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
       </button>
 
       <div class="example-image-container">
-        <img id="exampleImage" src="" alt="Pagina esempio" />
+        <img id="exampleImage" src="" alt="Sample page" />
         <div class="example-page-indicator">
-          <span id="currentPage">1</span> di <span id="totalPages">4</span>
+          <span id="currentPage">1</span> of <span id="totalPages">4</span>
         </div>
       </div>
 
@@ -2138,7 +2078,7 @@ function drawRadarPDF(doc, catScores, cx, cy, R){
 
     <div class="example-modal-footer">
       <button class="example-cta-btn" onclick="closeExampleModal();document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">
-        Compila il check per ricevere il tuo report personalizzato →
+        Complete the check to receive your personalised report →
       </button>
     </div>
   </div>

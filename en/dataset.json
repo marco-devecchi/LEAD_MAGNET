@@ -1,0 +1,2362 @@
+{
+  "version": "1.1",
+  "framework_total_kpis": 174,
+  "categories": {
+    "Direzione": {
+      "weight": 20.1,
+      "color": "#3B6FD6",
+      "short": "Direzione"
+    },
+    "Execution": {
+      "weight": 27.6,
+      "color": "#D64545",
+      "short": "Execution"
+    },
+    "Technology": {
+      "weight": 27.6,
+      "color": "#3FA66B",
+      "short": "Technology"
+    },
+    "Persone": {
+      "weight": 24.7,
+      "color": "#E08A3C",
+      "short": "Persone"
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "cat": "Direzione",
+      "sub": "Shared strategy",
+      "title": "Shared strategy",
+      "text": "Your managers know how to translate the company’s strategy into concrete actions for their teams.",
+      "anchor_low": "No one knows where the company is headed",
+      "anchor_high": "Each manager knows how to translate it into priorities for their team",
+      "kpis": [
+        {
+          "num": 1,
+          "name": "% of managers who understand the strategy",
+          "desc": "Measures how well the company’s strategy is truly understood by managers. Low understanding = misaligned execution.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 2,
+          "name": "% aligned initiatives",
+          "desc": "Verify that ongoing initiatives are consistent with the declared strategic direction.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 3,
+          "name": "Formalized and up-to-date strategic document",
+          "desc": "Presence and updating of a formal document defining the strategy. Absence = implicit and unshared strategy.",
+          "benchmark": "Yes"
+        },
+        {
+          "num": 4,
+          "name": "Number of active simultaneous strategic priorities",
+          "desc": "Too many simultaneous priorities can分散资源和注意力。最佳：最多3-5个同时活跃的优先级。",
+          "benchmark": "<5"
+        },
+        {
+          "num": 5,
+          "name": "Strategy review frequency",
+          "desc": "Frequency with which the strategy is reviewed and updated. Too infrequent = outdated strategy.",
+          "benchmark": "At least annually"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "Strategy cascade workshop",
+          "desc": "Conduct structured sessions (max 8 people) to translate the strategy into functional operational objectives, with comprehension verification through facilitated Q&A.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Individual strategy scorecard",
+          "desc": "Define a personal scorecard for each manager that links function KPIs to strategic goals, with quarterly review.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Recurring executive briefing",
+          "desc": "Establish a monthly 60-minute briefing with the AD to update managers on strategy status and gather operational feedback.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Strategic portfolio review",
+          "desc": "Map all active initiatives onto a strategic impact / effort matrix, archiving misaligned ones and redefining priorities.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Entry initiative filter",
+          "desc": "Implement a formal process (minimum business case) for the approval of new initiatives, with an obligatory strategic alignment criterion.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Quarterly alignment check-in",
+          "desc": "Introduce a quarterly portfolio review with explicit questions: 'Is this initiative still strategically relevant?'",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Strategic document drafting",
+          "desc": "Facilitate the creation of a structured strategic document (maximum 10 pages) including vision, priorities, three-year objectives, and reference KPIs.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Annual update process",
+          "desc": "Define a fixed annual review calendar for the strategic document, with designated owners and formal approval from the CDO or AD.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Distribution and onboarding",
+          "desc": "Structure a distribution and presentation process of the document to all managers, including documented Q&A sessions.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Strategic prioritization workshop",
+          "desc": "Facilitate a prioritization session with top management using the impact/probability matrix to reduce priorities to a maximum of 5.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Moratorium on new initiatives",
+          "desc": "Introduce a formal mechanism for a temporary stop to the start-up of new initiatives until ongoing projects reach defined milestones.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Project killing criteria",
+          "desc": "Define explicit criteria for suspending or closing non-strategic initiatives with a bi-annual review.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Annual strategic calendar",
+          "desc": "Define and block in the corporate calendar annual strategy review sessions: 1 extended annually + 2 semi-annual reviews.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Market signal dashboard",
+          "desc": "Implement a simple system (even just a monthly report) for monitoring key market signals relevant to the strategy.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Trigger-based review process",
+          "desc": "Define trigger events (e.g., loss of key customer, regulatory change, new competitor) that automatically activate an extraordinary review.",
+          "hours": 8,
+          "effort": "Quick"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "When I first enter an Italian SME for the first time, the pattern that emerges is almost always the same. The founder has clear ideas about where they want to take the company. The leadership team partially knows these plans but often does not fully share them and rarely speaks openly about it. Employees know little or nothing about this and do not understand the rationale behind decisions affecting them.",
+            "cites": []
+          },
+          {
+            "text": "It is not your problem, and it is measurable. According to a 2025 survey of over 3,500 workers, only one in three employees believes that senior management would openly and transparently answer questions about strategy and company finances. When asked the same question at the top levels, 56% agree. The gap between these two numbers is precisely where misunderstandings arise: those above think they have communicated, while those below are unaware.",
+            "cites": [
+              "SurveyMonkey 2025"
+            ]
+          },
+          {
+            "text": "The underlying cause, however, is cultural. I have seen many times founders and leaders keep the strategy close to their chest for a specific belief: that people would not understand it or worse, use it against the company. The logic of 'better not say too much' trickles down to operational levels, creating an organization that moves in fits and starts, with silos that do not communicate.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "The company is an organism whose parts must think as one to achieve challenging goals. Keeping people in the dark does not make them more controllable; it fosters distrust, suspicion, and disengagement. A vicious cycle ensues: the founder lacks trust, employees feel uninvolved, no one rows in the same direction, and the founder confirms that they could not rely on them.",
+            "cites": []
+          },
+          {
+            "text": "The cost is real and hardest to see on the balance sheet: projects that start but do not finish, initiatives that overlap, talented people leaving because they do not understand where they are going. In the mandates I have followed, the gap between what senior management decided and what the organization was actually doing was almost always larger than what senior management imagined.",
+            "cites": []
+          },
+          {
+            "text": "The reframing is this: strategy is not a secret to protect but a compass that becomes powerful only when many use it. It does not mean everyone must know everything; it means they must have enough knowledge to decide, every morning, in which direction to move. Without that 'enough,' the strategy remains a document no one uses.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "SurveyMonkey, \"2025 Workplace Culture and Trends,\" August 2025 - 3,573 full-time U.S. workers surveyed from July 25 to August 3, 2025, with an estimated margin of error of +/- 2.0 percentage points, weighted data based on the American Community Survey. https://www.surveymonkey.com/curiosity/surveymonkey-research-workplace-culture-and-trends/"
+      ]
+    },
+    {
+      "id": "q2",
+      "cat": "Direzione",
+      "sub": "Defining objectives",
+      "title": "Defining objectives",
+      "text": "Each business objective has a number that measures it, a deadline, and a responsible person with a name and surname.",
+      "anchor_low": "Vague objectives, no one is accountable",
+      "anchor_high": "A measurable target, deadline, and responsible person for each",
+      "kpis": [
+        {
+          "num": 11,
+          "name": "% of objectives defined with KPIs (SMART)",
+          "desc": "Percentage of objectives defined with SMART criteria: specific, measurable, with a deadline and a responsible person.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 12,
+          "name": "% of objectives assigned with explicit responsibility",
+          "desc": "Each objective must have an explicitly defined responsible party. Without ownership, there is no accountability.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 13,
+          "name": "% alignment of individual and corporate objectives",
+          "desc": "Degree of coherence between employees' personal goals and the company's overall goals. Misalignment = demotivation.",
+          "benchmark": ">75%"
+        },
+        {
+          "num": 14,
+          "name": "Average number of KPIs per function/team",
+          "desc": "Too many KPIs for a function can disperse focus. The optimal number is 3-5 per team.",
+          "benchmark": "3-5"
+        },
+        {
+          "num": 15,
+          "name": "Active structured performance management system",
+          "desc": "Indicates whether there exists a structured system to monitor and evaluate performance. Absence = subjective evaluation.",
+          "benchmark": "Yes"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "OKR / SMART workshop",
+          "desc": "Train the management on the SMART/OKR methodology and facilitate the rewriting of existing objectives into measurable ones.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Standardized objective template",
+          "desc": "Introduce a mandatory standardized template for defining objectives, including fields for KPI reference, baseline, and target.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Annual goal review",
+          "desc": "Establish a formal process of validating goals at the beginning of the year with facilitated SMART checks by a consultant.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Objective-owner matrix",
+          "desc": "Create and maintain an up-to-date matrix that associates each strategic objective to a single named owner.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Objective acceptance signature",
+          "desc": "Introduce a formal process of goal acceptance by managers, with signed documents stored in HR.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Semestral accountability review",
+          "desc": "Conduct a semestral review with each manager to verify the status of objectives and update ownership.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Objective cascading",
+          "desc": "Facilitate a top-down cascading process: from the company's strategic objectives to functional objectives, down to individual goals.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Alignment visualization map",
+          "desc": "Create a shared visual representation of the goal tree (strategy map) for all managers.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "MBO alignment check",
+          "desc": "Integrate an explicit moment for vertical goals alignment review into the existing MBO cycle.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "KPI rationalization",
+          "desc": "Reduce the number of KPIs per function to a maximum of 5-7 key ones through a facilitated prioritization session with responsible parties.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "KPI hierarchy (leading/lagging)",
+          "desc": "Structure KPIs into two levels: result-oriented KPIs (lagging) and process-oriented KPIs (leading), eliminating redundant ones.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "KPI owner and frequency",
+          "desc": "Assign an owner and update frequency to each KPI, removing those that are not regularly updated.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Performance Management System Design",
+          "desc": "Designing a simple performance management system: goals + KPIs + periodic reviews + feedback, calibrated to the company size.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Pilot Implementation",
+          "desc": "Implement the system on a pilot function for six months, gather feedback and optimize before full-scale rollout.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "HR and Manager Training",
+          "desc": "Train HR and managers on using the system, with a focus on conducting performance interviews.",
+          "hours": 16,
+          "effort": "Moderate"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "At the start of each meeting, I always ask the same question: what is our goal for this year? The answers almost always fall into the same category. Grow, improve service, become more market present. They are intentions, not goals: none of those sentences tells an employee what they need to do on Monday morning.",
+            "cites": []
+          },
+          {
+            "text": "The missing step is always the same: the number. Without a measure, a goal cannot be achieved or missed, and at year-end, the review becomes a discussion about interpretations.",
+            "cites": []
+          },
+          {
+            "text": "There is also a resistance I have learned to recognize: writing down a number means exposing oneself. As long as the goal remains vague, no one can be held responsible for not achieving it. It’s a form of protection, and like all protections, it has a cost: it removes the company’s ability to correct course before it is too late.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "A goal is not what I want to achieve; it is what I am willing to measure. If it does not have a number associated with it, it is not a goal, but a hope. And hopes are not manageable.",
+            "cites": []
+          },
+          {
+            "text": "The second step is the name. A goal assigned to a function is not assigned to anyone: functions do not decide; people do. When I ask who is responsible for a certain result and am told 'the sales team,' I already know that result will not be achieved.",
+            "cites": []
+          },
+          {
+            "text": "The third thing is the deadline, which serves less as a control than one might think: it serves to protect. A date tells those working on something when they can consider themselves done. Without it, work never ends, and people burn out.",
+            "cites": []
+          }
+        ]
+      },
+      "references": []
+    },
+    {
+      "id": "q3",
+      "cat": "Direzione",
+      "sub": "Data-driven decision-making culture",
+      "title": "Data-driven decisions",
+      "text": "Important decisions are based on numbers, not just the experience of those making them.",
+      "anchor_low": "Decisions made by intuition",
+      "anchor_high": "No important decision without data in front",
+      "kpis": [
+        {
+          "num": 31,
+          "name": "% of decisions supported by KPIs or data analysis",
+          "desc": "Percentage of decisions based on data analysis or KPIs, compared to those based on perceptions.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 32,
+          "name": "% of reports actually used",
+          "desc": "Percentage of produced reports that are actually read and utilized. High production + low usage = waste.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 33,
+          "name": "Level of trust in business data (survey)",
+          "desc": "Managers' perceived level of confidence in the accuracy and reliability of business data.",
+          "benchmark": ">7/10"
+        },
+        {
+          "num": 34,
+          "name": "Average time to retrieve data for a decision",
+          "desc": "Time required to find and access relevant data needed to make a decision. Slow data = slow decision-making.",
+          "benchmark": "<1 hour"
+        },
+        {
+          "num": 35,
+          "name": "Number of data sources for strategic decisions",
+          "desc": "How many independent sources contribute to an important decision. Three converging sources make a decision solid, one makes it fragile.",
+          "benchmark": ">3"
+        }
+      ],
+      "n_actions": 15,
+      "actions_preview": [
+        {
+          "name": "Data-driven decision protocol",
+          "desc": "Introduce a simple protocol: every proposal in meetings must include at least one supporting data point with cited source.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Pre-meeting dashboard",
+          "desc": "Distribute a concise report with relevant KPIs before each board meeting to cover the agenda topics.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Individual data literacy coaching",
+          "desc": "Work individually with managers less inclined towards using data to build confidence and habit.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Report utilization audit",
+          "desc": "Interview existing report recipients to understand which reports are actually read and which are ignored.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Report rationalization",
+          "desc": "Remove or consolidate unused reports, reducing production burden and enhancing the quality of key reports.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Reporting feedback loop",
+          "desc": "Establish a periodic mechanism for feedback from recipients to continuously improve the relevance of reports.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Data quality assessment",
+          "desc": "Conduct a data quality assessment in primary sources (ERP, CRM, Excel sheets) identifying critical areas.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Data quality owner",
+          "desc": "Nominate a data quality owner for each main data source responsible for quality and updating.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Data cleansing plan",
+          "desc": "Define and implement a prioritized plan to cleanse the most critical data for management decisions.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Business data catalog",
+          "desc": "Create a simple data source catalog indicating where to find each type of data and who to contact.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Self-service reporting",
+          "desc": "Implement a self-service reporting tool (even as simple as Power BI or Metabase) to reduce requests to IT.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Pre-processed key data",
+          "desc": "Pre-process the most requested data into standard reports available on-demand, reducing preparation time.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Data source mapping",
+          "desc": "Census of all data sources used by management in decision-making, identifying redundancies and gaps.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Prioritised data source integration",
+          "desc": "Integrate the 3-5 most critical data sources into a single consolidated view, eliminating the need for manual aggregation.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Data source governance",
+          "desc": "Define which sources are 'official' for each type of decision, reducing the proliferation of alternative sources.",
+          "hours": 8,
+          "effort": "Quick"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "I have often witnessed meetings where the same question received three different answers depending on who opened the file. Not because someone was lying: each person was looking at a different excerpt, updated at a different time.",
+            "cites": []
+          },
+          {
+            "text": "In two years, Italian SMEs that analyze their own data have increased from 26.6% to 42.7%. The number is growing quickly, but the gap remains significant: among micro and small businesses (PMI), we are at 41.9%, while large companies are at 83.6%. Those with tools make decisions based on data; those without still make decisions in the dark.",
+            "cites": [
+              "ISTAT 2025"
+            ]
+          },
+          {
+            "text": "What I see is that the problem rarely lies in the lack of data. It’s that the data are there but they take time, and when a decision needs to be made quickly, it gets made without them. The true measure isn’t how many data points you have; it’s how fast you can get your hands on them.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Making decisions based on data doesn’t mean setting aside judgment. It means that the judgment starts from a shared base rather than three different ones.",
+            "cites": []
+          },
+          {
+            "text": "I have seen companies build beautiful dashboards that no one uses, and others make good decisions with just three numbers written by hand on a blackboard. The difference isn’t in the tool: it’s that in the second case, those three numbers are shared by everyone and not questioned.",
+            "cites": []
+          },
+          {
+            "text": "Before purchasing an analysis tool, determine which five key numbers your company relies on for decision-making. If you can’t list them, no dashboard will help because you won’t know what to put into it.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "ISTAT, \"Firms and ICT, 2025\", Statistical Report, December 15, 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q4",
+      "cat": "Execution",
+      "sub": "Operational Processes",
+      "title": "Operational Processes",
+      "text": "Key processes always run the same way, regardless of who executes them.",
+      "anchor_low": "Each one does it their own way",
+      "anchor_high": "Same process for everyone, every time",
+      "kpis": [
+        {
+          "num": 36,
+          "name": "% processes documented and formalized",
+          "desc": "Percentage of business processes that are documented, standardized, and formalized.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 37,
+          "name": "Average execution time of key processes",
+          "desc": "Average time required to complete key operational processes from start to finish.",
+          "benchmark": "Varies by process"
+        },
+        {
+          "num": 38,
+          "name": "% processes with owner defined",
+          "desc": "Percentage of processes with a defined owner. Processes without an owner are not improved.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 39,
+          "name": "% standardised processes vs variable processes",
+          "desc": "Percentage of processes executed consistently in the same way, compared to those that vary by operator.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 40,
+          "name": "Average number of steps per process",
+          "desc": "Number of average steps required to complete a process. More steps = greater complexity and risk of error.",
+          "benchmark": "Varies by sector"
+        },
+        {
+          "num": 41,
+          "name": "Process variability rate (std dev times)",
+          "desc": "Variability in the execution times of processes. High variability = process not under control.",
+          "benchmark": "Low"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Key process census",
+          "desc": "Identify and census the 20-30 most critical business processes, defining the scope of priority documentation.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "As-is process documentation",
+          "desc": "Facilitate process mapping sessions with operational teams to document key processes in their current form (as-is).",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Document repository",
+          "desc": "Implement a centralized repository (e.g., SharePoint or Notion) for managing and updating process documentation.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Process time analysis",
+          "desc": "Measure the actual execution times of the 5 identified key processes, identifying the slower phases.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Bottleneck identification",
+          "desc": "Analyze the causes of slowdowns (approvals, delays, rework) and define prioritized corrective actions.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Optimization quick wins",
+          "desc": "Implement minor effort optimizations (e.g., eliminating redundant steps, automating notifications) with immediate impact on timelines.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Process owner assignment",
+          "desc": "Formally assign a process owner to each documented process with explicit responsibilities for performance and updates.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Process owner charter",
+          "desc": "Define the mandate for each process owner: what they measure, how frequently, and what decisions they can make autonomously.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Process owner community",
+          "desc": "Establish quarterly meetings among process owners to share best practices and common issues.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Identification of critical variability",
+          "desc": "Identify processes with the highest variability, evaluate whether it is pathological (errors, lack of standards) or physiological (required personalization).",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Standard operating procedures",
+          "desc": "Define SOPs (Standard Operating Procedures) for high-pathological variability processes and provide team training.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "Conformity Monitoring",
+          "desc": "Implement periodic compliance checks with immediate feedback to operators against standard procedures.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Value Stream Mapping",
+          "desc": "Map the value stream of each key process by identifying steps that do not add value to internal/external customers.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Eliminate Redundant Steps",
+          "desc": "Remove or consolidate unnecessary steps identified in Value Stream Mapping, simplifying operational workflows.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Lean Process Redesign",
+          "desc": "Redesign more complex processes by applying lean principles with the objective of reducing the number of steps by 20-30%.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "Basic Statistical Process Control",
+          "desc": "Introduce systematic process time measurements to identify real variability and its causes.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Root cause of variability",
+          "desc": "Analyze the causes of variability (variable input quality, differing competencies, unhandled exceptions) and define corrective actions.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Standardization of process inputs",
+          "desc": "Standardize the most variable process inputs (templates, checklists, required data) to reduce variability at the source.",
+          "hours": 16,
+          "effort": "Medium"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "There's a signal I recognize immediately: when I ask how a process works and they respond with a person’s name. 'That’s Anna.' It’s not an answer about the process; it’s an answer about risk.",
+            "cites": []
+          },
+          {
+            "text": "In rapidly growing companies, processes were not designed but evolved over time. Each individual found their own way of making things work, and that worked for years. The problem arises when the company doubles in size or when Anna retires.",
+            "cites": []
+          },
+          {
+            "text": "Management, which should be the backbone of processes, is used by only 48.8% of Italian SMEs compared to 85.9% of large enterprises. Even where it exists, I have almost always found it supplemented by a parallel spreadsheet: those are the real processes.",
+            "cites": [
+              "Istat 2025"
+            ]
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Standardization does not mean rigidity. It means that the outcome is independent of who performs it.",
+            "cites": []
+          },
+          {
+            "text": "The useful question is not 'do we have written procedures.' It's 'if a new person joins tomorrow, how long will they work like everyone else?' The time to get that answer is the measure of the process.",
+            "cites": []
+          },
+          {
+            "text": "There’s then a benefit almost no one considers: a standardized process is the only thing that can be automated. Until each does it their own way, there's nothing to automate; there's just order to impose.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Istat, 'Firms and ICT, 2025', Statistics Report, December 15, 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q5",
+      "cat": "Execution",
+      "sub": "Project execution and delivery",
+      "title": "Project execution",
+      "text": "Projects arrive at destination on time and within the promised budget at the outset.",
+      "anchor_low": "Almost always late or over budget",
+      "anchor_high": "Delivered as promised",
+      "kpis": [
+        {
+          "num": 42,
+          "name": "% of projects completed on schedule",
+          "desc": "Percentage of projects delivered by the originally planned date.",
+          "benchmark": ">75%"
+        },
+        {
+          "num": 43,
+          "name": "% of projects completed within budget",
+          "desc": "Percentage of projects completed without exceeding the approved budget.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 44,
+          "name": "Schedule variance (average time deviation)",
+          "desc": "Average deviation between planned and actual project completion dates.",
+          "benchmark": "<10%"
+        },
+        {
+          "num": 45,
+          "name": "Cost variance (average financial deviation)",
+          "desc": "Average deviation between planned and actual project costs.",
+          "benchmark": "<10%"
+        },
+        {
+          "num": 46,
+          "name": "% of projects with objectives modified during execution",
+          "desc": "Percentage of projects in which original objectives were modified during execution.",
+          "benchmark": "<15%"
+        },
+        {
+          "num": 47,
+          "name": "Average project start-up time (idea → start)",
+          "desc": "Time that passes from the approval of a project to the actual operational launch of activities.",
+          "benchmark": "<2 weeks"
+        },
+        {
+          "num": 48,
+          "name": "Time-to-market (decision → first measurable operational result)",
+          "desc": "Time from the decision to initiate an initiative to the first measurable operational outcome. Measures end-to-end execution speed.",
+          "benchmark": "Varies by sector"
+        }
+      ],
+      "n_actions": 21,
+      "actions_preview": [
+        {
+          "name": "Analysis of historical delays",
+          "desc": "Analyze projects from the last 2 years and identify systematic causes of delay (scope creep, resources, dependencies).",
+          "hours": 16,
+          "effort": "Average"
+        },
+        {
+          "name": "Milestone-based planning",
+          "desc": "Review the project planning methodology by introducing intermediate verifiable milestones every 2-4 weeks.",
+          "hours": 12,
+          "effort": "Average"
+        },
+        {
+          "name": "Buffer management",
+          "desc": "Introduce explicit buffers in project plans and establish a standard for managing them (Critical Chain Project Management).",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Simplified Earned Value Management",
+          "desc": "Introduce a simple cost tracking system for actuals vs. budget at each milestone, with automatic alerts.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Variance Governance",
+          "desc": "Define variance thresholds beyond which formal escalation to the project sponsor is mandatory.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Bottom-up Cost Estimation",
+          "desc": "Improve initial cost estimates through bottom-up methodologies and historical data from previous initiatives.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Structured Weekly Status Update",
+          "desc": "Introduce a 15-minute structured weekly project status update: completed, planned, blocks.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Bi-weekly Gantt Review",
+          "desc": "Review the project Gantt chart bi-weekly, updating remaining estimates based on actual status.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Mandatory recovery plan",
+          "desc": "Implement a formal recovery plan when schedule variance exceeds 10%.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Monthly budget tracking",
+          "desc": "Introduce a monthly cost tracking report for each project above a defined investment threshold.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Change request process",
+          "desc": "Implement a formal change request process to manage scope changes with financial impact.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Estimate at completion review",
+          "desc": "Formally update the estimate at completion (EAC) at each milestone and communicate them to the project sponsor.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Requirements freeze process",
+          "desc": "Introduce a requirements freeze process after the definition phase, with formal change requests for any modifications.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Initial stakeholder alignment",
+          "desc": "Allocate more time to the definition phase to ensure stakeholder buy-in before commencement.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Lessons learned on changes",
+          "desc": "Analyze changes to objectives from recent projects to identify patterns and prevent them in planning.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Project startup checklist",
+          "desc": "Define a standardized project kick-off checklist (team, tools, kickoff, plan) to reduce setup times.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Pre-approved resource pool",
+          "desc": "Proactively define an internal resource pool available for projects, reducing staffing times.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Fast-track for urgent projects",
+          "desc": "Define a fast-tracked procedure for the commencement of high-priority strategic projects.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "MVP approach",
+          "desc": "Introduce the practice of defining an MVP (Minimum Viable Product) for each initiative, with the goal of achieving a first result in 60-90 days.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Sprint-based delivery",
+          "desc": "Adopt an iterative approach (2-4 week sprints) with verifiable interim deliverables, even for non-IT projects.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Elimination of launch bottlenecks",
+          "desc": "Identify and remove the main organizational obstacles that slow down the transition from project to operational phase.",
+          "hours": 12,
+          "effort": "Medium"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "When I look at how projects are executed in PMIs, I always see the same pattern, regardless of the project. Deadlines slip, timelines stretch, initial objectives dilute.",
+            "cites": []
+          },
+          {
+            "text": "What is interesting is that there is rarely a technical issue behind it: there is a web of unspoken issues. Employees do not report risks they see first out of fear they will be perceived as critical. Suppliers do not communicate all the issues to avoid highlighting weaknesses in the newly launched product. Customers do not share backroom details to avoid being exposed. The result is a project proceeding on partial information.",
+            "cites": []
+          },
+          {
+            "text": "Another deficiency, almost always present: there is no measured starting point. Without it, judgments about the project remain impressionistic. We think things are going well because we hear them or poorly because something doesn’t seem right. The margin of error is enormous and discovery comes too late.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "It all starts with clarity of direction: where do we want to go, what transformation do we wish to implement, what results do we aim for. When this is clear to everyone, each person understands their role. Without it, the project operates in a 'they told me to do it that way' mode.",
+            "cites": []
+          },
+          {
+            "text": "The second point is supplier selection. The right supplier is not the most technically skilled: it’s the one closest to the customer’s way of thinking, the one who understands before they speak. Trust is not a soft factor in the project; it determines whether issues will emerge on time or explode at the end.",
+            "cites": []
+          },
+          {
+            "text": "No methodology replaces transparency and an outlook that extends beyond the next quarter. PMIs that understand this first generate projects that create value. Others continue to wonder why each project resembles the last.",
+            "cites": []
+          }
+        ]
+      },
+      "references": []
+    },
+    {
+      "id": "q6",
+      "cat": "Execution",
+      "sub": "Process automation",
+      "title": "Process automation",
+      "text": "Data flows from one system to another automatically without manual re-entry.",
+      "anchor_low": "Manual processes, duplicated data entry",
+      "anchor_high": "Systems communicating, no re-entry",
+      "kpis": [
+        {
+          "num": 61,
+          "name": "% of automated vs manual processes",
+          "desc": "Percentage of processes executed automatically compared to the total number of processes.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 62,
+          "name": "Time saved through automation",
+          "desc": "Amount of working time saved by introducing automations into processes.",
+          "benchmark": "Varies by process"
+        },
+        {
+          "num": 63,
+          "name": "% system integration (end-to-end digital)",
+          "desc": "Percentage of processes that are fully digital and require no manual intervention between systems.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 64,
+          "name": "Number of repetitive manual activities",
+          "desc": "Number of repetitive manual activities still being performed that could be automated.",
+          "benchmark": "Trend towards zero"
+        },
+        {
+          "num": 65,
+          "name": "Number of digitized workflows",
+          "desc": "Number of workflows that have been digitalized and structured within systems.",
+          "benchmark": "Varies by sector"
+        },
+        {
+          "num": 66,
+          "name": "Number of manual interventions per digital process",
+          "desc": "The average number of times an operator must manually intervene in a theoretically digital process.",
+          "benchmark": "Tends to zero"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Automation opportunity assessment",
+          "desc": "Identify and prioritize processes with the greatest potential for automation (high volume, clear rules, low variability).",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Quick automation wins",
+          "desc": "Implement rapid automations on simpler processes (notifications, reports, data transfer) using no-code/low-code tools.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Automation roadmap",
+          "desc": "Define a 12-month automation roadmap with KPIs for tracking and expected ROI for each initiative.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Pre-automation baseline",
+          "desc": "Systematically measure the manual time spent on processes before automation to quantify the benefit.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Post-implementation review",
+          "desc": "Conduct a 90-day post-implementation review of each automation, measuring the actual time saved.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Reinvestment of freed-up time",
+          "desc": "Explicitly define how the time saved by automation is reinvested in higher-value activities.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Integration landscape mapping",
+          "desc": "Map all active systems and existing integrations, identifying gaps and points of disconnection.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "API integration plan",
+          "desc": "Define a prioritized API integration plan for the most critical systems, starting with processes with the highest number of manual data transfer steps.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Integration monitoring",
+          "desc": "Implement real-time monitoring of existing integrations to detect disruptions and anomalies promptly.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Manual activity census",
+          "desc": "Quantify the repetitive manual activities performed by teams, estimating the weekly time dedicated to each one.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "RPA quick wins",
+          "desc": "Implement RPA (Robotic Process Automation) solutions or macros for the most time-consuming repetitive tasks.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "No-code automation training",
+          "desc": "Train operational teams on no-code tools (Zapier, Power Automate) to enable them to autonomously automate their activities.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Workflow priority mapping",
+          "desc": "Identify the 10 most critical workflows still managed via email/paper/phone and prioritize them for digitalization.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "BPM tool implementation",
+          "desc": "Implement a workflow management tool (even simple like Microsoft Power Automate or Kissflow) for prioritized workflows.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Digital workflow adoption program",
+          "desc": "Structure a digital workflow adoption program with training, support, and monitoring of usage.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Exception analysis",
+          "desc": "Analyze the causes of major manual interventions in digital processes: unmet rules, missing data, special cases.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Rule engine extension",
+          "desc": "Extend digital process rules to cover more frequent exceptions, reducing manual interventions.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Exception SLA",
+          "desc": "Define Service Level Agreements (SLAs) for managing residual exceptions, assigning ownership and resolution times.",
+          "hours": 8,
+          "effort": "Rapid"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "There is a gesture I see in almost every company I enter: someone reads a number from one screen and types it into another. Sometimes it’s an order, sometimes an invoice, sometimes a customer record. That gesture is the most visible symptom of two systems that don’t talk to each other.",
+            "cites": []
+          },
+          {
+            "text": "The national picture confirms this: 49.5% of Italian companies with at least ten employees use a management ERP system, but only 21.7% use CRM. Among SMEs, CRM usage drops to 21.1%, compared to 56.5% for large enterprises. The missing piece is often the one that concerns customers.",
+            "cites": [
+              "Istat 2025"
+            ]
+          },
+          {
+            "text": "The reason manual re-keying is rarely resisted isn’t a lack of technology. It’s because integrating two systems forces you to decide which system commands the data, and that decision touches the balance between functions. It’s an organizational problem masquerading as a technical one.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Automation doesn’t start with software; it starts with mapping. You can only automate chaos: you get it faster but not better without first describing the process.",
+            "cites": []
+          },
+          {
+            "text": "The criterion I use to choose what to automate first is not time saved, but error frequency. A repetitive manual task costs more than just hours: it costs the mistakes that go unnoticed and the time spent correcting them.",
+            "cites": []
+          },
+          {
+            "text": "A warning I always repeat: automating an incorrect process makes it definitive. Get the process right first, then automate it. Attempting to automate in reverse carves a working method into software that has never been validated by anyone.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Istat, 'Firms and ICT, 2025', Statistical Report, 15 December 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q7",
+      "cat": "Technology",
+      "sub": "Government and data quality",
+      "title": "Data quality and governance",
+      "text": "When two people look for the same data, they find the same number.",
+      "anchor_low": "Each function has its own numbers, and they do not align.",
+      "anchor_high": "One single data point, equal for all",
+      "kpis": [
+        {
+          "num": 126,
+          "name": "Data quality level (completeness and accuracy)",
+          "desc": "Overall data quality level of the company in terms of completeness, accuracy, and consistency.",
+          "benchmark": ">95%"
+        },
+        {
+          "num": 127,
+          "name": "% duplicate or inconsistent data",
+          "desc": "Percentage of records in systems that contain duplicated or contradictory data from different sources.",
+          "benchmark": "<5%"
+        },
+        {
+          "num": 128,
+          "name": "Average time to access data",
+          "desc": "Average time required to access the necessary data to support an analysis or decision.",
+          "benchmark": "<1 hour"
+        },
+        {
+          "num": 129,
+          "name": "% structured data vs unstructured data",
+          "desc": "Percentage of business data available in a structured format compared to unstructured data.",
+          "benchmark": ">60% structured"
+        },
+        {
+          "num": 130,
+          "name": "Number of integrated data sources",
+          "desc": "The number of distinct data sources integrated into a single system or data warehouse.",
+          "benchmark": "Increasing"
+        },
+        {
+          "num": 131,
+          "name": "Presence of formalized data governance model",
+          "desc": "Presence of a formal data governance model with defined roles, processes, and standards.",
+          "benchmark": "Yes"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Data quality assessment",
+          "desc": "Conduct a data quality assessment in key sources, measuring completeness, accuracy, consistency, and timeliness.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "Data quality rules",
+          "desc": "Define data quality rules for each critical source and implement automated validation controls.",
+          "hours": 20,
+          "effort": "Moderate"
+        },
+        {
+          "name": "Data stewardship",
+          "desc": "Appoint a data steward for each data domain, responsible for data quality and updates.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Deduplication analysis",
+          "desc": "Identify the main issues of data duplication and inconsistency across core systems.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Master data management",
+          "desc": "Implement a Master Data Management approach for critical data (customers, products, suppliers): single source of truth.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Deduplication routine",
+          "desc": "Implement automatic deduplication routines for datasets with the greatest duplication issues.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Data access bottleneck analysis",
+          "desc": "Identify the slowest data access processes and their causes (manual requests, unoptimized queries, permissions).",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Self-service data access",
+          "desc": "Implement self-service data access solutions for common queries, reducing IT request volumes.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "Data platform optimization",
+          "desc": "Optimize the performance of critical queries on the data platform, reducing response times.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Data inventory and classification",
+          "desc": "Census and classification of business data by type (structured/unstructured) and business priority.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Structured data migration",
+          "desc": "Migrate relevant unstructured data (documents, emails, notes) to structured or semi-structured formats.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "Data capture process redesign",
+          "desc": "Redesign the data acquisition processes to capture already structured data at the source.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Data integration roadmap",
+          "desc": "Define a roadmap for integrating priority data sources into a single data repository or data warehouse.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "ETL pipeline implementation",
+          "desc": "Implement the ETL (Extract, Transform, Load) pipeline for critical data integrations, automating the data flow.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Data integration governance",
+          "desc": "Define standards and processes for managing data integrations to ensure quality and consistency.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Data governance framework design",
+          "desc": "Design a data governance framework appropriate for the company’s size: principles, roles, processes, tools.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Data governance council",
+          "desc": "Establish a cross-functional Data Governance Council with business and IT representatives, holding monthly meetings.",
+          "hours": 8,
+          "effort": "Fast"
+        },
+        {
+          "name": "Data governance implementation",
+          "desc": "Gradually implement the framework starting from the most critical data domains for the business.",
+          "hours": 32,
+          "effort": "Challenging"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "The quickest test I can do when entering a company is to ask the same number to two different functions. Last month’s revenue, active customers, late deliveries. If the numbers don’t match, and they almost never do, the problem isn’t the data: it’s that no one has decided which is the correct one.",
+            "cites": []
+          },
+          {
+            "text": "Among Italian SMEs that evaluated an investment in artificial intelligence but did not proceed with it, 45.2% were deterred by the unavailability or poor quality of necessary data. Not due to costs or technology: it was because they lacked the foundational material.",
+            "cites": [
+              "Istat 2025"
+            ]
+          },
+          {
+            "text": "What makes this problem challenging is that it doesn't belong to anyone. Data quality isn't a function's responsibility, so no one owns it, and it continues to deteriorate until someone takes charge of it explicitly.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Governing data means deciding, for every piece of information that matters, who creates it, who corrects it, and what the good version is.",
+            "cites": []
+          },
+          {
+            "text": "The signal that things are working is simple and immediate: meetings no longer start with a discussion on numbers. When the first quarter hour doesn't need to be spent determining which file is up-to-date, you've gained both time and decision-making clarity.",
+            "cites": []
+          },
+          {
+            "text": "It's worth stating without equivocation: anything built on poor data inherits the error and amplifies it. A dashboard, an automation, or an AI model. None of these corrects the initial data.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Istat, \"Imprese e ICT, anno 2025\", Statistiche report, 15 dicembre 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q8",
+      "cat": "Technology",
+      "sub": "Cybersecurity and resilience",
+      "title": "Cybersecurity",
+      "text": "If tomorrow an attack were to shut down our systems, we would know what to do and how quickly we could return to operations.",
+      "anchor_low": "We have never seriously considered it",
+      "anchor_high": "Written, tested, updated plan",
+      "kpis": [
+        {
+          "num": 114,
+          "name": "MTTR, mean time to recovery of systems",
+          "desc": "Mean time from security incident detection to full resolution.",
+          "benchmark": "<4 hours (critical)"
+        },
+        {
+          "num": 115,
+          "name": "MTTD, mean time to detect an incident",
+          "desc": "Average time from the occurrence of a security incident to its detection by the team.",
+          "benchmark": "<1 hour (critical)"
+        },
+        {
+          "num": 116,
+          "name": "% critical vulnerabilities unresolved",
+          "desc": "Percentage of known critical vulnerabilities that have not yet been resolved or mitigated.",
+          "benchmark": "0%"
+        },
+        {
+          "num": 117,
+          "name": "% systems with up-to-date security controls",
+          "desc": "Percentage of systems covered by up-to-date security controls at the latest available version.",
+          "benchmark": "100%"
+        },
+        {
+          "num": 118,
+          "name": "Number of security incidents per period",
+          "desc": "The number of security events detected in a given period. Includes attempted attacks and actual breaches.",
+          "benchmark": "Trend towards 0"
+        },
+        {
+          "num": 119,
+          "name": "Adoption of security frameworks (NIST / ISO 27001)",
+          "desc": "Degree of adoption of international security frameworks: NIST, which is a guideline, and ISO 27001, which certifies.",
+          "benchmark": "Certified or in progress"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Incident response plan",
+          "desc": "Define and document an incident response plan with roles, procedures, and objective timelines.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "IR tabletop exercise",
+          "desc": "Conduct incident simulation tabletop exercises to test and improve response times.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Automated detection and response",
+          "desc": "Implement automated detection and response tools to reduce reaction time for common incidents.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Security monitoring improvement",
+          "desc": "Enhance security monitoring with SIEM or EDR tools to reduce detection time.",
+          "hours": 32,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Alert tuning",
+          "desc": "Optimize alert rules to reduce false positives and ensure that real alerts are detected promptly.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Threat intelligence integration",
+          "desc": "Integrate threat intelligence feeds to anticipate emerging attack vectors and reduce detection time.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Vulnerability management program",
+          "desc": "Implement a structured vulnerability management program: periodic scans, prioritization, and remediation tracking.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Patch management process",
+          "desc": "Define and adhere to SLAs for patching critical vulnerabilities (e.g., 72 hours for critical CVEs, seven days for high severity).",
+          "hours": 12,
+          "effort": "Moderate"
+        },
+        {
+          "name": "Risk-based prioritization",
+          "desc": "Prioritize vulnerabilities based on real business risk, not just technical severity.",
+          "hours": 12,
+          "effort": "Moderate"
+        },
+        {
+          "name": "Security baseline assessment",
+          "desc": "Define mandatory security control baselines for each category of system and verify their implementation.",
+          "hours": 16,
+          "effort": "Moderate"
+        },
+        {
+          "name": "Security hardening program",
+          "desc": "Initiate a critical system hardening program, applying recommended security configurations.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Continuous compliance monitoring",
+          "desc": "Implement continuous monitoring tools for security controls compliance with dashboards and alerts.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Security awareness program",
+          "desc": "Launch a security awareness program for employees to reduce the risk of human error incidents.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Attack surface reduction",
+          "desc": "Identify and reduce the attack surface: decommission obsolete systems, reduce privileges, network segmentation.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Proactive threat hunting",
+          "desc": "Conduct proactive threat hunting activities to identify breaches before they evolve into incidents.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Framework gap assessment",
+          "desc": "Conduct a framework gap assessment against the chosen security framework (NIST CSF or ISO 27001) with prioritization of missing controls.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Framework adoption roadmap",
+          "desc": "Define a framework adoption roadmap with quarterly objectives and responsibilities assigned.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "ISMS Implementation",
+          "desc": "Initiate the implementation of an Information Security Management System (ISMS) to systematize security management.",
+          "hours": 40,
+          "effort": "Challenging"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "There are two attitudes towards security, and neither is sustainable. The first is complete delegation to the supplier: it's left to those who sold us the systems. The second is a belief in one's irrelevance: there's nothing valuable to steal from us.",
+            "cites": []
+          },
+          {
+            "text": "The numbers tell a different story. In 2025, Italy recorded 507 serious incidents compared to 357 the previous year, with a growth of 42%. Our country alone accounts for 9.6% of the severe attacks detected worldwide: first in Europe and fourth globally.",
+            "cites": [
+              "Clusit 2026"
+            ]
+          },
+          {
+            "text": "Another common refrain I hear is that security is an IT issue. It isn't. The day our systems go down, the questions we receive are about what data we handle, how long it takes to get back up, and what we tell our customers. These are questions of direction, not technical department concerns.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "I am not an expert in offensive security, and it is not necessary to be one. What is needed, and what is almost always missing, comes first: knowing what needs to be protected, how much it is worth, and the consequences if it stops working.",
+            "cites": []
+          },
+          {
+            "text": "From that foundation, everything else follows, prioritized by importance rather than by supplier catalog. The same amount of money spent on a plan can yield far more value than spending it piece-by-piece on selected products.",
+            "cites": []
+          },
+          {
+            "text": "The final factor is what truly decides: an untested plan is not a valid plan. The time to discover that backups do not restore is not when they are needed.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Clusit, \"CLUSIT 2026 ICT Security Report\", March 2026. https://clusit.it/rapporto-clusit/"
+      ]
+    },
+    {
+      "id": "q9",
+      "cat": "Technology",
+      "sub": "Real usage of technologies",
+      "title": "Technology adoption",
+      "text": "The software you pay for is actually used by the people it was purchased for.",
+      "anchor_low": "Many paid licenses with little actual use",
+      "anchor_high": "What we pay for, we use",
+      "kpis": [
+        {
+          "num": 90,
+          "name": "% features utilized vs available",
+          "desc": "The percentage of available features on platforms that are actually used by users.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 91,
+          "name": "% active licenses vs purchased",
+          "desc": "The percentage of software licenses purchased that are actually active and in use.",
+          "benchmark": ">85%"
+        },
+        {
+          "num": 92,
+          "name": "Number of platforms with usage <50%",
+          "desc": "Number of platforms with a usage rate below 50% of enabled users.",
+          "benchmark": "0"
+        },
+        {
+          "num": 93,
+          "name": "User utilization intensity",
+          "desc": "How frequently does each individual user truly use the platform.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 94,
+          "name": "Number of processes executed outside official platforms",
+          "desc": "The number of business processes executed outside official platforms. Indicates shadow IT.",
+          "benchmark": "0"
+        },
+        {
+          "num": 95,
+          "name": "Average time between implementation and operational adoption",
+          "desc": "The period from the technical implementation of a tool to its stable operational adoption.",
+          "benchmark": "<60 days"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Feature utilization audit",
+          "desc": "To measure the actual usage of features for each key platform through analytics and interviews.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Feature activation plan",
+          "desc": "Define a plan to activate the most relevant and yet-to-be-used features, including dedicated training.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Use case library",
+          "desc": "Create a use case library for each platform, demonstrating to teams how to utilize advanced features in their work.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Software license audit",
+          "desc": "Census all purchased software licenses and verify the activation rate and actual usage.",
+          "hours": 8,
+          "effort": "Swift"
+        },
+        {
+          "name": "Software license optimization",
+          "desc": "Negotiate license contracts based on actual usage, eliminating unused licenses and optimizing costs.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "License governance process",
+          "desc": "Implement a license governance process: request, approval, assignment, recovery in case of user deactivation.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Low utilization platform review",
+          "desc": "Identify all platforms with utilization below 50% and assess the causes: lack of training, low relevance, preferred alternative.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Remediation or decommissioning",
+          "desc": "For each underutilized platform: define whether it is possible to increase adoption or if decommissioning is preferable.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Platform success criteria",
+          "desc": "Define success criteria for each new platform prior to launch, with a review six months post-implementation.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Per-user analytics",
+          "desc": "Analyze user engagement data at the individual user level to identify adoption patterns and abandonment cases.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Power user program",
+          "desc": "Identify and value the most active users (power users) as internal ambassadors to drive the adoption of others.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Personalized onboarding",
+          "desc": "Implement personalized onboarding journeys for user types to increase the relevance of training.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Shadow IT discovery",
+          "desc": "Identify non-official processes and tools in use through team surveys and network traffic analysis.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Shadow IT root cause",
+          "desc": "Analyze why official systems are being bypassed and address the underlying causes (lack of functionality, usability, speed).",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Officialization or substitution",
+          "desc": "For each significant shadow IT: assess whether to officialize it, substitute it with an approved solution, or eliminate it.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Adoption gap analysis",
+          "desc": "Systematically measure the time between go-live and attainment of predefined adoption thresholds for each technology.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Pre-launch adoption preparation",
+          "desc": "Structure pre-go-live adoption activities: communication, training, champions, dedicated support.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Hypercare period",
+          "desc": "Define a post-launch hypercare period (4-8 weeks) with intensive support to accelerate adoption.",
+          "hours": 16,
+          "effort": "Medium"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "The moment I realize that an instrument has not been adopted is when I ask to see the actual file being worked on. There is almost always one, and it is a spreadsheet that lives alongside the paid software costing tens of thousands of euros.",
+            "cites": []
+          },
+          {
+            "text": "The gap between those who adopt and those who lag behind is widening, not closing: on artificial intelligence, the distance between PMIs and large enterprises has increased from twenty points in 2023 to twenty-five in 2024, up to thirty-seven by 2025.",
+            "cites": [
+              "Istat 2025"
+            ]
+          },
+          {
+            "text": "The change resistance I most frequently encounter is not about the reluctance to change. It's that the tool was chosen based on a feature list rather than actual work requirements, and the person who would use it saw it for the first time on the day of the training.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Unadopted software is not a neutral cost. It continues to incur expenses, with more work done outside the system leading to more data that do not reach where they are needed.",
+            "cites": []
+          },
+          {
+            "text": "The right question before purchasing is not which product is better. It's who will use it every day and what it simplifies for them. If there isn't an answer to this second part, adoption won't happen, no matter how good the product is.",
+            "cites": []
+          },
+          {
+            "text": "Before buying something new, I would check what we already have. In my experience, a significant portion of what we need was purchased years ago and is not being used simply because nobody has ever explained that it exists.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Istat, 'Firms and ICT, 2025', Statistical Report, 15 December 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q10",
+      "cat": "Persone",
+      "sub": "Competencies and Real Usage",
+      "title": "Competencies and Skills",
+      "text": "People have the competencies required for their current work, not those that were needed five years ago.",
+      "anchor_low": "Evident gaps, we proceed as best we can",
+      "anchor_high": "Skills aligned with what is needed now",
+      "kpis": [
+        {
+          "num": 132,
+          "name": "% skills utilized vs available",
+          "desc": "Percentage of available skills in the organization that are actually used in work.",
+          "benchmark": ">80%"
+        },
+        {
+          "num": 133,
+          "name": "Gap between declared and observed competencies in practice",
+          "desc": "The difference between the competencies employees declare they possess and those observed in actual work.",
+          "benchmark": "Minimum possible"
+        },
+        {
+          "num": 134,
+          "name": "Number of critical competencies not covered",
+          "desc": "Number of critical business competencies that are either absent or inadequately supported.",
+          "benchmark": "No criticisms"
+        },
+        {
+          "num": 135,
+          "name": "% roles with formal skill mapping",
+          "desc": "Percentage of roles with a formal mapping of required versus actual available competencies.",
+          "benchmark": ">90%"
+        },
+        {
+          "num": 136,
+          "name": "% activity performed without adequate competencies",
+          "desc": "Percentage of operational activities carried out by individuals who do not have the adequate competencies to perform them.",
+          "benchmark": "<5%"
+        },
+        {
+          "num": 137,
+          "name": "Alignment level between skills and role",
+          "desc": "Degree of match between an individual's skills and those required by their role.",
+          "benchmark": ">8/10"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Competency utilization survey",
+          "desc": "Conduct a survey to identify competencies available within the company that are not adequately utilized in current roles.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Role-skill realignment",
+          "desc": "Redesign roles or reassign responsibilities to better leverage existing competencies.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Internal talent marketplace",
+          "desc": "Implement an internal matching system to link projects and opportunities with available but underutilized skills.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Structured skills assessment",
+          "desc": "Conduct structured assessments to validate declared competencies, with practical evaluation and structured feedback.",
+          "hours": 24,
+          "effort": "Comprehensive"
+        },
+        {
+          "name": "360-degree feedback on skills",
+          "desc": "Implement a 360-degree feedback process for key competencies, including comparison between self-assessment and external evaluation.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Customized development plan",
+          "desc": "Define customized development plans to address identified gaps, with measurable objectives and timelines.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Critical skills mapping",
+          "desc": "Identify critical business skills over the next 12-24 months and verify internal coverage.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Strategic hiring plan",
+          "desc": "Define a targeted hiring strategy to cover critical skill gaps, with detailed profile descriptions.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Accelerated upskilling programme",
+          "desc": "Initiate accelerated upskilling programmes on the most easily developable critical competencies internally.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Job architecture design",
+          "desc": "Define the required hard and soft skills for each role with expected proficiency levels.",
+          "hours": 24,
+          "effort": "Compulsory"
+        },
+        {
+          "name": "Skill framework implementation",
+          "desc": "Implement a shared skill framework with HR and managers, used for evaluation, development, and recruitment.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Annual skills review",
+          "desc": "Establish an annual skills review for each role, updating profiles in line with business changes.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Competency-role gap analysis",
+          "desc": "Identify instances where individuals regularly perform activities beyond their current competencies.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Just-in-time training",
+          "desc": "Implement just-in-time training for critical activities that are performed without adequate skills.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Task reallocation",
+          "desc": "Reallocate critical tasks to individuals with the appropriate competencies, thereby reducing operational risk.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Person-role fit assessment",
+          "desc": "Conduct a person-role alignment assessment for all key employees.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Role redesign",
+          "desc": "In cases of significant misalignment, consider role redesign or reassignment to a more suitable position.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "Internal mobility programme",
+          "desc": "Implement a internal mobility program that enables individuals to find roles better aligned with their skills.",
+          "hours": 16,
+          "effort": "Medium"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "The phrase I hear most often when a project stalls is that there's a lack of time. When I dig deeper, the issue isn't really about time: it's a lack of someone who knows how to do that task, and no one wants to say it out loud.",
+            "cites": []
+          },
+          {
+            "text": "National data confirms this clearly: among Italian companies that evaluated an investment in artificial intelligence but then did not proceed, almost 60% stopped due to a lack of adequate skills. Not because of the technology cost: because no one knew who would make it work.",
+            "cites": [
+              "Istat 2025"
+            ]
+          },
+          {
+            "text": "The point that interests me is different: the missing competence is rarely technical. It is governance competence, i.e., knowing how to define what you want, choosing a supplier, and ensuring that what arrives is what was needed.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Mapping competencies is not about distributing grades. It is about understanding which decisions the company can make on its own and which ones it cannot.",
+            "cites": []
+          },
+          {
+            "text": "On this, I have a conviction drawn from construction sites: competencies are not acquired solely by hiring. A significant part of them is built by supporting existing people, which costs less and lasts longer.",
+            "cites": []
+          },
+          {
+            "text": "The criterion for deciding what to keep in-house and what to outsource is simple: anything that is central to your competitive advantage must be something you can do yourself. The rest can be outsourced, provided it can be properly evaluated.",
+            "cites": []
+          }
+        ]
+      },
+      "references": [
+        "Istat, 'Firms and ICT, 2025', Statistical Report, 15 December 2025. https://www.istat.it"
+      ]
+    },
+    {
+      "id": "q11",
+      "cat": "Persone",
+      "sub": "Diffused involvement and shared responsibility",
+      "title": "Engagement and ownership",
+      "text": "People take initiative without waiting for someone to ask them to do so.",
+      "anchor_low": "It's about completing tasks, nothing more",
+      "anchor_high": "Proposals come from the bottom up",
+      "kpis": [
+        {
+          "num": 150,
+          "name": "Employee engagement level (survey)",
+          "desc": "Employee engagement and motivation level regarding work and the organization.",
+          "benchmark": ">7/10"
+        },
+        {
+          "num": 151,
+          "name": "Perceived ownership of results (survey)",
+          "desc": "Employees' perception of being responsible for their own work results and team outcomes.",
+          "benchmark": "Greater than 7/10"
+        },
+        {
+          "num": 152,
+          "name": "% of individual targets achieved",
+          "desc": "The percentage of individually assigned objectives that are actually met during the period.",
+          "benchmark": "Greater than 80%"
+        },
+        {
+          "num": 153,
+          "name": "Percentage of operational decisions made at the operational level (autonomy)",
+          "desc": "Percentage of operational decisions taken autonomously by staff without the need for escalation.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 154,
+          "name": "Participation rate in improvement initiatives",
+          "desc": "Percentage of employees actively participating in organization-driven improvement initiatives.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 155,
+          "name": "Number of autonomous initiatives generated by teams",
+          "desc": "Number of spontaneously proposed improvement initiatives by teams without top-down prompting.",
+          "benchmark": "Increasing over time"
+        },
+        {
+          "num": 156,
+          "name": "eNPS, how employees would recommend the company to a friend",
+          "desc": "How employees would recommend the company as a workplace to a friend. Ranges from -100 to +100.",
+          "benchmark": ">20"
+        }
+      ],
+      "n_actions": 21,
+      "actions_preview": [
+        {
+          "name": "Engagement survey",
+          "desc": "Conduct a validated semi-annual engagement survey, share the results, and develop an action plan for the function.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Manager effectiveness program",
+          "desc": "Train managers in leadership practices that increase engagement: recognition, listening, development.",
+          "hours": 24,
+          "effort": "Challenging"
+        },
+        {
+          "name": "Engagement Action Team",
+          "desc": "Form function-specific engagement action teams with the responsibility to implement priority actions emerging from the survey.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Assessment of ownership culture",
+          "desc": "Evaluate through surveys and interviews the perceived level of ownership and its drivers.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Autonomy and responsibility",
+          "desc": "Increase the level of operational team decision-making autonomy, accompanied by clear accountability for results.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Outcome-based management",
+          "desc": "Shift the management focus from inputs (hours worked, tasks completed) to outcomes (achieved results).",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "SMART Objective Review",
+          "desc": "Review the quality of existing individual objectives, ensuring they are SMART and achievable.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Frequent check-ins",
+          "desc": "Introduce regular (monthly) check-ins between managers and employees to discuss the status of objectives, with proactive coaching.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Challenging yet realistic objectives",
+          "desc": "Calibrate objectives to be challenging yet realistic, avoiding both overly easy and impossible goals.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Decision rights mapping",
+          "desc": "Map out recurring decisions and verify whether they are being taken at the most appropriate organizational level.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Structured Delegation",
+          "desc": "Formally transfer decision-making responsibility for specific categories of decisions to operational levels.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Manager coaching on delegation",
+          "desc": "Training managers in effective delegation: what to delegate, how to delegate, and how to monitor without micromanaging.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Improvement idea system",
+          "desc": "Implement a simple system to collect and value improvement ideas from operational teams.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Kaizen events",
+          "desc": "Organize continuous improvement (Kaizen) events where teams work on specific issues with facilitated support.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Idea implementation rate",
+          "desc": "Measure and communicate the idea implementation rate to increase trust in the system.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Innovation time",
+          "desc": "Introduce dedicated innovation and autonomous improvement time for teams (even just 10% of their time).",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Internal innovation challenge",
+          "desc": "Launch internal challenges on specific company issues, inviting teams to propose solutions.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Autonomy Lab",
+          "desc": "Create an 'autonomy lab' where teams can experiment with new approaches under light supervision.",
+          "hours": 20,
+          "effort": "Medium"
+        },
+        {
+          "name": "eNPS measurement",
+          "desc": "Implement quarterly eNPS measurement using a single question and analysis of open comments.",
+          "hours": 4,
+          "effort": "Quick"
+        },
+        {
+          "name": "eNPS driver analysis",
+          "desc": "Analyzing the key drivers of eNPS: what drives promoters, what generates detractors.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Targeted improvement actions",
+          "desc": "Define specific actions on the most critical drivers of eNPS, with owners and timelines.",
+          "hours": 16,
+          "effort": "Medium"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "When I enter a company, I always ask my colleagues one question: what would you change if you could. The responses are almost always precise, concrete, and well-thought-out. This means that the ideas exist, but they have never been asked for.",
+            "cites": []
+          },
+          {
+            "text": "When a proposal from below is ignored twice, the third does not come. Not out of spite: for economy. People stop spending energy where they have learned that it produces no effect.",
+            "cites": []
+          },
+          {
+            "text": "The connection with the rest is direct. If nobody knows the direction, nobody can propose something that goes in that direction. Initiative is not a matter of character; it is a consequence of the context people have.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Engagement is not achieved by communicating more. It is achieved by showing that something has changed because someone said so.",
+            "cites": []
+          },
+          {
+            "text": "In the yards where I worked, the first sign that transformation was taking root was never an indicator. It was that in meetings, people who used to be silent started speaking.",
+            "cites": []
+          },
+          {
+            "text": "There remains a responsibility that cannot be delegated: individuals do not take ownership of outcomes they did not help define. Asking for ownership over top-down set objectives is asking for something that does not exist.",
+            "cites": []
+          }
+        ]
+      },
+      "references": []
+    },
+    {
+      "id": "q12",
+      "cat": "Persone",
+      "sub": "Effective Training",
+      "title": "Effective Training",
+      "text": "What people learn in the classroom becomes evident in their work within a few weeks.",
+      "anchor_low": "Training is provided, then everything continues as before",
+      "anchor_high": "It is applied immediately and its impact can be seen",
+      "kpis": [
+        {
+          "num": 138,
+          "name": "% of training applied in daily work",
+          "desc": "Percentage of delivered training that is actually applied in daily work.",
+          "benchmark": ">60%"
+        },
+        {
+          "num": 139,
+          "name": "Time between training completion and operational use",
+          "desc": "The period from the end of a training course to the first practical application of the acquired skills.",
+          "benchmark": "<30 days"
+        },
+        {
+          "num": 140,
+          "name": "Level of skill retention (survey/test)",
+          "desc": "Percentage of knowledge acquired during training that is maintained over time.",
+          "benchmark": ">70%"
+        },
+        {
+          "num": 141,
+          "name": "Number of hours of employee training per year",
+          "desc": "The average number of hours of training each employee has accessed over the course of a year.",
+          "benchmark": ">40 hours/year"
+        },
+        {
+          "num": 142,
+          "name": "% of training content used post-delivery",
+          "desc": "Percentage of training materials produced or acquired that are utilized after the initial delivery.",
+          "benchmark": ">50%"
+        },
+        {
+          "num": 143,
+          "name": "Number of related training initiatives",
+          "desc": "Percentage of training initiatives directly linked to specific business objectives.",
+          "benchmark": ">80% of initiatives"
+        }
+      ],
+      "n_actions": 18,
+      "actions_preview": [
+        {
+          "name": "Learning transfer action plan",
+          "desc": "Define an application action plan for each training path: what will I do differently on Monday morning.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Manager role in learning transfer",
+          "desc": "Train managers on their role in supporting the application of training, with structured post-course check-ins.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Application assessment at 90 days",
+          "desc": "Evaluate the application of learned skills 90 days after training, with structured feedback.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Just-in-time learning",
+          "desc": "Deliver training closest to when it is needed for use, reducing the likelihood of forgetting.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "On-the-job training",
+          "desc": "Integrate classroom training with on-the-job training sessions where skills are applied immediately.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Learning path redesign",
+          "desc": "Redesign the training pathways by integrating practice and immediate application segments every 30-60 minutes of theory.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Spaced repetition",
+          "desc": "Introduce sessions of increasing remote reinforcement (spaced repetition) to consolidate acquired skills.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Micro-learning",
+          "desc": "Develop micro-learning content (5-10 minutes) for periodic reinforcement of key skills.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Practice opportunities",
+          "desc": "Create structured practice opportunities post-training: exercises, projects, job rotations.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Training needs analysis",
+          "desc": "Conduct a training needs analysis by function, identifying investment priorities.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Learning hours target",
+          "desc": "Define a learning hours target per employee/year and integrate it into managers' objectives.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Optimization of blended learning",
+          "desc": "Optimize the mix of training (classroom, e-learning, on-the-job) to maximize the effectiveness of time invested.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Content accessibility",
+          "desc": "Make training materials easily accessible and searchable on the corporate platform.",
+          "hours": 8,
+          "effort": "Rapid"
+        },
+        {
+          "name": "Reference material design",
+          "desc": "Design training materials as post-course references (job aids, checklists, quick reference cards).",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "LMS usage analytics",
+          "desc": "Monitor the use of content on the LMS platform and optimize less accessed materials.",
+          "hours": 8,
+          "effort": "Quick"
+        },
+        {
+          "name": "Business-linked learning strategy",
+          "desc": "Define the training strategy based on business objectives, not the available training offerings.",
+          "hours": 12,
+          "effort": "Medium"
+        },
+        {
+          "name": "Training ROI",
+          "desc": "Measure the ROI of key training initiatives in terms of impact on business KPIs.",
+          "hours": 16,
+          "effort": "Medium"
+        },
+        {
+          "name": "Training business sponsor",
+          "desc": "Involve business managers as sponsors of training initiatives to increase relevance and commitment.",
+          "hours": 8,
+          "effort": "Rapid"
+        }
+      ],
+      "why_it_happens": {
+        "blocks": [
+          {
+            "text": "Training is the expense item that I find easier to justify and verify. A course is purchased, a classroom is filled, and a certificate is archived. Whether something has changed in daily work practices, no one checks that.",
+            "cites": []
+          },
+          {
+            "text": "The breaking point is not in the classroom but upon returning to the desk. The individual returns, finds the same tools and deadlines as before, and within a week, they revert to their previous habits.",
+            "cites": []
+          },
+          {
+            "text": "When I ask a manager what they expect to see different after the course, the response is almost always generic. If those sending people for training cannot specify what should change, they won't be able to notice if it has changed.",
+            "cites": []
+          }
+        ]
+      },
+      "reframe": {
+        "blocks": [
+          {
+            "text": "Training works when those returning to work have the permission and opportunity to use what they have learned. Without that opportunity, within a few weeks, the investment will have evaporated.",
+            "cites": []
+          },
+          {
+            "text": "For this reason, what matters is not the classroom; it's the three months following: support, a real case to apply it to, someone to ask when you get stuck.",
+            "cites": []
+          },
+          {
+            "text": "The quickest way to understand if training has worked is not through an end-of-course test. It’s about looking, three months later, to see if a task is being performed differently from before.",
+            "cites": []
+          }
+        ]
+      },
+      "references": []
+    }
+  ],
+  "sectors": {
+    "Manifattura e produzione": {
+      "testo": "In your sector, 45.9% of companies analyze their data and 59.9% use an ERP management system. CRM adoption is at 19.0%; manufacturing has a good understanding of its production but much less about its customers.",
+      "fonte": "Istat, Enterprises and ICT, December 2025"
+    },
+    "Commercio e distribuzione": {
+      "testo": "Your sector leads Italy in CRM adoption with 29.9%, and 52.5% of companies analyze their data. However, only 19.1% derive at least 1% of revenue from online sales.",
+      "fonte": "Istat, Enterprises and ICT, December 2025"
+    },
+    "Servizi alle imprese": {
+      "testo": "Among professional and technical activities, 46.2% analyze data and 56.9% use an ERP. In rental and business support services, these figures drop to 42.5% and 38.5%, respectively.",
+      "fonte": "Istat, Enterprises and ICT, December 2025"
+    },
+    "Servizi alle persone": {
+      "testo": "The accommodation and food service industries have the lowest values in Italy alongside construction: 32.4% on data analysis, 28.5% on management. However, 34.6% sell online, which is the highest figure across all sectors.",
+      "fonte": "Istat, Enterprises and ICT, December 2025"
+    },
+    "Costruzioni e immobiliare": {
+      "testo": "Construction is the least digitalized sector in Italy: with only 28.4% on data analysis compared to an average of 42.7%, and CRM at just 11.3%. The real estate sector performs better, at 48.7%, but still lags behind with a CRM rate of 17.7%.",
+      "fonte": "Istat, Enterprises and ICT, December 2025"
+    },
+    "Agricoltura, energia e risorse": {
+      "testo": "More than 40% of agricultural businesses use at least one 4.0 solution, but over half are behind on digitalization, with the most common challenges being absent interoperability and limited skills. In energy provision, the picture is reversed: 53.6% on data analysis and 43.7% on CRM, among the highest in Italy.",
+      "fonte": "Istat, Enterprises and ICT, December 2025 · Smart AgriFood Observatory, Politecnico di Milano, February 2025"
+    },
+    "Altro / Multi-settore": {
+      "testo": "In Italy, 42.7% of companies with at least ten employees analyze their own data. While 79.5% of SMEs have a basic level of digitalization, only 37.3% reach an advanced level.",
+      "fonte": "Istat, 'Firms and ICT, December 2025'"
+    }
+  },
+  "sector_sources": [
+    "Istat, 'Firms and ICT, Year 2025', Statistical Report, 15 December 2025. Digital Intensity Index indicators for economic activity. https://www.istat.it",
+    "Smart AgriFood Observatory, Politecnico di Milano, 'Agricoltura 4.0: the market and level of adoption in Italy in 2024', February 2025. https://www.osservatori.net/report/smart-agrifood/agricoltura-4-0-mercato-livello-adozione-italia-2024/"
+  ]
+}
