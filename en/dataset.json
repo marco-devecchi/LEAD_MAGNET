@@ -367,9 +367,9 @@
       "cat": "Direzione",
       "sub": "Data-driven decision-making culture",
       "title": "Data-driven decisions",
-      "text": "Important decisions are based on numbers, not just the experience of those making them.",
+      "text": "Important decisions rest on figures as much as on the judgement of the people taking them.",
       "anchor_low": "Decisions made by intuition",
-      "anchor_high": "No important decision without data in front",
+      "anchor_high": "No big decision without the numbers in front of us",
       "kpis": [
         {
           "num": 31,
@@ -733,7 +733,7 @@
       "cat": "Execution",
       "sub": "Project execution and delivery",
       "title": "Project execution",
-      "text": "Projects arrive at destination on time and within the promised budget at the outset.",
+      "text": "Projects are delivered on time and within the budget agreed at the start.",
       "anchor_low": "Almost always late or over budget",
       "anchor_high": "Delivered as promised",
       "kpis": [
@@ -950,7 +950,7 @@
       "title": "Process automation",
       "text": "Data flows from one system to another automatically without manual re-entry.",
       "anchor_low": "Manual processes, duplicated data entry",
-      "anchor_high": "Systems communicating, no re-entry",
+      "anchor_high": "Systems connected, nothing keyed in twice",
       "kpis": [
         {
           "num": 61,
@@ -1338,7 +1338,7 @@
       "cat": "Technology",
       "sub": "Cybersecurity and resilience",
       "title": "Cybersecurity",
-      "text": "If tomorrow an attack were to shut down our systems, we would know what to do and how quickly we could return to operations.",
+      "text": "If an attack took our systems down tomorrow, we would know what to do and how long it would take to be running again.",
       "anchor_low": "We have never seriously considered it",
       "anchor_high": "Written, tested, updated plan",
       "kpis": [
@@ -1533,9 +1533,9 @@
       "cat": "Technology",
       "sub": "Real usage of technologies",
       "title": "Technology adoption",
-      "text": "The software you pay for is actually used by the people it was purchased for.",
+      "text": "The software we pay for is actually used by the people we bought it for.",
       "anchor_low": "Many paid licenses with little actual use",
-      "anchor_high": "What we pay for, we use",
+      "anchor_high": "Everything we pay for gets used",
       "kpis": [
         {
           "num": 90,
@@ -1728,8 +1728,8 @@
       "cat": "Persone",
       "sub": "Competencies and Real Usage",
       "title": "Competencies and Skills",
-      "text": "People have the competencies required for their current work, not those that were needed five years ago.",
-      "anchor_low": "Evident gaps, we proceed as best we can",
+      "text": "Our people's skills have kept pace with the way the work has changed.",
+      "anchor_low": "Clear gaps, we get by as best we can",
       "anchor_high": "Skills aligned with what is needed now",
       "kpis": [
         {
@@ -1923,7 +1923,7 @@
       "cat": "Persone",
       "sub": "Diffused involvement and shared responsibility",
       "title": "Engagement and ownership",
-      "text": "People take initiative without waiting for someone to ask them to do so.",
+      "text": "Our people take the initiative without waiting to be asked.",
       "anchor_low": "It's about completing tasks, nothing more",
       "anchor_high": "Proposals come from the bottom up",
       "kpis": [
@@ -2138,9 +2138,9 @@
       "cat": "Persone",
       "sub": "Effective Training",
       "title": "Effective Training",
-      "text": "What people learn in the classroom becomes evident in their work within a few weeks.",
+      "text": "What our people learn on a course shows up in their work within a few weeks.",
       "anchor_low": "Training is provided, then everything continues as before",
-      "anchor_high": "It is applied immediately and its impact can be seen",
+      "anchor_high": "Put to use straight away, with visible results",
       "kpis": [
         {
           "num": 138,
