@@ -1179,9 +1179,9 @@ async function generatePDF(lead){
     dir:'#3B6FD6', exe:'#D64545', tech:'#3FA66B', pep:'#E08A3C',
     crit:'#C13C3C', warn:'#C8862F', good:'#3B8B5B',
   };
-  const catColor = c => ({Direction:C.dir,Execution:C.exe,Technology:C.tech,People:C.pep})[c];
+  const catColor = c => ({Direzione:C.dir,Execution:C.exe,Technology:C.tech,Persone:C.pep})[c];
   // versione "tinta" molto chiara of ciascun colore categoria (~6% of saturazione)
-  const catColorLight = c => ({Direction:'#EEF3FC',Execution:'#FCEEEE',Technology:'#EEF8F2',People:'#FCF3EA'})[c];
+  const catColorLight = c => ({Direzione:'#EEF3FC',Execution:'#FCEEEE',Technology:'#EEF8F2',Persone:'#FCF3EA'})[c];
 
   // Helper: spezza parole lunghe inserendo uno spazio (jsPDF spezza solo sugli spazi).
   // Soglia conservativa: rompe solo quando la parola supera maxLen caratteri.
@@ -1984,7 +1984,7 @@ function slug(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036
 function drawRadarPDF(doc, catScores, cx, cy, R){
   const cats = Object.keys(catScores);
   const angle = i => (-Math.PI/2) + (i * 2*Math.PI / cats.length);
-  const catColor = c => ({Direction:'#3B6FD6',Execution:'#D64545',Technology:'#3FA66B',People:'#E08A3C'})[c];
+  const catColor = c => ({Direzione:'#3B6FD6',Execution:'#D64545',Technology:'#3FA66B',Persone:'#E08A3C'})[c];
 
   // griglia
   doc.setLineWidth(0.4);
