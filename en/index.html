@@ -766,7 +766,7 @@ function testoMsgOk(t){
 }
 
 // Link per la call con Marco (form esterno o Cal.com)
-const CALL_URL = "https://cal.com/marco-devecchi/call-conoscitiva";
+const CALL_URL = "https://cal.com/marco-devecchi/introductory-call-en";
 
 /* ---------- ETICHETTE CATEGORIE ----------
    La CHIAVE resta quella del dataset (Direction, Execution, Technology, People):
@@ -958,7 +958,7 @@ function bloccoTop3(total){
   if(total < 80) return {
     occhiello: 'TOP 3 OPPORTUNITIES FOR IMPROVEMENT',
     titolo:    'The three greatest opportunities',
-    sottotitolo:'The overall picture is sound. These are the three subcategories with the greatest remaining upside.',
+    sottotitolo:'The overall picture is sound, and the three subcategories below are the ones where the most room to improve remains.',
     pdfTitolo: 'Where you can still improve',
   };
   return {
@@ -1157,6 +1157,11 @@ document.getElementById('lead-form').addEventListener('submit', async function(e
 
 /* ---------- PDF GENERATION (jsPDF) ---------- */
 async function generatePDF(lead){
+  lead = {
+    ...lead,
+    company: lead.company.replace(/\b\w/g, c => c.toUpperCase()),
+    name: lead.name.replace(/\b\w/g, c => c.toUpperCase()),
+  };
   if(!window.jspdf || !window.jspdf.jsPDF){
     throw new Error('jsPDF non caricato');
   }
@@ -1289,7 +1294,7 @@ async function generatePDF(lead){
       let citeLines = null;
       let citeH = 0;
       if(block.cites && block.cites.length > 0){
-        const citeStr = 'Fonti: ' + block.cites.join(', ');
+        const citeStr = 'Source: ' + block.cites.join(', ');
         // citazioni: softBreak aggressivo per essere sicuri (parole composte tipo "via Salesforce")
         citeLines = doc.splitTextToSize(softBreak(citeStr, 35), safeW);
         citeH = 4 + citeLines.length * citeLeading;
@@ -1356,7 +1361,7 @@ async function generatePDF(lead){
     doc.setFont(FONT,'bold');
     doc.setFontSize(8);
     doc.setTextColor('#8a8f9c');
-    doc.text('RIFERIMENTI', M, y);
+    doc.text('REFERENCES', M, y);
     y += 12;
     doc.setFont(FONT,'normal');
     doc.setFontSize(7.5);
@@ -1402,10 +1407,10 @@ async function generatePDF(lead){
   doc.setFont(FONT,'bold'); doc.setFontSize(110); doc.setTextColor('#F1A211');
   doc.text(String(Math.round(lastResult.total)), M, 510);
   doc.setFontSize(14); doc.setTextColor('#ECEEF3');
-  doc.text('/100, Maturity: ' + tierObj.word, M, 540);
+  doc.text('/100 · Maturity ' + tierObj.word.replace(/^./, c => c.toUpperCase()), M, 540);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
-  doc.text('Check based on ' + DATASET.questions.reduce((a,q)=>a+q.kpis.length,0) + ' KPIs · complete framework: ' + DATASET.framework_total_kpis + ' KPIs · 4 areas · 30 subcategories', M, H-60);
+  doc.text('Check based on ' + DATASET.questions.reduce((a,q)=>a+q.kpis.length,0) + ' KPIs · full framework of ' + DATASET.framework_total_kpis + ' KPIs across 4 areas and 30 subcategories', M, H-60);
   doc.text('Version 1.0 · 12-question self-assessment', M, H-46);
 
   // ------- PAGE 2: Sintesi e radar -------
@@ -1418,7 +1423,7 @@ async function generatePDF(lead){
 
   // Intro descrittiva
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const intro = `Based on the 12 answers provided, ${lead.company}'s overall digital maturity score is ${Math.round(lastResult.total)}/100, classified as "${tierObj.label.toLowerCase()}". The score is a weighted average of the framework's four areas, normalised to a 100-point scale: ${Object.keys(DATASET.categories).map(c=>etichettaCat(c)+' '+pesoIt(DATASET.categories[c].weight)+'%').join(', ')}.`;
+  const intro = `From the 12 answers given, ${lead.company} scores ${Math.round(lastResult.total)}/100 for overall digital maturity, a level rated ${tierObj.label.toLowerCase()}. The score is a weighted average of the framework's four areas, normalised to a 100-point scale, with weights of ${Object.keys(DATASET.categories).map(c=>pesoIt(DATASET.categories[c].weight)+'% for '+etichettaCat(c)).join(', ').replace(/, ([^,]*)$/, ' and $1')}.`;
   const introLines = doc.splitTextToSize(intro, W-2*M);
   doc.text(introLines, M, y);
   y += introLines.length * 13 + 20;
@@ -1465,7 +1470,7 @@ async function generatePDF(lead){
 
   // Sotto, descrizione of cosa il lettore sta guardando
   doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-  const expl = `The radar chart shows the shape of your organisation. The larger and more regular the orange area, the more balanced your performance across the four areas. Indentations indicate where reinforcement may be needed. The table reports each area’s score on a 0–100 scale and its weighting in the overall result.`;
+  const expl = `The radar chart gives you the shape of your profile. The larger and more even the orange area, the more balanced your performance across the four areas. Where the shape pulls inwards is where reinforcement may be needed. The table reports each area’s score on a 0–100 scale and its weighting in the overall result.`;
   const explLines = doc.splitTextToSize(expl, W-2*M);
   doc.text(explLines, M, y);
   y += explLines.length * 12 + 14;
@@ -1581,22 +1586,22 @@ async function generatePDF(lead){
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
   const m1 = senzaCriticita
     ? `The following pages provide a detailed view of the three lowest-scoring subcategories. None is below the threshold: they are included for completeness, not because they require intervention. Each section contains two tables covering the underlying KPIs and suggested actions. Tables use the colour assigned to each area: Direction blue, Execution red, Technology green and People orange.`
-    : `The following pages provide a detailed view of the three areas identified by your check. Each section contains two tables covering the underlying KPIs and the practical actions suggested. Tables use the colour assigned to each area: Direction blue, Execution red, Technology green and People orange.`;
+    : `The following pages provide a detailed view of the three subcategories your check has flagged. Each section contains two tables, one for the underlying KPIs and one for the suggested actions. Tables follow the colour of each area, with blue for Direction, red for Execution, green for Technology and orange for People.`;
   const m1Lines = doc.splitTextToSize(m1, W-2*M);
   doc.text(m1Lines, M, y);
   y += m1Lines.length * 13 + 22;
 
   // Blocco 2: Come leggere la colonna TUO
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
-  doc.text('How to read the “YOUR SCORE” and “Benchmark” columns', M, y); y += 16;
+  doc.text('How to read the “Your score” and “Benchmark” columns', M, y); y += 16;
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const m2 = `Each KPI shows two values: “YOUR SCORE” and “Benchmark”. “YOUR SCORE” represents the score of the subcategory to which that KPI belongs, on a 0–100 scale, derived from your answer. “Benchmark” is the KPI framework reference value for that indicator: the level to aim for in order to align with best practice.`;
+  const m2 = `Each KPI shows two values: “Your score” and “Benchmark”. “Your score” represents the score of the subcategory to which that KPI belongs, on a 0–100 scale, derived from your answer. “Benchmark” is the reference value the framework sets for that indicator, the level to aim for to match best practice.`;
   const m2Lines = doc.splitTextToSize(m2, W-2*M);
   doc.text(m2Lines, M, y);
   y += m2Lines.length * 13 + 16;
 
   doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
-  const m2b = `“YOUR SCORE” is therefore an approximation. It shows your position at subcategory level, but not the exact value of an individual KPI. Obtaining that figure requires direct measurement within the company, such as average delivery time, percentage of documented processes or eNPS.`;
+  const m2b = `“Your score” is therefore an approximation that places you at subcategory level rather than at the level of a single KPI. Getting that figure means measuring the individual indicators inside the company, things like average delivery time, the percentage of documented processes or eNPS.`;
   const m2bLines = doc.splitTextToSize(m2b, W-2*M);
   doc.text(m2bLines, M, y);
   y += m2bLines.length * 13 + 22;
@@ -1607,8 +1612,8 @@ async function generatePDF(lead){
   const blockY = y;
   // calcolo altezza blocco prima of disegnarlo
   const m3Title = `This is an initial overview`;
-  const m3 = `The 12-question rapid check is designed to give you a three-minute snapshot of your digital maturity. It helps you understand your broad position and where to focus attention, but it does not replace an in-depth assessment. A complete and detailed picture requires a structured assessment of around 20 minutes, completed by several key people in the company, including the CEO, CFO, CTO, HR Manager, functional managers and a sample of operational staff.`;
-  const m3b = `Only then can different perspectives be compared, genuinely critical KPIs identified, exact values calculated and a measurable action plan established. This report is an ideal starting point for that conversation.`;
+  const m3 = `The 12-question quick check gives you a three-minute snapshot of your digital maturity. It helps you understand your broad position and where to focus attention, but it does not replace an in-depth assessment. A complete and detailed picture requires a structured assessment taking around 20 minutes, completed by several key people in the company, including the CEO, CFO, CTO, HR Manager, functional managers and a sample of operational staff.`;
+  const m3b = `Only then can you compare different perspectives, identify the KPIs that are genuinely critical, calculate exact values and build a measurable action plan. This report is where that conversation starts.`;
   const m3Lines = doc.splitTextToSize(m3, W-2*M-32);
   const m3bLines = doc.splitTextToSize(m3b, W-2*M-32);
   const blockH = 16 + 14 + m3Lines.length*13 + 12 + m3bLines.length*13 + 18;
@@ -1628,12 +1633,12 @@ async function generatePDF(lead){
   doc.setFont(FONT,'bold'); doc.setFontSize(12); doc.setTextColor(C.ink);
   doc.text('Traffic-light thresholds', M, y); y += 18;
   doc.setFont(FONT,'normal'); doc.setFontSize(10); doc.setTextColor(C.soft);
-  doc.text('The colour of “YOUR SCORE” follows this logic:', M, y); y += 18;
+  doc.text('The colour of “Your score” follows the thresholds below.', M, y); y += 18;
 
   const soglie = [
-    {col: C.crit,  label: '< 40%',     desc: 'Critical: the area requires priority intervention'},
-    {col: C.warn,  label: '40% to 65%', desc: 'Needs improvement: below the best-practice standard, with meaningful room to improve'},
-    {col: C.good,  label: '> 65%',     desc: 'Good: aligned with or above the best-practice standard'},
+    {col: C.crit,  label: '< 40%',     desc: 'Critical, this area needs attention before the others'},
+    {col: C.warn,  label: '40% to 65%', desc: 'Needs work, below the best-practice standard with meaningful room to close the gap'},
+    {col: C.good,  label: '> 65%',     desc: 'Good, in line with the best-practice standard or above it'},
   ];
   soglie.forEach(s=>{
     doc.setFillColor(s.col); doc.roundedRect(M, y, 70, 18, 3, 3, 'F');
@@ -1801,7 +1806,7 @@ async function generatePDF(lead){
     } else {
       interpretazione = "you are aligned with best-practice standards in this area.";
     }
-    const chiarimento = "Based on your single answer in the rapid check. This is an indicative snapshot showing that in this area " + interpretazione + " A complete measurement requires the underlying KPIs.";
+    const chiarimento = "Taken from your single answer in the quick check, this is an indicative snapshot that shows that in this area " + interpretazione + " A complete measurement requires the underlying KPIs.";
     doc.setFont(FONT,'italic'); doc.setFontSize(8.5); doc.setTextColor(C.mute);
     const chiarLines = doc.splitTextToSize(chiarimento, W - 2*M);
     doc.text(chiarLines, M, y);
@@ -1849,7 +1854,10 @@ async function generatePDF(lead){
           '(' + azNum + ' of ' + q.actions_preview.length + ' in the framework)');
     // Intro tabella Azioni, dinamica in base allo score
     doc.setFont(FONT,'normal'); doc.setFontSize(9.5); doc.setTextColor(C.soft);
-    const azIntro = "Based on your score in this area, the report suggests " + azionsFiltered.length + " actions: " + azTierLabel + ". They are listed in order of expected impact. The cost of implementation depends on how your company operates, which this check cannot determine without a closer look.";
+    const actionCount = azionsFiltered.length < 10
+      ? ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"][azionsFiltered.length]
+      : String(azionsFiltered.length);
+    const azIntro = "Based on your score in this area, the report suggests " + actionCount + " " + azTierLabel + ". They are listed in order of expected impact. The cost of implementation depends on how your company operates, which this check cannot determine without a closer look.";
     const azIntroLines = doc.splitTextToSize(azIntro, W-2*M);
     doc.text(azIntroLines, M, y);
     y += azIntroLines.length * 12 + 18;
@@ -1914,7 +1922,7 @@ async function generatePDF(lead){
       const principali = q.kpis.slice(0, KPI_IN_SCHEDA);
       const quanti = q.kpis.length;
       const intro = quanti > principali.length
-        ? "These figures will show whether the actions have worked. This report includes " + principali.length + " of " + quanti + "; the remainder are in the appendix. They are not needed to decide where to start, but to verify progress."
+        ? "These figures will show whether the actions have worked. This report includes " + principali.length + " of the " + quanti + ", with the rest in the appendix, and they serve to verify progress rather than to decide where to start."
         : "These figures will show whether the actions have worked.";
       y = titoloSezione('How to measure progress', cCol, y,
             quanti > principali.length ? '(' + principali.length + ' of ' + quanti + ', the remainder in the appendix)' : '');
@@ -1936,10 +1944,10 @@ async function generatePDF(lead){
       doc.setTextColor(C.accent); doc.setFontSize(9); doc.setFont(FONT,'bold');
       doc.text('APPENDIX', M, y); y += 26;
       doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(22);
-      doc.text('All KPIs for the areas analysed', M, y); y += 30;
+      doc.text('All KPIs for the subcategories analysed', M, y); y += 30;
       doc.setFont(FONT,'normal'); doc.setFontSize(10.5); doc.setTextColor(C.soft);
       const introApp = doc.splitTextToSize(
-        "This appendix lists every indicator underlying the areas analysed, together with its benchmark. The actions determine where to start; these indicators allow you to verify in six months that measurable change has actually occurred.",
+        "This appendix lists every indicator underlying the subcategories analysed, together with its benchmark. The actions tell you where to start, while these indicators let you check in six months whether anything measurable has actually changed.",
         W-2*M);
       doc.text(introApp, M, y);
       y += introApp.length * 13 + 22;
@@ -1952,7 +1960,7 @@ async function generatePDF(lead){
         doc.text(etichettaCat(q.cat).toUpperCase(), M, y); y += 22;
         doc.setTextColor(C.ink); doc.setFont(FONT,'bold'); doc.setFontSize(17);
         doc.text(q.title, M, y); y += 24;
-        y = titoloSezione(q.kpis.length + ' KPI', cCol, y - 14, '') - 4;
+        y = titoloSezione(q.kpis.length + ' KPIs', cCol, y - 14, '') - 4;
         y = tabellaKPI(q.kpis, cCol,
               "All framework indicators for this subcategory.", y);
         y += 16;
@@ -1971,11 +1979,11 @@ async function generatePDF(lead){
   doc.text('your results directly?', M, 200);
 
   doc.setFont(FONT,'normal'); doc.setFontSize(11); doc.setTextColor('#B6BBC9');
-  const next = `A 30-minute call with Marco to review the scores in the context of your company, validate priorities and identify the right starting point. If there is a sound case for action, we will outline a plan. If there is not, I will tell you.`;
+  const next = `A 30-minute call with me to go through the scores in the context of your company, confirm the priorities and find the right place to start. If there is a sound case for action, we will outline a plan together. If there is not, I will tell you so.`;
   doc.text(doc.splitTextToSize(next, W-2*M), M, 250);
 
   doc.setTextColor('#F1A211'); doc.setFont(FONT,'bold'); doc.setFontSize(13);
-  doc.text('Book: ' + CALL_URL, M, 380);
+  doc.text('Book a slot at ' + CALL_URL, M, 380);
 
   doc.setFontSize(9); doc.setTextColor('#7A8090');
   doc.text('© Marco De Vecchi · KPI Framework v2.0 · April 2026', M, H-60);

@@ -374,25 +374,25 @@
         {
           "num": 31,
           "name": "% of decisions supported by KPIs or data analysis",
-          "desc": "Percentage of decisions based on data analysis or KPIs, compared to those based on perceptions.",
+          "desc": "Percentage of decisions based on data analysis or KPIs rather than on perception.",
           "benchmark": ">70%"
         },
         {
           "num": 32,
           "name": "% of reports actually used",
-          "desc": "Percentage of produced reports that are actually read and utilized. High production + low usage = waste.",
+          "desc": "Percentage of the reports produced that are actually read and used. High output with low readership is waste.",
           "benchmark": ">60%"
         },
         {
           "num": 33,
           "name": "Level of trust in business data (survey)",
-          "desc": "Managers' perceived level of confidence in the accuracy and reliability of business data.",
+          "desc": "How far managers trust the accuracy and reliability of company data.",
           "benchmark": ">7/10"
         },
         {
           "num": 34,
           "name": "Average time to retrieve data for a decision",
-          "desc": "Time required to find and access relevant data needed to make a decision. Slow data = slow decision-making.",
+          "desc": "Time required to find and open the data a decision needs. Slow data means slow decisions.",
           "benchmark": "<1 hour"
         },
         {
@@ -406,25 +406,25 @@
       "actions_preview": [
         {
           "name": "Data-driven decision protocol",
-          "desc": "Introduce a simple protocol: every proposal in meetings must include at least one supporting data point with cited source.",
+          "desc": "Introduce a simple rule whereby every proposal brought to a meeting carries at least one supporting figure with its source cited.",
           "hours": 8,
           "effort": "Quick"
         },
         {
           "name": "Pre-meeting dashboard",
-          "desc": "Distribute a concise report with relevant KPIs before each board meeting to cover the agenda topics.",
+          "desc": "Circulate a short report with the relevant KPIs before each board meeting, covering the items on the agenda.",
           "hours": 12,
           "effort": "Medium"
         },
         {
           "name": "Individual data literacy coaching",
-          "desc": "Work individually with managers less inclined towards using data to build confidence and habit.",
+          "desc": "Coach managers who are less comfortable with data one to one, so that both confidence and habit build up.",
           "hours": 16,
           "effort": "Medium"
         },
         {
-          "name": "Report utilization audit",
-          "desc": "Interview existing report recipients to understand which reports are actually read and which are ignored.",
+          "name": "Report usage audit",
+          "desc": "Ask the people who receive the reports which ones they actually read and which ones they ignore.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -454,13 +454,13 @@
         },
         {
           "name": "Data cleansing plan",
-          "desc": "Define and implement a prioritized plan to cleanse the most critical data for management decisions.",
+          "desc": "Define and implement a prioritised plan to cleanse the most critical data for management decisions.",
           "hours": 32,
           "effort": "Challenging"
         },
         {
-          "name": "Business data catalog",
-          "desc": "Create a simple data source catalog indicating where to find each type of data and who to contact.",
+          "name": "Business data catalogue",
+          "desc": "Create a simple data source catalogue indicating where to find each type of data and who to contact.",
           "hours": 16,
           "effort": "Medium"
         },
@@ -498,17 +498,17 @@
       "why_it_happens": {
         "blocks": [
           {
-            "text": "I have often witnessed meetings where the same question received three different answers depending on who opened the file. Not because someone was lying: each person was looking at a different excerpt, updated at a different time.",
+            "text": "I have sat in plenty of meetings where the same question got three different answers depending on who opened the file. This was not because anyone was lying, it was because each person was looking at a different extract, updated at a different moment.",
             "cites": []
           },
           {
-            "text": "In two years, Italian SMEs that analyze their own data have increased from 26.6% to 42.7%. The number is growing quickly, but the gap remains significant: among micro and small businesses (PMI), we are at 41.9%, while large companies are at 83.6%. Those with tools make decisions based on data; those without still make decisions in the dark.",
+            "text": "Over two years, the share of Italian SMEs analysing their own data has risen from 26.6% to 42.7%. The figure is growing quickly, yet the gap remains wide, since micro and small businesses stand at 41.9% against 83.6% for large companies. Companies with the right tools decide on the basis of data, while the others are still deciding in the dark.",
             "cites": [
               "ISTAT 2025"
             ]
           },
           {
-            "text": "What I see is that the problem rarely lies in the lack of data. It’s that the data are there but they take time, and when a decision needs to be made quickly, it gets made without them. The true measure isn’t how many data points you have; it’s how fast you can get your hands on them.",
+            "text": "What I see is that the problem rarely lies in the lack of data. The data exist, but reaching them takes time, so when a decision has to be taken quickly it gets taken without it. The real measure is how fast you can get your hands on the data you already have.",
             "cites": []
           }
         ]
@@ -516,21 +516,21 @@
       "reframe": {
         "blocks": [
           {
-            "text": "Making decisions based on data doesn’t mean setting aside judgment. It means that the judgment starts from a shared base rather than three different ones.",
+            "text": "Deciding on the basis of data still leaves room for judgement, with the difference that the judgement now starts from one shared baseline instead of three separate ones.",
             "cites": []
           },
           {
-            "text": "I have seen companies build beautiful dashboards that no one uses, and others make good decisions with just three numbers written by hand on a blackboard. The difference isn’t in the tool: it’s that in the second case, those three numbers are shared by everyone and not questioned.",
+            "text": "I have seen companies build beautiful dashboards that no one uses, and others decide well on three numbers written by hand on a whiteboard. The difference lies in the fact that everyone in the second company shares those three numbers and nobody disputes them.",
             "cites": []
           },
           {
-            "text": "Before purchasing an analysis tool, determine which five key numbers your company relies on for decision-making. If you can’t list them, no dashboard will help because you won’t know what to put into it.",
+            "text": "Before you buy an analytics tool, work out which five numbers your company actually decides on. If you can’t list them, no dashboard will help because you won’t know what to put into it.",
             "cites": []
           }
         ]
       },
       "references": [
-        "ISTAT, \"Firms and ICT, 2025\", Statistical Report, December 15, 2025. https://www.istat.it"
+        "Istat, \"Firms and ICT, 2025\", Statistical Report, 15 December 2025. https://www.istat.it"
       ]
     },
     {
@@ -607,7 +607,7 @@
         },
         {
           "name": "Bottleneck identification",
-          "desc": "Analyze the causes of slowdowns (approvals, delays, rework) and define prioritized corrective actions.",
+          "desc": "Analyse the causes of slowdowns (approvals, delays, rework) and define prioritised corrective actions.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -679,7 +679,7 @@
         },
         {
           "name": "Root cause of variability",
-          "desc": "Analyze the causes of variability (variable input quality, differing competencies, unhandled exceptions) and define corrective actions.",
+          "desc": "Analyse the causes of variability (variable input quality, differing competencies, unhandled exceptions) and define corrective actions.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -725,7 +725,7 @@
         ]
       },
       "references": [
-        "Istat, 'Firms and ICT, 2025', Statistics Report, December 15, 2025. https://www.istat.it"
+        "Istat, \"Firms and ICT, 2025\", Statistical Report, 15 December 2025. https://www.istat.it"
       ]
     },
     {
@@ -784,7 +784,7 @@
       "actions_preview": [
         {
           "name": "Analysis of historical delays",
-          "desc": "Analyze projects from the last 2 years and identify systematic causes of delay (scope creep, resources, dependencies).",
+          "desc": "Analyse projects from the last 2 years and identify systematic causes of delay (scope creep, resources, dependencies).",
           "hours": 16,
           "effort": "Average"
         },
@@ -868,7 +868,7 @@
         },
         {
           "name": "Lessons learned on changes",
-          "desc": "Analyze changes to objectives from recent projects to identify patterns and prevent them in planning.",
+          "desc": "Analyse changes to objectives from recent projects to identify patterns and prevent them in planning.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -904,7 +904,7 @@
         },
         {
           "name": "Elimination of launch bottlenecks",
-          "desc": "Identify and remove the main organizational obstacles that slow down the transition from project to operational phase.",
+          "desc": "Identify and remove the main organisational obstacles that slow down the transition from project to operational phase.",
           "hours": 12,
           "effort": "Medium"
         }
@@ -948,7 +948,7 @@
       "cat": "Execution",
       "sub": "Process automation",
       "title": "Process automation",
-      "text": "Data flows from one system to another automatically without manual re-entry.",
+      "text": "Data moves from one system to the next automatically, with nothing keyed in twice.",
       "anchor_low": "Manual processes, duplicated data entry",
       "anchor_high": "Systems connected, nothing keyed in twice",
       "kpis": [
@@ -961,7 +961,7 @@
         {
           "num": 62,
           "name": "Time saved through automation",
-          "desc": "Amount of working time saved by introducing automations into processes.",
+          "desc": "Working time saved once automation is introduced into a process.",
           "benchmark": "Varies by process"
         },
         {
@@ -974,32 +974,32 @@
           "num": 64,
           "name": "Number of repetitive manual activities",
           "desc": "Number of repetitive manual activities still being performed that could be automated.",
-          "benchmark": "Trend towards zero"
+          "benchmark": "Towards zero"
         },
         {
           "num": 65,
-          "name": "Number of digitized workflows",
-          "desc": "Number of workflows that have been digitalized and structured within systems.",
+          "name": "Number of digitised workflows",
+          "desc": "Number of workflows that have been digitised and structured within systems.",
           "benchmark": "Varies by sector"
         },
         {
           "num": 66,
           "name": "Number of manual interventions per digital process",
           "desc": "The average number of times an operator must manually intervene in a theoretically digital process.",
-          "benchmark": "Tends to zero"
+          "benchmark": "Towards zero"
         }
       ],
       "n_actions": 18,
       "actions_preview": [
         {
           "name": "Automation opportunity assessment",
-          "desc": "Identify and prioritize processes with the greatest potential for automation (high volume, clear rules, low variability).",
+          "desc": "Identify and prioritise the processes with the greatest potential for automation (high volume, clear rules, low variability).",
           "hours": 16,
           "effort": "Medium"
         },
         {
           "name": "Quick automation wins",
-          "desc": "Implement rapid automations on simpler processes (notifications, reports, data transfer) using no-code/low-code tools.",
+          "desc": "Implement quick automations on the simpler processes (notifications, reports, data transfer) using no-code/low-code tools.",
           "hours": 24,
           "effort": "Challenging"
         },
@@ -1011,7 +1011,7 @@
         },
         {
           "name": "Pre-automation baseline",
-          "desc": "Systematically measure the manual time spent on processes before automation to quantify the benefit.",
+          "desc": "Measure how much manual time each process takes before automating it, so that the benefit can be quantified.",
           "hours": 8,
           "effort": "Fast"
         },
@@ -1035,7 +1035,7 @@
         },
         {
           "name": "API integration plan",
-          "desc": "Define a prioritized API integration plan for the most critical systems, starting with processes with the highest number of manual data transfer steps.",
+          "desc": "Define a prioritised API integration plan for the most critical systems, starting with processes with the highest number of manual data transfer steps.",
           "hours": 24,
           "effort": "Challenging"
         },
@@ -1065,13 +1065,13 @@
         },
         {
           "name": "Workflow priority mapping",
-          "desc": "Identify the 10 most critical workflows still managed via email/paper/phone and prioritize them for digitalization.",
+          "desc": "Identify the 10 most critical workflows still managed via email/paper/phone and prioritise them for digitalisation.",
           "hours": 12,
           "effort": "Medium"
         },
         {
           "name": "BPM tool implementation",
-          "desc": "Implement a workflow management tool (even simple like Microsoft Power Automate or Kissflow) for prioritized workflows.",
+          "desc": "Implement a workflow management tool (even simple like Microsoft Power Automate or Kissflow) for prioritised workflows.",
           "hours": 32,
           "effort": "Challenging"
         },
@@ -1083,7 +1083,7 @@
         },
         {
           "name": "Exception analysis",
-          "desc": "Analyze the causes of major manual interventions in digital processes: unmet rules, missing data, special cases.",
+          "desc": "Analyse the causes of major manual interventions in digital processes: unmet rules, missing data, special cases.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -1103,17 +1103,17 @@
       "why_it_happens": {
         "blocks": [
           {
-            "text": "There is a gesture I see in almost every company I enter: someone reads a number from one screen and types it into another. Sometimes it’s an order, sometimes an invoice, sometimes a customer record. That gesture is the most visible symptom of two systems that don’t talk to each other.",
+            "text": "There is one gesture I see in almost every company I walk into, someone reading a number off one screen and typing it into another. Sometimes it’s an order, sometimes an invoice, sometimes a customer record. That gesture is the most visible symptom of two systems that don’t talk to each other.",
             "cites": []
           },
           {
-            "text": "The national picture confirms this: 49.5% of Italian companies with at least ten employees use a management ERP system, but only 21.7% use CRM. Among SMEs, CRM usage drops to 21.1%, compared to 56.5% for large enterprises. The missing piece is often the one that concerns customers.",
+            "text": "The national picture confirms this: 49.5% of Italian companies of at least ten employees run an ERP system, but only 21.7% use CRM. Among SMEs, CRM usage drops to 21.1%, compared to 56.5% for large enterprises. The missing piece is usually the one covering the customer.",
             "cites": [
               "Istat 2025"
             ]
           },
           {
-            "text": "The reason manual re-keying is rarely resisted isn’t a lack of technology. It’s because integrating two systems forces you to decide which system commands the data, and that decision touches the balance between functions. It’s an organizational problem masquerading as a technical one.",
+            "text": "The reason manual re-keying is so rarely eliminated has little to do with technology. Integrating two systems forces you to decide which of them owns the data, and that decision shifts the balance of power between departments. It is an organisational problem dressed up as a technical one.",
             "cites": []
           }
         ]
@@ -1121,15 +1121,15 @@
       "reframe": {
         "blocks": [
           {
-            "text": "Automation doesn’t start with software; it starts with mapping. You can only automate chaos: you get it faster but not better without first describing the process.",
+            "text": "Automation starts with mapping rather than with software, because automating chaos simply gives you faster chaos, and the process has to be described before any of it can be automated.",
             "cites": []
           },
           {
-            "text": "The criterion I use to choose what to automate first is not time saved, but error frequency. A repetitive manual task costs more than just hours: it costs the mistakes that go unnoticed and the time spent correcting them.",
+            "text": "The criterion I use to choose what to automate first is how often the task goes wrong, more than how much time it eats. A repetitive manual task costs you more than the hours it takes, because it also costs you the mistakes that slip through and the time spent putting them right.",
             "cites": []
           },
           {
-            "text": "A warning I always repeat: automating an incorrect process makes it definitive. Get the process right first, then automate it. Attempting to automate in reverse carves a working method into software that has never been validated by anyone.",
+            "text": "One warning I repeat constantly is that automating a broken process makes it permanent. Get the process right first and automate it afterwards, because doing it the other way round carves a way of working into software before anyone has validated it.",
             "cites": []
           }
         ]
@@ -1345,13 +1345,13 @@
         {
           "num": 114,
           "name": "MTTR, mean time to recovery of systems",
-          "desc": "Mean time from security incident detection to full resolution.",
+          "desc": "Mean time from the detection of a security incident to its full resolution.",
           "benchmark": "<4 hours (critical)"
         },
         {
           "num": 115,
           "name": "MTTD, mean time to detect an incident",
-          "desc": "Average time from the occurrence of a security incident to its detection by the team.",
+          "desc": "Mean time from a security incident occurring to the team detecting it.",
           "benchmark": "<1 hour (critical)"
         },
         {
@@ -1363,19 +1363,19 @@
         {
           "num": 117,
           "name": "% systems with up-to-date security controls",
-          "desc": "Percentage of systems covered by up-to-date security controls at the latest available version.",
+          "desc": "Percentage of systems covered by security controls kept at the latest available version.",
           "benchmark": "100%"
         },
         {
           "num": 118,
           "name": "Number of security incidents per period",
           "desc": "The number of security events detected in a given period. Includes attempted attacks and actual breaches.",
-          "benchmark": "Trend towards 0"
+          "benchmark": "Towards zero"
         },
         {
           "num": 119,
           "name": "Adoption of security frameworks (NIST / ISO 27001)",
-          "desc": "Degree of adoption of international security frameworks: NIST, which is a guideline, and ISO 27001, which certifies.",
+          "desc": "Degree of adoption of international security frameworks, where NIST is a set of guidelines and ISO 27001 is certifiable.",
           "benchmark": "Certified or in progress"
         }
       ],
@@ -1389,7 +1389,7 @@
         },
         {
           "name": "IR tabletop exercise",
-          "desc": "Conduct incident simulation tabletop exercises to test and improve response times.",
+          "desc": "Run tabletop exercises simulating an incident, to test and improve response times.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -1401,7 +1401,7 @@
         },
         {
           "name": "Security monitoring improvement",
-          "desc": "Enhance security monitoring with SIEM or EDR tools to reduce detection time.",
+          "desc": "Strengthen security monitoring with SIEM or EDR tools to reduce detection time.",
           "hours": 32,
           "effort": "Challenging"
         },
@@ -1493,17 +1493,17 @@
       "why_it_happens": {
         "blocks": [
           {
-            "text": "There are two attitudes towards security, and neither is sustainable. The first is complete delegation to the supplier: it's left to those who sold us the systems. The second is a belief in one's irrelevance: there's nothing valuable to steal from us.",
+            "text": "There are two attitudes towards security, and neither is sustainable. The first hands the whole matter to the supplier, on the grounds that whoever sold the systems will look after them. The second assumes the company is too small to be worth attacking, on the grounds that there is nothing here worth stealing.",
             "cites": []
           },
           {
-            "text": "The numbers tell a different story. In 2025, Italy recorded 507 serious incidents compared to 357 the previous year, with a growth of 42%. Our country alone accounts for 9.6% of the severe attacks detected worldwide: first in Europe and fourth globally.",
+            "text": "The numbers tell a different story. In 2025, Italy recorded 507 serious incidents compared to 357 the previous year, a rise of 42%. Italy alone accounts for 9.6% of the serious attacks detected worldwide, first in Europe and fourth in the world.",
             "cites": [
               "Clusit 2026"
             ]
           },
           {
-            "text": "Another common refrain I hear is that security is an IT issue. It isn't. The day our systems go down, the questions we receive are about what data we handle, how long it takes to get back up, and what we tell our customers. These are questions of direction, not technical department concerns.",
+            "text": "Another refrain I hear constantly is that security belongs to the IT department, which it does not. The day the systems go down, the questions coming at you are what data you hold, how long it takes to get back up, and what you tell your customers. Those are questions for whoever runs the company.",
             "cites": []
           }
         ]
@@ -1511,15 +1511,15 @@
       "reframe": {
         "blocks": [
           {
-            "text": "I am not an expert in offensive security, and it is not necessary to be one. What is needed, and what is almost always missing, comes first: knowing what needs to be protected, how much it is worth, and the consequences if it stops working.",
+            "text": "I am not an expert in offensive security, and it is not necessary to be one. What is needed comes first and is almost always missing, namely knowing what has to be protected, what it is worth and what happens if it stops working.",
             "cites": []
           },
           {
-            "text": "From that foundation, everything else follows, prioritized by importance rather than by supplier catalog. The same amount of money spent on a plan can yield far more value than spending it piece-by-piece on selected products.",
+            "text": "From that foundation, everything else follows, ordered by importance rather than by the supplier's catalogue. The same money spent on a plan is worth far more than the same money spent piece by piece on individual products.",
             "cites": []
           },
           {
-            "text": "The final factor is what truly decides: an untested plan is not a valid plan. The time to discover that backups do not restore is not when they are needed.",
+            "text": "The factor that decides everything is testing, because an untested plan is not a plan. Finding out that the backups do not restore should never happen on the day you need them.",
             "cites": []
           }
         ]
@@ -1539,7 +1539,7 @@
       "kpis": [
         {
           "num": 90,
-          "name": "% features utilized vs available",
+          "name": "% features used vs available",
           "desc": "The percentage of available features on platforms that are actually used by users.",
           "benchmark": ">60%"
         },
@@ -1557,7 +1557,7 @@
         },
         {
           "num": 93,
-          "name": "User utilization intensity",
+          "name": "User usage intensity",
           "desc": "How frequently does each individual user truly use the platform.",
           "benchmark": ">70%"
         },
@@ -1577,7 +1577,7 @@
       "n_actions": 18,
       "actions_preview": [
         {
-          "name": "Feature utilization audit",
+          "name": "Feature usage audit",
           "desc": "To measure the actual usage of features for each key platform through analytics and interviews.",
           "hours": 12,
           "effort": "Medium"
@@ -1613,8 +1613,8 @@
           "effort": "Quick"
         },
         {
-          "name": "Low utilization platform review",
-          "desc": "Identify all platforms with utilization below 50% and assess the causes: lack of training, low relevance, preferred alternative.",
+          "name": "Low usage platform review",
+          "desc": "Identify all platforms with usage below 50% and assess the causes: lack of training, low relevance, preferred alternative.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -1632,7 +1632,7 @@
         },
         {
           "name": "Per-user analytics",
-          "desc": "Analyze user engagement data at the individual user level to identify adoption patterns and abandonment cases.",
+          "desc": "Analyse user engagement data at the individual user level to identify adoption patterns and abandonment cases.",
           "hours": 8,
           "effort": "Quick"
         },
@@ -1656,7 +1656,7 @@
         },
         {
           "name": "Shadow IT root cause",
-          "desc": "Analyze why official systems are being bypassed and address the underlying causes (lack of functionality, usability, speed).",
+          "desc": "Analyse why official systems are being bypassed and address the underlying causes (lack of functionality, usability, speed).",
           "hours": 12,
           "effort": "Medium"
         },
@@ -1734,7 +1734,7 @@
       "kpis": [
         {
           "num": 132,
-          "name": "% skills utilized vs available",
+          "name": "% skills used vs available",
           "desc": "Percentage of available skills in the organization that are actually used in work.",
           "benchmark": ">80%"
         },
@@ -1772,8 +1772,8 @@
       "n_actions": 18,
       "actions_preview": [
         {
-          "name": "Competency utilization survey",
-          "desc": "Conduct a survey to identify competencies available within the company that are not adequately utilized in current roles.",
+          "name": "Competency usage survey",
+          "desc": "Conduct a survey to identify competencies available within the company that are not adequately used in current roles.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -2028,7 +2028,7 @@
         },
         {
           "name": "Decision rights mapping",
-          "desc": "Map out recurring decisions and verify whether they are being taken at the most appropriate organizational level.",
+          "desc": "Map out recurring decisions and verify whether they are being taken at the most appropriate organisational level.",
           "hours": 12,
           "effort": "Medium"
         },
@@ -2169,7 +2169,7 @@
         {
           "num": 142,
           "name": "% of training content used post-delivery",
-          "desc": "Percentage of training materials produced or acquired that are utilized after the initial delivery.",
+          "desc": "Percentage of training materials produced or acquired that are used after the initial delivery.",
           "benchmark": ">50%"
         },
         {
@@ -2327,15 +2327,15 @@
   ],
   "sectors": {
     "Manifattura e produzione": {
-      "testo": "In your sector, 45.9% of companies analyze their data and 59.9% use an ERP management system. CRM adoption is at 19.0%; manufacturing has a good understanding of its production but much less about its customers.",
+      "testo": "In your sector, 45.9% of companies analyse their data and 59.9% use an ERP management system. CRM adoption is at 19.0%; manufacturing has a good understanding of its production but much less about its customers.",
       "fonte": "Istat, Enterprises and ICT, December 2025"
     },
     "Commercio e distribuzione": {
-      "testo": "Your sector leads Italy in CRM adoption with 29.9%, and 52.5% of companies analyze their data. However, only 19.1% derive at least 1% of revenue from online sales.",
+      "testo": "Your sector leads Italy in CRM adoption with 29.9%, and 52.5% of companies analyse their data. However, only 19.1% derive at least 1% of revenue from online sales.",
       "fonte": "Istat, Enterprises and ICT, December 2025"
     },
     "Servizi alle imprese": {
-      "testo": "Among professional and technical activities, 46.2% analyze data and 56.9% use an ERP. In rental and business support services, these figures drop to 42.5% and 38.5%, respectively.",
+      "testo": "Among professional and technical activities, 46.2% analyse data and 56.9% use an ERP. In rental and business support services, these figures drop to 42.5% and 38.5%, respectively.",
       "fonte": "Istat, Enterprises and ICT, December 2025"
     },
     "Servizi alle persone": {
@@ -2343,15 +2343,15 @@
       "fonte": "Istat, Enterprises and ICT, December 2025"
     },
     "Costruzioni e immobiliare": {
-      "testo": "Construction is the least digitalized sector in Italy: with only 28.4% on data analysis compared to an average of 42.7%, and CRM at just 11.3%. The real estate sector performs better, at 48.7%, but still lags behind with a CRM rate of 17.7%.",
+      "testo": "Construction is the least digitised sector in Italy: with only 28.4% on data analysis compared to an average of 42.7%, and CRM at just 11.3%. The real estate sector performs better, at 48.7%, but still lags behind with a CRM rate of 17.7%.",
       "fonte": "Istat, Enterprises and ICT, December 2025"
     },
     "Agricoltura, energia e risorse": {
-      "testo": "More than 40% of agricultural businesses use at least one 4.0 solution, but over half are behind on digitalization, with the most common challenges being absent interoperability and limited skills. In energy provision, the picture is reversed: 53.6% on data analysis and 43.7% on CRM, among the highest in Italy.",
+      "testo": "More than 40% of agricultural businesses use at least one 4.0 solution, but over half are behind on digitalisation, with the most common challenges being absent interoperability and limited skills. In energy provision, the picture is reversed: 53.6% on data analysis and 43.7% on CRM, among the highest in Italy.",
       "fonte": "Istat, Enterprises and ICT, December 2025 · Smart AgriFood Observatory, Politecnico di Milano, February 2025"
     },
     "Altro / Multi-settore": {
-      "testo": "In Italy, 42.7% of companies with at least ten employees analyze their own data. While 79.5% of SMEs have a basic level of digitalization, only 37.3% reach an advanced level.",
+      "testo": "In Italy, 42.7% of companies with at least ten employees analyse their own data. While 79.5% of SMEs have a basic level of digitalisation, only 37.3% reach an advanced level.",
       "fonte": "Istat, 'Firms and ICT, December 2025'"
     }
   },
